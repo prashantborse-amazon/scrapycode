@@ -1,0 +1,431 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>HFR,Inc for Mobile Internet</title>
+	<link rel="stylesheet" type="text/css" href="../style/base.css" />
+	<link rel="stylesheet" type="text/css" href="../style/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../style/content.css" />
+	<link rel="stylesheet" type="text/css" href="../style/board.css" />
+	<link rel="stylesheet" type="text/css" href="../style/member.css" />
+	<script type="text/javascript" src="../script/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="../script/jquery-ui.js"></script>
+	<script type="text/javascript" src="../script/common.js"></script>
+</head>
+<body>	
+	<!-- header -->
+	<script>
+    function funLogin(){
+	   $('#mask').show();
+    }
+	function funClient(){
+	   alert("You do not have permission.");
+	}
+    </script>
+	<!-- header -->
+	<a name="toppage"></a>
+	<div id="header">
+		<div class="ctl-holder">
+			<h1><a href="http://hfrnet.com/eng/main/main.html"><img src="../images/img/img-logo.gif" alt="HFR,Inc for Mobile Internet" /></a></h1>
+			
+			<!-- service -->
+			<dl id="utility">
+				<dt class="hd-element">Services menu</dt>
+				<dd class="home"><a href="http://hfrnet.com/eng/main/main.html">Home</a></dd>
+				<dd><a id="layerloginopen" href="#mask">Login</a></dd>
+				<dd><a href="../etc/sitemap.html">Sitemap</a></dd>
+				<dd><a href="http://hfrnet.com/hfr_kor/">Korean</a></dd>
+			</dl>
+			<!-- //service -->
+			
+			<!-- navigation -->
+			<h2 class="hd-element">Site Menu</h2>
+			<ul id="navigation">
+				<li class="subnav01">
+					<a class="nav-topmenu" href="../product/solutions1.html">Solutions</a>
+					<div>
+						<ul>
+							<li><a href="../product/solutions1.html">Mobile Fronthaul</a></li>
+							<li><a href="../product/solutions2.html">Mobile Backhaul</a></li>
+							<li><a href="../product/solutions3.html">Optical Networking</a></li>
+							<li><a href="../product/solutions4.html">Packet Networking</a></li>
+							<li><a href="../product/solutions5.html">Gigabit Ethernet Access</a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="subnav02">
+					<a class="nav-topmenu" href="../product/list.html?kind=p&code=20">Products</a>
+					<div>
+						<ul>
+							<li><a href="../product/list.html?kind=p&code=20">Cellular Coverage System</a></li>
+							<li><a href="../product/list.html?kind=p&code=21">Optical Transport System</a></li>
+							<li><a href="../product/list.html?kind=p&code=22">FTTx System</a></li>
+						</ul>
+					</div>
+				</li>
+
+				<li class="subnav03">
+					<a class="nav-topmenu" href="../technology/download.html?kind_dtl=wp">Technology</a>
+					<div>
+						<ul>
+							<li><a href="../technology/download.html?kind_dtl=wp">Document Library</a></li>
+							<li><a href="../technology/innovation_list.html">Innovation</a></li>
+							<li><a href="../technology/ipr_intro.html">IPR</a></li>
+						</ul>
+					</div>
+				</li>
+
+
+				<li class="subnav04">
+				   					<a class="nav-topmenu" href="../partner/request_customer.html">Partners</a>
+										<div>
+						<ul>
+						   							<li><a href="../partner/request_customer.html">Partners Link</a></li>
+																				</ul>
+					</div>
+				</li>
+				<li class="subnav05 nav">
+					<a class="nav-topmenu" href="../about/hfr.html">About Us</a>
+					<div>
+						<ul>
+							<li><a href="../about/hfr.html">About HFR</a></li>
+							<li><a href="../about/ceo.html">From CEO's Desk</a></li>
+							<li><a href="../about/history.html">History</a></li>
+							<li><a href="../about/moral.html">Ethical Management</a></li>
+							<li><a href="../about/environment.html">Green Management</a></li>
+							<!--
+							<li><a href="../about/ipr.html">Intellectual Property Rights</a></li>
+							<li><a href="../about/download.html">Document Library</a></li>
+							-->
+							<li><a href="../about/affiliates.html">Affiliates</a></li>
+							<li><a href="../about/clients.html">Customers</a></li>
+
+							<li><a href="../about/certificates.html">Certificates</a></li>
+
+							<li><a href="../about/news.html">News &amp; Events</a></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+			<!-- //navigation -->
+		</div>
+	</div>
+	<!-- //header -->
+	
+	<!-- layer login -->
+	<script id="dynamic"></script>
+	<script>
+	   function funLoginCheck(){
+	      if (document.loginForm.id.value==""){
+		     alert("You can't leave id empty.");
+			 document.loginForm.id.focus();
+			 return false;
+		  }
+		  if (document.loginForm.pass.value==""){
+		     alert("You can't leave password empty.");
+			 document.loginForm.pass.focus();
+			 return false;
+		  }		  
+	   }
+	</script>
+	<div id="mask">
+	<iframe name="ifram" title="blank" width="0" height="0"></iframe>
+		<div class="layer-login">
+			<h1>Login</h1>
+			<div class="btn-close">
+				<a href="#"><img src="../images/txt/x-close.png" art="close" /><span>CLOSE</span></a>
+			</div>
+			<div class="txt">
+				<span class="color8">Welcome to HFR</span>
+			</div>
+			<div class="holder">
+				<form name="loginForm" method="post" action="../etc/login.html" onsubmit="return funLoginCheck()" target="ifram">
+				<input type="hidden" name="url" value="/eng/about/certificates.html?"/>
+					<fieldset>
+						<legend>Login</legend>
+						<div class="wrp-login">
+							<p class="frm-item">
+								<label for="frm-poplogin-item1">ID</label>
+								<input type="text" name="id" value="" id="frm-poplogin-item1" class="frm-el-input" maxlength="20"/>
+							</p>
+							<p class="frm-item" style="margin-top:8px;">
+								<label for="frm-poplogin-item2">Password</label>
+								<input type="password" name="pass" value="" id="frm-poplogin-item2" class="frm-el-input" maxlength="20" />
+							</p>
+							<button type="submit" class="btn-login btn-blue-big"><span>Login</span></button>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+			<p class="btn">
+				<a href="../partner/request_customer.html"><button type="submit" class="btn-core10 btn-register"><span>Register</span></button></a>
+			</p>
+			<p class="txt2">
+				Forgot your user ID and/or password?<br />
+				<span class="color1">TEL</span> : 82-70-4469-5657, <span class="color1">EMAIL</span> : sales@hfrnet.com
+			</p>
+		</div>
+	</div>
+	<!-- //layer login -->
+
+
+	<!-- layer download -->
+	<script>
+	function funMailSel(val){
+		if (val!="" && val!="self") {
+		   document.form_mail.email2.value = val;
+		   document.form_mail.email2.readOnly=true;
+	  } else if (val=="self") {
+		   document.form_mail.email2.value = '';
+		   document.form_mail.email2.readOnly=false;
+		   document.form_mail.email2.focus();
+	  } else if (val=="") {
+		   document.form_mail.email2.value = '';
+		   document.form_mail.email2.readOnly=true;
+	  }
+	}
+	function funCheckMail(){
+	  if (document.form_mail.name.value==""){
+            alert("You can't leave name empty.");
+            document.form_mail.name.focus();
+      }
+	  else if (document.form_mail.affiliation.value==""){
+            alert("You can't leave Company/Organization empty.");
+            document.form_mail.affiliation.focus();
+      }	  
+	  else if (document.form_mail.email1.value==""){
+            alert("Please enter your e-mail address");
+            document.form_mail.email1.focus();            
+      }
+	  else if (document.form_mail.email2.value==""){
+            alert("Please enter your e-mail address");
+            document.form_mail.email2.focus();
+      }
+	  else{
+	     document.form_mail.submit();
+	  }
+	}
+	function funMailCancel(){
+	    document.form_mail.reset();
+	}
+	function funDownLoad(v, m){
+	   document.form_mail.no.value = v;
+	   document.form_mail.view.value = m;
+	   $('#mask-down').show();
+	}
+
+	function fn_aboutDownLoad(){
+		document.form_mail.sendTarget.value = "about";
+		$('#mask-down').show();
+	}
+	</script>
+	<div id="mask-down">
+		<div class="layer-down">
+			<h1>Email is required.</h1>
+			<div class="btn-close">
+				<a href="#"><img src="../images/txt/x-close.png" art="close" /><span>CLOSE</span></a>
+			</div>
+			<div class="txt">
+				<span class="color8">Document will be sent to your email.</span>
+			</div>
+			<form name="form_mail" method="post" action="../about/send.html">
+			<input type="hidden" name="mode" value="send"/>
+			<input type="hidden" name="no" value="" />
+			<input type="hidden" name="page" value="" />
+			<input type="hidden" name="sel" value="" />
+			<input type="hidden" name="find" value=""/>
+			<input type="hidden" name="view" value=""/>
+			<input type="hidden" name="kind_dtl" value=""/>
+
+			<input type="hidden" name="sendTarget" value="" />
+			
+			<div class="holder">
+				<p class="frm-item">
+					<label for="frm-poplogin-item1">Name</label>
+					<input type="text" name="name" value="" class="frm-el-input" maxlength="80"/>
+				</p>
+				<p class="frm-item" style="margin-top:8px;">
+					<label for="frm-poplogin-item2" style="height:42px; line-height:18px;">Company/<br />Organization</label>
+					<input type="text" name="affiliation" value="" class="frm-el-input" style="margin-top:6px;" />
+				</p>
+				<p class="frm-item" style="margin-top:15px;">				
+					<label for="frm-poplogin-item2">E-mail</label>
+					<input type="text" name="email1" value="" id="email-1" class="frm-el-input" maxlength="100"/>@<input type="text" name="email2" value="" id="email-2" class="frm-el-input" maxlength="100"/>
+					<span class="frm-el-select">
+						<select name="mail"  title="Select the e-mail address" onchange="funMailSel(this.value)">
+							<option value="self" >Select</option>
+											<option value="gmail.com" >gmail.com</option>
+											<option value="yahoo.com" >yahoo.com</option>
+											<option value="hotmail.com" >hotmail.com</option>
+						</select>
+					</span>
+				</p>
+			</div>
+			<!-- button -->
+			<div class="set-button-down">
+				<span class="btn-core7 btn-blue">
+					<span class="sp-icon sp-icon-check"></span>
+					<a href="javascript:funCheckMail()">OK</a>
+				</span>
+				<span class="btn-core8 btn-grey">
+					<span class="sp-icon sp-icon-cross"></span>
+					<a href="javascript:funMailCancel()">Cancel</a>
+				</span>
+			</div>
+			<!-- //button -->
+
+			</form>
+		</div>
+	</div>
+	<!-- //layer download -->	
+	
+	<!-- content -->
+	<div id="sub-container">
+		<div class="ctl-holder">
+						<!-- left menu -->			
+			    							
+				<div id="aside">
+				<h2>About Us</h2>
+				<ul>
+					<li ><a href="../about/hfr.html">About HFR </a></li>
+					<li ><a href="../about/ceo.html">From The CEO's Desk</a></li>
+					<li ><a href="../about/history.html">History</a></li>
+					<li ><a href="../about/moral.html">Ethical Management</a></li>
+					<li ><a href="../about/environment.html">Green Management</a></li>
+					<!--
+					<li ><a href="../about/ipr.html">IPR</a></li>
+					<li ><a href="../about/download.html">Document Library</a></li>
+					-->
+					<li ><a href="../about/affiliates.html">Affiliates</a></li>
+					<li ><a href="../about/clients.html">Customers</a></li>
+
+					<li class="on"><a href="../about/certificates.html">Certificates</a></li>
+					<li ><a href="../about/news.html">News &amp; Events</a></li>
+				</ul>
+				</div>
+							<!-- //left menu -->			
+			<!-- content -->
+			<div id="content">
+								<!-- location -->
+				<div id="location">
+					<p>
+						<a href="http://hfrnet.com/eng/main/main.html"><img src="../images/ico/ico-location-home.gif" alt="home" /></a>
+						<span class="lo-1">About Us</span>
+						<span class="lo-2">Certificates</span>
+					</p>
+					<h3>Certificates</h3>
+				</div>
+				<!-- //location -->					
+				<div class="cnt-hfr">
+					<div class="txtBox">
+						These certificates show that HFR is currently registered to the standard indicated. We constantly rely <br />
+						on our customers and on the industry for feedback and validation on the directions we take in our <br />
+						products and solutions. That is why we invest our time and resources and participate in global <br />
+						standards. 
+					</div>
+					<p class="mt50"><img src="../images/img/certificates_itm1.gif" alt="certificates" /></p>
+				</div>
+			</div>
+			<!-- content -->
+		</div>
+	</div>
+	<!-- //content -->
+	
+	<!-- site allmenu -->
+	<div id="allmenu">
+		<div class="ctl-holder">
+			<dl class="first">
+				<dt>Solutions</dt>
+				<dd><a href="../product/solutions1.html">Mobile Fronthaul</a></dd>
+				<dd><a href="../product/solutions2.html">Mobile Backhaul</a></dd>
+				<dd><a href="../product/solutions3.html">Optical Networking</a></dd>
+				<dd><a href="../product/solutions4.html">Packet Networking</a></dd>
+				<dd><a href="../product/solutions5.html">Gigabit Ethernet Access</a></dd>
+			</dl>
+			<dl>
+				<dt>Products</dt>
+				<dd><a href="../product/list.html?kind=p&code=20">Cellular Coverage System</a></dd>
+				<dd><a href="../product/list.html?kind=p&code=21">Optical Transport System</a></dd>
+				<dd><a href="../product/list.html?kind=p&code=22">FTTx System</a></dd>
+			</dl>
+			<dl>
+				<dt>Technology</dt>
+				<dd><a href="../technology/download.html?kind_dtl=wp">Document Library</a></dd>
+				<dd><a href="../technology/innovation_list.html">Innovation</a></dd>
+				<dd><a href="../technology/ipr_intro.html">IPR</a></dd>
+			</dl>
+			<dl>
+				<dt>Partners</dt>
+								<dd><a href="../partner/request_customer.html">Partners Link</a></dd>
+											</dl>
+			<dl>
+				<dt>About Us
+</dt>
+				<dd><a href="../about/hfr.html">About HFR</a></dd>
+				<dd><a href="../about/ceo.html">From CEO's Desk</a></dd>
+				<dd><a href="../about/history.html">History</a></dd>
+				<dd><a href="../about/moral.html">Ethical Management</a></dd>
+				<dd><a href="../about/affiliates.html">Affiliates</a></dd>
+				<dd><a href="../about/clients.html">Customers</a></dd>
+				
+				<dd><a href="../about/certificates.html">Certificates</a></dd>
+
+				<dd><a href="../about/news.html">News & Events</a></dd>
+			</dl>
+		</div>
+		<!-- //top button -->
+		<a href="#toppage">
+			<div id="top-btn">
+				<p>TOP</p>
+			</div>
+		</a>
+		<!-- //top button -->
+	</div>
+	<!-- //site allmenu -->
+	
+	<!-- footer -->
+	<div id="footer">
+		<div class="ctl-holder">
+			<!-- family site -->
+			<dl>
+				<dt><a href="#">Family Site</a></dt>
+				<dd>
+					<ul>
+						<li><a href="http://www.hfrnet.com/hfr_kor/">HFR</a></li>
+						<li><a href="http://www.zpsys.com/" target="_blank">ZPSYS</a></li>
+						<!--
+						<li><a href="http://www.symtechnology.com" target="_blank">SYM</a></li>
+						-->
+					</ul>
+				</dd>
+			</dl>
+			<!-- //family site -->
+			
+			<!-- site info -->
+			<address>
+				Hana EZ tower 5F, 10, Seongnam-daero43beon-gil, Bundang-gu, Seongnam-si, Gyeonggi-do, Korea<br />
+				<span class="entxt">
+					TEL <span>+82-31-712-7768</span>
+					<span class="liner">|</span>
+					FAX <span>+82-31-712-7948</span>
+					<span class="liner">|</span>
+					E-MAIL <a href="mailto:resonant@hfrnet.com">resonant@hfrnet.com</a>
+				</span>
+			</address>
+			<p class="copyright">COPYRIGHTⓒ2014HFR.inc. ALL RIGHTS RESERVED.</p>
+			<!-- //site info -->
+			
+			<!-- sns -->
+			<ul id="sns">
+				<li><a href="https://www.facebook.com/hfrinc" target="_blank"><img src="../images/ico/ico-main-f.png" alt="facebook" /></a></li>
+				<li><a href="https://twitter.com/hfr_resonant" target="_blank"><img src="../images/ico/ico-main-t.png" alt="tweeter" /></a></li>
+				<li><a href="https://kr.linkedin.com/in/hfrnet" target="_blank"><img src="../images/ico/ico-main-in.png" alt="linkedin" /></a></li>
+			</ul>
+			<!-- //sns -->
+
+		</div>
+	</div>
+	<!-- //footer -->
+
+</body>
+</html>

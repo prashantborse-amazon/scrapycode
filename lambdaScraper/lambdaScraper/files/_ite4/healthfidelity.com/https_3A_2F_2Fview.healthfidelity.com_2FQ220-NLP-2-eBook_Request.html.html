@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--
+        IMPORTANT:
+        * The "mktoName" fields CAN BE edited if the template is in use.
+        * The "id" MUST NOT be changed after template is in use.
+    -->
+    <script type="text/javascript" src="//cdn.bizible.com/scripts/bizible.js" async></script>  
+    <meta charset="utf-8">
+    <title>Health Fidelity | NLP eBook | Part 2: The Clinical and Financial Opportunity of Suspecting</title>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <!-- section off/on -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <meta name="robots" content="index, follow"><meta name="keywords" content="Health Fidelity, risk adjustment, prospective risk adjustment, risk analytics, prospective risk, risk management software, medicare risk adjustment, risk adjustment factor, CMS risk adjustment, medicare advantage star ratings, medicare advantage risk adjustment, radv, HCC coding, radv audit, Natural Language Processing, NLP, compliance"><meta name="description" content="An in-depth look at how our technology stack processes information from our NLP engine, Lumanent Insights, to derive clinical suspects and deliver them to providers.">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" type="text/css" media="all">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//healthfidelity.com/wp-content/themes/hf/marketo/landing-page.css?v=20170112b">
+    <style>
+        @media (min-width: 768px) {
+            .hero-height {
+                height: 400px;
+            }
+        }
+    </style>
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-61502207-1', 'auto');
+    ga('require', 'GTM-WFKFJK9');
+    ga('set', 'userId', '');
+    ga('set', 'dimension1', '');
+    ga('send', 'pageview'); 
+    </script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-61502207-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-61502207-1');
+</script>
+
+
+<style>.mktoGen.mktoImg {display:inline-block; line-height:0;}</style>
+</head>
+<body id="hf-lp" class="master-v3">
+    
+    <header id="masthead" class="site-header" role="banner">
+        <div class="hf-mkt-section-label">Header</div>
+        <div class="container">
+            <div class="content">
+                <div class="site-branding">
+                <p class="site-title"><a href="//healthfidelity.com/" rel="home">Health Fidelity</a></p>
+                <p class="site-description"></p>
+                </div><!-- .site-branding -->
+                <nav id="site-navigation" class="main-navigation" role="navigation">
+                    <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+                        <i class="fa fa-bars"></i>
+                        <span class="text">Menu</span>
+                    </button>
+                    <div class="menu-primary-container">
+                        <ul id="primary-menu" class="menu">
+                            <li id="menu-item-29" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-9 current_page_item menu-item-29">
+                                <a href="#form-section">Download NLP eBook Part 2</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav><!-- #site-navigation -->
+            </div>
+        </div>
+    </header><!-- #masthead -->
+    <div id="content" class="mktoContent site-content content-area">
+        <div data-section="banner" class="section banner-section" style="display:block;">
+            <div class="hf-mkt-section-label">Banner</div>
+            <div class="image">
+                <div class="mktoImg mktoGen" id="mkto_gen_banner_image"><img class="lpimg" id="banner_image" mktoname="Banner Image" src="/rs/951-BHK-440/images/NLPEBook2Header.png"></div>
+            </div>
+        </div>
+        <div data-section="hero" class="section hero-section intro-section" style="background-color:#FFFFFF; display:none;">
+            <div class="hf-mkt-section-label">Hero</div>
+            <div class="image" style="display:none;">
+                <div class="mktoImg mktoGen" id="mkto_gen_hero_image"><img class="mktoImg" id="hero_image" mktoname="Hero Image" src="//healthfidelity.com/wp-content/themes/hf/marketo/images/intro@2x.jpg"></div>
+            </div>
+            <div class="content">
+                <div class="container">
+                    <div class="wrapper middle-align hero-height">
+                        <div class="wrapper-inner middle-align-inner">
+                            <div class="mktoText" id="hero_title"><div>
+<h3 style="text-align: center;">Traditional&nbsp;Risk Adjustment Approaches are&nbsp;Myopic...</h3>
+<div style="color: #000000; font-family: 'Open Sans'; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;"><br /></div>
+<div style="color: #000000; font-family: 'Open Sans'; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;"><br /></div>
+<table style="width: 600px; margin-left: auto; margin-right: auto;">
+<tbody>
+<tr>
+<td style="width: 550px; height: 350px;">
+<div><img src="https://view.healthfidelity.com/rs/951-BHK-440/images/360-degreeDiagramB1.jpg" alt="360-degreeDiagramB1.jpg" height="327" width="550" constrain="true" imagepreview="false" /></div>
+</td>
+</tr>
+</tbody>
+</table>
+<h3 style="text-align: center;">&nbsp;</h3>
+<h3 style="text-align: center;">...it's Time for a Completely New&nbsp;Perspective.<br /></h3>
+</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-section="compare" class="section compare-section planning-section" style="display:none;">
+            <div class="hf-mkt-section-label">Compare</div>
+            <div class="container">
+                <div class="row">
+                    <div class="evaluate-col col">
+                        <div class="image-container" style="display:none;">
+                            <div class="image">
+                                <div class="mktoImg mktoGen" id="mkto_gen_compare_step1_image"><img class="mktoImg" id="compare_step1_image" mktoname="Compare Step #1 Image" src="//healthfidelity.com/wp-content/themes/hf/marketo/images/planning-evaluate@2x.png" width="50%"></div>
+                            </div>
+                        </div>
+                        <div class="mktoText" id="compare_step1_title"><h2>Evaluate</h2></div>
+                        <div class="mktoText" id="compare_step1_text">Connect with us to reserve a time during the conference. We look forward to seeing you in Nashville.</div>
+                        <p style="display:none;"><a class="hf-icon-link" href="#" target="_blank"><i class="icon fa fa-cloud-download"></i>Download</a></p>
+                    </div>
+                    <div class="compare-col col">
+                        <div class="image-container" style="display:none;">
+                            <div class="image">
+                                <div class="mktoImg mktoGen" id="mkto_gen_compare_step2_image"><img class="mktoImg" id="compare_step2_image" mktoname="Compare Step #2 Image" src="//healthfidelity.com/wp-content/themes/hf/marketo/images/planning-compare@2x.png" width="50%"></div>
+                            </div>
+                        </div>
+                        <div class="mktoText" id="compare_step2_title"><h2>Compare</h2></div>
+                        <div class="mktoText" id="compare_step2_text"></div>
+                        <p style="display:none;"><a class="hf-icon-link" href="#" target="_blank"><i class="icon fa fa-cloud-download"></i>Download</a></p>
+                    </div>
+                    <div class="inquire-col col">
+                        <div class="image-container" style="display:none;">
+                            <div class="image">
+                                <div class="mktoImg mktoGen" id="mkto_gen_compare_step3_image"><img class="mktoImg" id="compare_step3_image" mktoname="Compare Step #3 Image" src="//healthfidelity.com/wp-content/themes/hf/marketo/images/planning-inquire@2x.png" width="50%"></div>
+                            </div>
+                        </div>
+                        <div class="mktoText" id="compare_step3_title"><h2>Inquire</h2></div>
+                        <div class="mktoText" id="compare_step3_text">Connect with us to reserve a time during the conference. We look forward to seeing you in Nashville.</div>
+                        <p style="display:none;"><a class="hf-icon-link" href="#" target="_blank"><i class="icon fa fa-cloud-download"></i>Download</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-section="cs" class="section cs-section casestudy-section title-section" style="display:none;">
+            <div class="hf-mkt-section-label">CS</div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="info">
+                            <div class="image" align="center" style="display:none;">
+                                <div class="mktoImg mktoGen" id="mkto_gen_casestudy_image"><img class="mktoImg" id="casestudy_image" mktoname="CS Image" src="//healthfidelity.com/wp-content/themes/hf/images/upmc-logo.png" width="65%" align="middle"></div>
+                            </div>
+                            <div class="mktoText" id="casestudy_content1">
+                                <p>Leave with key takeaways and lessons learned that will enable your organization to succeed in similar circumstances.</p>
+                            </div>
+                            <div class="stats" style="display:none;">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="stat">
+                                            <p class="stat-amount">$229</p>
+                                            <p class="stat-label">Incremental Revenue Per Member</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="stat">
+                                            <p class="stat-amount">4X</p>
+                                            <p class="stat-label">Coder Productivity</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mktoText" id="casestudy_content2">
+                                <p>Leave with key takeaways and lessons learned that will enable your organization to succeed in similar circumstances.</p>
+                            </div>
+                            <p style="display:none;"><a class="hf-icon-link" href="#"><i class="icon fa fa-cloud-download"></i>Download the Case Study</a></p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="content">
+                            <div class="mktoText" id="casestudy_section_content">
+                                <h2>Peer Perspective: UPMC Case Study</h2>
+                                <p><em>Mary Beth Jenkins, SVP &amp; COO at UPMC HEALTH PLAN and Dr. Adele Towers, MPH at UPMC Enterprises</em> will explain the challenges their plan was facing in risk adjustment for their MA and Exchange populations. Together, they'll discuss how they overcame several challenges and improved plan performance.</p>
+                                <p>Leave with key takeaways and lessons learned that will enable your organization to succeed in similar circumstances.</p>
+                            </div>
+                        </div>
+                        <div class="event-datetime" style="display:none;">
+                            <div class="row">
+                                <div class="image col-xs-3">
+                                    <div class="mktoImg mktoGen" id="mkto_gen_casestudy_section_datetime_image"><img class="mktoImg" id="casestudy_section_datetime_image" mktoname="CS Date/Time Image" src="//healthfidelity.com/wp-content/themes/hf/marketo/images/calendar-icon@2x.png"></div>
+                                </div>
+                                <div class="col-xs-9">
+                                    <div class="mktoText" id="casestudy_section_datetime">
+                                        <h3>Monday, March&nbsp;21 at 2:00PM</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-section="1col" class="section onecol-section casestudy-section" style="display:block;">
+            <div class="hf-mkt-section-label">1Col</div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="content">
+                            <div class="mktoText" id="onecol_content1"><h1 style="text-align: center;"><span style="font-family: helvetica, arial, sans-serif;">Natural Language Processing shouldn't be a mystery.</span><br /></h1>
+<div style="text-align: center;"><span style="font-family: helvetica, arial, sans-serif;">That's why we're shining a light into the black box.</span></div>
+<div style="text-align: center;"><span style="font-family: helvetica, arial, sans-serif;"></span><br /></div>
+<div style="text-align: center;"><br /><span style="font-size: 12.0pt; line-height: 115%; font-family: 'Helvetica Neue';">Clinical suspecting is an exciting next step in applying the use of NLP to unstructured clinical data. It&rsquo;s a prospective-looking view of potential conditions and treatments based on multiple data sources to surface incomplete and under-documented diagnoses (suspects). In <span style="color: #007ac9;"><em>Natural Language Processing in Healthcare: The Clinical and Financial Opportunity of Suspecting</em></span>, the second part&nbsp;of our NLP eBook series, learn about this compelling, effective use of NLP technology.</span><br /></div>
+<p><span></span><br /></p></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="event-datetime" style="display:none;">
+                            <div class="row">
+                                <div class="image col-xs-3">
+                                    <div class="mktoImg mktoGen" id="mkto_gen_onecol_datetime_image"><img class="mktoImg" id="onecol_datetime_image" mktoname="1Col Date/Time Image" src="//healthfidelity.com/wp-content/themes/hf/marketo/images/calendar-icon@2x.png"></div>
+                                </div>
+                                <div class="col-xs-9">
+                                    <div class="mktoText" id="onecol_datetime"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-section="2col" class="section twocol-section casestudy-section" style="display:block;">
+            <div class="hf-mkt-section-label">2Col</div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="content">
+                            <div class="mktoText" id="twocol_content1"><h3><span style="font-family: helvetica, arial, sans-serif; color: #057ac9;">How NLP Works</span><br /></h3>
+<p style="margin-bottom: 8.0pt; background: white;"><span style="font-size: 12.0pt; line-height: 115%; font-family: 'Helvetica Neue'; color: black;">Lumanent Insights ingests data from problem lists, billing data, meds lists, claims, pharmacy, RAPS/EDPS, MAO-004, MOR, and clinical documentation. In every instance, alongside the derivation through rules-based and complex logic, a possible suspect is then measured against MEAT criteria, ranked, and presented to clinicians to deliver care.</span></p>
+<hr />
+<div>&nbsp;</div>
+<h3><span style="font-family: helvetica, arial, sans-serif; color: #057ac9;">How NLP&nbsp;Suspecting Helps</span></h3>
+<div>
+<p style="margin-bottom: 8.0pt; background: white;"><span style="font-size: 12.0pt; line-height: 115%; font-family: 'Helvetica Neue'; color: black;">In many ways, NLP suspecting is the chart prep that doctors have never had time to do. Physicians&rsquo; notes, pharmacy orders, claims, administrative data, all of this is part of the 80% of data in healthcare regarded as &ldquo;unstructured.&rdquo; By parsing that data with NLP technology and delivering suspected undocumented or under-documented conditions to physicians, more necessary care is delivered and more accurate risk profiles are achieved than previously possible.</span></p>
+<hr style="cursor: default; color: #000000; font-family: 'Open Sans'; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;" />
+<div style="color: #000000; font-family: 'Open Sans'; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">&nbsp;</div>
+<h3 style="color: #000000; font-family: 'Open Sans'; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><span style="font-family: helvetica, arial, sans-serif; color: #057ac9;">How NLP&nbsp;Suspecting&nbsp;Supports Provider Goals</span></h3>
+<div>
+<p>Health Fidelity's Lumanent Pre-Encounter Prep is a customized workflow that delivers data-validated clinical suspects to doctors and care managers to ensure a complete and accurate medical record. Equipped with this insight, practices are more effective in managing patient conditions and able to fully realize the revenue&nbsp;of care delivered.&nbsp;</p>
+</div>
+&nbsp;</div></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="content">
+                            <div class="mktoText" id="twocol_content2"><p><img src="https://view.healthfidelity.com/rs/951-BHK-440/images/Lumanent PEP Thumbnail.png" width="550" height="481" constrain="true" imagepreview="false" /><br /></p>
+<p style="line-height: normal;"><span style="font-size: 12.0pt; font-family: 'Helvetica Neue';">Lumanent&trade; Pre-Encounter Prep ensures that a patient&rsquo;s current conditions are completely and accurately captured before the patient is seen. By delivering clinical suspects through Pre-Encounter Prep, organizational goals like improving risk adjustment factor, empowering clinical care efforts, and standardizing risk capture go from goals to effective parts of your organization&rsquo;s strategy for success.</span>&nbsp;</p>
+<p style="margin-bottom: 7.5pt; line-height: normal; background: white;"><span style="font-size: 12.0pt; font-family: 'Helvetica Neue'; color: black;">Clinical suspecting through Pre-Encounter Prep is an exciting technology pushing risk adjustment to new levels, supporting payer and provider goals under value-based care. If you&rsquo;d like to know more, this new eBook is a terrific first step.</span></p>
+<p><strong><span style="font-family: helvetica, arial, sans-serif;"><br /></span></strong></p></div>
+                        </div>
+                        <div class="event-datetime" style="display:none;">
+                            <div class="row">
+                                <div class="image col-xs-3">
+                                    <div class="mktoImg mktoGen" id="mkto_gen_twocol_datetime_image"><img class="mktoImg" id="twocol_datetime_image" mktoname="2Col Date/Time Image" src="//healthfidelity.com/wp-content/themes/hf/marketo/images/calendar-icon@2x.png"></div>
+                                </div>
+                                <div class="col-xs-9">
+                                    <div class="mktoText" id="twocol_datetime">
+                                        <h3>Monday, March&nbsp;21 at 2:00PM</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-section="3col" class="section threecol-section casestudy-section" style="display:none;">
+            <div class="hf-mkt-section-label">3Col</div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="content">
+                            <div class="mktoText" id="threecol_content1">
+                                <h2>Lorem ipsum dolor sit amet</h2>
+                                <p>Ut sed laoreet felis. Ut tristique ante orci, in blandit est scelerisque non. Vestibulum quis elementum enim. Phasellus congue pulvinar cursus. Nam hendrerit pellentesque malesuada. Vivamus dui tellus, tempus a fermentum at, eleifend ut ligula. Suspendisse quis augue vulputate ligula egestas ullamcorper.</p>
+                                <p>Pellentesque sit amet enim sed odio pulvinar facilisis. Donec quis elit lobortis, finibus nisl eget, pulvinar nisl.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="content">
+                            <div class="mktoText" id="threecol_content2">
+                                <h2>Integer sollicitudin tincidunt ante eget rutrum</h2>
+                                <p>Ut sed laoreet felis. Ut tristique ante orci, in blandit est scelerisque non. Vestibulum quis elementum enim. Phasellus congue pulvinar cursus. Nam hendrerit pellentesque malesuada. Vivamus dui tellus, tempus a fermentum at, eleifend ut ligula. Suspendisse quis augue vulputate ligula egestas ullamcorper.</p>
+                                <p>Pellentesque sit amet enim sed odio pulvinar facilisis. Donec quis elit lobortis, finibus nisl eget, pulvinar nisl.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="content">
+                            <div class="mktoText" id="threecol_content3">
+                                <h2>Proin sed est a sem</h2>
+                                <p>Ut sed laoreet felis. Ut tristique ante orci, in blandit est scelerisque non. Vestibulum quis elementum enim. Phasellus congue pulvinar cursus. Nam hendrerit pellentesque malesuada. Vivamus dui tellus, tempus a fermentum at, eleifend ut ligula. Suspendisse quis augue vulputate ligula egestas ullamcorper.</p>
+                                <p>Pellentesque sit amet enim sed odio pulvinar facilisis. Donec quis elit lobortis, finibus nisl eget, pulvinar nisl.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-section="form" id="form-section" class="section form-section meeting-section" style="display:block;">
+            <div class="hf-mkt-section-label">Form</div>
+            <div class="container">
+                <div class="row">
+                    <div class="content col-sm-6">
+                        <div class="mktoText" id="form_content"><h2 style="color: #000000; font-family: 'Open Sans'; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;"><span style="color: #ffffff;">Download&nbsp;NLP eBook Part 2:</span></h2>
+<h2 style="color: #000000; font-family: 'Open Sans'; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;"><span style="color: #ffffff;" mce-data-marked="1">The Clinical and Financial Opportunity of Suspecting</span></h2>
+<p style="color: #000000; font-family: 'Open Sans'; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;"><span style="color: #ffffff;">Please provide the information requested to the right. An email with the link to download a PDF of the eBook will be sent to your inbox.&nbsp;</span></p></div>
+                    </div>
+                    <div class="form col-sm-6">
+                        <div class="mktoForm" id="form_primary"><div id='lpeCDiv_17036' class='lpeCElement FORM-Content-EBook'><span class='lpContentsItem formSpan'>
+<script src="/js/forms2/js/forms2.min.js"></script>
+<form class="mktoForm" id="mktoForm_1096">
+</form>
+<script>
+  (function (){
+    var formDescriptor = {"Id":1096,"Vid":1096,"Status":"approved","Name":"FORM-Content-EBook","Description":"","Layout":"above","GutterWidth":10,"OffsetWidth":10,"HasTwoButtons":true,"SubmitLabel":"Download eBook","ResetLabel":"Clear","ButtonLocation":"120","LabelWidth":100,"FieldWidth":150,"ToolTipType":"none","FontFamily":"Helvetica, Arial, sans-serif","FontSize":"13px","FontColor":"#333","FontUrl":null,"LineMargin":10,"ProcessorVersion":2,"CreatedByUserid":206,"ProcessOptions":{"language":"English","locale":"en_US","profiling":{"isEnabled":true,"numberOfProfilingFields":1,"alwaysShowFields":[]},"socialSignOn":{"isEnabled":false,"enabledNetworks":[],"cfId":null,"codeSnippet":null}},"EnableDeferredMode":0,"ButtonType":null,"ButtonImageUrl":null,"ButtonText":null,"ButtonSubmissionText":"Please Wait","ButtonStyle":{"id":13,"className":"mktoRound","css":".mktoForm .mktoButtonWrap.mktoRound .mktoButton {\ncolor:#fff;\nborder:1px solid #a3bee2;\n-webkit-border-radius:5px;\n-moz-border-radius:5px;\nborder-radius:5px;\nbackground-color:#779dd5;\nbackground-image: -webkit-gradient(linear, left top, left bottom, from(#779dd5), to(#5186cb));\nbackground-image: -webkit-linear-gradient(top, #779dd5, #5186cb);\nbackground-image: -moz-linear-gradient(top, #779dd5, #5186cb);\nbackground-image: linear-gradient(to bottom, #779dd5, #5186cb);\npadding:0.4em 1em;\nfont-size:1em;\n}\n.mktoForm .mktoButtonWrap.mktoRound .mktoButton:hover {\nborder:1px solid #45638c;\n}\n.mktoForm .mktoButtonWrap.mktoRound .mktoButton:focus {\noutline:none;\nborder:1px solid #45638c;\n}\n.mktoForm .mktoButtonWrap.mktoRound .mktoButton:active{\nbackground-color:#5186cb;\nbackground-image: -webkit-gradient(linear, left top, left bottom, from(#5186cb), to(#779dd5));\nbackground-image: -webkit-linear-gradient(top, #5186cb, #779dd5);\nbackground-image: -moz-linear-gradient(top, #5186cb, #779dd5);\nbackground-image: linear-gradient(to bottom, #5186cb, #779dd5);\n}\n","buttonColor":null},"ThemeStyle":{"id":6,"displayOrder":4,"name":"Round","backgroundColor":"#FFF","layout":"left","fontFamily":"Helvetica, Arial, sans-serif","fontSize":"13px","fontColor":"#333","offsetWidth":10,"gutterWidth":10,"labelWidth":100,"fieldWidth":150,"lineMargin":10,"useBackgroundColorOnPreview":false,"css":"","href":"css\/forms2-theme-round.css","buttonStyleId":13},"ThemeStyleOverride":null,"rows":[[{"Id":2446,"Name":"FirstName","IsRequired":true,"Datatype":"string","Maxlength":255,"InputLabel":"First Name:","InputInitialValue":"","InputSourceChannel":"constant","VisibleRows":4,"FieldWidth":300,"LabelWidth":300,"PlaceholderText":"First Name","ValidationMessage":"This field is required."}],[{"Id":2447,"Name":"LastName","IsRequired":true,"Datatype":"string","Maxlength":255,"InputLabel":"Last Name:","InputInitialValue":"","InputSourceChannel":"constant","FieldWidth":300,"LabelWidth":300,"PlaceholderText":"Last Name","ValidationMessage":"This field is required."}],[{"Id":2445,"Name":"Email","IsRequired":true,"Datatype":"email","Maxlength":255,"InputLabel":"Email Address:","InputInitialValue":"","InputSourceChannel":"constant","VisibleRows":4,"FieldWidth":300,"LabelWidth":300,"PlaceholderText":"Email Address","ValidationMessage":"Must be valid email. \u003Cspan class='mktoErrorDetail'\u003Eexample@yourdomain.com\u003C\/span\u003E"}],[{"Id":2450,"Name":"Phone","IsRequired":true,"Datatype":"phone","Maxlength":255,"InputLabel":"Phone Number:","InputInitialValue":"","InputSourceChannel":"constant","VisibleRows":4,"FieldWidth":300,"LabelWidth":300,"ProfilingFieldNumber":0,"PlaceholderText":"Phone Number","ValidationMessage":"Must be a phone number. \u003Cspan class='mktoErrorDetail'\u003E503-555-1212\u003C\/span\u003E"}],[{"Id":2449,"Name":"Title","IsRequired":true,"Datatype":"string","Maxlength":255,"InputLabel":"Job Title:","InputInitialValue":"","InputSourceChannel":"constant","VisibleRows":4,"FieldWidth":300,"LabelWidth":300,"ProfilingFieldNumber":0,"PlaceholderText":"Job Title","ValidationMessage":"This field is required."}],[{"Id":2448,"Name":"Company","IsRequired":true,"Datatype":"string","Maxlength":255,"InputLabel":"Organization Name:","InputInitialValue":"","InputSourceChannel":"constant","VisibleRows":4,"FieldWidth":300,"LabelWidth":300,"ProfilingFieldNumber":0,"PlaceholderText":"Organization Name","ValidationMessage":"This field is required."}],[{"Id":2453,"Name":"LeadSource","Datatype":"hidden","Maxlength":255,"InputLabel":"Lead Source:","InputInitialValue":"Inbound: Direct Traffic","InputSourceChannel":"url","InputSourceSelector":"UTM_Source","ProfilingFieldNumber":0}],[{"Id":2454,"Name":"Lead_Source_Detail__c","Datatype":"hidden","Maxlength":255,"InputLabel":"Lead Source Detail (L):","InputInitialValue":"eBook Download","InputSourceChannel":"url","InputSourceSelector":"UTM_Medium","ProfilingFieldNumber":0}],[{"Id":2455,"Name":"content","Datatype":"hidden","Maxlength":255,"InputLabel":"Content:","InputInitialValue":"","InputSourceChannel":"url","InputSourceSelector":"UTM_Content","ProfilingFieldNumber":0}],[{"Id":2451,"Name":"Profiling","Datatype":"profiling","InputInitialValue":"","ProfilingFieldNumber":0,"IsLabelToLeft":true}]],"fieldsetRows":{"2451":[[{"Id":2456,"Name":"Plan_Type__c","IsRequired":true,"Datatype":"picklist","Maxlength":255,"PicklistValues":[{"label":"Select the option that best describes your organization:","value":"","selected":true,"isDefault":true},{"label":"National Health Plan","value":"National Health Plan"},{"label":"Regional Health Plan","value":"Regional Health Plan"},{"label":"IDFS \/ Provider Sponsored Health Plan","value":"IDFS \/ Provider Sponsored Health Plan"},{"label":"ACO","value":"ACO"},{"label":"Risk Bearing Provider \/ IPA","value":"Risk Bearing Provider \/ IPA"},{"label":"Health System","value":"Health System"},{"label":"Other","value":"Other"}],"DefaultValue":[""],"InputLabel":"Organization Type:","InputInitialValue":"","InputSourceChannel":"constant","VisibleRows":4,"FieldWidth":300,"LabelWidth":300,"ProfilingFieldNumber":0,"ValidationMessage":"This field is required.","FieldsetFieldId":2451}],[{"Id":2452,"Name":"RA_Challenge__c","IsRequired":true,"Datatype":"picklist","Maxlength":4099,"PicklistValues":[{"label":"Select your Risk Adjustment Objective(s): ","value":"","selected":true,"isDefault":true},{"label":"Revenue Growth","value":"Revenue Growth"},{"label":"Coder Productivity \/ Efficiency","value":"Coder Productivity \/ Efficiency"},{"label":"Audit Risk  \/ Compliance Adherence","value":"Audit Risk  \/ Compliance Adherence"},{"label":"Data Integration","value":"Data Integration"},{"label":"Vendor Consolidation","value":"Vendor Consolidation"},{"label":"Plan Profitability","value":"Plan Profitability"},{"label":"Cost Reduction","value":"Cost Reduction"},{"label":"Analytics \/ Statistical Modeling","value":"Analytics \/ Statistical Modeling"}],"DefaultValue":[""],"InputLabel":"Risk Adjustment Objective:","InputInitialValue":"","InputSourceChannel":"constant","IsMultiselect":true,"VisibleRows":4,"FieldWidth":300,"LabelWidth":218,"ProfilingFieldNumber":0,"ValidationMessage":"This field is required.","FieldsetFieldId":2451}],[{"Id":2460,"Name":"Timing__c","IsRequired":true,"Datatype":"picklist","Maxlength":255,"PicklistValues":[{"label":"When do you plan to invest in your program?","value":"","selected":true,"isDefault":true},{"label":"Within next 6 months","value":"Within next 6 months"},{"label":"6 to 12 months","value":"6 to 12 months"},{"label":"12 to 18 months","value":"12 to 18 months"},{"label":"18+ months","value":"18+ months"}],"DefaultValue":[""],"InputLabel":"Risk Adjustment Timing:","InputInitialValue":"","InputSourceChannel":"constant","VisibleRows":4,"FieldWidth":300,"LabelWidth":300,"ProfilingFieldNumber":0,"ValidationMessage":"This field is required.","FieldsetFieldId":2451}],[{"Id":2457,"Name":"RA_Approach__c","IsRequired":true,"Datatype":"picklist","Maxlength":4099,"PicklistValues":[{"label":"Select the activities underway in your department:","value":"","selected":true,"isDefault":true},{"label":"Insource Coding Dept","value":"Insource Coding Dept"},{"label":"Outsourced Coding Team","value":"Outsourced Coding Team"},{"label":"Retrospective Review","value":"Retrospective Review"},{"label":"Prospective Review","value":"Prospective Review"}],"DefaultValue":[""],"InputLabel":"Risk Adjustment Approach","InputInitialValue":"","InputSourceChannel":"constant","IsMultiselect":true,"VisibleRows":4,"FieldWidth":300,"LabelWidth":300,"ProfilingFieldNumber":0,"ValidationMessage":"This field is required.","FieldsetFieldId":2451}],[{"Id":2461,"Name":"Physician_Network__c","IsRequired":true,"Datatype":"picklist","Maxlength":255,"PicklistValues":[{"label":"What portion of your Physician Network is owned?","value":"","selected":true,"isDefault":true},{"label":"\u003C25% Owned Physician Network","value":"\u003C25% Owned Physician Network"},{"label":"25-49% Owned Physician Network","value":"25-49% Owned Physician Network"},{"label":"50-75% Owned Physician Network","value":"50-75% Owned Physician Network"},{"label":"\u003E75% Owned Physician Network","value":"\u003E75% Owned Physician Network"},{"label":"Affiliated Only Network","value":"Affiliated Only Network"}],"DefaultValue":[""],"InputLabel":"Physician Network Ownership:","InputInitialValue":"","InputSourceChannel":"constant","VisibleRows":4,"FieldWidth":300,"LabelWidth":300,"ProfilingFieldNumber":0,"ValidationMessage":"This field is required.","FieldsetFieldId":2451}],[{"Id":2459,"Name":"Chart_Retrieval_Vendor__c","IsRequired":true,"Datatype":"picklist","Maxlength":255,"PicklistValues":[{"label":"Who is your Chart Retrieval Vendor?","value":"","selected":true,"isDefault":true},{"label":"Performs Inhouse","value":"Performs Inhouse"},{"label":"EMSI","value":"EMSI"},{"label":"Datafied","value":"Datafied"},{"label":"Healthport \/ Ciox","value":"Healthport \/ Ciox"},{"label":"Mediconnect","value":"Mediconnect"},{"label":"Optum","value":"Optum"},{"label":"Inovalon","value":"Inovalon"},{"label":"Altegra","value":"Altegra"},{"label":"Verisk \/ Verscend","value":"Verisk \/ Verscend"},{"label":"ArroHealth","value":"ArroHealth"},{"label":"Advantmed","value":"Advantmed"},{"label":"Other","value":"Other"}],"DefaultValue":[""],"InputLabel":"Chart Retrieval Vendor:","InputInitialValue":"","InputSourceChannel":"constant","VisibleRows":4,"FieldWidth":300,"LabelWidth":300,"ProfilingFieldNumber":0,"ValidationMessage":"This field is required.","FieldsetFieldId":2451}],[{"Id":2458,"Name":"Submissions_Vendor__c","IsRequired":true,"Datatype":"picklist","Maxlength":255,"PicklistValues":[{"label":"Who is your Submissions Vendor?","value":"","selected":true,"isDefault":true},{"label":"Perform Inhouse","value":"Performs Inhouse"},{"label":"Optum","value":"Optum"},{"label":"Inovalon","value":"Inovalon"},{"label":"Altegra","value":"Altegra"},{"label":"Verisk \/ Verscend","value":"Verisk \/ Verscend"},{"label":"Trizetto","value":"Trizetto"},{"label":"Wipro","value":"Wipro"},{"label":"Other","value":"Other"}],"DefaultValue":[""],"InputLabel":"Submissions Vendor:","InputInitialValue":"","InputSourceChannel":"constant","VisibleRows":4,"FieldWidth":300,"LabelWidth":300,"ProfilingFieldNumber":0,"ValidationMessage":"This field is required.","FieldsetFieldId":2451}],[{"Id":2462,"Name":"Comment_Capture__c","IsRequired":true,"Datatype":"textarea","Maxlength":32768,"InputLabel":"How can Health Fidelity best serve you?","InputInitialValue":"","InputSourceChannel":"constant","VisibleRows":2,"FieldWidth":300,"LabelWidth":300,"ProfilingFieldNumber":0,"PlaceholderText":"How can Health Fidelity best serve you?","ValidationMessage":"This field is required.","FieldsetFieldId":2451}]]},"action":"\/index.php\/leadCapture\/save","munchkinId":"951-BHK-440","invalidInputMsg":"Invalid Input","formSubmitFailedMsg":"Submission failed, please try again later."};
+    MktoForms2.setOptions({baseUrl:"/js/forms2/"});
+    var isDev = false;
+    if(isDev && window.console && window.JSON){
+      console.log(JSON.stringify(formDescriptor, null, "  "));
+    }
+    formDescriptor.lpId = 1885;
+    var form = MktoForms2.newForm(formDescriptor, function (form){
+      var lpFields = {"lpId":1885,"subId":206,"munchkinId":"951-BHK-440","lpurl":"\/\/view.healthfidelity.com\/Q220-NLP-2-eBook_Request.html?cr={creative}&kw={keyword}"};
+      var pageFields = MktoForms2.getPageFields();
+      form.addHiddenFields(lpFields);
+      form.addHiddenFields(pageFields);
+      if(window.mktoPreFillFields){
+        form.setValuesCoerced(mktoPreFillFields);
+      }
+      if(!form.EnableDeferredMode){
+        form.render();
+      }
+    });     
+  })()
+</script>
+
+<noscript>
+  <form class='mktoForm mktoNoJS' action='/index.php/leadCapture/save' method='post'>
+        <div class='mktoFormRow'>
+          <div class='mktoFormCol'>
+            <label class="mktoLabel" for='FirstName'>
+              First Name:            </label>
+            <input type="text" class='mktoField mktoTextField' name='FirstName' id='FirstName'>
+          </div>
+        </div>
+        <div class='mktoFormRow'>
+          <div class='mktoFormCol'>
+            <label class="mktoLabel" for='LastName'>
+              Last Name:            </label>
+            <input type="text" class='mktoField mktoTextField' name='LastName' id='LastName'>
+          </div>
+        </div>
+        <div class='mktoFormRow'>
+          <div class='mktoFormCol'>
+            <label class="mktoLabel" for='Email'>
+              Email Address:            </label>
+            <input type="text" class='mktoField mktoTextField' name='Email' id='Email'>
+          </div>
+        </div>
+        <div class='mktoFormRow'>
+          <div class='mktoFormCol'>
+            <label class="mktoLabel" for='Phone'>
+              Phone Number:            </label>
+            <input type="text" class='mktoField mktoTextField' name='Phone' id='Phone'>
+          </div>
+        </div>
+        <div class='mktoFormRow'>
+          <div class='mktoFormCol'>
+            <label class="mktoLabel" for='Title'>
+              Job Title:            </label>
+            <input type="text" class='mktoField mktoTextField' name='Title' id='Title'>
+          </div>
+        </div>
+        <div class='mktoFormRow'>
+          <div class='mktoFormCol'>
+            <label class="mktoLabel" for='Company'>
+              Organization Name:            </label>
+            <input type="text" class='mktoField mktoTextField' name='Company' id='Company'>
+          </div>
+        </div>
+        <div class='mktoFormRow'>
+          <div class='mktoFormCol'>
+            <label class="mktoLabel" for='LeadSource'>
+              Lead Source:            </label>
+            <input type="text" class='mktoField mktoTextField' name='LeadSource' id='LeadSource'>
+          </div>
+        </div>
+        <div class='mktoFormRow'>
+          <div class='mktoFormCol'>
+            <label class="mktoLabel" for='Lead_Source_Detail__c'>
+              Lead Source Detail (L):            </label>
+            <input type="text" class='mktoField mktoTextField' name='Lead_Source_Detail__c' id='Lead_Source_Detail__c'>
+          </div>
+        </div>
+        <div class='mktoFormRow'>
+          <div class='mktoFormCol'>
+            <label class="mktoLabel" for='content'>
+              Content:            </label>
+            <input type="text" class='mktoField mktoTextField' name='content' id='content'>
+          </div>
+        </div>
+        <div class='mktoFormRow'>
+          <div class='mktoFormCol'>
+            <label class="mktoLabel" for='Plan_Type__c'>
+              Organization Type:            </label>
+            <input type="text" class='mktoField mktoTextField' name='Plan_Type__c' id='Plan_Type__c'>
+          </div>
+        </div>
+        <div class='mktoFormRow'>
+          <div class='mktoFormCol'>
+            <label class="mktoLabel" for='RA_Challenge__c'>
+              Risk Adjustment Objective:            </label>
+            <input type="text" class='mktoField mktoTextField' name='RA_Challenge__c' id='RA_Challenge__c'>
+          </div>
+        </div>
+        <div class='mktoFormRow'>
+          <div class='mktoFormCol'>
+            <label class="mktoLabel" for='Timing__c'>
+              Risk Adjustment Timing:            </label>
+            <input type="text" class='mktoField mktoTextField' name='Timing__c' id='Timing__c'>
+          </div>
+        </div>
+        <div class='mktoFormRow'>
+          <div class='mktoFormCol'>
+            <label class="mktoLabel" for='RA_Approach__c'>
+              Risk Adjustment Approach            </label>
+            <input type="text" class='mktoField mktoTextField' name='RA_Approach__c' id='RA_Approach__c'>
+          </div>
+        </div>
+        <div class='mktoFormRow'>
+          <div class='mktoFormCol'>
+            <label class="mktoLabel" for='Physician_Network__c'>
+              Physician Network Ownership:            </label>
+            <input type="text" class='mktoField mktoTextField' name='Physician_Network__c' id='Physician_Network__c'>
+          </div>
+        </div>
+        <div class='mktoFormRow'>
+          <div class='mktoFormCol'>
+            <label class="mktoLabel" for='Chart_Retrieval_Vendor__c'>
+              Chart Retrieval Vendor:            </label>
+            <input type="text" class='mktoField mktoTextField' name='Chart_Retrieval_Vendor__c' id='Chart_Retrieval_Vendor__c'>
+          </div>
+        </div>
+        <div class='mktoFormRow'>
+          <div class='mktoFormCol'>
+            <label class="mktoLabel" for='Submissions_Vendor__c'>
+              Submissions Vendor:            </label>
+            <input type="text" class='mktoField mktoTextField' name='Submissions_Vendor__c' id='Submissions_Vendor__c'>
+          </div>
+        </div>
+        <div class='mktoFormRow'>
+          <div class='mktoFormCol'>
+            <label class="mktoLabel" for='Comment_Capture__c'>
+              How can Health Fidelity best serve you?            </label>
+            <input type="text" class='mktoField mktoTextField' name='Comment_Capture__c' id='Comment_Capture__c'>
+          </div>
+        </div>
+    <span style="display:none;"><input type="text" name="_marketo_comments" value=""></span>
+    <span class='mktoButtonWrap'><button type='submit' class='mktoButton'>Submit</button></span>
+    <input type="hidden" name="lpId" value="1885" />
+    <input type="hidden" name="subId" value="206" />
+    <input type="hidden" name="lpurl" value="//view.healthfidelity.com/Q220-NLP-2-eBook_Request.html?cr={creative}&amp;kw={keyword}" />
+    <input type="hidden" name="formid" value="1096" />
+    <input type="hidden" name="ret" value="" />
+    <input type="hidden" name="munchkinId" value="951-BHK-440"/>
+    <input type="hidden" name="kw" value=""/>
+    <input type="hidden" name="cr" value=""/>
+    <input type="hidden" name="searchstr" value=""/>
+    <input type="hidden" name="_mkt_disp" value="return"/>
+    <input type="hidden" name="_mkt_trk" value=""/>
+  </form>  
+</noscript>
+
+</span></div>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="colophon" class="site-footer" role="contentinfo">
+        <div class="hf-mkt-section-label">Footer</div>
+        <div class="body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8 col-lg-9 col">
+                        <div class="primary">
+                            <div class="textwidget">
+                                <img class="logo" src="//healthfidelity.com/wp-content/uploads/logo-standard@2x.png" alt="Health Fidelity">
+                                <div class="mktoSnippet" id="footer_excerpt"><p>Health Fidelity simplifies risk adjustment, offering risk-bearing organizations clear visibility into and control over the process. Through our NLP-powered solutions and expert advisory services, we uncover insights that enable better care plans and more complete revenue capture. The Lumanent&trade;️ suite gives our partners the confidence to pursue and ability to succeed in risk-sharing arrangements across MA, ACA, Medicaid, and ACO programs.</p></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-lg-3 col">
+                        <div class="secondary">
+                            <div class="textwidget">
+                                <div class="mktoSnippet" id="footer_contact"><ul itemscope="" itemtype="http://schema.org/Organization">
+<li class="company" itemprop="name">Health Fidelity</li>
+<li class="address" itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress"><span itemprop="streetAddress">4 W 4th Ave., Suite 501</span></li>
+<li class="address" itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress"><span itemprop="addressLocality">San Mateo</span>, <span itemprop="addressRegion">CA</span> <span itemprop="postalCode">94402</span></li>
+<li class="phone"><span class="name">Phone:</span> <span class="value" itemprop="telephone">(650) 727-3300</span></li>
+<li class="email"><span class="name">General:</span> <span class="value" itemprop="email" style="color: #007ac9;"><a href="/cdn-cgi/l/email-protection#3851565e5778505d59544c505e515c5d54514c41165b5755" target="_blank" id="" style="color: #007ac9;"><span class="__cf_email__" data-cfemail="e0898e868fa08885818c9488868984858c899499ce838f8d">[email&#160;protected]</span></a></span></li>
+<li class="email"><span class="name">Media:</span> <span class="value" itemprop="email" style="color: #007ac9;"><a href="/cdn-cgi/l/email-protection#066b63626f67466e63676a726e606f62636a6f727f2865696b" style="color: #007ac9;"><span class="__cf_email__" data-cfemail="91fcf4f5f8f0d1f9f4f0fde5f9f7f8f5f4fdf8e5e8bff2fefc">[email&#160;protected]</span></a></span></li>
+</ul></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="container">
+                <div class="content">
+                    <div class="copyright">
+                        © <span class="year"></span> <span class="name">Health Fidelity</span>
+                        <span class="sep" style="margin:0 5px;"> — </span>
+                        <div class="menu-footer-container">
+                            <ul id="footer-menu" class="menu">
+                                <li id="menu-item-32" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32"><a href="//healthfidelity.com/privacy-policy/">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="social">
+                        <div class="textwidget">
+                            <ul>
+                                <li><a href="https://www.linkedin.com/company/health-fidelity" onclick="__gaTracker('send', 'event', 'outbound-widget', 'https://www.linkedin.com/company/health-fidelity', 'LinkedIn');" target="_blank"><i class="icon fa fa-linkedin"></i>LinkedIn</a></li>
+                                <li><a href="https://twitter.com/healthfidelity" onclick="__gaTracker('send', 'event', 'outbound-widget', 'https://twitter.com/healthfidelity', 'Twitter');" target="_blank"><i class="icon fa fa-twitter"></i>Twitter</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="top">
+                        <ul>
+                            <li><a href="#top" class="scroll-top-link"><i class="icon fa fa-chevron-up"></i>Top</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer><!-- #colophon -->
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/4.2.0/lodash.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="//healthfidelity.com/wp-content/themes/hf/js/script.min.js"></script>
+    <script>
+        if (!String.prototype.trim) {
+            String.prototype.trim = function () {
+                return this.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '');
+            };
+        }
+        jQuery(function($){
+            $('.copyright .year').text((new Date()).getFullYear());
+            if (window.location.href.indexOf('marketodesigner.com') >= 0) {
+                $('body').addClass('dev');
+            }
+            var sectionOrder = "Banner, Hero, Compare, CS, 1Col, 2Col, 3Col, Form".split(',');
+            if (sectionOrder.length) {
+                $.each(sectionOrder.reverse(), function(i,v) {
+                    var section = v.trim().toLowerCase();
+                    if (section) $('div.section[data-section="'+ section +'"]').prependTo('#content');
+                });
+            }
+        });
+    </script>
+<script type="text/javascript" src="//munchkin.marketo.net//munchkin-beta.js"></script><script>Munchkin.init('951-BHK-440', {customName: 'Q220-NLP-2-eBook_Request', wsInfo: 'j1RR'});</script>
+<script type="text/javascript" src="/js/stripmkttok.js"></script></body>
+
+</html>

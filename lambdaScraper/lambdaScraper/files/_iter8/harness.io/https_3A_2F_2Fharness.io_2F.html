@@ -1,0 +1,1669 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MGL29QM');</script>
+<!-- End Google Tag Manager -->
+
+<!-- Hotjar Tracking Code for harness.io -->
+<script>
+(function(h,o,t,j,a,r){
+h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+h._hjSettings={hjid:1882634,hjsv:6};
+a=o.getElementsByTagName('head')[0];
+r=o.createElement('script');r.async=1;
+r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+a.appendChild(r);
+})(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+<!-- End Hotjar Tracking Code for harness.io -->
+
+	<link rel="pingback" href="https://harness.io/xmlrpc.php" />
+
+	<script type="text/javascript">
+		document.documentElement.className = 'js';
+	</script>
+
+	<script>var et_site_url='https://harness.io';var et_post_id='2';function et_core_page_resource_fallback(a,b){"undefined"===typeof b&&(b=a.sheet.cssRules&&0===a.sheet.cssRules.length);b&&(a.onerror=null,a.onload=null,a.href?a.href=et_site_url+"/?et_core_page_resource="+a.id+et_post_id:a.src&&(a.src=et_site_url+"/?et_core_page_resource="+a.id+et_post_id))}
+</script>
+	<!-- This site is optimized with the Yoast SEO Premium plugin v14.6 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>CI/CD tool for Devops - Harness Continuous Delivery</title>
+	<meta name="description" content="Harness Continuous Delivery — Empower developers and DevOps to automate the deployment, testing and rollback of code in production." />
+	<meta name="robots" content="index, follow" />
+	<meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+	<meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+	<link rel="canonical" href="https://harness.io/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Home Page" />
+	<meta property="og:description" content="Harness Continuous Delivery — Empower developers and DevOps to automate the deployment, testing and rollback of code in production." />
+	<meta property="og:url" content="https://harness.io/" />
+	<meta property="og:site_name" content="Harness" />
+	<meta property="article:publisher" content="https://business.facebook.com/harnessinc/" />
+	<meta property="article:modified_time" content="2020-07-28T14:26:15+00:00" />
+	<meta property="og:image" content="https://harness.io/wp-content/uploads/2019/11/carousal-leftarrow.svg" />
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:creator" content="@harnessio" />
+	<meta name="twitter:site" content="@harnessio" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://harness.io/#organization","name":"Harness","url":"https://harness.io/","sameAs":["https://business.facebook.com/harnessinc/","https://www.instagram.com/harnessteam/","https://www.linkedin.com/company/harnessinc","https://twitter.com/harnessio"],"logo":{"@type":"ImageObject","@id":"https://harness.io/#logo","inLanguage":"en-US","url":"https://harness.io/wp-content/uploads/2020/05/94022296_665646394236949_632674929245945856_n.png","width":600,"height":600,"caption":"Harness"},"image":{"@id":"https://harness.io/#logo"}},{"@type":"WebSite","@id":"https://harness.io/#website","url":"https://harness.io/","name":"Harness","description":"Continuous Delivery Simplified \u2014 CI/CD for Devops","publisher":{"@id":"https://harness.io/#organization"},"potentialAction":[{"@type":"SearchAction","target":"https://harness.io/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"ImageObject","@id":"https://harness.io/#primaryimage","inLanguage":"en-US","url":"https://harness.io/wp-content/uploads/2019/11/carousal-leftarrow.svg"},{"@type":"WebPage","@id":"https://harness.io/#webpage","url":"https://harness.io/","name":"CI/CD tool for Devops - Harness Continuous Delivery","isPartOf":{"@id":"https://harness.io/#website"},"about":{"@id":"https://harness.io/#organization"},"primaryImageOfPage":{"@id":"https://harness.io/#primaryimage"},"datePublished":"2019-11-08T19:09:08+00:00","dateModified":"2020-07-28T14:26:15+00:00","description":"Harness Continuous Delivery \u2014 Empower developers and DevOps to automate the deployment, testing and rollback of code in production.","inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://harness.io/"]}]}]}</script>
+	<!-- / Yoast SEO Premium plugin. -->
+
+
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Harness &raquo; Feed" href="https://harness.io/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Harness &raquo; Comments Feed" href="https://harness.io/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Harness &raquo; Home Page Comments Feed" href="https://harness.io/home/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/harness.io\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.4.2"}};
+			/*! This file is auto-generated */
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<meta content="Divi v.4.0.6" name="generator"/><style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://harness.io/wp-includes/css/dist/block-library/style.min.css?ver=5.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='widgetopts-styles-css'  href='https://harness.io/wp-content/plugins/widget-options/assets/css/widget-options.css' type='text/css' media='all' />
+<link rel='stylesheet' id='wordpress-popular-posts-css-css'  href='https://harness.io/wp-content/plugins/wordpress-popular-posts/assets/css/wpp.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='divi-style-css'  href='https://harness.io/wp-content/themes/Divi/style.css?ver=4.0.6' type='text/css' media='all' />
+<link rel='stylesheet' id='meks-author-widget-css'  href='https://harness.io/wp-content/plugins/meks-smart-author-widget/css/style.css?ver=1.1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='dashicons-css'  href='https://harness.io/wp-includes/css/dashicons.min.css?ver=5.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='addtoany-css'  href='https://harness.io/wp-content/plugins/add-to-any/addtoany.min.css?ver=1.15' type='text/css' media='all' />
+<link rel='stylesheet' id='ari-fancybox-css'  href='https://harness.io/wp-content/plugins/ari-fancy-lightbox/assets/fancybox/jquery.fancybox.min.css?ver=1.3.6' type='text/css' media='all' />
+<script type='text/javascript' src='https://harness.io/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='https://harness.io/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='https://harness.io/wp-content/plugins/add-to-any/addtoany.min.js?ver=1.1'></script>
+<script type="application/json" id="wpp-json">
+{"sampling_active":0,"sampling_rate":100,"ajax_url":"https:\/\/harness.io\/wp-json\/wordpress-popular-posts\/v1\/popular-posts","ID":0,"token":"2907038ed9","lang":0,"debug":0}
+</script>
+<script type='text/javascript' src='https://harness.io/wp-content/plugins/wordpress-popular-posts/assets/js/wpp.min.js?ver=5.2.2'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var ARI_FANCYBOX = {"lightbox":{"animationEffect":"zoom-in-out","idleTime":0,"arrows":false,"infobar":false,"buttons":["fullScreen","close"],"backFocus":false,"trapFocus":false,"thumbs":{"hideOnClose":false},"touch":{"vertical":true,"momentum":true},"lang":"custom","i18n":{"custom":{"PREV":"Previous","NEXT":"Next","PLAY_START":"Start slideshow (P)","PLAY_STOP":"Stop slideshow (P)","FULL_SCREEN":"Full screen (F)","THUMBS":"Thumbnails (G)","CLOSE":"Close (Esc)","ERROR":"The requested content cannot be loaded. <br\/> Please try again later."}}},"convert":{"wp_gallery":{"convert":false},"pdf":{"convert":true,"external":{"convert":true}}},"viewers":{"pdfjs":{"url":"https:\/\/harness.io\/wp-content\/plugins\/ari-fancy-lightbox\/assets\/pdfjs\/web\/viewer.html"}}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://harness.io/wp-content/plugins/ari-fancy-lightbox/assets/fancybox/jquery.fancybox.min.js?ver=1.3.6'></script>
+<link rel='https://api.w.org/' href='https://harness.io/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://harness.io/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://harness.io/wp-includes/wlwmanifest.xml" /> 
+<link rel='shortlink' href='https://harness.io/' />
+<link rel="alternate" type="application/json+oembed" href="https://harness.io/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fharness.io%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://harness.io/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fharness.io%2F&#038;format=xml" />
+
+<script data-cfasync="false">
+window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overlays=[];a2a_config.templates={};
+(function(d,s,a,b){a=d.createElement(s);b=d.getElementsByTagName(s)[0];a.async=1;a.src="https://static.addtoany.com/menu/page.js";b.parentNode.insertBefore(a,b);})(document,"script");
+</script>
+<style type="text/css">BODY .fancybox-container{z-index:99999999}BODY .fancybox-is-open .fancybox-bg{opacity:0.8}BODY .fancybox-bg {background-color:#000000}BODY .fancybox-thumbs {background-color:#ffffff}</style><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" /><link rel="icon" href="https://harness.io/wp-content/uploads/2019/11/favicon.png" sizes="32x32" />
+<link rel="icon" href="https://harness.io/wp-content/uploads/2019/11/favicon.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://harness.io/wp-content/uploads/2019/11/favicon.png" />
+<meta name="msapplication-TileImage" content="https://harness.io/wp-content/uploads/2019/11/favicon.png" />
+<link rel="stylesheet" id="et-core-unified-2-cached-inline-styles" href="https://harness.io/wp-content/et-cache/2/et-core-unified-2-159666542403.min.css" onerror="et_core_page_resource_fallback(this, true)" onload="et_core_page_resource_fallback(this)" />
+	<link rel="stylesheet" href="https://harness.io/wp-content/themes/Divi/customstyle.css" type="text/css" media="screen" />
+	<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+	<script  src="https://harness.io/wp-content/themes/Divi/js/customscript.js" type="text/javascript"  /></script>
+
+<div id="custom_html-14" class="widget_text widget et_pb_widget widget_custom_html"><div class="textwidget custom-html-widget"><!-- Start of Async Drift Code -->
+<script>
+"use strict";
+
+!function() {
+  var t = window.driftt = window.drift = window.driftt || [];
+  if (!t.init) {
+    if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+    t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], 
+    t.factory = function(e) {
+      return function() {
+        var n = Array.prototype.slice.call(arguments);
+        return n.unshift(e), t.push(n), t;
+      };
+    }, t.methods.forEach(function(e) {
+      t[e] = t.factory(e);
+    }), t.load = function(t) {
+      var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+      o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+      var i = document.getElementsByTagName("script")[0];
+      i.parentNode.insertBefore(o, i);
+    };
+  }
+}();
+drift.SNIPPET_VERSION = '0.3.1';
+drift.load('72suywi6x9i2');
+</script>
+<!-- End of Async Drift Code --></div></div> <!-- end .et_pb_widget --></head>
+<body class="home page-template-default page page-id-2 et_pb_button_helper_class et_non_fixed_nav et_show_nav et_secondary_nav_enabled et_secondary_nav_only_menu et_primary_nav_dropdown_animation_fade et_secondary_nav_dropdown_animation_fade et_header_style_left et_pb_svg_logo et_pb_footer_columns5 et_cover_background et_pb_gutter osx et_pb_gutters3 et_pb_pagebuilder_layout et_no_sidebar et_divi_theme et-db et_minified_js et_minified_css">
+	<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MGL29QM"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+	<div id="page-container">
+
+				<!-- 	<div id="top-header">
+			<div class="container clearfix">
+
+			
+				<div id="et-secondary-menu">
+				<ul id="et-secondary-nav" class="menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-229535"><a href="https://harness.io/blog/">Blog Home</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-224893"><a href="https://harness.io/category/continuous-delivery/">Continuous Delivery</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-224894"><a href="https://harness.io/category/customer-success/">Customer Success</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-224896"><a href="https://harness.io/category/devops/">DevOps</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-224897"><a href="https://harness.io/category/how-to/">How To</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-224895"><a href="https://harness.io/category/machine-learning/">Machine Learning</a></li>
+</ul>				</div> 
+
+			</div> 
+		</div>  -->
+		
+	
+			<header id="main-header" data-height-onload="66">
+			<div id="text-2" class="newsalerttopsection widget et_pb_widget widget_text">			<div class="textwidget"><p>Harness Acquires CI Pioneer <a href="https://drone.io/" target="_blank" rel="noopener noreferrer">Drone.io</a>. <a href="https://harness.io/2020/08/harness-acquires-ci-pioneer-drone-io-and-commits-to-open-source/"">Read More</a></p>
+</div>
+		</div> <!-- end .et_pb_widget -->			<div class="container clearfix et_menu_container">
+							<div class="logo_container">
+					<!-- <span class="logo_helper"></span> -->
+					<a href="https://harness.io/">
+						<img src="https://harness.io/wp-content/uploads/2019/11/harness-logo.svg" alt="Harness" id="logo" data-height-percentage="54" />
+					</a>
+				</div>
+							<div id="et-top-navigation" data-height="66" data-fixed-height="40">
+											<nav id="top-menu-nav">
+						<ul id="top-menu" class="nav"><li id="menu-item-240006" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-240006"><a href="#">CI/CD Platform</a>
+<ul class="sub-menu">
+	<li id="menu-item-240012" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-240012"><a href="https://harness.io/continuous-integration/">Continuous Integration</a></li>
+	<li id="menu-item-240017" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-240017"><a href="https://harness.io/continuous-delivery/">Continuous Delivery</a></li>
+	<li id="menu-item-240021" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-240021"><a href="https://harness.io/continuous-efficiency/">Continuous Efficiency</a></li>
+</ul>
+</li>
+<li id="menu-item-233240" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-233240"><a href="https://harness.io/use-cases/">Use Cases</a>
+<ul class="sub-menu">
+	<li id="menu-item-233259" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-233259"><a href="https://harness.io/use-cases/self-service-continuous-delivery/">Self-Service Deployments</a></li>
+	<li id="menu-item-233247" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-233247"><a href="https://harness.io/use-cases/deploying-to-kubernetes/">Kubernetes Deployments</a></li>
+	<li id="menu-item-233242" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-233242"><a href="https://harness.io/use-cases/monolith-to-microservices/">Monoliths to Microservices</a></li>
+	<li id="menu-item-233243" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-233243"><a href="https://harness.io/use-cases/public-cloud-migration/">Public Cloud Migration</a></li>
+	<li id="menu-item-233244" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-233244"><a href="https://harness.io/use-cases/devsecops-governance/">Governance &#038; Compliance</a></li>
+	<li id="menu-item-233246" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-233246"><a href="https://harness.io/use-cases/scaling-out-of-jenkins-pipelines/">Scaling Beyond Jenkins</a></li>
+	<li id="menu-item-233245" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-233245"><a href="https://harness.io/use-cases/spinnaker-not-enough/">Spinnaker Not Enough</a></li>
+	<li id="menu-item-236881" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-236881"><a href="https://harness.io/use-cases/continuous-efficiency-use-case/">Cloud Cost Management</a></li>
+</ul>
+</li>
+<li id="menu-item-69" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-69"><a href="https://harness.io/customers/">Customers</a></li>
+<li id="menu-item-225005" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-225005"><a href="https://harness.io/pricing/">Pricing</a></li>
+<li id="menu-item-228995" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-228995"><a href="#">Developer</a>
+<ul class="sub-menu">
+	<li id="menu-item-228993" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-228993"><a href="https://community.harness.io/">Community</a></li>
+	<li id="menu-item-228994" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-228994"><a href="https://docs.harness.io/">Documentation</a></li>
+	<li id="menu-item-81" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-81"><a href="https://harness.io/developer/integrations/">Integrations</a></li>
+	<li id="menu-item-84" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-84"><a href="https://harness.io/developer/api/">API</a></li>
+	<li id="menu-item-87" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-87"><a href="https://harness.io/developer/open-source/">Open Source</a></li>
+</ul>
+</li>
+<li id="menu-item-238657" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-238657"><a href="#">Resources</a>
+<ul class="sub-menu">
+	<li id="menu-item-238658" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-238658"><a href="https://harness.io/resource-center/">Resource Center</a></li>
+	<li id="menu-item-90" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-90"><a href="https://harness.io/blog/">Blog</a></li>
+</ul>
+</li>
+<li id="menu-item-233150" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-233150"><a href="https://harness.io/company/">Company</a>
+<ul class="sub-menu">
+	<li id="menu-item-233039" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-233039"><a href="https://harness.io/company/">Company</a></li>
+	<li id="menu-item-235668" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-235668"><a href="https://harness.io/press-news/">Press &#038; News</a></li>
+	<li id="menu-item-235980" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-235980"><a href="https://harness.io/company/partners/">Partners</a></li>
+	<li id="menu-item-238710" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-238710"><a href="https://harness.io/resource-center/events-and-webinars/#events-and-webinars">Events</a></li>
+	<li id="menu-item-235969" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-235969"><a href="https://harness.io/t-shirts/">T-Shirt Store</a></li>
+	<li id="menu-item-233040" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-233040"><a href="https://harness.io/careers/">Careers</a></li>
+	<li id="menu-item-229442" class="wow-modal-id-2 menu-item menu-item-type-custom menu-item-object-custom menu-item-229442"><a href="#">Contact Sales</a></li>
+	<li id="menu-item-233041" class="wow-modal-id-1 menu-item menu-item-type-custom menu-item-object-custom menu-item-233041"><a href="#">Contact HQ</a></li>
+</ul>
+</li>
+<li id="menu-item-224546" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-224546"><a href="https://app.harness.io">Sign In</a></li>
+</ul>						</nav>
+					
+					
+					<!--
+										
+					<div id="et_top_search">
+						<span id="et_search_icon"></span>
+					</div>
+					-->
+					<div id="et_mobile_nav_menu">
+				<div class="mobile_nav closed">
+					<span class="select_page">Select Page</span>
+					<span class="mobile_menu_bar mobile_menu_bar_toggle"></span>
+				</div>
+			</div>				</div> <!-- #et-top-navigation -->
+									<div class="toprightbtn">
+						<div id="custom_html-2" class="widget_text widget et_pb_widget widget_custom_html"><div class="textwidget custom-html-widget"><a href="#" class="bluebtntop wow-modal-id-4">Get Started</a></div></div> <!-- end .et_pb_widget -->					</div>
+			</div> <!-- .container -->
+		<!-- 	<div class="et_search_outer">
+				<div class="container et_search_form_container">
+					<form role="search" method="get" class="et-search-form" action="https://harness.io/">
+					<input type="search" class="et-search-field" placeholder="Search &hellip;" value="" name="s" title="Search for:" />					</form>
+					<span class="et_close_search_field"></span>
+				</div>
+			</div> -->
+		</header> <!-- #main-header -->
+			<div id="et-main-area">
+	
+<div id="main-content">
+
+
+			
+				<article id="post-2" class="post-2 page type-page status-publish hentry">
+
+				
+					<div class="entry-content">
+					<div id="et-boc" class="et-boc">
+			
+		<div class="et-l et-l--post">
+			<div class="et_builder_inner_content et_pb_gutters3">
+		<div class="et_pb_section et_pb_section_0 et_pb_with_background et_section_regular">
+				
+				
+				
+				
+					<div id="hpagesliderouter" class="et_pb_row et_pb_row_0 swapmobileouter">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_0  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				<div class="et_pb_module et_pb_post_slider et_pb_post_slider_0 et_animated et_pb_slider et_pb_post_slider_image_background et_pb_slider_fullwidth_off et_pb_slider_no_arrows et_pb_slider_no_pagination">
+				
+				
+				<div class="et_pb_slides">
+								<div class="et_pb_slide et_pb_media_alignment_center et_pb_bg_layout_dark" >
+												<div class="et_pb_container clearfix">
+					<div class="et_pb_slider_container_inner">
+												<div class="et_pb_slide_description">
+															<h2 class="et_pb_slide_title"><a href="https://harness.io/2019/12/slide-2/">Slide 2</a></h2>
+								<div class="et_pb_slide_content ">
+									<div>
+<div class="wp-block-columns">
+<div class="wp-block-column hsliderleftcontent" style="flex-basis:41%">
+<h2 class="fcwhite fsh48 fsm32">Onboard your Kubernetes Apps in Minutes</h2>
+<a href="#" class="getstrtdbtn mt3vw mb1vw wow-modal-id-4 mr2 mr2sm">Try Harness For Free</a><a href="#" class="wow-modal-id-7 greenbnrbtn mt3vw ">Request On-Prem Trial</a>
+<p class="fcblue fs24 fsm24">Continuous Delivery-as-a-Service</p>
+</div>
+
+
+
+<div class="wp-block-column" style="flex-basis:59%">
+<lottie-player src="https://harness.io/wp-content/uploads/2019/12/home-slider-new2.json" background="transparent" speed="1" style="width: 100%;" loop="" autoplay="">
+</lottie-player>
+</div>
+</div>
+</div>								</div>
+																				</div> <!-- .et_pb_slide_description -->
+											</div>
+				</div> <!-- .et_pb_container -->
+			</div> <!-- .et_pb_slide -->
+					<div class="et_pb_slide et_pb_media_alignment_center et_pb_bg_layout_dark" >
+												<div class="et_pb_container clearfix">
+					<div class="et_pb_slider_container_inner">
+												<div class="et_pb_slide_description">
+															<h2 class="et_pb_slide_title"><a href="https://harness.io/2019/12/slide-1/">Slide 1</a></h2>
+								<div class="et_pb_slide_content ">
+									<div>
+<div class="wp-block-columns">
+<div class="wp-block-column hsliderleftcontent" style="flex-basis:42%">
+<h2 class="fcwhite fsh48 fsm32">Jenkins Pipelines not
+scaling for CD?</h2>
+<a href="#" class="getstrtdbtn mt3vw mb1vw wow-modal-id-4  mr2 mr2sm">Try Harness For Free</a><a href="#" class="wow-modal-id-7 greenbnrbtn mt3vw ">Request On-Prem Trial</a>
+<p class="fcblue fs24 fsm24">Continuous Delivery-as-a-Service</p>
+</div>
+
+
+
+<div class="wp-block-column" style="flex-basis:58%">
+<lottie-player src="https://harness.io/wp-content/uploads/2019/12/home-header-jpipeline.json" background="transparent" speed="1" style="width: 100%;" loop="" autoplay="">
+</lottie-player>
+</div>
+</div>
+</div>								</div>
+																				</div> <!-- .et_pb_slide_description -->
+											</div>
+				</div> <!-- .et_pb_container -->
+			</div> <!-- .et_pb_slide -->
+					<div class="et_pb_slide et_pb_media_alignment_center et_pb_bg_layout_dark" >
+												<div class="et_pb_container clearfix">
+					<div class="et_pb_slider_container_inner">
+												<div class="et_pb_slide_description">
+															<h2 class="et_pb_slide_title"><a href="https://harness.io/2019/12/slide-3/">Slide 3</a></h2>
+								<div class="et_pb_slide_content ">
+									<div>
+<div class="wp-block-columns">
+<div class="wp-block-column hsliderleftcontent" style="flex-basis:46%">
+<h2 class="fcwhite fsh48 fsm32">Get <span class="strike">Scripts</span> Ship Done.</h2>
+
+<a href="#" class="getstrtdbtn mt3vw mb1vw wow-modal-id-4 mr2 mr2sm">Try Harness For Free</a><a href="#" class="wow-modal-id-7 greenbnrbtn mt3vw">Request On-Prem Trial</a>
+<p class="fcblue fs24 fsm24">Continuous Delivery-as-a-Service</p>
+</div>
+
+
+
+<div class="wp-block-column" style="flex-basis:54%">
+<lottie-player src="https://harness.io/wp-content/uploads/2019/12/home-slider-new3.json" background="transparent" speed="1" style="width: 100%;" loop="loop" autoplay="autoplay">
+</lottie-player>
+</div>
+</div>
+</div>								</div>
+																				</div> <!-- .et_pb_slide_description -->
+											</div>
+				</div> <!-- .et_pb_container -->
+			</div> <!-- .et_pb_slide -->
+		
+				</div> <!-- .et_pb_slides -->
+				
+			</div> <!-- .et_pb_slider -->
+			
+			</div> <!-- .et_pb_column -->
+				
+				
+			</div> <!-- .et_pb_row --><div class="et_pb_row et_pb_row_1 swapmobileouter et_pb_equal_columns">
+				<div class="et_pb_column et_pb_column_1_2 et_pb_column_1 swapsecondonmobile  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				<div id="fullwidthblk" class="et_pb_module et_pb_text et_pb_text_0 et_pb_bg_layout_light  et_pb_text_align_center">
+				
+				
+				<div class="et_pb_text_inner"><h2 class="fcwhite fsh48 fsm32">Jenkins Pipelines not scaling for CD?</h2>
+<p><a href="#" class="getstrtdbtn mt1vw  wow-modal-id-4 mr2 mr2sm">Try Harness For Free</a><a href="#" class="wow-modal-id-7 greenbnrbtn mt1vw">Request On-Prem Trial</a></div>
+			</div> <!-- .et_pb_text -->
+			</div> <!-- .et_pb_column --><div class="et_pb_column et_pb_column_1_2 et_pb_column_2 swapfirstonmobile  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_1 et_pb_bg_layout_light  et_pb_text_align_left">
+				
+				
+				<div class="et_pb_text_inner"><lottie-player 
+    src="https://harness.io/wp-content/uploads/2019/12/homebanner-mobile-view.json"  background="transparent"  speed="1"  style="width: 100%; height: ;"  loop  autoplay ><br />
+</lottie-player></div>
+			</div> <!-- .et_pb_text -->
+			</div> <!-- .et_pb_column -->
+				
+				
+			</div> <!-- .et_pb_row -->
+				
+				
+			</div> <!-- .et_pb_section --><div class="et_pb_section et_pb_section_1 homebnrbtmblk et_pb_with_background et_section_regular">
+				
+				
+				
+				
+					<div class="et_pb_row et_pb_row_2 et_pb_equal_columns et_pb_gutters1">
+				<div class="et_pb_column et_pb_column_1_5 et_pb_column_3  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_0">
+				
+				
+				<span class="et_pb_image_wrap "><img src="https://harness.io/wp-content/uploads/2019/11/homepagewave-left.svg" alt="Continuous Delivery as A Service - CICD - ci cd devops" title="" srcset="" sizes="" /></span>
+			</div>
+			</div> <!-- .et_pb_column --><div class="et_pb_column et_pb_column_3_5 et_pb_column_4  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_2 et_pb_bg_layout_light  et_pb_text_align_center">
+				
+				
+				<div class="et_pb_text_inner"><h1 class="fcbluelight fs48 fsm32">Continuous Delivery-as-a-Service.</h1></div>
+			</div> <!-- .et_pb_text --><div class="et_pb_module et_pb_text et_pb_text_3 et_pb_bg_layout_light  et_pb_text_align_center">
+				
+				
+				<div class="et_pb_text_inner"><p class="fs24 fsm24 fcgrey">Harness automates the entire CD process, uses machine learning to protect you when deployments fail, and equips you with enterprise-grade security every step of the way.</p>
+<p class="fs24 fsm24 fcgrey">Continuous Delivery has never been so simple.</p></div>
+			</div> <!-- .et_pb_text --><div class="et_pb_module et_pb_text et_pb_text_4 et_pb_bg_layout_light  et_pb_text_align_left">
+				
+				
+				<div class="et_pb_text_inner"><p align="center">&nbsp;<br /><script src="https://fast.wistia.com/embed/medias/8871f08wgw.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><span class="wistia_embed wistia_async_8871f08wgw popover=true popoverAnimateThumbnail=true popoverContent=link" style="display:inline;position:relative"><a href="#" class="learnmorebigbtn mt1vw">Watch Video</a></span></p></div>
+			</div> <!-- .et_pb_text -->
+			</div> <!-- .et_pb_column --><div class="et_pb_column et_pb_column_1_5 et_pb_column_5  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_1">
+				
+				
+				<span class="et_pb_image_wrap "><img src="https://harness.io/wp-content/uploads/2019/11/homepagewave-right.svg" alt="Continuous Delivery-as-a-Service - CICD - devops ci cd" title="" srcset="" sizes="" /></span>
+			</div>
+			</div> <!-- .et_pb_column -->
+				
+				
+			</div> <!-- .et_pb_row -->
+				
+				
+			</div> <!-- .et_pb_section --><div class="et_pb_section et_pb_section_3 et_pb_with_background et_section_regular">
+				
+				
+				
+				
+					<div class="et_pb_row et_pb_row_3">
+				<div class="et_pb_column et_pb_column_1_2 et_pb_column_6  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_2">
+				
+				
+				<span class="et_pb_image_wrap "><img src="https://harness.io/wp-content/uploads/2020/06/continuous-efficiency-root-cost-analysis-heaven.svg" alt="Continuous Efficiency Root Cost Analysis - Harness Product Feature" title="" srcset="" sizes="" /></span>
+			</div>
+			</div> <!-- .et_pb_column --><div class="et_pb_column et_pb_column_1_2 et_pb_column_7  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_5 et_pb_bg_layout_light  et_pb_text_align_left">
+				
+				
+				<div class="et_pb_text_inner"><h2 class="fcwhite fsh48 fsm32">Introducing<br />
+Continuous Efficiency</h2></div>
+			</div> <!-- .et_pb_text --><div class="et_pb_module et_pb_text et_pb_text_6 et_pb_bg_layout_light  et_pb_text_align_left">
+				
+				
+				<div class="et_pb_text_inner"><p class="fs24 fsm18 fcwhite">Managing your Cloud Cost can be a mystery. With Continuous Efficiency, everyone from the CFO to Developers have full visibility into cloud cost broken down by the hour and service (zero tagging required).</p></div>
+			</div> <!-- .et_pb_text --><div class="et_pb_module et_pb_text et_pb_text_7 et_pb_bg_layout_light  et_pb_text_align_left">
+				
+				
+				<div class="et_pb_text_inner"><div class="bannerbuttonbox"><script src="https://fast.wistia.com/embed/medias/svleqxi6ex.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script></p>
+<div class="wistia_responsive_padding">
+<div class="wistia_responsive_wrapper"><span class="wistia_embed wistia_async_svleqxi6ex popover=true popoverAnimateThumbnail=true popoverContent=link videoFoam=true"><a class="playvidiconwhite fs16 fsm16" href="#">Watch Video</a></span></div>
+</div>
+<div><a href="https://harness.io/continuous-efficiency/" class="whitebtn">Learn More</a></div>
+</div></div>
+			</div> <!-- .et_pb_text -->
+			</div> <!-- .et_pb_column -->
+				
+				
+			</div> <!-- .et_pb_row -->
+				
+				
+			</div> <!-- .et_pb_section --><div class="et_pb_section et_pb_section_4 ds-carousel-section et_pb_with_background et_section_regular">
+				
+				
+				
+				
+					<div class="et_pb_row et_pb_row_4 ds-carousel-row">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_8  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_3">
+				
+				
+				<span class="et_pb_image_wrap "><img src="https://harness.io/wp-content/uploads/2020/01/audi-logo.svg" alt="Harness Customer - Audi" title="" srcset="" sizes="" /></span>
+			</div><div class="et_pb_module et_pb_image et_pb_image_4">
+				
+				
+				<span class="et_pb_image_wrap "><img src="https://harness.io/wp-content/uploads/2020/01/Redbull-logo.svg" alt="Harness Customer -Red Bull" title="" srcset="" sizes="" /></span>
+			</div><div class="et_pb_module et_pb_image et_pb_image_5">
+				
+				
+				<span class="et_pb_image_wrap "><img src="https://harness.io/wp-content/uploads/2019/11/customer-logo3.svg" alt="Harness Customer - NCR" title="" srcset="" sizes="" /></span>
+			</div><div class="et_pb_module et_pb_image et_pb_image_6">
+				
+				
+				<span class="et_pb_image_wrap "><img src="https://harness.io/wp-content/uploads/2019/11/customer-logo4.svg" alt="Harness Customer - Charles Schwab" title="" srcset="" sizes="" /></span>
+			</div><div class="et_pb_module et_pb_image et_pb_image_7">
+				
+				
+				<span class="et_pb_image_wrap "><img src="https://harness.io/wp-content/uploads/2019/12/soulcycle-logo-white-1.svg" alt="Harness Customer - Soulcycle" title="" srcset="" sizes="" /></span>
+			</div><div class="et_pb_module et_pb_image et_pb_image_8 ds-carousel-module">
+				
+				
+				<span class="et_pb_image_wrap "><img src="https://harness.io/wp-content/uploads/2019/11/customer-logo5.svg" alt="Harness Customer - Nutanix" title="" srcset="" sizes="" /></span>
+			</div><div class="et_pb_module et_pb_image et_pb_image_9">
+				
+				
+				<span class="et_pb_image_wrap "><img src="https://harness.io/wp-content/uploads/2019/12/jobvite-logo.svg" alt="Harness Customer - Jobvite" title="" srcset="" sizes="" /></span>
+			</div><div class="et_pb_module et_pb_image et_pb_image_10">
+				
+				
+				<span class="et_pb_image_wrap "><img src="https://harness.io/wp-content/uploads/2019/12/buildcom-logo.svg" alt="Harness Customer - Build.com" title="" srcset="" sizes="" /></span>
+			</div><div class="et_pb_module et_pb_image et_pb_image_11">
+				
+				
+				<span class="et_pb_image_wrap "><img src="https://harness.io/wp-content/uploads/2019/12/advanced-logo.svg" alt="Harness Customer - Advanced Software" title="" srcset="" sizes="" /></span>
+			</div><div class="et_pb_module et_pb_image et_pb_image_12">
+				
+				
+				<span class="et_pb_image_wrap "><img src="https://harness.io/wp-content/uploads/2019/12/openbank-logo.svg" alt="Harness Customer - OpenBank" title="" srcset="" sizes="" /></span>
+			</div><div class="et_pb_module et_pb_image et_pb_image_13">
+				
+				
+				<span class="et_pb_image_wrap "></span>
+			</div>
+			</div> <!-- .et_pb_column -->
+				
+				
+			</div> <!-- .et_pb_row --><div id="three-columns" class="et_pb_row et_pb_row_5 ds-arrow-row">
+				<div class="et_pb_column et_pb_column_1_5 et_pb_column_9  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_8 et_pb_bg_layout_light  et_pb_text_align_left">
+				
+				
+				<div class="et_pb_text_inner"><img src="https://harness.io/wp-content/uploads/2019/11/carousal-leftarrow.svg" width="undefined" height="undefined" id="ds-arrow-left" alt="left arrow" /></div>
+			</div> <!-- .et_pb_text -->
+			</div> <!-- .et_pb_column --><div class="et_pb_column et_pb_column_3_5 et_pb_column_10  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_9 et_pb_bg_layout_light  et_pb_text_align_center">
+				
+				
+				<div class="et_pb_text_inner"><p class="fs18 fsm18 fcdarkgray">Customers Who Get Ship Done with Harness</p></div>
+			</div> <!-- .et_pb_text -->
+			</div> <!-- .et_pb_column --><div class="et_pb_column et_pb_column_1_5 et_pb_column_11  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_10 et_pb_bg_layout_light  et_pb_text_align_right">
+				
+				
+				<div class="et_pb_text_inner"><img src="https://harness.io/wp-content/uploads/2019/11/carousal-rightarrow.svg" width="undefined" height="undefined" id="ds-arrow-right" alt="right arrow" /></div>
+			</div> <!-- .et_pb_text -->
+			</div> <!-- .et_pb_column -->
+				
+				
+			</div> <!-- .et_pb_row -->
+				
+				
+			</div> <!-- .et_pb_section --><div class="et_pb_section et_pb_section_5 et_pb_with_background et_section_regular">
+				
+				
+				
+				
+					<div class="et_pb_row et_pb_row_6">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_12  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_11 et_pb_bg_layout_light  et_pb_text_align_center">
+				
+				
+				<div class="et_pb_text_inner"><h2 class="fcwhite fsh48 fsm32">Why is Harness Unique?</h2></div>
+			</div> <!-- .et_pb_text -->
+			</div> <!-- .et_pb_column -->
+				
+				
+			</div> <!-- .et_pb_row -->
+				
+				
+			</div> <!-- .et_pb_section --><div id="whyharnessblk" class="et_pb_section et_pb_section_6 et_pb_with_background et_section_regular">
+				
+				
+				
+				
+					<div class="et_pb_row et_pb_row_7 hcolcenter">
+				<div class="et_pb_column et_pb_column_1_3 et_pb_column_13  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_12 et_pb_bg_layout_light  et_pb_text_align_center">
+				
+				
+				<div class="et_pb_text_inner"><h2 class="fcwhite fs32 fsm24">Self-Service Deployments</h2></div>
+			</div> <!-- .et_pb_text --><div class="et_pb_module et_pb_code et_pb_code_0">
+				
+				
+				<div class="et_pb_code_inner"><lottie-player 
+    src="https://harness.io/wp-content/uploads/2019/12/harness-unique-data1new.json"  background="transparent"  speed="1"  style="width: 100%; height: ;" hover loop>
+</lottie-player></div>
+			</div> <!-- .et_pb_code -->
+			</div> <!-- .et_pb_column --><div class="et_pb_column et_pb_column_1_3 et_pb_column_14  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_13 et_pb_bg_layout_light  et_pb_text_align_center">
+				
+				
+				<div class="et_pb_text_inner"><h2  class="fcwhite  fs32 fsm24">Easy to Install, Scale, and Use</h2></div>
+			</div> <!-- .et_pb_text --><div class="et_pb_module et_pb_code et_pb_code_1">
+				
+				
+				<div class="et_pb_code_inner"><lottie-player 
+    src="https://harness.io/wp-content/uploads/2019/12/harness-unique-data2new.json"  background="transparent"  speed="1"  style="width: 100%; height: ;" hover loop>
+</lottie-player></div>
+			</div> <!-- .et_pb_code -->
+			</div> <!-- .et_pb_column --><div class="et_pb_column et_pb_column_1_3 et_pb_column_15  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_14 et_pb_bg_layout_light  et_pb_text_align_center">
+				
+				
+				<div class="et_pb_text_inner"><h2 class="fcwhite  fs32 fsm24">Cloud-Native &amp; Traditional DC</h2></div>
+			</div> <!-- .et_pb_text --><div class="et_pb_module et_pb_code et_pb_code_2">
+				
+				
+				<div class="et_pb_code_inner"><lottie-player 
+    src="https://harness.io/wp-content/uploads/2019/12/harness-unique-data3new.json"  background="transparent"  speed="1"  style="width: 100%; height: ;" hover loop>
+</lottie-player></div>
+			</div> <!-- .et_pb_code -->
+			</div> <!-- .et_pb_column -->
+				
+				
+			</div> <!-- .et_pb_row --><div class="et_pb_row et_pb_row_8 hcolcenter">
+				<div class="et_pb_column et_pb_column_1_3 et_pb_column_16  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_15 et_pb_bg_layout_light  et_pb_text_align_center">
+				
+				
+				<div class="et_pb_text_inner"><h2  class="fcwhite  fs32 fsm24">Automated Canary Deployments</h2></div>
+			</div> <!-- .et_pb_text --><div class="et_pb_module et_pb_code et_pb_code_3">
+				
+				
+				<div class="et_pb_code_inner"><lottie-player 
+    src="https://harness.io/wp-content/uploads/2019/12/harness-unique-data4new.json"  background="transparent"  speed="1"  style="width: 100%; height: ;" hover loop>
+</lottie-player></div>
+			</div> <!-- .et_pb_code -->
+			</div> <!-- .et_pb_column --><div class="et_pb_column et_pb_column_1_3 et_pb_column_17  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_16 et_pb_bg_layout_light  et_pb_text_align_center">
+				
+				
+				<div class="et_pb_text_inner"><h2  class="fcwhite  fs32 fsm24">GitOps</h2></div>
+			</div> <!-- .et_pb_text --><div class="et_pb_module et_pb_code et_pb_code_4">
+				
+				
+				<div class="et_pb_code_inner"><lottie-player 
+    src="https://harness.io/wp-content/uploads/2019/12/harness-unique-data5new.json"  background="transparent"  speed="1"  style="width: 100%; height: ;" hover loop>
+</lottie-player></div>
+			</div> <!-- .et_pb_code -->
+			</div> <!-- .et_pb_column --><div class="et_pb_column et_pb_column_1_3 et_pb_column_18  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_17 et_pb_bg_layout_light  et_pb_text_align_center">
+				
+				
+				<div class="et_pb_text_inner"><h2 class="fcwhite  fs32 fsm24">DevOps Metrics</h2></div>
+			</div> <!-- .et_pb_text --><div class="et_pb_module et_pb_code et_pb_code_5">
+				
+				
+				<div class="et_pb_code_inner"><lottie-player 
+    src="https://harness.io/wp-content/uploads/2019/12/harness-unique-data6new.json"  background="transparent"  speed="1"  style="width: 100%; height: ;" hover loop>
+</lottie-player></div>
+			</div> <!-- .et_pb_code -->
+			</div> <!-- .et_pb_column -->
+				
+				
+			</div> <!-- .et_pb_row --><div class="et_pb_row et_pb_row_9">
+				<div class="et_pb_column et_pb_column_1_3 et_pb_column_19  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_18 et_pb_bg_layout_light  et_pb_text_align_center">
+				
+				
+				<div class="et_pb_text_inner"><h2 class="fcwhite  fs32 fsm24">Continuous<br />
+Verification</h2></div>
+			</div> <!-- .et_pb_text --><div class="et_pb_module et_pb_code et_pb_code_6">
+				
+				
+				<div class="et_pb_code_inner"><lottie-player src="https://harness.io/wp-content/uploads/2020/01/webAnimtions_V1.json"  background="transparent"  speed="1"  style="width: 100%; height: ;" hover loop>
+</lottie-player></div>
+			</div> <!-- .et_pb_code -->
+			</div> <!-- .et_pb_column --><div class="et_pb_column et_pb_column_1_3 et_pb_column_20  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_19 et_pb_bg_layout_light  et_pb_text_align_center">
+				
+				
+				<div class="et_pb_text_inner"><h2 class="fcwhite  fs32 fsm24">Automatic Rollback</h2></div>
+			</div> <!-- .et_pb_text --><div class="et_pb_module et_pb_code et_pb_code_7">
+				
+				
+				<div class="et_pb_code_inner"><lottie-player 
+    src="https://harness.io/wp-content/uploads/2019/12/harness-unique-data7new.json"  background="transparent"  speed="1"  style="width: 100%; height: ;" hover loop>
+</lottie-player></div>
+			</div> <!-- .et_pb_code -->
+			</div> <!-- .et_pb_column --><div class="et_pb_column et_pb_column_1_3 et_pb_column_21  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_20 et_pb_bg_layout_light  et_pb_text_align_center">
+				
+				
+				<div class="et_pb_text_inner"><h2 class="fcwhite  fs32 fsm24">RBAC, SSO &amp; Audit Trails</h2></div>
+			</div> <!-- .et_pb_text --><div class="et_pb_module et_pb_code et_pb_code_8">
+				
+				
+				<div class="et_pb_code_inner"><lottie-player 
+    src="https://harness.io/wp-content/uploads/2019/12/harness-unique-data8new.json"  background="transparent"  speed="1"  style="width: 100%; height: ;" hover loop>
+</lottie-player></div>
+			</div> <!-- .et_pb_code -->
+			</div> <!-- .et_pb_column -->
+				
+				
+			</div> <!-- .et_pb_row --><div class="et_pb_row et_pb_row_10">
+				<div class="et_pb_column et_pb_column_1_3 et_pb_column_22  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_21 et_pb_bg_layout_light  et_pb_text_align_center">
+				
+				
+				<div class="et_pb_text_inner"><h2 class="fcwhite  fs32 fsm24">Continuous<br />
+Efficiency</h2></div>
+			</div> <!-- .et_pb_text --><div class="et_pb_module et_pb_code et_pb_code_9">
+				
+				
+				<div class="et_pb_code_inner"><lottie-player src="https://harness.io/wp-content/uploads/2020/06/ce-icon1.json"  background="transparent"  speed="1"  style="width: 100%; height: ;" hover loop>
+</lottie-player></div>
+			</div> <!-- .et_pb_code -->
+			</div> <!-- .et_pb_column --><div class="et_pb_column et_pb_column_1_3 et_pb_column_23  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_22 et_pb_bg_layout_light  et_pb_text_align_center">
+				
+				
+				<div class="et_pb_text_inner"><h2 class="fcwhite  fs32 fsm24">Root Cost<br />
+Analysis</h2></div>
+			</div> <!-- .et_pb_text --><div class="et_pb_module et_pb_code et_pb_code_10">
+				
+				
+				<div class="et_pb_code_inner"><lottie-player 
+    src="https://harness.io/wp-content/uploads/2020/06/ce-icon2.json"  background="transparent"  speed="1"  style="width: 100%; height: ;" hover loop>
+</lottie-player></div>
+			</div> <!-- .et_pb_code -->
+			</div> <!-- .et_pb_column --><div class="et_pb_column et_pb_column_1_3 et_pb_column_24  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_23 et_pb_bg_layout_light  et_pb_text_align_center">
+				
+				
+				<div class="et_pb_text_inner"><h2 class="fcwhite  fs32 fsm24">Cloud Cost<br />
+Event Correlation</h2></div>
+			</div> <!-- .et_pb_text --><div class="et_pb_module et_pb_code et_pb_code_11">
+				
+				
+				<div class="et_pb_code_inner"><lottie-player 
+    src="https://harness.io/wp-content/uploads/2020/06/ce-icon3.json"  background="transparent"  speed="1"  style="width: 100%; height: ;" hover loop>
+</lottie-player></div>
+			</div> <!-- .et_pb_code -->
+			</div> <!-- .et_pb_column -->
+				
+				
+			</div> <!-- .et_pb_row -->
+				
+				
+			</div> <!-- .et_pb_section --><div id="clientctaboxouter" class="et_pb_section et_pb_section_8 homedeopttstm et_pb_with_background et_section_regular">
+				
+				
+				
+				
+					<div class="et_pb_row et_pb_row_11 et_pb_equal_columns">
+				<div class="et_pb_column et_pb_column_2_5 et_pb_column_25  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_14 clientimgbox">
+				
+				
+				<span class="et_pb_image_wrap "><img src="https://harness.io/wp-content/uploads/2020/01/logmein-logo-circle2.svg" alt="Harness Customer - LogMeIn" title="" srcset="" sizes="" /></span>
+			</div>
+			</div> <!-- .et_pb_column --><div class="et_pb_column et_pb_column_3_5 et_pb_column_26  et_pb_css_mix_blend_mode_passthrough et-last-child" id="clcontentctabox">
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_24 et_pb_bg_layout_light  et_pb_text_align_left">
+				
+				
+				<div class="et_pb_text_inner"><blockquote>
+<p class="fs42 fsm32 fsitalic">With Harness, deployment time went from 10-12 hours to 30 minutes.</p>
+</blockquote>
+<div class="hnamebox">
+Kyle Flavin<br />
+<span>Staff Software Engineer, LogMeIn</span>
+</div></div>
+			</div> <!-- .et_pb_text -->
+			</div> <!-- .et_pb_column -->
+				
+				
+			</div> <!-- .et_pb_row -->
+				
+				
+			</div> <!-- .et_pb_section --><div id="randomanimouter" class="et_pb_section et_pb_section_10 et_pb_with_background et_section_regular">
+				
+				
+				
+				
+					<div id="randomanimrow1" class="et_pb_row et_pb_row_12">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_27  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_25 et_pb_bg_layout_light  et_pb_text_align_left">
+				
+				
+				<div class="et_pb_text_inner"><lottie-player 
+    src="https://harness.io/wp-content/uploads/2019/12/random-ctablock-data-new.json"  background="transparent"  speed="1"  style="width: 100%; height: ;"  loop  autoplay ><br />
+</lottie-player></div>
+			</div> <!-- .et_pb_text --><div class="et_pb_module et_pb_text et_pb_text_26 et_pb_bg_layout_light  et_pb_text_align_left">
+				
+				
+				<div class="et_pb_text_inner"><lottie-player 
+    src="https://harness.io/wp-content/uploads/2019/12/random-ctablock-mobile.json"  background="transparent"  speed="1"  style="width: 100%; height: ;"  loop  autoplay ><br />
+</lottie-player></div>
+			</div> <!-- .et_pb_text -->
+			</div> <!-- .et_pb_column -->
+				
+				
+			</div> <!-- .et_pb_row --><div id="randomanimrow2" class="et_pb_row et_pb_row_13">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_28  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_27 et_pb_bg_layout_light  et_pb_text_align_center">
+				
+				
+				<div class="et_pb_text_inner"><h2 class="fcwhite fsh48 fsm32">Interested in a Demo of Harness?</h2></div>
+			</div> <!-- .et_pb_text --><div class="et_pb_module et_pb_text et_pb_text_28 et_pb_bg_layout_light  et_pb_text_align_center">
+				
+				
+				<div class="et_pb_text_inner"><ul>
+<li class="midblk">
+<p class="fcwhite fs24 fsm18 lh36">Get started by selecting the product of your choice below.</p>
+<p><a href="#" class="getstrtdbtn mt1vw  wow-modal-id-10 mr2 mr2sm">Continuous Delivery</a><a href="#" class="wow-modal-id-8 greenbnrbtn mt1vw">Continuous Efficiency</a></p>
+</li>
+</ul></div>
+			</div> <!-- .et_pb_text -->
+			</div> <!-- .et_pb_column -->
+				
+				
+			</div> <!-- .et_pb_row -->
+				
+				
+			</div> <!-- .et_pb_section -->		</div><!-- .et_builder_inner_content -->
+	</div><!-- .et-l -->
+	
+			
+		</div><!-- #et-boc -->
+							</div> <!-- .entry-content -->
+
+				
+				</article> <!-- .et_pb_post -->
+
+			
+
+</div> <!-- #main-content -->
+
+
+			<footer id="main-footer">
+<div id="mobilefooter"><div class="container"></div></div>
+				
+<div class="container">
+    <div id="footer-widgets" class="clearfix">
+		<div class="footer-widget"><div id="nav_menu-2" class="widget fwidget et_pb_widget widget_nav_menu"><div class="menu-footer-menu-col1-container"><ul id="menu-footer-menu-col1" class="menu"><li id="menu-item-109" class="bold uppercase menu-item menu-item-type-post_type menu-item-object-page menu-item-109"><a href="https://harness.io/?page_id=6">Product</a></li>
+<li id="menu-item-240013" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-240013"><a href="https://harness.io/continuous-integration/">Continuous Integration</a></li>
+<li id="menu-item-240016" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-240016"><a href="https://harness.io/continuous-delivery/">Continuous Delivery</a></li>
+<li id="menu-item-240022" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-240022"><a href="https://harness.io/continuous-efficiency/">Continuous Efficiency</a></li>
+</ul></div></div> <!-- end .fwidget --></div> <!-- end .footer-widget --><div class="footer-widget"><div id="nav_menu-3" class="widget fwidget et_pb_widget widget_nav_menu"><div class="menu-footer-menu-col2-container"><ul id="menu-footer-menu-col2" class="menu"><li id="menu-item-113" class="bold uppercase menu-item menu-item-type-post_type menu-item-object-page menu-item-113"><a href="https://harness.io/use-cases/">Use Cases</a></li>
+<li id="menu-item-233258" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-233258"><a href="https://harness.io/use-cases/self-service-continuous-delivery/">Self-Service Continuous Delivery</a></li>
+<li id="menu-item-232228" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-232228"><a href="https://harness.io/use-cases/public-cloud-migration/">Public Cloud Migration</a></li>
+<li id="menu-item-232222" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-232222"><a href="https://harness.io/use-cases/deploying-to-kubernetes/">Kubernetes Deployments</a></li>
+<li id="menu-item-232237" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-232237"><a href="https://harness.io/use-cases/scaling-out-of-jenkins-pipelines/">Scaling Beyond Jenkins Pipelines</a></li>
+<li id="menu-item-232243" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-232243"><a href="https://harness.io/use-cases/spinnaker-not-enough/">Spinnaker Not Enough</a></li>
+<li id="menu-item-232247" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-232247"><a href="https://harness.io/use-cases/monolith-to-microservices/">Migrating Monoliths to Microservices</a></li>
+<li id="menu-item-232251" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-232251"><a href="https://harness.io/use-cases/devsecops-governance/">DevSecOps – Compliance &#038; Governance</a></li>
+<li id="menu-item-236882" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-236882"><a href="https://harness.io/use-cases/continuous-efficiency-use-case/">Cloud Cost Management</a></li>
+</ul></div></div> <!-- end .fwidget --></div> <!-- end .footer-widget --><div class="footer-widget"><div id="nav_menu-4" class="widget fwidget et_pb_widget widget_nav_menu"><div class="menu-footer-menu-col3-container"><ul id="menu-footer-menu-col3" class="menu"><li id="menu-item-228991" class="bold uppercase menu-item menu-item-type-custom menu-item-object-custom menu-item-228991"><a href="https://community.harness.io/">Community</a></li>
+<li id="menu-item-228992" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-228992"><a href="https://docs.harness.io/">Documentation</a></li>
+<li id="menu-item-130" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-130"><a href="https://harness.io/developer/integrations/">Integrations</a></li>
+<li id="menu-item-127" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-127"><a href="https://harness.io/developer/api/">API</a></li>
+<li id="menu-item-131" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-131"><a href="https://harness.io/developer/open-source/">Open Source</a></li>
+</ul></div></div> <!-- end .fwidget --></div> <!-- end .footer-widget --><div class="footer-widget"><div id="nav_menu-5" class="widget fwidget et_pb_widget widget_nav_menu"><div class="menu-footer-menu-col4-container"><ul id="menu-footer-menu-col4" class="menu"><li id="menu-item-224942" class="bold uppercase menu-item menu-item-type-post_type menu-item-object-page menu-item-224942"><a href="https://harness.io/company/">Company</a></li>
+<li id="menu-item-232984" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-232984"><a href="https://harness.io/careers/">Careers</a></li>
+<li id="menu-item-235979" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-235979"><a href="https://harness.io/company/partners/">Partners</a></li>
+<li id="menu-item-238709" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-238709"><a href="https://harness.io/resource-center/events-and-webinars/#events-and-webinars">Events</a></li>
+<li id="menu-item-235970" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-235970"><a href="https://harness.io/t-shirts/">T-Shirt Store</a></li>
+<li id="menu-item-230696" class="wow-modal-id-1 menu-item menu-item-type-custom menu-item-object-custom menu-item-230696"><a href="#">Contact</a></li>
+<li id="menu-item-238655" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-238655"><a href="https://harness.io/resource-center/">Resource Center</a></li>
+<li id="menu-item-348" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-348"><a href="https://harness.io/blog/">Blog</a></li>
+<li id="menu-item-349" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-349"><a href="https://harness.io/customers/">Customers</a></li>
+</ul></div></div> <!-- end .fwidget --></div> <!-- end .footer-widget --><div class="footer-widget"><div id="nav_menu-6" class="widget fwidget et_pb_widget widget_nav_menu"><div class="menu-footer-menu-col5-container"><ul id="menu-footer-menu-col5" class="menu"><li id="menu-item-229155" class="bold uppercase menu-item menu-item-type-post_type menu-item-object-page menu-item-229155"><a href="https://harness.io/pricing/">Pricing</a></li>
+<li id="menu-item-229158" class="wow-modal-id-4 menu-item menu-item-type-custom menu-item-object-custom menu-item-229158"><a href="#">Get Started</a></li>
+<li id="menu-item-230175" class="wow-modal-id-2 menu-item menu-item-type-custom menu-item-object-custom menu-item-230175"><a href="#">Contact Sales</a></li>
+<li id="menu-item-229160" class="wow-modal-id-3 menu-item menu-item-type-custom menu-item-object-custom menu-item-229160"><a href="#">Request a Quote</a></li>
+<li id="menu-item-232244" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-232244"><a href="https://harness.io/use-cases/spinnaker-not-enough/">Harness vs. Spinnaker</a></li>
+<li id="menu-item-232890" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-232890"><a href="https://harness.io/xebialabscompetitors/">Harness vs. Xebia Labs</a></li>
+</ul></div></div> <!-- end .fwidget --></div> <!-- end .footer-widget -->    </div> <!-- #footer-widgets -->
+</div>    <!-- .container -->
+
+						<div id="foosocialblk">
+				<div class="container clearfix">
+				<div id="custom_html-17" class="widget_text widget et_pb_widget widget_custom_html"><div class="textwidget custom-html-widget"><ul class="et-social-icons">
+	<p>Follow us on:</p>
+	<li class="et-social-icon et-social-linkedin">
+		<a href="https://www.linkedin.com/company/harnessinc/" title="LinkedIn" target="_blank" class="icon" rel="noopener noreferrer">
+			<span>Linkedin</span>
+		</a>
+	</li>
+	<li class="et-social-icon et-social-twitter">
+		<a href="https://twitter.com/harnessio" target="_blank" title="Twitter" class="icon" rel="noopener noreferrer">
+			<span>Twitter</span>
+		</a>
+	</li>
+	<li class="et-social-icon et-social-facebook">
+		<a href="https://www.facebook.com/harnessinc/" target="_blank" title="Facebook" class="icon" rel="noopener noreferrer">
+			<span>Facebook</span>
+		</a>
+	</li>
+</ul></div></div> <!-- end .et_pb_widget -->				</div>
+				</div>
+
+				<div id="footer-bottom">
+
+					<div class="container clearfix">
+						<div class="footerbottomblk"><div id="custom_html-3" class="widget_text widget et_pb_widget widget_custom_html"><div class="textwidget custom-html-widget"><ul>
+<li class="first"><a href="https://harness.io/terms-of-use/">Terms of Use</a></li>
+<li><a href="https://harness.io/privacy/">Privacy Policy</a></li>
+<li><a href="https://harness.io/careers/">Careers</a></li>
+<li class="last">© <script>document.write(new Date().getFullYear())</script> Harness Inc.</li>
+</ul>
+</div></div> <!-- end .et_pb_widget --></div>
+				<ul class="et-social-icons">
+
+
+</ul>					</div>	<!-- .container -->
+				</div>
+			</footer> <!-- #main-footer -->
+		</div> <!-- #et-main-area -->
+
+
+	</div> <!-- #page-container -->
+
+	<div id="wow-modal-overlay-1" class="wow-modal-overlay" style="display:none;"><div id="wow-modal-overclose-1" class="wow-modal-overclose"></div><div id="wow-modal-window-1" class="wow-modal-window" style="display:none;"><div id="wow-modal-close-1" class="mw-close-btn topRight image"></div><div class="modal-window-content"><div class="et_pb_section et_pb_section_12 et_section_regular">
+				
+				
+				
+				
+					<div class="et_pb_row et_pb_row_14">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_29  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_29 et_pb_bg_layout_light  et_pb_text_align_center">
+				
+				
+				<div class="et_pb_text_inner"><h2 class="fs48 fsm32">Give Us A Shout</h2>
+<p class="fs18 fsm18">Use the form below to drop us a line.</p></div>
+			</div> <!-- .et_pb_text -->
+			</div> <!-- .et_pb_column -->
+				
+				
+			</div> <!-- .et_pb_row --><div class="et_pb_row et_pb_row_15 et_pb_equal_columns">
+				<div class="et_pb_column et_pb_column_1_2 et_pb_column_30  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				<div id="formouter" class="et_pb_module et_pb_text et_pb_text_30 et_pb_bg_layout_light  et_pb_text_align_left">
+				
+				
+				<div class="et_pb_text_inner"><script src="//go.harness.io/js/forms2/js/forms2.min.js"></script></p>
+<form id="mktoForm_1248"></form>
+<p><script>MktoForms2.loadForm("//go.harness.io", "924-CQO-224", 1248);</script></div>
+			</div> <!-- .et_pb_text -->
+			</div> <!-- .et_pb_column --><div class="et_pb_column et_pb_column_1_2 et_pb_column_31  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				<div id="popuprightboxslider" class="et_pb_module et_pb_code et_pb_code_12">
+				
+				
+				<div class="et_pb_code_inner"><div class="et_pb_module et_pb_slider et_pb_slider_0 et_pb_slider_fullwidth_off et_pb_slider_no_arrows">
+				<div class="et_pb_slides">
+					<div class="et_pb_slide et_pb_slide_0 et_pb_bg_layout_dark et_pb_slide_with_image et_pb_media_alignment_center et-pb-active-slide" data-slide-id="et_pb_slide_0">
+				
+				
+				<div class="et_pb_container clearfix">
+					<div class="et_pb_slider_container_inner">
+						<div class="et_pb_slide_image"><img src="https://harness.io/wp-content/uploads/2019/11/logo-cti.svg" alt="Harness Customer - Consumer Track" srcset="" sizes="" /></div>
+						<div class="et_pb_slide_description">
+							<div class="et_pb_slide_content">"We reduced deployment effort by 16 hours per day, saving $290,000 a year."</div>
+							
+						</div> <!-- .et_pb_slide_description -->
+					</div>
+				</div> <!-- .et_pb_container -->
+				
+			</div> <!-- .et_pb_slide -->
+			<div class="et_pb_slide et_pb_slide_1 et_pb_bg_layout_dark et_pb_slide_with_image et_pb_media_alignment_center" data-slide-id="et_pb_slide_1">
+				
+				
+				<div class="et_pb_container clearfix">
+					<div class="et_pb_slider_container_inner">
+						<div class="et_pb_slide_image"><img src="https://harness.io/wp-content/uploads/2019/11/linedata-logo.svg" alt="Harness Customer - Linedata" srcset="" sizes="" /></div>
+						<div class="et_pb_slide_description">
+							<div class="et_pb_slide_content">"By implementing automation with Harness, we eliminated the need to incur $500,000 in DevOps costs."</div>
+							
+						</div> <!-- .et_pb_slide_description -->
+					</div>
+				</div> <!-- .et_pb_container -->
+				
+			</div> <!-- .et_pb_slide -->
+			<div class="et_pb_slide et_pb_slide_2 et_pb_bg_layout_dark et_pb_slide_with_image et_pb_media_alignment_center" data-slide-id="et_pb_slide_2">
+				
+				
+				<div class="et_pb_container clearfix">
+					<div class="et_pb_slider_container_inner">
+						<div class="et_pb_slide_image"><img src="https://harness.io/wp-content/uploads/2019/11/advanced_logo.svg" alt="Harness Customer - Advanced Software" srcset="" sizes="" /></div>
+						<div class="et_pb_slide_description">
+							<div class="et_pb_slide_content">"We achieved a 10x return on investment within first few months, while reducing deployment time from 2 days to 2 hours."</div>
+							
+						</div> <!-- .et_pb_slide_description -->
+					</div>
+				</div> <!-- .et_pb_container -->
+				
+			</div> <!-- .et_pb_slide -->
+			
+				</div> <!-- .et_pb_slides -->
+				
+			</div> <!-- .et_pb_slider -->
+			</div>
+			</div> <!-- .et_pb_code -->
+			</div> <!-- .et_pb_column -->
+				
+				
+			</div> <!-- .et_pb_row -->
+				
+				
+			</div> <!-- .et_pb_section --></div></div></div><div id="wow-modal-overlay-2" class="wow-modal-overlay" style="display:none;"><div id="wow-modal-overclose-2" class="wow-modal-overclose"></div><div id="wow-modal-window-2" class="wow-modal-window" style="display:none;"><div id="wow-modal-close-2" class="mw-close-btn topRight image"></div><div class="modal-window-content"><div class="et_pb_section et_pb_section_14 et_section_regular">
+				
+				
+				
+				
+					<div class="et_pb_row et_pb_row_16">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_32  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_31 et_pb_bg_layout_light  et_pb_text_align_center">
+				
+				
+				<div class="et_pb_text_inner"><h2 class="fs48 fsm32">Contact Sales</h2>
+<p class="fs18 fsm18">Please fill out the form below and we’ll get back to you directly.</p></div>
+			</div> <!-- .et_pb_text -->
+			</div> <!-- .et_pb_column -->
+				
+				
+			</div> <!-- .et_pb_row --><div class="et_pb_row et_pb_row_17 et_pb_equal_columns">
+				<div class="et_pb_column et_pb_column_1_2 et_pb_column_33  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				<div id="formouter" class="et_pb_module et_pb_text et_pb_text_32 et_pb_bg_layout_light  et_pb_text_align_left">
+				
+				
+				<div class="et_pb_text_inner"><script src="//go.harness.io/js/forms2/js/forms2.min.js"></script></p>
+<form id="mktoForm_1249"></form>
+<p><script>MktoForms2.loadForm("//go.harness.io", "924-CQO-224", 1249);</script></div>
+			</div> <!-- .et_pb_text -->
+			</div> <!-- .et_pb_column --><div class="et_pb_column et_pb_column_1_2 et_pb_column_34  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				<div id="popuprightboxslider" class="et_pb_module et_pb_code et_pb_code_13">
+				
+				
+				<div class="et_pb_code_inner"><div class="et_pb_module et_pb_slider et_pb_slider_1 et_pb_slider_fullwidth_off et_pb_slider_no_arrows">
+				<div class="et_pb_slides">
+					<div class="et_pb_slide et_pb_slide_3 et_pb_bg_layout_dark et_pb_slide_with_image et_pb_media_alignment_center et-pb-active-slide" data-slide-id="et_pb_slide_3">
+				
+				
+				<div class="et_pb_container clearfix">
+					<div class="et_pb_slider_container_inner">
+						<div class="et_pb_slide_image"><img src="https://harness.io/wp-content/uploads/2019/11/logo-cti.svg" alt="Harness Customer - Consumer Track" srcset="" sizes="" /></div>
+						<div class="et_pb_slide_description">
+							<div class="et_pb_slide_content">"We reduced deployment effort by 16 hours per day, saving $290,000 a year."</div>
+							
+						</div> <!-- .et_pb_slide_description -->
+					</div>
+				</div> <!-- .et_pb_container -->
+				
+			</div> <!-- .et_pb_slide -->
+			<div class="et_pb_slide et_pb_slide_4 et_pb_bg_layout_dark et_pb_slide_with_image et_pb_media_alignment_center" data-slide-id="et_pb_slide_4">
+				
+				
+				<div class="et_pb_container clearfix">
+					<div class="et_pb_slider_container_inner">
+						<div class="et_pb_slide_image"><img src="https://harness.io/wp-content/uploads/2019/11/linedata-logo.svg" alt="Harness Customer - Linedata" srcset="" sizes="" /></div>
+						<div class="et_pb_slide_description">
+							<div class="et_pb_slide_content">"By implementing automation with Harness, we eliminated the need to incur $500,000 in DevOps costs."</div>
+							
+						</div> <!-- .et_pb_slide_description -->
+					</div>
+				</div> <!-- .et_pb_container -->
+				
+			</div> <!-- .et_pb_slide -->
+			<div class="et_pb_slide et_pb_slide_5 et_pb_bg_layout_dark et_pb_slide_with_image et_pb_media_alignment_center" data-slide-id="et_pb_slide_5">
+				
+				
+				<div class="et_pb_container clearfix">
+					<div class="et_pb_slider_container_inner">
+						<div class="et_pb_slide_image"><img src="https://harness.io/wp-content/uploads/2019/11/advanced_logo.svg" alt="Harness Customer - Advanced Software" srcset="" sizes="" /></div>
+						<div class="et_pb_slide_description">
+							<div class="et_pb_slide_content">"We achieved a 10x return on investment within first few months, while reducing deployment time from 2 days to 2 hours."</div>
+							
+						</div> <!-- .et_pb_slide_description -->
+					</div>
+				</div> <!-- .et_pb_container -->
+				
+			</div> <!-- .et_pb_slide -->
+			
+				</div> <!-- .et_pb_slides -->
+				
+			</div> <!-- .et_pb_slider -->
+			</div>
+			</div> <!-- .et_pb_code -->
+			</div> <!-- .et_pb_column -->
+				
+				
+			</div> <!-- .et_pb_row -->
+				
+				
+			</div> <!-- .et_pb_section --></div></div></div><div id="wow-modal-overlay-3" class="wow-modal-overlay" style="display:none;"><div id="wow-modal-overclose-3" class="wow-modal-overclose"></div><div id="wow-modal-window-3" class="wow-modal-window" style="display:none;"><div id="wow-modal-close-3" class="mw-close-btn topRight image"></div><div class="modal-window-content"><div class="et_pb_section et_pb_section_16 et_section_regular">
+				
+				
+				
+				
+					<div class="et_pb_row et_pb_row_18">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_35  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_33 et_pb_bg_layout_light  et_pb_text_align_center">
+				
+				
+				<div class="et_pb_text_inner"><h2 class="fs48 fsm32">Request a Price Quote.</h2>
+<p class="fs18 fsm18">Our goal is to help you deliver applications to production safely, and reliably with effective release management tools. Fill out the form below and we’ll get back to you quickly.</p></div>
+			</div> <!-- .et_pb_text -->
+			</div> <!-- .et_pb_column -->
+				
+				
+			</div> <!-- .et_pb_row --><div class="et_pb_row et_pb_row_19 et_pb_equal_columns">
+				<div class="et_pb_column et_pb_column_1_2 et_pb_column_36  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				<div id="formouter" class="et_pb_module et_pb_text et_pb_text_34 et_pb_bg_layout_light  et_pb_text_align_left">
+				
+				
+				<div class="et_pb_text_inner"><script src="//go.harness.io/js/forms2/js/forms2.min.js"></script></p>
+<form id="mktoForm_1091"></form>
+<p><script>MktoForms2.loadForm("//go.harness.io", "924-CQO-224", 1091);</script></div>
+			</div> <!-- .et_pb_text -->
+			</div> <!-- .et_pb_column --><div class="et_pb_column et_pb_column_1_2 et_pb_column_37  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				<div id="popuprightboxslider" class="et_pb_module et_pb_code et_pb_code_14">
+				
+				
+				<div class="et_pb_code_inner"><div class="et_pb_module et_pb_slider et_pb_slider_2 et_pb_slider_fullwidth_off et_pb_slider_no_arrows">
+				<div class="et_pb_slides">
+					<div class="et_pb_slide et_pb_slide_6 et_pb_bg_layout_dark et_pb_slide_with_image et_pb_media_alignment_center et-pb-active-slide" data-slide-id="et_pb_slide_6">
+				
+				
+				<div class="et_pb_container clearfix">
+					<div class="et_pb_slider_container_inner">
+						<div class="et_pb_slide_image"><img src="https://harness.io/wp-content/uploads/2019/11/logo-cti.svg" alt="Harness Customer - Consumer Track" srcset="" sizes="" /></div>
+						<div class="et_pb_slide_description">
+							<div class="et_pb_slide_content">"We reduced deployment effort by 16 hours per day, saving $290,000 a year."</div>
+							
+						</div> <!-- .et_pb_slide_description -->
+					</div>
+				</div> <!-- .et_pb_container -->
+				
+			</div> <!-- .et_pb_slide -->
+			<div class="et_pb_slide et_pb_slide_7 et_pb_bg_layout_dark et_pb_slide_with_image et_pb_media_alignment_center" data-slide-id="et_pb_slide_7">
+				
+				
+				<div class="et_pb_container clearfix">
+					<div class="et_pb_slider_container_inner">
+						<div class="et_pb_slide_image"><img src="https://harness.io/wp-content/uploads/2019/11/linedata-logo.svg" alt="Harness Customer - Linedata" srcset="" sizes="" /></div>
+						<div class="et_pb_slide_description">
+							<div class="et_pb_slide_content">"By implementing automation with Harness, we eliminated the need to incur $500,000 in DevOps costs."</div>
+							
+						</div> <!-- .et_pb_slide_description -->
+					</div>
+				</div> <!-- .et_pb_container -->
+				
+			</div> <!-- .et_pb_slide -->
+			<div class="et_pb_slide et_pb_slide_8 et_pb_bg_layout_dark et_pb_slide_with_image et_pb_media_alignment_center" data-slide-id="et_pb_slide_8">
+				
+				
+				<div class="et_pb_container clearfix">
+					<div class="et_pb_slider_container_inner">
+						<div class="et_pb_slide_image"><img src="https://harness.io/wp-content/uploads/2019/11/advanced_logo.svg" alt="Harness Customer - Advanced Software" srcset="" sizes="" /></div>
+						<div class="et_pb_slide_description">
+							<div class="et_pb_slide_content">"We achieved a 10x return on investment within first few months, while reducing deployment time from 2 days to 2 hours."</div>
+							
+						</div> <!-- .et_pb_slide_description -->
+					</div>
+				</div> <!-- .et_pb_container -->
+				
+			</div> <!-- .et_pb_slide -->
+			
+				</div> <!-- .et_pb_slides -->
+				
+			</div> <!-- .et_pb_slider -->
+			</div>
+			</div> <!-- .et_pb_code -->
+			</div> <!-- .et_pb_column -->
+				
+				
+			</div> <!-- .et_pb_row -->
+				
+				
+			</div> <!-- .et_pb_section --></div></div></div><div id="wow-modal-overlay-4" class="wow-modal-overlay" style="display:none;"><div id="wow-modal-overclose-4" class="wow-modal-overclose"></div><div id="wow-modal-window-4" class="wow-modal-window" style="display:none;"><div id="wow-modal-close-4" class="mw-close-btn topRight image"></div><div class="modal-window-content"><div class="et_pb_section et_pb_section_18 et_section_regular">
+				
+				
+				
+				
+					<div class="et_pb_row et_pb_row_20">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_38  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_35 et_pb_bg_layout_light  et_pb_text_align_center">
+				
+				
+				<div class="et_pb_text_inner"><h2 class="fs48 fsm32">Get Started</h2>
+<p class="fs18 fsm14">Harness is easy to trial, easy to use, easy to love.</p></div>
+			</div> <!-- .et_pb_text -->
+			</div> <!-- .et_pb_column -->
+				
+				
+			</div> <!-- .et_pb_row --><div id="getstrtfrmrowouter" class="et_pb_row et_pb_row_21">
+				<div class="et_pb_column et_pb_column_1_2 et_pb_column_39  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				<div id="formouter" class="et_pb_module et_pb_text et_pb_text_36 et_pb_bg_layout_light  et_pb_text_align_left">
+				
+				
+				<div class="et_pb_text_inner"><script src="//go.harness.io/js/forms2/js/forms2.min.js"></script></p>
+<form class="mktoForm mktoHasWidth mktoLayoutLeft" novalidate="novalidate">
+<div class="mktoFormRow">
+<div class="mktoFieldDescriptor mktoFormCol">
+<div class="mktoFieldWrap mktoRequiredField"><input class="mktoField mktoTextField mktoHasWidth mktoRequired" tabindex="1" maxlength="255" name="FirstName" type="text" placeholder="First Name" /></div>
+</div>
+</div>
+<div class="mktoFormRow">
+<div class="mktoFieldDescriptor mktoFormCol">
+<div class="mktoFieldWrap mktoRequiredField"><input class="mktoField mktoTextField mktoHasWidth mktoRequired" tabindex="2" maxlength="255" name="LastName" type="text" placeholder="Last Name" /></div>
+</div>
+</div>
+<div class="mktoFormRow">
+<div class="mktoFieldDescriptor mktoFormCol">
+<div class="mktoFieldWrap mktoRequiredField"><input class="mktoField mktoEmailField mktoHasWidth mktoRequired" tabindex="3" maxlength="255" name="Email" type="email" placeholder="Work Email" /></div>
+</div>
+</div>
+<div class="mktoFormRow">
+<div class="mktoFieldDescriptor mktoFormCol">
+<div class="mktoFieldWrap mktoRequiredField"><input class="mktoField mktoTextField mktoHasWidth mktoRequired" tabindex="4" maxlength="255" name="Company" type="text" placeholder="Company Name" /></div>
+</div>
+</div>
+<div class="mktoFormRow">
+<div class="mktoFieldDescriptor mktoFormCol">
+<div class="mktoFieldWrap mktoRequiredField"><input class="mktoField mktoTextField mktoHasWidth mktoRequired" tabindex="5" maxlength="255" name="Title" type="text" placeholder="Job Title" /></div>
+</div>
+</div>
+<div class="mktoFormRow">
+<div class="mktoFieldDescriptor mktoFormCol">
+<div class="mktoFieldWrap mktoRequiredField"><input class="mktoField mktoTextField mktoHasWidth mktoRequired" tabindex="6" maxlength="2000" name="freemiumPassword" type="password" placeholder="Password" /></div>
+</div>
+</div>
+<div class="mktoButtonRow"><span class="mktoButtonWrap mktoSimple"><button class="mktoButton bluebtn" tabindex="8" type="submit">Get Started</button></span><a class="fs14 fsm18 fwregular wow-modal-id-5 textright" href="#" 
+ id="wow-modal-close-4">Join an existing team</a>
+</div>
+<p id="signup-form-error">
+</form></div>
+			</div> <!-- .et_pb_text -->
+			</div> <!-- .et_pb_column --><div class="et_pb_column et_pb_column_1_2 et_pb_column_40  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_37 et_pb_bg_layout_light  et_pb_text_align_left">
+				
+				
+				<div class="et_pb_text_inner"><ul id="getpopupsocialbtn">
+<li><a href="https://app.harness.io/gateway/api/users/oauth2Redirect?provider=GITHUB&amp;action=signup" target="_blank" class="github" rel="noopener noreferrer"><img src="https://harness.io/wp-content/uploads/2019/11/githubicon.svg" alt="GitHub SSO" /><span>Github</span></a></li>
+<li><a href="https://app.harness.io/gateway/api/users/oauth2Redirect?provider=BITBUCKET&amp;action=signup" target="_blank" class="bitbucket" rel="noopener noreferrer"><img src="https://harness.io/wp-content/uploads/2019/11/bigbucketicon.svg" alt="BitBucket SSO" /><span>BitBucket</span></a></li>
+<li><a href="https://app.harness.io/gateway/api/users/oauth2Redirect?provider=GITLAB&amp;action=signup" target="_blank" class="gitlab" rel="noopener noreferrer"><img src="https://harness.io/wp-content/uploads/2019/11/gitlabicon.svg" alt="Gitlab SSO" /><span>GitLab</span></a></li>
+<li><a href="https://app.harness.io/gateway/api/users/oauth2Redirect?provider=LINKEDIN&amp;action=signup" target="_blank" class="linkedin" rel="noopener noreferrer"><img src="https://harness.io/wp-content/uploads/2019/11/linkedinicon.svg" alt="Linkedin SSO" /><span>LinkedIn</span></a></li>
+<li><a href="https://app.harness.io/gateway/api/users/oauth2Redirect?provider=GOOGLE&amp;action=signup" target="_blank" class="google" rel="noopener noreferrer"><img src="https://harness.io/wp-content/uploads/2019/11/googleicon.svg" alt="Google SSO" /><span>Google</span></a></li>
+<li><a href="https://app.harness.io/gateway/api/users/oauth2Redirect?provider=AZURE&amp;action=signup" target="_blank" class="azure" rel="noopener noreferrer"><img src="https://harness.io/wp-content/uploads/2019/11/azureicon.svg" alt="Azure + Harness" /><span>Azure</span></a></li>
+</ul>
+<p class="popupfrmsmtext fclightblack">By signing up, you agree to our <a href="/privacy/" target="_blank" rel="noopener noreferrer">Privacy Policy</a> and our <a href="/terms-of-use/" target="_blank" rel="noopener noreferrer">Terms of Use</a>.</p></div>
+			</div> <!-- .et_pb_text -->
+			</div> <!-- .et_pb_column -->
+				
+				
+			</div> <!-- .et_pb_row -->
+				
+				
+			</div> <!-- .et_pb_section --></div></div></div><div id="wow-modal-overlay-5" class="wow-modal-overlay" style="display:none;"><div id="wow-modal-overclose-5" class="wow-modal-overclose"></div><div id="wow-modal-window-5" class="wow-modal-window" style="display:none;"><div id="wow-modal-close-5" class="mw-close-btn topRight image"></div><div class="modal-window-content"><div class="et_pb_section et_pb_section_20 et_section_regular">
+				
+				
+				
+				
+					<div class="et_pb_row et_pb_row_22">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_41  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_38 et_pb_bg_layout_light  et_pb_text_align_center">
+				
+				
+				<div class="et_pb_text_inner"><h2 class="fs48 fsm32">Try Harness</h2>
+<p class="fs18 fsm14">To join an existing Harness account, please enter:</p></div>
+			</div> <!-- .et_pb_text -->
+			</div> <!-- .et_pb_column -->
+				
+				
+			</div> <!-- .et_pb_row --><div class="et_pb_row et_pb_row_23">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_42  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				<div id="formouter" class="et_pb_module et_pb_text et_pb_text_39 et_pb_bg_layout_light  et_pb_text_align_left">
+				
+				
+				<div class="et_pb_text_inner"><script src="//go.harness.io/js/forms2/js/forms2.min.js"></script></p>
+<form
+    novalidate="novalidate"
+    class="mktoForm mktoHasWidth mktoLayoutLeft" id="signup-join-existing-account"></p>
+<div class="mktoFormRow">
+          <input name="JoinEmail" placeholder="Work email..." maxlength="255" type="email" class="mktoField mktoEmailField mktoHasWidth mktoRequired" />
+        </div>
+<div class="mktoFormRow">
+          <input name="JoinName" placeholder="Join Name" maxlength="255" type="text" class="mktoField mktoTextField mktoHasWidth mktoRequired" />
+    </div>
+<div class="mktoFormRow">
+          <input placeholder="Company" name="JoinCompany" maxlength="255" type="text" class="mktoField mktoTextField mktoHasWidth mktoRequired" />
+    </div>
+<div class="mktoFormRow">
+        <input name="AdminEmail" placeholder="Email of account admin" maxlength="255" type="email" class="mktoField mktoEmailField mktoHasWidth mktoRequired"/>
+    </div>
+<div class="mktoFormRow">
+           <textarea placeholder="Note for admin" name="Note" maxlength="1024" class="mktoField mktoTextField mktoHasWidth mktoRequired" ></textarea>
+    </div>
+<div class="mktoButtonRow"><button type="button" class="request-invitation mktoButton bluebtn">Request Invitation</button></span><a class="fs14 fsm18 wow-modal-id-4 go-back textright" href="#" 
+ id="wow-modal-close-5">&#x276E; Go back</a>
+    </div>
+<p class="mktoButtonRow error">
+</form></div>
+			</div> <!-- .et_pb_text -->
+			</div> <!-- .et_pb_column -->
+				
+				
+			</div> <!-- .et_pb_row -->
+				
+				
+			</div> <!-- .et_pb_section --></div></div></div><div id="wow-modal-overlay-6" class="wow-modal-overlay" style="display:none;"><div id="wow-modal-overclose-6" class="wow-modal-overclose"></div><div id="wow-modal-window-6" class="wow-modal-window" style="display:none;"><div id="wow-modal-close-6" class="mw-close-btn topRight image"></div><div class="modal-window-content"><div id="thankyoupopupouter" class="et_pb_section et_pb_section_22 et_section_regular">
+				
+				
+				
+				
+					<div class="et_pb_row et_pb_row_24">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_43  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				<div class="et_pb_with_border et_pb_module et_pb_text et_pb_text_40 et_pb_bg_layout_light  et_pb_text_align_center">
+				
+				
+				<div class="et_pb_text_inner"><h2 class="fs48 fsm32">Thanks for Contacting Harness</h2>
+<p class="fs18 fsm14">We received your information and we’ll be in touch shortly.</p></div>
+			</div> <!-- .et_pb_text --><div class="et_pb_module et_pb_text et_pb_text_41 et_pb_bg_layout_light  et_pb_text_align_center">
+				
+				
+				<div class="et_pb_text_inner"><h2 class="fs24 fsm18">Meanwhile, keep up-to-date on Harness by checking out our blog.</h2></div>
+			</div> <!-- .et_pb_text -->
+			</div> <!-- .et_pb_column -->
+				
+				
+			</div> <!-- .et_pb_row --><div class="et_pb_row et_pb_row_25 blogsrowouter">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_44  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				<div class="et_pb_module et_pb_code et_pb_code_15">
+				
+				
+				<div class="et_pb_code_inner"><div id="ajax-load-more" class="ajax-load-more-wrap blue"  data-alm-id="" data-canonical-url="https://harness.io/" data-slug="home" data-post-id="0"  data-localized="ajax_load_more_vars"><ul aria-live="polite" aria-atomic="true" class="alm-listing alm-ajax" data-container-type="ul" data-repeater="default" data-post-type="post" data-post-format="standard" data-category="continuous-delivery,customer-success,devops,featured,how-to,machine-learning" data-order="DESC" data-orderby="date" data-offset="0" data-posts-per-page="2" data-scroll="false" data-pause="false" data-button-label="Older Posts" data-images-loaded="true"></ul><div class="alm-btn-wrap" style="visibility: hidden;"><button class="alm-load-more-btn more " rel="next">Older Posts</button></div></div></div>
+			</div> <!-- .et_pb_code --><div class="et_pb_module et_pb_text et_pb_text_42 et_pb_bg_layout_light  et_pb_text_align_center">
+				
+				
+				<div class="et_pb_text_inner"><a href="https://harness.io/blog/" class="learnmorebtn mt1vw">View All</a></div>
+			</div> <!-- .et_pb_text -->
+			</div> <!-- .et_pb_column -->
+				
+				
+			</div> <!-- .et_pb_row -->
+				
+				
+			</div> <!-- .et_pb_section --></div></div></div><div id="wow-modal-overlay-7" class="wow-modal-overlay" style="display:none;"><div id="wow-modal-overclose-7" class="wow-modal-overclose"></div><div id="wow-modal-window-7" class="wow-modal-window" style="display:none;"><div id="wow-modal-close-7" class="mw-close-btn topRight image"></div><div class="modal-window-content"><div class="et_pb_section et_pb_section_24 et_section_regular">
+				
+				
+				
+				
+					<div class="et_pb_row et_pb_row_26">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_45  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_43 et_pb_bg_layout_light  et_pb_text_align_center">
+				
+				
+				<div class="et_pb_text_inner"><h2 class="fs48 fsm32"> Request a Demo for Access to our Trial</h2>
+<p class="fs18 fsm14"> For On-Prem, we'll set up a brief demo to discuss getting you started.</p></div>
+			</div> <!-- .et_pb_text -->
+			</div> <!-- .et_pb_column -->
+				
+				
+			</div> <!-- .et_pb_row --><div class="et_pb_row et_pb_row_27">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_46  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				<div id="formouter" class="et_pb_module et_pb_code et_pb_code_16 btncenter">
+				
+				
+				<div class="et_pb_code_inner"><script src="//go.harness.io/js/forms2/js/forms2.min.js"></script>
+<form id="mktoForm_1423"></form>
+<script>MktoForms2.loadForm("//go.harness.io", "924-CQO-224", 1423);</script></div>
+			</div> <!-- .et_pb_code -->
+			</div> <!-- .et_pb_column -->
+				
+				
+			</div> <!-- .et_pb_row -->
+				
+				
+			</div> <!-- .et_pb_section --></div></div></div><div id="wow-modal-overlay-8" class="wow-modal-overlay" style="display:none;"><div id="wow-modal-overclose-8" class="wow-modal-overclose"></div><div id="wow-modal-window-8" class="wow-modal-window" style="display:none;"><div id="wow-modal-close-8" class="mw-close-btn topRight image"></div><div class="modal-window-content"><div class="et_pb_section et_pb_section_26 et_section_regular">
+				
+				
+				
+				
+					<div class="et_pb_row et_pb_row_28">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_47  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_44 et_pb_bg_layout_light  et_pb_text_align_center">
+				
+				
+				<div class="et_pb_text_inner"><h2 class="fs48 fsm32">Request a Continuous Efficiency Demo</h2>
+<p class="fs18 fsm18">Please fill out the form below to request your demo.</p></div>
+			</div> <!-- .et_pb_text -->
+			</div> <!-- .et_pb_column -->
+				
+				
+			</div> <!-- .et_pb_row --><div class="et_pb_row et_pb_row_29 et_pb_equal_columns">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_48  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				<div id="formouter" class="et_pb_module et_pb_text et_pb_text_45 btncenter et_pb_bg_layout_light  et_pb_text_align_left">
+				
+				
+				<div class="et_pb_text_inner"><script src="//go.harness.io/js/forms2/js/forms2.min.js"></script></p>
+<form id="mktoForm_1469"></form>
+<p><script>MktoForms2.loadForm("//go.harness.io", "924-CQO-224", 1469);</script></div>
+			</div> <!-- .et_pb_text -->
+			</div> <!-- .et_pb_column -->
+				
+				
+			</div> <!-- .et_pb_row -->
+				
+				
+			</div> <!-- .et_pb_section --></div></div></div><div id="wow-modal-overlay-9" class="wow-modal-overlay" style="display:none;"><div id="wow-modal-overclose-9" class="wow-modal-overclose"></div><div id="wow-modal-window-9" class="wow-modal-window" style="display:none;"><div id="wow-modal-close-9" class="mw-close-btn topRight image"></div><div class="modal-window-content"><div class="et_pb_section et_pb_section_28 et_section_regular">
+				
+				
+				
+				
+					<div class="et_pb_row et_pb_row_30">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_49  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_46 et_pb_bg_layout_light  et_pb_text_align_center">
+				
+				
+				<div class="et_pb_text_inner"><h2 class="fs48 fsm32">Request a Continuous Efficiency Quote</h2>
+<p class="fs18 fsm18">Fill out the form below and we’ll get back to you quickly.</p></div>
+			</div> <!-- .et_pb_text -->
+			</div> <!-- .et_pb_column -->
+				
+				
+			</div> <!-- .et_pb_row --><div class="et_pb_row et_pb_row_31 et_pb_equal_columns">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_50  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				<div id="formouter" class="et_pb_module et_pb_text et_pb_text_47 btncenter et_pb_bg_layout_light  et_pb_text_align_left">
+				
+				
+				<div class="et_pb_text_inner"><script src="//go.harness.io/js/forms2/js/forms2.min.js"></script></p>
+<form id="mktoForm_1473"></form>
+<p><script>MktoForms2.loadForm("//go.harness.io", "924-CQO-224", 1473);</script></div>
+			</div> <!-- .et_pb_text -->
+			</div> <!-- .et_pb_column -->
+				
+				
+			</div> <!-- .et_pb_row -->
+				
+				
+			</div> <!-- .et_pb_section --></div></div></div><div id="wow-modal-overlay-10" class="wow-modal-overlay" style="display:none;"><div id="wow-modal-overclose-10" class="wow-modal-overclose"></div><div id="wow-modal-window-10" class="wow-modal-window" style="display:none;"><div id="wow-modal-close-10" class="mw-close-btn topRight image"></div><div class="modal-window-content"><div class="et_pb_section et_pb_section_30 et_section_regular">
+				
+				
+				
+				
+					<div class="et_pb_row et_pb_row_32">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_51  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_48 et_pb_bg_layout_light  et_pb_text_align_center">
+				
+				
+				<div class="et_pb_text_inner"><h2 class="fs48 fsm32">Request a Continuous Delivery Demo</h2>
+<p class="fs18 fsm18">Please fill out the form below to request your demo.</p></div>
+			</div> <!-- .et_pb_text -->
+			</div> <!-- .et_pb_column -->
+				
+				
+			</div> <!-- .et_pb_row --><div class="et_pb_row et_pb_row_33 et_pb_equal_columns">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_52  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				<div id="formouter" class="et_pb_module et_pb_text et_pb_text_49 btncenter et_pb_bg_layout_light  et_pb_text_align_left">
+				
+				
+				<div class="et_pb_text_inner"><script src="//go.harness.io/js/forms2/js/forms2.min.js"></script></p>
+<form id="mktoForm_1533"></form>
+<p><script>MktoForms2.loadForm("//go.harness.io", "924-CQO-224", 1533);</script></div>
+			</div> <!-- .et_pb_text -->
+			</div> <!-- .et_pb_column -->
+				
+				
+			</div> <!-- .et_pb_row -->
+				
+				
+			</div> <!-- .et_pb_section --></div></div></div>	<script type="text/javascript">
+				var et_animation_data = [{"class":"et_pb_post_slider_0","style":"fade","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"}];
+			</script>
+	<link rel='stylesheet' id='modal-window-css'  href='https://harness.io/wp-content/plugins/modal-window/public/assets/css/style.min.css?ver=5.0.6' type='text/css' media='all' />
+<style id='modal-window-inline-css' type='text/css'>
+@media only screen and (max-width: 480px){ #wow-modal-window-1 { width:85% !important; } } #wow-modal-close-1 { top: -15px;right: -15px; } #wow-modal-close-1.mw-close-btn.image:before { content: "\00d7"; text-align: center; width: 32px; height: 32px; line-height: 32px; color: #fff; font-family: inherit; font-size: 14px; font-weight: normal; font-style: normal; background: #000; border-radius: 25px; } #wow-modal-close-1.mw-close-btn.image:hover:before { color: #000; background: #fff; }
+@media only screen and (max-width: 480px){ #wow-modal-window-2 { width:85% !important; } } #wow-modal-close-2 { top: -15px;right: -15px; } #wow-modal-close-2.mw-close-btn.image:before { content: "\00d7"; text-align: center; width: 32px; height: 32px; line-height: 32px; color: #fff; font-family: inherit; font-size: 14px; font-weight: normal; font-style: normal; background: #000; border-radius: 25px; } #wow-modal-close-2.mw-close-btn.image:hover:before { color: #000; background: #fff; }
+@media only screen and (max-width: 480px){ #wow-modal-window-3 { width:85% !important; } } #wow-modal-close-3 { top: -15px;right: -15px; } #wow-modal-close-3.mw-close-btn.image:before { content: "\00d7"; text-align: center; width: 32px; height: 32px; line-height: 32px; color: #fff; font-family: inherit; font-size: 14px; font-weight: normal; font-style: normal; background: #000; border-radius: 25px; } #wow-modal-close-3.mw-close-btn.image:hover:before { color: #000; background: #fff; }
+@media only screen and (max-width: 480px){ #wow-modal-window-4 { width:85% !important; } } #wow-modal-close-4 { top: -15px;right: -15px; } #wow-modal-close-4.mw-close-btn.image:before { content: "\00d7"; text-align: center; width: 32px; height: 32px; line-height: 32px; color: #fff; font-family: inherit; font-size: 14px; font-weight: normal; font-style: normal; background: #000; border-radius: 25px; } #wow-modal-close-4.mw-close-btn.image:hover:before { color: #000; background: #fff; }
+@media only screen and (max-width: 480px){ #wow-modal-window-5 { width:85% !important; } } #wow-modal-close-5 { top: -15px;right: -15px; } #wow-modal-close-5.mw-close-btn.image:before { content: "\00d7"; text-align: center; width: 32px; height: 32px; line-height: 32px; color: #fff; font-family: inherit; font-size: 14px; font-weight: normal; font-style: normal; background: #000; border-radius: 25px; } #wow-modal-close-5.mw-close-btn.image:hover:before { color: #000; background: #fff; }
+@media only screen and (max-width: 480px){ #wow-modal-window-6 { width:85% !important; } } #wow-modal-close-6 { top: -15px;right: -15px; } #wow-modal-close-6.mw-close-btn.image:before { content: "\00d7"; text-align: center; width: 32px; height: 32px; line-height: 32px; color: #fff; font-family: inherit; font-size: 14px; font-weight: normal; font-style: normal; background: #000; border-radius: 25px; } #wow-modal-close-6.mw-close-btn.image:hover:before { color: #000; background: #fff; }
+@media only screen and (max-width: 480px){ #wow-modal-window-7 { width:85% !important; } } #wow-modal-close-7 { top: -15px;right: -15px; } #wow-modal-close-7.mw-close-btn.image:before { content: "\00d7"; text-align: center; width: 32px; height: 32px; line-height: 32px; color: #fff; font-family: inherit; font-size: 14px; font-weight: normal; font-style: normal; background: #000; border-radius: 25px; } #wow-modal-close-7.mw-close-btn.image:hover:before { color: #000; background: #fff; }
+@media only screen and (max-width: 480px){ #wow-modal-window-8 { width:85% !important; } } #wow-modal-close-8 { top: -15px;right: -15px; } #wow-modal-close-8.mw-close-btn.image:before { content: "\00d7"; text-align: center; width: 32px; height: 32px; line-height: 32px; color: #fff; font-family: inherit; font-size: 14px; font-weight: normal; font-style: normal; background: #000; border-radius: 25px; } #wow-modal-close-8.mw-close-btn.image:hover:before { color: #000; background: #fff; }
+@media only screen and (max-width: 480px){ #wow-modal-window-9 { width:85% !important; } } #wow-modal-close-9 { top: -15px;right: -15px; } #wow-modal-close-9.mw-close-btn.image:before { content: "\00d7"; text-align: center; width: 32px; height: 32px; line-height: 32px; color: #fff; font-family: inherit; font-size: 14px; font-weight: normal; font-style: normal; background: #000; border-radius: 25px; } #wow-modal-close-9.mw-close-btn.image:hover:before { color: #000; background: #fff; }
+@media only screen and (max-width: 480px){ #wow-modal-window-10 { width:85% !important; } } #wow-modal-close-10 { top: -15px;right: -15px; } #wow-modal-close-10.mw-close-btn.image:before { content: "\00d7"; text-align: center; width: 32px; height: 32px; line-height: 32px; color: #fff; font-family: inherit; font-size: 14px; font-weight: normal; font-style: normal; background: #000; border-radius: 25px; } #wow-modal-close-10.mw-close-btn.image:hover:before { color: #000; background: #fff; }
+</style>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var DIVI = {"item_count":"%d Item","items_count":"%d Items"};
+var et_shortcodes_strings = {"previous":"Previous","next":"Next"};
+var et_pb_custom = {"ajaxurl":"https:\/\/harness.io\/wp-admin\/admin-ajax.php","images_uri":"https:\/\/harness.io\/wp-content\/themes\/Divi\/images","builder_images_uri":"https:\/\/harness.io\/wp-content\/themes\/Divi\/includes\/builder\/images","et_frontend_nonce":"61a4297111","subscription_failed":"Please, check the fields below to make sure you entered the correct information.","et_ab_log_nonce":"1c3663242f","fill_message":"Please, fill in the following fields:","contact_error_message":"Please, fix the following errors:","invalid":"Invalid email","captcha":"Captcha","prev":"Prev","previous":"Previous","next":"Next","wrong_captcha":"You entered the wrong number in captcha.","ignore_waypoints":"no","is_divi_theme_used":"1","widget_search_selector":".widget_search","ab_tests":[],"is_ab_testing_active":"","page_id":"2","unique_test_id":"","ab_bounce_rate":"5","is_cache_plugin_active":"no","is_shortcode_tracking":"","tinymce_uri":""}; var et_frontend_scripts = {"builderCssContainerPrefix":"#et-boc","builderCssLayoutPrefix":"#et-boc .et-l"};
+var et_pb_box_shadow_elements = [".et_pb_slider_0",".et_pb_slider_0",".et_pb_slider_0",".et_pb_slider_1",".et_pb_slider_1",".et_pb_slider_1",".et_pb_slider_2",".et_pb_slider_2",".et_pb_slider_2"];
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://harness.io/wp-content/themes/Divi/js/custom.min.js?ver=4.0.6'></script>
+<script type='text/javascript' src='https://harness.io/wp-content/plugins/page-links-to/dist/new-tab.js?ver=3.3.4'></script>
+<script type='text/javascript' src='https://harness.io/wp-content/themes/Divi/core/admin/js/common.js?ver=4.0.6'></script>
+<script type='text/javascript' src='https://harness.io/wp-includes/js/wp-embed.min.js?ver=5.4.2'></script>
+<script type='text/javascript' src='https://harness.io/wp-content/plugins/modal-window/public/assets/js/jquery.effects.min.js?ver=5.0.6'></script>
+<script type='text/javascript' src='https://harness.io/wp-content/plugins/modal-window/public/assets/js/jquery.modalWindow.min.js?ver=5.0.6'></script>
+<script type='text/javascript'>
+jQuery(function() {jQuery("#wow-modal-overlay-1").ModalWindow({"animation":["no","400","no","400"],"overlay":true,"overlay_css":["rgba(0, 0, 0, 0.7)"],"action":["click","0"],"closeBtn":[false,"0"],"closeAction":[false,false],"triggers":["wow-modal-id-1","wow-modal-close-1","wow-button-close-1"],"modal_css":{"width":"53%","height":"auto","top":"10%","left":"0%","right":"0%","padding":"10px","border-width":0,"border-style":"none","border-color":"#383838","position":"absolute","border-radius":"8px","background-color":null,"box-shadow":"none"},"content_css":{"font-family":"inherit","font-size":"16px"}}); });
+jQuery(function() {jQuery("#wow-modal-overlay-2").ModalWindow({"animation":["no","400","no","400"],"overlay":true,"overlay_css":["rgba(0, 0, 0, 0.7)"],"action":["click","0"],"closeBtn":[false,"0"],"closeAction":[false,false],"triggers":["wow-modal-id-2","wow-modal-close-2","wow-button-close-2"],"modal_css":{"width":"53%","height":"auto","top":"10%","left":"0%","right":"0%","padding":"10px","border-width":0,"border-style":"none","border-color":"#383838","position":"absolute","border-radius":"8px","background-color":null,"box-shadow":"none"},"content_css":{"font-family":"inherit","font-size":"16px"}}); });
+jQuery(function() {jQuery("#wow-modal-overlay-3").ModalWindow({"animation":["no","400","no","400"],"overlay":true,"overlay_css":["rgba(0, 0, 0, 0.7)"],"action":["click","0"],"closeBtn":[false,"0"],"closeAction":[false,false],"triggers":["wow-modal-id-3","wow-modal-close-3","wow-button-close-3"],"modal_css":{"width":"53%","height":"auto","top":"10%","left":"0%","right":"0%","padding":"10px","border-width":0,"border-style":"none","border-color":"#383838","position":"absolute","border-radius":"8px","background-color":null,"box-shadow":"none"},"content_css":{"font-family":"inherit","font-size":"16px"}}); });
+jQuery(function() {jQuery("#wow-modal-overlay-4").ModalWindow({"animation":["no","400","no","400"],"overlay":true,"overlay_css":["rgba(0, 0, 0, 0.7)"],"action":["click","0"],"closeBtn":[false,"0"],"closeAction":[false,false],"triggers":["wow-modal-id-4","wow-modal-close-4","wow-button-close-4"],"modal_css":{"width":"53%","height":"auto","top":"10%","left":"0%","right":"0%","padding":"10px","border-width":0,"border-style":"none","border-color":"#383838","position":"absolute","border-radius":"8px","background-color":null,"box-shadow":"none"},"content_css":{"font-family":"inherit","font-size":"16px"}}); });
+jQuery(function() {jQuery("#wow-modal-overlay-5").ModalWindow({"animation":["no","400","no","400"],"overlay":true,"overlay_css":["rgba(0, 0, 0, 0.7)"],"action":["click","0"],"closeBtn":[false,"0"],"closeAction":[false,false],"triggers":["wow-modal-id-5","wow-modal-close-5","wow-button-close-5"],"modal_css":{"width":"53%","height":"auto","top":"10%","left":"0%","right":"0%","padding":"10px","border-width":0,"border-style":"none","border-color":"#383838","position":"absolute","border-radius":"8px","background-color":null,"box-shadow":"none"},"content_css":{"font-family":"inherit","font-size":"16px"}}); });
+jQuery(function() {jQuery("#wow-modal-overlay-6").ModalWindow({"animation":["no","400","no","400"],"overlay":true,"overlay_css":["rgba(0, 0, 0, 0.7)"],"action":["click","0"],"closeBtn":[false,"0"],"closeAction":[false,false],"triggers":["wow-modal-id-6","wow-modal-close-6","wow-button-close-6"],"modal_css":{"width":"53%","height":"auto","top":"10%","left":"0%","right":"0%","padding":"10px","border-width":0,"border-style":"none","border-color":"#383838","position":"absolute","border-radius":"8px","background-color":null,"box-shadow":"none"},"content_css":{"font-family":"inherit","font-size":"16px"}}); });
+jQuery(function() {jQuery("#wow-modal-overlay-7").ModalWindow({"animation":["no","400","no","400"],"overlay":true,"overlay_css":["rgba(0, 0, 0, 0.7)"],"action":["click","0"],"closeBtn":[false,"0"],"closeAction":[false,false],"triggers":["wow-modal-id-7","wow-modal-close-7","wow-button-close-7"],"modal_css":{"width":"53%","height":"auto","top":"10%","left":"0%","right":"0%","padding":"10px","border-width":0,"border-style":"none","border-color":"#383838","position":"absolute","border-radius":"8px","background-color":null,"box-shadow":"none"},"content_css":{"font-family":"inherit","font-size":"16px"}}); });
+jQuery(function() {jQuery("#wow-modal-overlay-8").ModalWindow({"animation":["no","400","no","400"],"overlay":true,"overlay_css":["rgba(0, 0, 0, 0.7)"],"action":["click","0"],"closeBtn":[false,"0"],"closeAction":[false,false],"triggers":["wow-modal-id-8","wow-modal-close-8","wow-button-close-8"],"modal_css":{"width":"53%","height":"auto","top":"10%","left":"0%","right":"0%","padding":"10px","border-width":0,"border-style":"none","border-color":"#383838","position":"absolute","border-radius":"8px","background-color":null,"box-shadow":"none"},"content_css":{"font-family":"inherit","font-size":"16px"}}); });
+jQuery(function() {jQuery("#wow-modal-overlay-9").ModalWindow({"animation":["no","400","no","400"],"overlay":true,"overlay_css":["rgba(0, 0, 0, 0.7)"],"action":["click","0"],"closeBtn":[false,"0"],"closeAction":[false,false],"triggers":["wow-modal-id-9","wow-modal-close-9","wow-button-close-9"],"modal_css":{"width":"53%","height":"auto","top":"10%","left":"0%","right":"0%","padding":"10px","border-width":0,"border-style":"none","border-color":"#383838","position":"absolute","border-radius":"8px","background-color":null,"box-shadow":"none"},"content_css":{"font-family":"inherit","font-size":"16px"}}); });
+jQuery(function() {jQuery("#wow-modal-overlay-10").ModalWindow({"animation":["no","400","no","400"],"overlay":true,"overlay_css":["rgba(0,0,0,.7)"],"action":["click","0"],"closeBtn":[false,"0"],"closeAction":[false,false],"triggers":["wow-modal-id-10","wow-modal-close-10","wow-button-close-10"],"modal_css":{"width":"53%","height":"auto","top":"10%","left":"0%","right":"0%","padding":"10px","border-width":0,"border-style":"none","border-color":"#383838","position":"absolute","border-radius":"8px","background-color":"#ffffff","box-shadow":"none"},"content_css":{"font-family":"inherit","font-size":"16px"}}); });
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var alm_localize = {"ajaxurl":"https:\/\/harness.io\/wp-admin\/admin-ajax.php","alm_nonce":"454f85f2ff","rest_api":"https:\/\/harness.io\/wp-json\/","rest_nonce":"2907038ed9","pluginurl":"https:\/\/harness.io\/wp-content\/plugins\/ajax-load-more","speed":"200","ga_debug":"false","results_text":"Viewing {post_count} of {total_posts} results.","no_results_text":"No results found.","alm_debug":"","a11y_focus":"1"};
+var ajax_load_more_vars = {"id":"ajax-load-more"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://harness.io/wp-content/plugins/ajax-load-more/core/dist/js/ajax-load-more.min.js?ver=5.3.6'></script>
+
+  <!-- Scripts to support Sales contact auto-complete/Sign up/Join forms -->
+  <script src="//storage.googleapis.com/harness-ui-thirdparty/third-party/harness-marketing-utils.js?t=225"></script>
+  <script src="//storage.googleapis.com/harness-ui-thirdparty/third-party/harness-marketing-signup-form-v2.js?v=22"></script>
+  <script src="//storage.googleapis.com/harness-ui-thirdparty/third-party/harness-marketing-join-form-v2.js?t=22"></script>
+    <!-- Marketo Munchkin Tracking Code -->
+  <script type="text/javascript">
+(function() {
+  var didInit = false;
+  function initMunchkin() {
+    if(didInit === false) {
+      didInit = true;
+      Munchkin.init('924-CQO-224');
+    }
+  }
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = '//munchkin.marketo.net/munchkin.js';
+  s.onreadystatechange = function() {
+    if (this.readyState == 'complete' || this.readyState == 'loaded') {
+      initMunchkin();
+    }
+  };
+  s.onload = initMunchkin;
+  document.getElementsByTagName('head')[0].appendChild(s);
+})();
+</script>
+<!-- Bugsnag Integration -->
+<script>
+  if (/harness.io/i.test(location.hostname)) {
+    jQuery.getScript('//d2wy8f7a9ursnm.cloudfront.net/v6/bugsnag.min.js', function () {
+      window.bugsnagClient = bugsnag('00b6b65e94b213d9e0430b1ca306232d')
+    })
+  }
+</script>
+<!-- 6sense -->
+<script>
+    window._6si = window._6si || [];
+    window._6si.push(['enableEventTracking', true]);
+    window._6si.push(['setToken', 'c5b349db87e83b80f965276d31deeee3']);
+    window._6si.push(['setEndpoint', 'b.6sc.co']);
+    (function() {
+      var gd = document.createElement('script');
+      gd.type = 'text/javascript';
+      gd.async = true;
+      gd.src = '//j.6sc.co/6si.min.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(gd, s);
+    })();
+  </script>
+</body>
+</html>

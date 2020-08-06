@@ -1,0 +1,686 @@
+﻿<!-- 产品展示详情 -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" en>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="HandheldFriendly" content="true" />
+<link rel="shortcut icon" href="http://hillsuntec.com/wp-content/themes/wordpress_themes_02/images/favicon.ico" type="image/x-icon" />
+<link rel="logo-big-precomposed" href="logo-big.png" />
+<link rel="stylesheet" type="text/css" href="http://hillsuntec.com/wp-content/themes/wordpress_themes_02/style.css " />
+<script src="http://hillsuntec.com/wp-content/themes/wordpress_themes_02/js/jquery-1.8.2.min.js" type="text/javascript" charset="utf-8"></script> 
+<title>Image quality detection  &#8211;  HillSunTec</title>
+<meta name="keywords" content=" "/>
+<meta name="description" content="" />
+<meta property="qc:admins" content="" />
+<script type="text/javascript">
+  $(function(){
+    $(".nav li a").hover(function() {
+      var sws=$(this).attr("class");
+      $(".sec_nav").hide();
+      $(".triangle").hide();
+      $(".contact_nav").hide();   
+      $("."+sws+"_nav").show();
+      $("."+sws+" .triangle").show();
+    });
+    
+    $(".sec_nav").mouseleave(function(){
+      $(this).fadeOut(800);
+      $(".triangle").fadeOut(800);
+    });
+    $(".headFirst .nav li").click(function() {
+      $(this).addClass("cur").siblings().removeClass("cur");
+    });
+  })
+</script>
+</head>
+<body>
+<div class="body">
+	<!---->
+   <div class="head headFirst">
+      <a href="/">
+        <div class="logo">
+          <img class="logo1" src="http://hillsuntec.com/wp-content/themes/wordpress_themes_02/images/logo-big1.png" />
+          <img class="logo2" src="http://hillsuntec.com/wp-content/themes/wordpress_themes_02/images/logo-big2.png" />
+        </div>
+      </a>
+      <a href="javascript:;" class="navBtn2"></a>   
+      <div class="nav">
+         <ul>
+            <a class='search_icon' href='/zh'>中文</a>            <li >
+               <a href="http://hillsuntec.com/index.php">
+                  <div class="bg"></div>
+                  <div class="tBox">
+                     <div class="t1">home</div>
+                     <div class="t2">home </div>
+                  </div>
+               </a>
+            </li>
+            <li  >
+               <a href="http://hillsuntec.com/index.php/about">
+                  <div class="bg"></div>
+                  <div class="tBox">
+                     <div class="t1">About </div>
+                     <div class="t2">About </div>
+                  </div>
+              </a>
+           </li>
+           <li class='cur'>
+               <a class="products" href="http://hillsuntec.com/index.php/products">
+                  <div class="bg"></div>
+                  <div class="tBox">
+                     <div class="t1">products </div>
+                     <div class="t2">products  </div>
+                  </div>
+                  <div class="triangle"></div>
+               </a>
+            </li>
+            <li >
+               <a class="solutions" href="http://hillsuntec.com/index.php/solutions">
+                  <div class="bg"></div>
+                  <div class="tBox">
+                     <div class="t1">solutions</div>
+                     <div class="t2">solutions</div>
+                  </div>
+                  <div class="triangle"></div>
+               </a>
+            </li>
+            <li >
+               <a class="news" href="http://hillsuntec.com/index.php/news">
+                  <div class="bg"></div>
+                  <div class="tBox">
+                     <div class="t1">news</div>
+                     <div class="t2">news</div>
+                  </div>
+                  <!-- <div class="triangle"></div> -->
+               </a>
+            </li>
+            <li >
+               <a class="contact" href="http://hillsuntec.com/index.php/contact">
+                  <div class="bg"></div>
+                  <div class="tBox">
+                     <div class="t1">contact </div>
+                     <div class="t2">contact</div>
+                  </div>
+                  <div class="triangle"></div>
+               </a>
+            </li>
+            <!-- <li class="vision" style="cursor: pointer; ">
+               <div class="bg"></div>
+               <div class="">
+                 <div class="t1">
+                  Vision 
+                 </div>
+                 <div class="t2">
+                  Vision 
+                 </div>
+               </div>
+            </li> -->
+         </ul>
+      </div>
+      <div class="navM">
+         <div class="navMbox">            
+            <ul>
+               <li>
+                  <a href="http://hillsuntec.com/index.php">home</a>
+               </li>
+               <li>
+                  <a href="http://hillsuntec.com/index.php/about">About</a>
+               </li>
+               <li>
+                  <a href="http://hillsuntec.com/index.php/solutions">solutions</a>
+               </li>
+               <li>
+                  <a href="http://hillsuntec.com/index.php/products">products</a>
+               </li>
+               <li>
+                  <a href="http://hillsuntec.com/index.php/news">news</a>
+               </li>
+               <li>
+                  <a href="http://hillsuntec.com/index.php/contact">contact</a>
+               </li>
+               <!-- <li class="vision" style="cursor: pointer; ">
+                  Vision               </li> -->
+            </ul>
+         </div>
+         <span>
+        <a class='search_icon' href='/zh'>中文</a>      </span>
+      </div>
+      <a href="#" class="navBtn"></a> 
+      <div class="sec_nav products_nav">
+        <div class="sec_link"></div>
+        <div class="list_cat" >
+          <div class="sec_title">
+            <a href="http://hillsuntec.com/index.php/products?type=41" type="41">
+              Video management service            </a>
+          </div>
+          <div class="sec_min">
+            <li>
+              <a href='http://hillsuntec.com/en/2384.html'>IDCN all in one machine</a>            </li>
+            <li>
+              <a href='http://hillsuntec.com/en/2070.html'>Image quality detection</a>            </li>
+            <li>
+              <a href='http://hillsuntec.com/en/2084.html'>Intelligent video integrated management software</a>            </li>
+            <li>
+              <a href='http://hillsuntec.com/en/2082.html'>Intelligent video integrated management software</a>            </li>
+          </div>
+        </div>
+        <div class="list_cat">
+          <div class="sec_title">
+            <a href="http://hillsuntec.com/index.php/products?type=42" type="42">
+              Video intelligent service            </a>
+          </div>
+          <div class="sec_min">
+            <li>
+              <a href='http://hillsuntec.com/en/2387.html'>Face image enhancement servic</a>            </li>
+            <li>
+              <a href='http://hillsuntec.com/en/2395.html'>Face super-resolution server</a>            </li>
+            <li>
+              <a href='http://hillsuntec.com/en/2396.html'>HillSun intelligent behavior analysis system</a>            </li>
+          </div>
+        </div>
+        <div class="list_cat">
+          <div class="sec_title">
+            <a href="http://hillsuntec.com/index.php/products?type=34" type="34">
+              Industry management platform            </a>
+          </div>
+          <div class="sec_min">
+            <li>
+              <a href='http://hillsuntec.com/en/2179.html'>Video and audio networking monitoring platform</a>            </li>
+            <li>
+              <a href='http://hillsuntec.com/en/2115.html'>Railway remote viewing control platform</a>            </li>
+            <li>
+              <a href='http://hillsuntec.com/en/2111.html'>Public security (SWAT) operational conductor training platform</a>            </li>
+          </div>
+        </div>
+        <div class="list_cat">
+          <div class="sec_title">
+            <a href="http://hillsuntec.com/index.php/products?type=35" type="35">
+              Intelligent cloud platform service            </a>
+          </div>
+          <div class="sec_min">
+            <li>
+              <a href='http://hillsuntec.com/en/2397.html'>Intelligent cloud platform</a>            </li>
+          </div>
+        </div>
+        <div class="list_cat">
+          <div class="sec_title">
+            <a href="http://hillsuntec.com/index.php/products?type=43" type="43">
+              Application of Intelligent Rail Transit Industry            </a>
+          </div>
+          <div class="sec_min">
+            <li>
+              <a href='http://hillsuntec.com/zh/2608.html'>Asset Inspection Management System</a>            </li>
+            <li>
+              <a href='http://hillsuntec.com/en/2606.html'>Passenger Flow Statistical Analysis System</a>            </li>
+            <li>
+              <a href='http://hillsuntec.com/en/2603.html'>Unmanned Remote Video Control System</a>            </li>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- <div class="sec_nav products_nav">
+        <div class="sec_link"></div>
+        <div class="list_cat">
+          <div class="sec_title">
+            <a href="http://hillsuntec.com/index.php/products?type=7" type="7">
+              视频管理服务
+            </a>
+          </div>
+          <div class="sec_min">
+            <li>
+              <a href="http://hillsuntec.com/zh/2084.html">IDCN一体机部分</a>            
+            </li>
+            <li>
+              <a href="http://hillsuntec.com/zh/2082.html">图像质量检测</a>            
+            </li>
+            <li>
+              <a href="http://hillsuntec.com/zh/2080.html">智能视频综合管理软件</a>            
+            </li>
+          </div>
+        </div>
+        <div class="list_cat">
+          <div class="sec_title">
+            <a href="http://hillsuntec.com/index.php/products?type=8" type="8">
+              视频智能服务
+            </a>
+          </div>
+          <div class="sec_min">
+            <li>
+              <a href="http://hillsuntec.com/zh/2109.html">人脸图像增强服务</a>            
+            </li>
+            <li>
+              <a href="http://hillsuntec.com/zh/2107.html">人脸超分辨服务</a>            
+            </li>
+            <li>
+              <a href="http://hillsuntec.com/zh/2105.html">洪森智能行为分析系统</a>            
+            </li>
+            <li>
+              <a href="http://hillsuntec.com/zh/2086.html">车辆数据存储服务</a>            
+            </li>
+            <li>
+              <a href="http://hillsuntec.com/zh/2103.html">车辆挖掘服务</a>            
+            </li>
+            <li>
+              <a href="http://hillsuntec.com/zh/2099.html">车辆比对服务</a>            
+            </li>
+            <li>
+              <a href="http://hillsuntec.com/zh/2096.html">车辆捕捉服务</a>            
+            </li>
+            <li>
+              <a href="http://hillsuntec.com/zh/2095.html">人脸数据存储服务</a>            
+            </li>
+            <li>
+              <a href="http://hillsuntec.com/zh/2093.html">人脸挖掘服务</a>            
+            </li>
+            <li>
+              <a href="http://hillsuntec.com/zh/2090.html">人脸比对服务</a>            
+            </li>
+            <li>
+              <a href="http://hillsuntec.com/zh/2088.html">人脸捕捉服务</a>            
+            </li>
+          </div>
+        </div>
+        <div class="list_cat">
+          <div class="sec_title">
+            <a href="http://hillsuntec.com/index.php/products?type=9" type="9">
+              智能硬件产品            
+            </a>
+          </div>
+          <div class="sec_min">
+            <li>
+              <a href="http://hillsuntec.com/zh/2078.html">人证一体机</a>            
+            </li>
+            <li>
+              <a href="http://hillsuntec.com/zh/2076.html">人脸闸机</a>            
+            </li>
+            <li>
+              <a href="http://hillsuntec.com/zh/2070.html">“透镜”便携式布控一体机</a>            
+            </li>
+          </div>
+        </div>
+        <div class="list_cat">
+          <div class="sec_title">
+            <a href="http://hillsuntec.com/index.php/products?type=34" type="34">
+              行业管理平台            
+            </a>
+          </div>
+          <div class="sec_min">
+            <li>
+              <a href="http://hillsuntec.com/zh/2179.html">音视频联网监管平台</a>            
+            </li>
+            <li>
+              <a href="http://hillsuntec.com/zh/2115.html">铁路远程视控平台</a>            
+            </li>
+            <li>
+              <a href="http://hillsuntec.com/zh/2111.html">公安(特警)作战指挥训练平台</a>            
+            </li>
+          </div>
+        </div>
+        <div class="list_cat">
+          <div class="sec_title">
+            <a href="http://hillsuntec.com/index.php/products?type=35" type="35">
+              智能云平台服务            
+            </a>
+          </div>
+          <div class="sec_min">
+            <li>
+              <a href="http://hillsuntec.com/zh/2196.html">智能云平台</a>            
+            </li>
+          </div>
+        </div>
+      </div> -->
+
+      <div class="sec_nav solutions_nav">
+        <div class="sec_link"></div>
+        <div class="list_cat">
+          <div class="sec_title">
+            <a href="http://hillsuntec.com/index.php/solutions?type=21" type="21">
+              教育            
+            </a>
+          </div>
+          <div class="sec_min">
+            <li>
+              <a href="http://hillsuntec.com/zh/2073.html">平安高校人脸识别解决方案</a>            
+            </li>
+            <li>
+              <a href="http://hillsuntec.com/zh/2057.html">平安幼教人脸识别解决方案</a>            
+            </li>
+            <!-- <li class="cat-item-none">没有分类目录</li> -->
+          </div>
+        </div>
+        <div class="list_cat">
+          <div class="sec_title">
+            <a href="http://hillsuntec.com/index.php/solutions?type=14" type="14">
+              铁路            
+            </a>
+          </div>
+          <div class="sec_min">
+            <li>
+              <a href="http://hillsuntec.com/zh/2067.html">铁路行业变电所远程视控系统解决方案</a>            
+            </li>
+            <li>
+              <a href="http://hillsuntec.com/zh/2058.html">智慧铁路智能化综合管理解决方案</a>            
+            </li>
+          </div>
+        </div>
+        <div class="list_cat">
+          <div class="sec_title">
+            <a href="http://hillsuntec.com/index.php/solutions?type=20" type="20">
+              楼宇            
+            </a>
+          </div>
+          <div class="sec_min">
+            <li>
+              <a href="http://hillsuntec.com/zh/2056.html">智能楼宇高清视频解决方案</a>            
+            </li>
+          </div>
+        </div>
+        <div class="list_cat">
+          <div class="sec_title">
+            <a href="http://hillsuntec.com/index.php/solutions?type=19" type="19">
+              公检法            
+            </a>
+          </div>
+          <div class="sec_min">
+            <li>
+              <a href="http://hillsuntec.com/zh/2055.html">智能视频分析司法监狱应用解决方案</a>            
+            </li>
+            <li>
+              <a href="http://hillsuntec.com/zh/2054.html">公安智能视频分析方案</a>            
+            </li>
+          </div>
+        </div>
+        </div>
+      <!-- <div class="sec_nav solutions_nav">
+        <div class="sec_link"></div>
+        <div class="list_cat" >
+          <div class="sec_title">
+            <a href="http://hillsuntec.com/index.php/solutions?type=21" type="21">
+              Education            </a>
+          </div>
+          <div class="sec_min">
+            <li>
+              <a href='http://hillsuntec.com/en/2073.html'>Safe college and university face recognition solution</a>            </li>
+            <li>
+              <a href='http://hillsuntec.com/en/2057.html'>Safe preschool education of face recognition solution</a>            </li>
+            <li class="cat-item-none">No categories</li>          </div>
+        </div>
+        <div class="list_cat">
+          <div class="sec_title">
+            <a href="http://hillsuntec.com/index.php/solutions?type=14" type="14">
+              Railway            </a>
+          </div>
+          <div class="sec_min">
+            <li>
+              <a href='http://hillsuntec.com/en/2067.html'>Remote vision control system solution for substation of railway industry </a>            </li>
+            <li>
+              <a href='http://hillsuntec.com/en/2058.html'>Smart railway intelligent comprehensive management solution  </a>            </li>
+            <li>
+              <a href='http://hillsuntec.com/en/2058.html'>Smart railway intelligent comprehensive management solution  </a>            </li>
+          </div>
+        </div>
+        <div class="list_cat">
+          <div class="sec_title">
+            <a href="http://hillsuntec.com/index.php/solutions?type=20" type="20">
+              Building            </a>
+          </div>
+          <div class="sec_min">
+            <li>
+              <a href='http://hillsuntec.com/en/2056.html'>Intelligent building HD video solution</a>            </li>
+          </div>
+        </div>
+        <div class="list_cat">
+          <div class="sec_title">
+            <a href="http://hillsuntec.com/index.php/solutions?type=19" type="19">
+              Public security organs            </a>
+          </div>
+          <div class="sec_min">
+            <li>
+              <a href='http://hillsuntec.com/en/2055.html'>Intelligent video analysis of prison application solution</a>            </li>
+            <li>
+              <a href='http://hillsuntec.com/en/2054.html'>Intelligent video analysis solution of public security</a>            </li>
+          </div>
+        </div>
+        </div>
+      </div> -->
+
+      <!-- <div class="sec_nav news_nav">
+        <div class="list_cat" >
+          <div class="sec_title">
+            <a href="http://hillsuntec.com/index.php/news?type=11" type="11">
+              company-news            </a>
+          </div>
+        </div>
+        <div class="list_cat">
+          <div class="sec_title">
+            <a href="http://hillsuntec.com/index.php/news?type=12" type="12">
+              trade-news            </a>
+          </div>
+        </div>
+        </div>
+      </div> -->
+
+      <div class="sec_nav contact_nav">
+        <div class="list_cat" >
+          <div class="sec_title">
+            <a href="http://hillsuntec.com/index.php/invite" type="39">
+              Enterprise recruitment            </a>
+          </div>
+        </div>
+        <div class="list_cat">
+          <div class="sec_title">
+            <a href="http://hillsuntec.com/index.php/contact" type="12">
+              Contact us            </a>
+          </div>
+        </div>
+        </div>
+      </div>
+   </div>
+</div>
+<link rel="stylesheet" type="text/css" href="http://hillsuntec.com/wp-content/themes/wordpress_themes_02/css/single-cat-5.css" />
+
+<!-- 头部开始 -->
+<div class="deline center"><span></span></div>
+<div class="bigtitle clear center">
+   <div class="left">
+      <h1>Product</h1>
+   </div>
+   <div class="right"> 
+      <span>
+         <!-- 面包屑导航开始-->
+         <div class="mbx-dh">
+            Position :            <a href="http://hillsuntec.com/en">
+              HillSunTec            </a> 
+            >
+            <!-- &raquo; -->
+            <a href="http://hillsuntec.com/en/category/products">Products</a> > Image quality detection            </div>
+         <!-- 面包屑导航结束-->
+      </span> 
+   </div>
+</div>
+<!-- 头部结束 -->
+
+<!-- 产品详情开始 -->
+<!-- 产品正文 -->
+<div class="center centers"  style="margin:0 auto;margin-top:40px;">
+    
+    
+   <div>
+      <div class="the_content">
+         <p><div style="overflow: hidden;">
+<div style="float: left; width: 45%; padding: 150px 0 10px 0; box-sizing: border-box;">
+<h2 style="width: 100%; font-size: 40px; color: #000; font-family: '微软雅黑'; line-height: 40px; font-weight: normal; letter-spacing: 2px; text-align: center; margin-top: 80px;">Image quality detection</h2>
+<p style="display: block; width: 100%; height: 4px; background: #69b015; margin: 20px 0;"> </p>
+<p style="padding: 0px 10%; font-size: 16px; color: #7c7c7c; font-family: 微软雅黑; line-height: 30px; font-weight: normal; box-sizing: border-box; text-align: justify;">Video quality diagnosis is an intelligent video fault analysis and warning system. For video image of snowflakes, scrolling, fuzzy, partial color, screen freezes, gain unbalance, video signal loss, monitoring camera image shift , video signal interference, the decrease of the quality of the video for accurate analysis, judgment, and report to the police. Video quality diagnostic system can also be used as a major alarm means for preventing the degradation of video quality caused by malicious damage to the front-end camera and the loss of video.</p>
+</div>
+<div class="left" style="float: right; width: 55%; padding: 150px 0 10px 0; box-sizing: border-box;"><img title="1514555788256313.jpg" src="/wp-content/uploads/20171229/1514555788256313.jpg" alt="图像质量检测.jpg" width="100%" /></div>
+</div>
+<div style="overflow: hidden;">
+<div style="width: 100%; padding: 160px 0 10px 0; box-sizing: border-box; text-align: left;">
+<p style="font-size: 40px; color: #fff; font-family: '微软雅黑'; font-weight: normal; letter-spacing: 3px; text-align: left; padding: 15px; background-color: #69b015; width: auto; height: auto; display: inline-block; margin: 0 auto;">System features</p>
+<p style="font-size: 16px; color: #7c7c7c; font-family: 微软雅黑; padding-top: 60px; text-align: justify;"><span style="color: #7f7f7f;"><i style="width: 8px; height: 8px; background-color: #69b015; border-radius: 50%; margin-right: 6px; vertical-align: middle; display: inline-block;"></i>Video color interference detection：Based on the core algorithm of image detection, it is possible to detect the image bias interference in the real time of front camera.</span></p>
+<p style="font-size: 16px; color: #7c7c7c; font-family: '微软雅黑';"><span style="color: #7f7f7f;"><i style="width: 8px; height: 8px; background-color: #69b015; border-radius: 50%; margin-right: 6px; vertical-align: middle; display: inline-block;"></i>It includes follows steps：</span></p>
+<p style="font-size: 16px; color: #7c7c7c; font-family: '微软雅黑';"><span style="color: #7f7f7f;"><i style="width: 8px; height: 8px; background-color: #69b015; border-radius: 50%; margin-right: 6px; vertical-align: middle; display: inline-block;"></i>Convert the image of color space from RGB to Lab.<br /></span></p>
+<p style="font-size: 16px; color: #7c7c7c; font-family: '微软雅黑';"><span style="color: #7f7f7f;"><i style="width: 8px; height: 8px; background-color: #69b015; border-radius: 50%; margin-right: 6px; vertical-align: middle; display: inline-block;"></i>Calculate the color histogram of a and b components.<br /></span></p>
+<p style="font-size: 16px; color: #7c7c7c; font-family: 微软雅黑; text-align: justify;"><span style="color: #7f7f7f;"><i style="width: 8px; height: 8px; background-color: #69b015; border-radius: 50%; margin-right: 6px; vertical-align: middle; display: inline-block;"></i>Calculate the image partial color factor. The bias factor is larger than the set threshold image, which is considered to be biased and alarming.<br /></span></p>
+<p style="font-size: 16px; color: #7c7c7c; font-family: '微软雅黑';"><span style="color: #7f7f7f;"><i style="width: 8px; height: 8px; background-color: #69b015; border-radius: 50%; margin-right: 6px; vertical-align: middle; display: inline-block;"></i>Video snow interference detection：</span></p>
+<p style="font-size: 16px; color: #7c7c7c; font-family: 微软雅黑; text-align: justify;"><span style="color: #7f7f7f;"><i style="width: 8px; height: 8px; background-color: #69b015; border-radius: 50%; margin-right: 6px; vertical-align: middle; display: inline-block;"></i>Snowflake screen is a large number of irregular movement noise, and flicker in  the picture. These characteristics are: The texture is deep and regular. The grayscale value of &#8220;flicker point&#8221; is changed  by dramatically and the amplitude fluctuates greatly.<br /></span></p>
+<p style="font-size: 16px; color: #7c7c7c; font-family: 微软雅黑; text-align: justify;"><span style="color: #7f7f7f;"><i style="width: 8px; height: 8px; background-color: #69b015; border-radius: 50%; margin-right: 6px; vertical-align: middle; display: inline-block;"></i>Based on the core algorithm of image detection, it can detect whether the front camera has the phenomenon of snowflake interference in real time. If there is an exception, the alarm will be alerted.<br /></span></p>
+<p style="font-size: 16px; color: #7c7c7c; font-family: '微软雅黑';"><span style="color: #7f7f7f;"><i style="width: 8px; height: 8px; background-color: #69b015; border-radius: 50%; margin-right: 6px; vertical-align: middle; display: inline-block;"></i>Video resolution anomaly detection：</span></p>
+<p style="font-size: 16px; color: #7c7c7c; font-family: 微软雅黑; text-align: justify;"><span style="color: #7f7f7f;"><i style="width: 8px; height: 8px; background-color: #69b015; border-radius: 50%; margin-right: 6px; vertical-align: middle; display: inline-block;"></i>Based on the core algorithm of image detection, it can detect the phenomenon of the image sharpness in the real time of front camera, and alarm prompt if there is any abnormality.<br /></span></p>
+<p style="font-size: 16px; color: #7c7c7c; font-family: '微软雅黑';"><span style="color: #7f7f7f;"><i style="width: 8px; height: 8px; background-color: #69b015; border-radius: 50%; margin-right: 6px; vertical-align: middle; display: inline-block;"></i>It includes follows steps：</span></p>
+<p style="font-size: 16px; color: #7c7c7c; font-family: 微软雅黑; text-align: justify;"><span style="color: #7f7f7f;"><i style="width: 8px; height: 8px; background-color: #69b015; border-radius: 50%; margin-right: 6px; vertical-align: middle; display: inline-block;"></i>Compare the resolution of quantified values and externally set up of clear warning threshold and definition alarm threshold, determines whether or not to warning or alarm the sharpness of the current image.</span></p>
+<p style="font-size: 16px; color: #7c7c7c; font-family: 微软雅黑; text-align: justify;"><span style="color: #7f7f7f;"><i style="width: 8px; height: 8px; background-color: #69b015; border-radius: 50%; margin-right: 6px; vertical-align: middle; display: inline-block;"></i>Compare the resolution of quantified values and externally set up of clear warning threshold and definition alarm threshold, determines whether or not to warning or alarm the sharpness of the current image include: If definition quantized value less than definition warning threshold value, then no warning or alarm information is required; If definition quantized value less than definition alarm threshold, and more than definition warning threshold value, then output warning information; If definition quantized value greater than definition alarm threshold, then output alarm information.</span></p>
+<p style="font-size: 16px; color: #7c7c7c; font-family: '微软雅黑';"><span style="color: #7f7f7f;"><i style="width: 8px; height: 8px; background-color: #69b015; border-radius: 50%; margin-right: 6px; vertical-align: middle; display: inline-block;"></i>Video fringe interference detection：</span></p>
+<p style="font-size: 16px; color: #7c7c7c; font-family: 微软雅黑; text-align: justify;"><span style="color: #7f7f7f;"><i style="width: 8px; height: 8px; background-color: #69b015; border-radius: 50%; margin-right: 6px; vertical-align: middle; display: inline-block;"></i>Based on the core algorithm of image detection, it can detect the phenomenon of the fringe interference in the real time of front camera, and alarm prompt if there is any abnormality.<br /></span></p>
+<p style="font-size: 16px; color: #7c7c7c; font-family: '微软雅黑';"><span style="color: #7f7f7f;"><i style="width: 8px; height: 8px; background-color: #69b015; border-radius: 50%; margin-right: 6px; vertical-align: middle; display: inline-block;"></i>It includes follows steps：</span></p>
+<p style="font-size: 16px; color: #7c7c7c; font-family: 微软雅黑; text-align: justify;"><span style="color: #7f7f7f;"><i style="width: 8px; height: 8px; background-color: #69b015; border-radius: 50%; margin-right: 6px; vertical-align: middle; display: inline-block;"></i>First, obtain the target of video, extract the image in the video sequence, and convert the storage format of the image from multi-channel to single-channel gray level image storage format.<br /></span></p>
+<p style="font-size: 16px; color: #7c7c7c; font-family: 微软雅黑; text-align: justify;"><span style="color: #7f7f7f;"><i style="color: #7c7c7c; font-family: 微软雅黑; white-space: normal; width: 8px; height: 8px; background-color: #69b015; border-radius: 50%; margin-right: 6px; vertical-align: middle; display: inline-block;"></i>Secondly, the grayscale image sequence is processed the frames before and after  in order to obtain the difference frame of image sequence. And the image sequence of the difference image is de-noising processed in morphology.<br /></span></p>
+<p style="text-align: justify;"><span style="color: #7f7f7f;"><i style="width: 8px; height: 8px; background-color: #69b015; border-radius: 50%; margin-right: 6px; vertical-align: middle; display: inline-block;"></i>Then de-noised images sequence and difference image sequence to Sobel operator sharpening processing, the two sets of images were obtained and the row projection was performed respectively. The variance of the two sets of projection data was calculated，through the variance ratio of projection data ,determine whether there are across the grain.</span></p>
+<p><span style="color: #7f7f7f;"><i style="width: 8px; height: 8px; background-color: #69b015; border-radius: 50%; margin-right: 6px; vertical-align: middle; display: inline-block;"></i>Picture flutter detection：</span></p>
+<p style="text-align: justify;"><span style="color: #7f7f7f;"><i style="width: 8px; height: 8px; background-color: #69b015; border-radius: 50%; margin-right: 6px; vertical-align: middle; display: inline-block;"></i>Based on image detection core algorithm, it can detect the image jitter of the front camera in real time, and alert the alarm if there is an abnormality. </span></p>
+<p><span style="color: #7f7f7f;"><i style="width: 8px; height: 8px; background-color: #69b015; border-radius: 50%; margin-right: 6px; vertical-align: middle; display: inline-block;"></i>It includes follows steps：<br /></span></p>
+<p style="text-align: justify;"><span style="color: #7f7f7f;"><i style="width: 8px; height: 8px; background-color: #69b015; border-radius: 50%; margin-right: 6px; vertical-align: middle; display: inline-block;"></i>According to the current image of video YUV image information, obtain the basic feature information of the edge images of the YUV components of the current image.</span></p>
+<p style="text-align: justify;"><span style="color: #7f7f7f;"><i style="width: 8px; height: 8px; background-color: #69b015; border-radius: 50%; margin-right: 6px; vertical-align: middle; display: inline-block;"></i>Calculate the local extreme point distribution state of the edge image of the current image, compare the background image and the local extreme point distribution state of the current image, determines whether the current image is moving relative to the background image.</span></p>
+<p><span style="color: #7f7f7f;"><i style="width: 8px; height: 8px; background-color: #69b015; border-radius: 50%; margin-right: 6px; vertical-align: middle; display: inline-block;"></i>Video picture lose detection：</span></p>
+<p style="text-align: justify;"><span style="color: #7f7f7f;"><i style="width: 8px; height: 8px; background-color: #69b015; border-radius: 50%; margin-right: 6px; vertical-align: middle; display: inline-block;"></i>Based on image detection core algorithm, it can detect the image jitter of the front camera in real time, and alert the alarm if there is an abnormality.</span></p>
+<p><i style="width: 8px; height: 8px; background-color: #69b015; border-radius: 50%; margin-right: 6px; vertical-align: middle; display: inline-block;"></i><span style="color: #808080;">It includes follows steps：</span></p>
+<p style="text-align: justify;"><span style="color: #7f7f7f;"><i style="width: 8px; height: 8px; background-color: #69b015; border-radius: 50%; margin-right: 6px; vertical-align: middle; display: inline-block;"></i>According to the video YUV image information of the current image, obtain the basic feature information of the edge images of the YUV components of the current image.<br /></span></p>
+<p style="text-align: justify;"><span style="color: #7f7f7f;"><i style="width: 8px; height: 8px; background-color: #69b015; border-radius: 50%; margin-right: 6px; vertical-align: middle; display: inline-block;"></i>Calculate the local extreme point distribution state of the edge image of the current image, compare the background image and the local extreme point distribution state of the current image, determines whether the current image is moving relative to the background image.<br /></span></p>
+<p style="text-align: justify;"><span style="color: #7f7f7f;"><i style="width: 8px; height: 8px; background-color: #69b015; border-radius: 50%; margin-right: 6px; vertical-align: middle; display: inline-block;"></i>Calculate the edge width of each local extreme point of the edge image of the current image, obtain the edge width average value, according the average value of the edge width to obtain the definition quantized value. determines whether the current image is moving relative to the background image, output the alarm message.</span></p>
+<p><span style="color: #7f7f7f;"><i style="width: 8px; height: 8px; background-color: #69b015; border-radius: 50%; margin-right: 6px; vertical-align: middle; display: inline-block;"></i>Video screen loss detection：</span></p>
+<p style="text-align: justify;"><span style="color: #7f7f7f;"><i style="width: 8px; height: 8px; background-color: #69b015; border-radius: 50%; margin-right: 6px; vertical-align: middle; display: inline-block;"></i>Based on image detection core algorithm, it can detect the image jitter of the front camera in real time, and alert the alarm if there is an abnormality.<br /></span></p>
+<p><span style="color: #7f7f7f;"><i style="width: 8px; height: 8px; background-color: #69b015; border-radius: 50%; margin-right: 6px; vertical-align: middle; display: inline-block;"></i><i style="width: 8px; height: 8px; background-color: #69b015; border-radius: 50%; margin-right: 6px; vertical-align: middle; display: inline-block;"></i><span style="color: #808080;">It includes follows steps：</span><br /></span></p>
+<p style="text-align: justify;"><span style="color: #7f7f7f;"><i style="width: 8px; height: 8px; background-color: #69b015; border-radius: 50%; margin-right: 6px; vertical-align: middle; display: inline-block;"></i>First, extract one frame image from the video, the analysis the gray value of each pixel of this frame image, between pixels in the same frame of difference gray value represent the intensity of the change in the frame.</span></p>
+</div>
+</div>
+</p>
+      </div>
+   </div>
+</div>
+<!-- 产品详情结束-->
+
+<!-- 底部轮播图 -->
+<div class="delines center"></div>
+<div class="workList">
+  <script >
+  var workData = [
+    {
+    pid: 0,
+    type: '5',
+    imgSrc: '<img width="880" height="488" src="http://hillsuntec.com/wp-content/uploads/2019/06/图片2.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="图片2" srcset="http://hillsuntec.com/wp-content/uploads/2019/06/图片2-300x166.png 300w, http://hillsuntec.com/wp-content/uploads/2019/06/图片2-768x426.png 768w, http://hillsuntec.com/wp-content/uploads/2019/06/图片2.png 880w" sizes="(max-width: 880px) 100vw, 880px" />',
+    href: 'http://hillsuntec.com/en/2608.html',
+    title: '(中文) 资产巡检管理系统'
+  }, 
+    {
+    pid: 1,
+    type: '5',
+    imgSrc: '<img width="782" height="420" src="http://hillsuntec.com/wp-content/uploads/2019/06/图片1.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="图片1" srcset="http://hillsuntec.com/wp-content/uploads/2019/06/图片1-300x161.png 300w, http://hillsuntec.com/wp-content/uploads/2019/06/图片1-768x412.png 768w, http://hillsuntec.com/wp-content/uploads/2019/06/图片1.png 782w" sizes="(max-width: 782px) 100vw, 782px" />',
+    href: 'http://hillsuntec.com/en/2606.html',
+    title: '(中文) 客流统计分析系统'
+  }, 
+    {
+    pid: 2,
+    type: '5',
+    imgSrc: '<img width="1920" height="1080" src="http://hillsuntec.com/wp-content/uploads/2019/05/首页.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="首页" srcset="http://hillsuntec.com/wp-content/uploads/2019/05/首页-300x169.png 300w, http://hillsuntec.com/wp-content/uploads/2019/05/首页-768x432.png 768w, http://hillsuntec.com/wp-content/uploads/2019/05/首页-1024x576.png 1024w, http://hillsuntec.com/wp-content/uploads/2019/05/首页.png 1920w" sizes="(max-width: 1920px) 100vw, 1920px" />',
+    href: 'http://hillsuntec.com/en/2603.html',
+    title: '(中文) 无人值守远程视控系统'
+  }, 
+    {
+    pid: 3,
+    type: '5',
+    imgSrc: '<img width="1000" height="1128" src="http://hillsuntec.com/wp-content/uploads/2018/08/洪森AI云平台.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="洪森AI云平台" srcset="http://hillsuntec.com/wp-content/uploads/2018/08/洪森AI云平台-266x300.jpg 266w, http://hillsuntec.com/wp-content/uploads/2018/08/洪森AI云平台-768x866.jpg 768w, http://hillsuntec.com/wp-content/uploads/2018/08/洪森AI云平台-908x1024.jpg 908w, http://hillsuntec.com/wp-content/uploads/2018/08/洪森AI云平台.jpg 1000w" sizes="(max-width: 1000px) 100vw, 1000px" />',
+    href: 'http://hillsuntec.com/en/2397.html',
+    title: '(中文) 洪森AI云平台'
+  }, 
+    {
+    pid: 4,
+    type: '5',
+    imgSrc: '<img width="815" height="617" src="http://hillsuntec.com/wp-content/uploads/2018/08/FSmart-C1_副本.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="FSmart-C1_副本" srcset="http://hillsuntec.com/wp-content/uploads/2018/08/FSmart-C1_副本-300x227.jpg 300w, http://hillsuntec.com/wp-content/uploads/2018/08/FSmart-C1_副本-768x581.jpg 768w, http://hillsuntec.com/wp-content/uploads/2018/08/FSmart-C1_副本.jpg 815w" sizes="(max-width: 815px) 100vw, 815px" />',
+    href: 'http://hillsuntec.com/en/2396.html',
+    title: '(中文) FSmart-C人脸访客机'
+  }, 
+    {
+    pid: 5,
+    type: '5',
+    imgSrc: '<img width="273" height="200" src="http://hillsuntec.com/wp-content/uploads/2018/08/I1_副本.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="I1_副本" />',
+    href: 'http://hillsuntec.com/en/2395.html',
+    title: '(中文) FSmart-I人脸门禁机'
+  }, 
+    {
+    pid: 6,
+    type: '5',
+    imgSrc: '<img width="471" height="344" src="http://hillsuntec.com/wp-content/uploads/2018/08/G1_副本.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="G1_副本" srcset="http://hillsuntec.com/wp-content/uploads/2018/08/G1_副本-300x219.jpg 300w, http://hillsuntec.com/wp-content/uploads/2018/08/G1_副本.jpg 471w" sizes="(max-width: 471px) 100vw, 471px" />',
+    href: 'http://hillsuntec.com/en/2387.html',
+    title: '(中文) FSmart-G人脸闸机'
+  }, 
+    {
+    pid: 7,
+    type: '5',
+    imgSrc: '<img width="906" height="748" src="http://hillsuntec.com/wp-content/uploads/2018/08/磐石概述.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="磐石概述" srcset="http://hillsuntec.com/wp-content/uploads/2018/08/磐石概述-300x248.png 300w, http://hillsuntec.com/wp-content/uploads/2018/08/磐石概述-768x634.png 768w, http://hillsuntec.com/wp-content/uploads/2018/08/磐石概述.png 906w" sizes="(max-width: 906px) 100vw, 906px" />',
+    href: 'http://hillsuntec.com/en/2384.html',
+    title: '(中文) “磐石”动静态人脸布控系统'
+  }, 
+    ]; 
+  </script>
+
+<div class="work row" id="solutions">
+  <div class="box">
+    <div class="top">
+      <div class="menu">
+        VIEW OTHERS
+      </div>
+      <div class="btns">
+        <a href="javascript:;" class="btnLeft"></a>
+        <a href="javascript:;" class="btnRight"></a>
+      </div>
+    </div>
+    <div class="listBox">
+      <div class="list">
+        <ul>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<div class="foot">
+  <div class="box">
+    <div class="fl">
+      <p>
+        <a href="http://www.beian.miit.gov.cn">© 2016 HillSunTec.Guangdong ICP for 14098070        </a>
+      </p>         
+      <!-- <p><script src="http://hillsuntec.com/wp-content/themes/wordpress_themes_02/js/stat.js" language="JavaScript"></script></p> -->
+    </div>
+    <div class="share">
+      <a href="javascript:;" class="qq" target="_blank">
+        <span></span>
+      </a>
+      <a class="weixin" style="cursor: pointer;position: relative;">
+        <span></span>
+        <div class="weixin_show" id="weixin_show">
+        <img src="http://hillsuntec.com/wp-content/themes/wordpress_themes_02/images/weixin.jpg" width="200px;" height="200px;" />
+        </div>
+      </a>
+      <a href="javascript:;" class="weibo" target="_blank">
+        <span></span>
+      </a>
+    </div>
+  </div>
+</div>
+</div>
+<!--?php printf( __( 'Proudly powered by %s', 'wordpress_themes_02' ), 'WordPress' ); ?-->
+</body></html>
+<script src="http://hillsuntec.com/wp-content/themes/wordpress_themes_02/js/jquery-1.8.2.min.js" type="text/javascript" charset="utf-8"></script>  
+<script src="http://hillsuntec.com/wp-content/themes/wordpress_themes_02/js/main.js" type="text/javascript" charset="utf-8"></script>
+
+
+<script src="http://hillsuntec.com/wp-content/themes/wordpress_themes_02/js/single-cat-5.js" type="text/javascript" charset="utf-8"></script> 
+<script src="http://hillsuntec.com/wp-content/themes/wordpress_themes_02/js/work.js" type="text/javascript" charset="utf-8"></script>
+<script src="http://hillsuntec.com/wp-content/themes/wordpress_themes_02/js/main.js" type="text/javascript" charset="utf-8"></script>
+
+
+

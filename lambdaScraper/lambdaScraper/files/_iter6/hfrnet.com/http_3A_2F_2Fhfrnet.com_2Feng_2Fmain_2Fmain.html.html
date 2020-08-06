@@ -1,0 +1,652 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>HFR,Inc for Mobile Internet</title>
+	<link rel="stylesheet" type="text/css" href="../style/base.css" />
+	<link rel="stylesheet" type="text/css" href="../style/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../style/content.css" />
+	<!--link rel="stylesheet" type="text/css" href="../style/board.css" />
+	<link rel="stylesheet" type="text/css" href="../style/member.css" /-->
+	<link rel="stylesheet" type="text/css" href="../style/main.css" />
+	<script type="text/javascript" src="../script/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="../script/jquery-ui.js"></script>
+	<script type="text/javascript" src="../script/jquery.flexslider-min.js"></script>
+	<script type="text/javascript" src="../script/jquery.anyslider.js"></script>
+	<script type="text/javascript" src="../script/common.js"></script>
+	<script type="text/javascript">
+		$(window).load(function(){
+			$('#product1, #product2, #product3').AnySlider({showControls : false, interval : 5000, keyboardNav : false, speed : 500});
+			$('.viw-main-product .thum a').bind('mouseenter', function(){
+				//$(this).find('span').fadeTo( "250" , 1);
+			}).bind('mouseleave', function(){
+				//$(this).find('span').fadeTo( "250" , 0);
+			});
+			
+			$('#slideholder').flexslider({
+                animation:"slide",
+				slideshowSpeed : 5000,
+				animationSpeed : 1200,
+                animationLoop : true,
+				start : function(){
+					$('#slideholder').prepend('<div id="textholder"></div>');
+					$('.flex-active-slide .copycont').clone().appendTo('#textholder');
+					$('#textholder .tit').css({'left' : '0'});
+					$('#textholder .cnt').css({'top' : '0'});
+				},
+				before : function(){
+					$('#textholder .tit').animate({'left' : '-300px'}, 600);
+					$('#textholder .cnt').animate({'top' : '300px'}, 750, function(){
+						$(this).parent().find('*').remove();
+					$('#textholder').animate({'height' : 0}, 450);
+					});
+				},
+				after : function(slider){
+					$('li.flex-active-slide div.copycont').clone().appendTo('#textholder');
+					$('#textholder').animate({'height' : 320}, 450);
+					$('#textholder .tit').animate({'left' : '0'}, 600);
+					$('#textholder .cnt').animate({'top' : '0'}, 750);
+					if (!slider.playing)
+					{
+						slider.play();
+					}
+				}
+			});
+			
+						$('#main-section-top .prev').click(function(){
+				$('.flex-direction-nav li a.flex-prev').trigger('click');
+			});
+
+			$('#main-section-top .next').click(function(){
+				$('.flex-direction-nav li a.flex-next').trigger('click');
+			});
+			
+			$('.as-nav a').click(function(){
+				$num = $(this).text();
+				$getUrl = $(this).parent().parent().children('.slider').children('div').children('div').eq($num).children('.thum').children('a').attr('href');
+				$(this).parent().parent().children('p.btn1').children('a').attr('href',$getUrl);
+			});
+		})
+	</script>
+	
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+
+function getCookie( name ){
+	var nameOfCookie = name + "=";
+	var x = 0;
+	while ( x <= document.cookie.length )
+	{
+		var y = (x+nameOfCookie.length);
+		if ( document.cookie.substring( x, y ) == nameOfCookie ) {
+			if ( (endOfCookie=document.cookie.indexOf( ";", y )) == -1 )
+			endOfCookie = document.cookie.length;
+			return unescape( document.cookie.substring( y, endOfCookie ) );
+		}
+		
+		x = document.cookie.indexOf( " ", x ) + 1;
+		
+		if ( x == 0 ) break;
+	}
+			return "";
+}
+
+function funWindow(no, w,h,top,left,scroll){
+   if (scroll=="y"){
+      scroll="yes";
+   }
+   else if (scroll=="n"){
+      scroll="no";
+   }
+   else if (scroll=="a"){
+      scroll="auto";
+   }
+   
+   NewWindow("./popup.html?no="+no,"Kpop"+no,w,h,top,left,scroll);
+}
+
+function funWindowEtc(no, w,h,top,left,scroll){
+   if (scroll=="y"){
+      scroll="yes";
+   }
+   else if (scroll=="n"){
+      scroll="no";
+   }
+   else if (scroll=="a"){
+      scroll="auto";
+   }
+   
+   NewWindow("./popup_not_all.html?no="+no,"Kpop"+no,w,h,top,left,scroll);
+}
+
+
+function NewWindow(mypage,myname,w,h,top,left,scroll){
+   var win = null;
+   settings = 'height='+h+',width='+w+',top='+top+',left='+left+',scrollbars='+scroll+'';
+   win = window.open(mypage,myname,settings);
+}
+-->
+</SCRIPT>
+</head>
+<body>
+	<!-- header -->
+	<script>
+    function funLogin(){
+	   $('#mask').show();
+    }
+	function funClient(){
+	   alert("You do not have permission.");
+	}
+    </script>
+	<!-- header -->
+	<a name="toppage"></a>
+	<div id="header">
+		<div class="ctl-holder">
+			<h1><a href="http://hfrnet.com/eng/main/main.html"><img src="../images/img/img-logo.gif" alt="HFR,Inc for Mobile Internet" /></a></h1>
+			
+			<!-- service -->
+			<dl id="utility">
+				<dt class="hd-element">Services menu</dt>
+				<dd class="home"><a href="http://hfrnet.com/eng/main/main.html">Home</a></dd>
+				<dd><a id="layerloginopen" href="#mask">Login</a></dd>
+				<dd><a href="../etc/sitemap.html">Sitemap</a></dd>
+				<dd><a href="http://hfrnet.com/hfr_kor/">Korean</a></dd>
+			</dl>
+			<!-- //service -->
+			
+			<!-- navigation -->
+			<h2 class="hd-element">Site Menu</h2>
+			<ul id="navigation">
+				<li class="subnav01">
+					<a class="nav-topmenu" href="../product/solutions1.html">Solutions</a>
+					<div>
+						<ul>
+							<li><a href="../product/solutions1.html">Mobile Fronthaul</a></li>
+							<li><a href="../product/solutions2.html">Mobile Backhaul</a></li>
+							<li><a href="../product/solutions3.html">Optical Networking</a></li>
+							<li><a href="../product/solutions4.html">Packet Networking</a></li>
+							<li><a href="../product/solutions5.html">Gigabit Ethernet Access</a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="subnav02">
+					<a class="nav-topmenu" href="../product/list.html?kind=p&code=20">Products</a>
+					<div>
+						<ul>
+							<li><a href="../product/list.html?kind=p&code=20">Cellular Coverage System</a></li>
+							<li><a href="../product/list.html?kind=p&code=21">Optical Transport System</a></li>
+							<li><a href="../product/list.html?kind=p&code=22">FTTx System</a></li>
+						</ul>
+					</div>
+				</li>
+
+				<li class="subnav03">
+					<a class="nav-topmenu" href="../technology/download.html?kind_dtl=wp">Technology</a>
+					<div>
+						<ul>
+							<li><a href="../technology/download.html?kind_dtl=wp">Document Library</a></li>
+							<li><a href="../technology/innovation_list.html">Innovation</a></li>
+							<li><a href="../technology/ipr_intro.html">IPR</a></li>
+						</ul>
+					</div>
+				</li>
+
+
+				<li class="subnav04">
+				   					<a class="nav-topmenu" href="../partner/request_customer.html">Partners</a>
+										<div>
+						<ul>
+						   							<li><a href="../partner/request_customer.html">Partners Link</a></li>
+																				</ul>
+					</div>
+				</li>
+				<li class="subnav05">
+					<a class="nav-topmenu" href="../about/hfr.html">About Us</a>
+					<div>
+						<ul>
+							<li><a href="../about/hfr.html">About HFR</a></li>
+							<li><a href="../about/ceo.html">From CEO's Desk</a></li>
+							<li><a href="../about/history.html">History</a></li>
+							<li><a href="../about/moral.html">Ethical Management</a></li>
+							<li><a href="../about/environment.html">Green Management</a></li>
+							<!--
+							<li><a href="../about/ipr.html">Intellectual Property Rights</a></li>
+							<li><a href="../about/download.html">Document Library</a></li>
+							-->
+							<li><a href="../about/affiliates.html">Affiliates</a></li>
+							<li><a href="../about/clients.html">Customers</a></li>
+
+							<li><a href="../about/certificates.html">Certificates</a></li>
+
+							<li><a href="../about/news.html">News &amp; Events</a></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+			<!-- //navigation -->
+		</div>
+	</div>
+	<!-- //header -->
+	
+	<!-- layer login -->
+	<script id="dynamic"></script>
+	<script>
+	   function funLoginCheck(){
+	      if (document.loginForm.id.value==""){
+		     alert("You can't leave id empty.");
+			 document.loginForm.id.focus();
+			 return false;
+		  }
+		  if (document.loginForm.pass.value==""){
+		     alert("You can't leave password empty.");
+			 document.loginForm.pass.focus();
+			 return false;
+		  }		  
+	   }
+	</script>
+	<div id="mask">
+	<iframe name="ifram" title="blank" width="0" height="0"></iframe>
+		<div class="layer-login">
+			<h1>Login</h1>
+			<div class="btn-close">
+				<a href="#"><img src="../images/txt/x-close.png" art="close" /><span>CLOSE</span></a>
+			</div>
+			<div class="txt">
+				<span class="color8">Welcome to HFR</span>
+			</div>
+			<div class="holder">
+				<form name="loginForm" method="post" action="../etc/login.html" onsubmit="return funLoginCheck()" target="ifram">
+				<input type="hidden" name="url" value="/eng/main/main.html?"/>
+					<fieldset>
+						<legend>Login</legend>
+						<div class="wrp-login">
+							<p class="frm-item">
+								<label for="frm-poplogin-item1">ID</label>
+								<input type="text" name="id" value="" id="frm-poplogin-item1" class="frm-el-input" maxlength="20"/>
+							</p>
+							<p class="frm-item" style="margin-top:8px;">
+								<label for="frm-poplogin-item2">Password</label>
+								<input type="password" name="pass" value="" id="frm-poplogin-item2" class="frm-el-input" maxlength="20" />
+							</p>
+							<button type="submit" class="btn-login btn-blue-big"><span>Login</span></button>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+			<p class="btn">
+				<a href="../partner/request_customer.html"><button type="submit" class="btn-core10 btn-register"><span>Register</span></button></a>
+			</p>
+			<p class="txt2">
+				Forgot your user ID and/or password?<br />
+				<span class="color1">TEL</span> : 82-70-4469-5657, <span class="color1">EMAIL</span> : sales@hfrnet.com
+			</p>
+		</div>
+	</div>
+	<!-- //layer login -->
+
+
+	<!-- layer download -->
+	<script>
+	function funMailSel(val){
+		if (val!="" && val!="self") {
+		   document.form_mail.email2.value = val;
+		   document.form_mail.email2.readOnly=true;
+	  } else if (val=="self") {
+		   document.form_mail.email2.value = '';
+		   document.form_mail.email2.readOnly=false;
+		   document.form_mail.email2.focus();
+	  } else if (val=="") {
+		   document.form_mail.email2.value = '';
+		   document.form_mail.email2.readOnly=true;
+	  }
+	}
+	function funCheckMail(){
+	  if (document.form_mail.name.value==""){
+            alert("You can't leave name empty.");
+            document.form_mail.name.focus();
+      }
+	  else if (document.form_mail.affiliation.value==""){
+            alert("You can't leave Company/Organization empty.");
+            document.form_mail.affiliation.focus();
+      }	  
+	  else if (document.form_mail.email1.value==""){
+            alert("Please enter your e-mail address");
+            document.form_mail.email1.focus();            
+      }
+	  else if (document.form_mail.email2.value==""){
+            alert("Please enter your e-mail address");
+            document.form_mail.email2.focus();
+      }
+	  else{
+	     document.form_mail.submit();
+	  }
+	}
+	function funMailCancel(){
+	    document.form_mail.reset();
+	}
+	function funDownLoad(v, m){
+	   document.form_mail.no.value = v;
+	   document.form_mail.view.value = m;
+	   $('#mask-down').show();
+	}
+
+	function fn_aboutDownLoad(){
+		document.form_mail.sendTarget.value = "about";
+		$('#mask-down').show();
+	}
+	</script>
+	<div id="mask-down">
+		<div class="layer-down">
+			<h1>Email is required.</h1>
+			<div class="btn-close">
+				<a href="#"><img src="../images/txt/x-close.png" art="close" /><span>CLOSE</span></a>
+			</div>
+			<div class="txt">
+				<span class="color8">Document will be sent to your email.</span>
+			</div>
+			<form name="form_mail" method="post" action="../about/send.html">
+			<input type="hidden" name="mode" value="send"/>
+			<input type="hidden" name="no" value="" />
+			<input type="hidden" name="page" value="1" />
+			<input type="hidden" name="sel" value="" />
+			<input type="hidden" name="find" value=""/>
+			<input type="hidden" name="view" value=""/>
+			<input type="hidden" name="kind_dtl" value=""/>
+
+			<input type="hidden" name="sendTarget" value="" />
+			
+			<div class="holder">
+				<p class="frm-item">
+					<label for="frm-poplogin-item1">Name</label>
+					<input type="text" name="name" value="" class="frm-el-input" maxlength="80"/>
+				</p>
+				<p class="frm-item" style="margin-top:8px;">
+					<label for="frm-poplogin-item2" style="height:42px; line-height:18px;">Company/<br />Organization</label>
+					<input type="text" name="affiliation" value="" class="frm-el-input" style="margin-top:6px;" />
+				</p>
+				<p class="frm-item" style="margin-top:15px;">				
+					<label for="frm-poplogin-item2">E-mail</label>
+					<input type="text" name="email1" value="" id="email-1" class="frm-el-input" maxlength="100"/>@<input type="text" name="email2" value="" id="email-2" class="frm-el-input" maxlength="100"/>
+					<span class="frm-el-select">
+						<select name="mail"  title="Select the e-mail address" onchange="funMailSel(this.value)">
+							<option value="self" >Select</option>
+											<option value="gmail.com" >gmail.com</option>
+											<option value="yahoo.com" >yahoo.com</option>
+											<option value="hotmail.com" >hotmail.com</option>
+						</select>
+					</span>
+				</p>
+			</div>
+			<!-- button -->
+			<div class="set-button-down">
+				<span class="btn-core7 btn-blue">
+					<span class="sp-icon sp-icon-check"></span>
+					<a href="javascript:funCheckMail()">OK</a>
+				</span>
+				<span class="btn-core8 btn-grey">
+					<span class="sp-icon sp-icon-cross"></span>
+					<a href="javascript:funMailCancel()">Cancel</a>
+				</span>
+			</div>
+			<!-- //button -->
+
+			</form>
+		</div>
+	</div>
+	<!-- //layer download -->	<!-- content -->
+	<div id="main-container">
+	    		<div id="main-section-top">
+			<button type="button" class="prev"><span class="hd-element">이전</span></button>
+			<button type="button" class="next"><span class="hd-element">다음</span></button>
+			<div id="slideholder">
+				<ul class="slides">
+				    					<li>
+						<div class="wrp-slider" style="background:url(../product/file_view_main.html?no=2) center top no-repeat;">
+							<div class="wrp-images">
+								<!--h3><img src="../images/txt/tit-main-product.png" alt="CREATE THE RESONANT NETWORKING SOLUTIONS" /></h3-->
+								<!--img src="../images/dummy/img-dummy-main-product1.png" alt="" /-->
+							</div>
+						</div>
+						<div class="copycont">
+							<p class="tit">
+								flexiHaul™<br />
+								<img id="tit1" src="../images/txt/tit-main-tit1.png" alt="" /><span>HSN-8500</span><img id="tit2" src="../images/txt/tit-main-tit2.png" alt="" />								
+							</p>
+							<div class="cnt">
+								Flexible Fronthaul and Backhaul Solution for 4G and Beyond																<p class="btn"><a href="http://hfrnet.com/eng/product/view.html?no=27&page=1&kind=p&code=21&sel=&find=">More</a></p>
+															</div>
+						</div>
+					</li>
+										<li>
+						<div class="wrp-slider" style="background:url(../product/file_view_main.html?no=14) center top no-repeat;">
+							<div class="wrp-images">
+								<!--h3><img src="../images/txt/tit-main-product.png" alt="CREATE THE RESONANT NETWORKING SOLUTIONS" /></h3-->
+								<!--img src="../images/dummy/img-dummy-main-product1.png" alt="" /-->
+							</div>
+						</div>
+						<div class="copycont">
+							<p class="tit">
+								Carrier Ethernet Switch<br />
+								<img id="tit1" src="../images/txt/tit-main-tit1.png" alt="" /><span>CET-10448</span><img id="tit2" src="../images/txt/tit-main-tit2.png" alt="" />								
+							</p>
+							<div class="cnt">
+								At 6 RU Size, 88 Gbps of Switching Capacity																<p class="btn"><a href="http://www.hfrnet.com/eng/product/view.html?no=22&page=1&kind=p&code=21&sel=&find=">More</a></p>
+															</div>
+						</div>
+					</li>
+										<li>
+						<div class="wrp-slider" style="background:url(../product/file_view_main.html?no=15) center top no-repeat;">
+							<div class="wrp-images">
+								<!--h3><img src="../images/txt/tit-main-product.png" alt="CREATE THE RESONANT NETWORKING SOLUTIONS" /></h3-->
+								<!--img src="../images/dummy/img-dummy-main-product1.png" alt="" /-->
+							</div>
+						</div>
+						<div class="copycont">
+							<p class="tit">
+								Carrier Ethernet Switch<br />
+								<img id="tit1" src="../images/txt/tit-main-tit1.png" alt="" /><span>HA-821</span><img id="tit2" src="../images/txt/tit-main-tit2.png" alt="" />								
+							</p>
+							<div class="cnt">
+								Ethernet WAN and Wireless 4G Mobile Backhaul Services 																<p class="btn"><a href="http://www.hfrnet.com/eng/product/view.html?no=42&page=1&kind=p&code=21&sel=&find=">More</a></p>
+															</div>
+						</div>
+					</li>
+									</ul>
+			</div>
+		</div>
+				
+		
+		<div id="main-section-bot">
+<!--
+			<div class="viw-main-product n2">
+				<h3><img src="../images/main/main_st2.gif" /></h3>
+				<div id="product1" class="slider">
+-->
+			<div class="viw-main-product n4">
+				<!-- <h3>CE2 MEF CERTIFIED</h3> -->
+				<div id="product2" class="slider">
+
+				  <div>
+						<p class="thum"><a href="javascript:funWindow(5,'558','328','20','20','n');"><img src="../images/main/main_itm_1_1_3.png" alt="" /></a></p>
+					</div>
+
+<!-- image용
+				  <div>
+						<p class="thum"><a href="http://hfrnet.com/eng/product/view.html?no=26&page=1&kind=p&code=21&sel=&find="><img src="../images/main/main_itm_1_3.png" alt="" /></a></p>
+					</div>
+-->
+				  <div>
+						<p class="thum"><a href="javascript:funWindowEtc(4,'558','328','20','500','n');"><img src="../images/main/main_itm_1_1_4.png" alt="" /></a></p>
+					</div>
+					<div>
+						<p class="thum"><a href="javascript:funWindowEtc(9,'558','328','20','500','n');"><img src="../images/main/main_itm_1_1_5.png" alt="" /></a></p>
+					</div>
+				</div>
+
+			</div>
+			<div class="viw-main-product n4">
+				<!-- <h3>CE2 MEF CERTIFIED</h3> -->
+				<div id="product2" class="slider">
+				   <div>
+						<p class="thum"><a href="http://hfrnet.com/eng/product/view.html?no=85&page=1&kind=p&code=20&sel=&find="><img src="../images/main/mu-side4.png" alt="" /></a></p>
+					</div>
+					<div>
+						<p class="thum"><a href="http://hfrnet.com/eng/product/view.html?no=27&page=1&kind=p&code=21&sel=&find="><img src="../images/main/8500_2.png" alt="" /></a></p>
+					</div>
+					<div>
+						<p class="thum"><a href="http://hfrnet.com/eng/product/view.html?no=41&page=1&kind=p&code=21&sel=&find="><img src="../images/main/805_4.png" alt="" /></a></p>
+					</div>
+				</div>
+			</div>
+			<div id="viw-main-last" class="viw-main-product n3">
+				<h3>News &amp; Events</h3>
+				<div id="product3" class="slider">
+					<table summary="News &amp; Events board. No, Title, Date" class="main_list">
+					<caption>News &amp; Events</caption>
+					<colgroup>
+					
+						<col width="" />
+						
+					</colgroup>
+						<tbody>
+					    						<tr>
+							<td>
+								<a href="/eng/about/news_view.html?no=233&page=1&sel=&find=&sel0=" >Verizon Selects Fujitsu as Preferred Supplier..</a>
+								<img src="../images/ico/ico-new.gif"/>							</td>
+						</tr>
+												<tr>
+							<td>
+								<a href="/eng/about/news_view.html?no=232&page=1&sel=&find=&sel0=" >HFR showcased in 5G Malaysia Demonstration Pr..</a>
+								<img src="../images/ico/ico-new.gif"/>							</td>
+						</tr>
+												<tr>
+							<td>
+								<a href="/eng/about/news_view.html?no=231&page=1&sel=&find=&sel0=" >HFR had joined in ICT COMM 2019. ICT COMM 201..</a>
+															</td>
+						</tr>
+											</tbody>
+				</table>
+				</div>
+			</div>
+
+			<div class="phTxt">
+				<ul>
+					<li><img src="../images/main/tel_txt.gif" alt="tel +82-31-712-7768" /></li>
+					<!-- <li><img src="../images/main/fax_txt.gif" alt="fax 82-31-712-7948" /></li> -->
+					<li><a href="mailto:resonant@hfrnet.com"><img src="../images/main/mail_txt.gif" alt="E-mail resonant@hfrnet.com" /></a></li>
+				</ul>
+			</div>
+
+		</div>
+		
+		
+	</div>
+	<!-- //content -->
+	
+	<!-- //top button -->
+	<a href="#top">
+		<div id="top-btn">
+			<p>TOP</p>
+		</div>
+	</a>
+	<!-- //top button -->
+		
+	<!-- site allmenu -->
+	<div id="allmenu">
+		<div class="ctl-holder">
+			<dl class="first">
+				<dt>Solutions</dt>
+				<dd><a href="../product/solutions1.html">Mobile Fronthaul</a></dd>
+				<dd><a href="../product/solutions2.html">Mobile Backhaul</a></dd>
+				<dd><a href="../product/solutions3.html">Optical Networking</a></dd>
+				<dd><a href="../product/solutions4.html">Packet Networking</a></dd>
+				<dd><a href="../product/solutions5.html">Gigabit Ethernet Access</a></dd>
+			</dl>
+			<dl>
+				<dt>Products</dt>
+				<dd><a href="../product/list.html?kind=p&code=20">Cellular Coverage System</a></dd>
+				<dd><a href="../product/list.html?kind=p&code=21">Optical Transport System</a></dd>
+				<dd><a href="../product/list.html?kind=p&code=22">FTTx System</a></dd>
+			</dl>
+			<dl>
+				<dt>Technology</dt>
+				<dd><a href="../technology/download.html?kind_dtl=wp">Document Library</a></dd>
+				<dd><a href="../technology/innovation_list.html">Innovation</a></dd>
+				<dd><a href="../technology/ipr_intro.html">IPR</a></dd>
+			</dl>
+			<dl>
+				<dt>Partners</dt>
+								<dd><a href="../partner/request_customer.html">Partners Link</a></dd>
+											</dl>
+			<dl>
+				<dt>About Us
+</dt>
+				<dd><a href="../about/hfr.html">About HFR</a></dd>
+				<dd><a href="../about/ceo.html">From CEO's Desk</a></dd>
+				<dd><a href="../about/history.html">History</a></dd>
+				<dd><a href="../about/moral.html">Ethical Management</a></dd>
+				<dd><a href="../about/affiliates.html">Affiliates</a></dd>
+				<dd><a href="../about/clients.html">Customers</a></dd>
+				
+				<dd><a href="../about/certificates.html">Certificates</a></dd>
+
+				<dd><a href="../about/news.html">News & Events</a></dd>
+			</dl>
+		</div>
+		<!-- //top button -->
+		<a href="#toppage">
+			<div id="top-btn">
+				<p>TOP</p>
+			</div>
+		</a>
+		<!-- //top button -->
+	</div>
+	<!-- //site allmenu -->
+	
+	<!-- footer -->
+	<div id="footer">
+		<div class="ctl-holder">
+			<!-- family site -->
+			<dl>
+				<dt><a href="#">Family Site</a></dt>
+				<dd>
+					<ul>
+						<li><a href="http://www.hfrnet.com/hfr_kor/">HFR</a></li>
+						<li><a href="http://www.zpsys.com/" target="_blank">ZPSYS</a></li>
+						<!--
+						<li><a href="http://www.symtechnology.com" target="_blank">SYM</a></li>
+						-->
+					</ul>
+				</dd>
+			</dl>
+			<!-- //family site -->
+			
+			<!-- site info -->
+			<address>
+				Hana EZ tower 5F, 10, Seongnam-daero43beon-gil, Bundang-gu, Seongnam-si, Gyeonggi-do, Korea<br />
+				<span class="entxt">
+					TEL <span>+82-31-712-7768</span>
+					<span class="liner">|</span>
+					FAX <span>+82-31-712-7948</span>
+					<span class="liner">|</span>
+					E-MAIL <a href="mailto:resonant@hfrnet.com">resonant@hfrnet.com</a>
+				</span>
+			</address>
+			<p class="copyright">COPYRIGHTⓒ2014HFR.inc. ALL RIGHTS RESERVED.</p>
+			<!-- //site info -->
+			
+			<!-- sns -->
+			<ul id="sns">
+				<li><a href="https://www.facebook.com/hfrinc" target="_blank"><img src="../images/ico/ico-main-f.png" alt="facebook" /></a></li>
+				<li><a href="https://twitter.com/hfr_resonant" target="_blank"><img src="../images/ico/ico-main-t.png" alt="tweeter" /></a></li>
+				<li><a href="https://kr.linkedin.com/in/hfrnet" target="_blank"><img src="../images/ico/ico-main-in.png" alt="linkedin" /></a></li>
+			</ul>
+			<!-- //sns -->
+
+		</div>
+	</div>
+	<!-- //footer -->
+
+</body>
+</html>

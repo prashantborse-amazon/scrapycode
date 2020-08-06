@@ -1,0 +1,1036 @@
+<!doctype html>
+<html lang="en">
+	<head>
+	<meta name="generator" content="Hugo 0.69.1" />
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+		<title>
+		
+			
+				Grafana: The open observability platform | Grafana Labs
+			
+		
+		</title>
+		
+		<meta name="robots" content="index, follow">
+		
+
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link rel="shortcut icon" href="https://grafana.com/static/assets/img/fav32.png" type="image/x-icon">
+		<meta name="application-name" content="Grafana Labs" />
+		<meta name="Copyright" content="Grafana Labs" />
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:site" content="@grafana">
+		<meta name="twitter:url" content="https://twitter.com/grafana" />
+		<meta name="twitter:title" content="Grafana: The open observability platform">
+
+		
+			
+			<meta name="twitter:image" content="/static/img/grafana/redesign-dashboard_home.png" />
+			<meta property="og:image" content="/static/img/grafana/redesign-dashboard_home.png" />
+			
+		
+
+		
+		<meta name="twitter:description" content="Grafana is the open source analytics &amp; monitoring solution for every database." />
+		<meta name="description" content="Grafana is the open source analytics &amp; monitoring solution for every database.">
+		
+		<meta property="og:site_name" content="Grafana Labs" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Grafana: The open observability platform" />
+
+		
+			<link href="https://grafana.com/index.xml" rel="feed" type="application/rss+xml" title="Grafana Labs Blog" />
+		
+
+		
+		
+		  <link href="https://grafana.com/static/app.e1bb35bb1a0cfd3da90b.css" type='text/css' rel="stylesheet">
+		
+		
+		  <link href="https://grafana.com/static/shared.228df530a70d9233323f.css" type='text/css' rel="stylesheet">
+		
+
+		
+		
+		
+			
+				<link href="https://grafana.com/static/grafanacon.2d20cf95bb63d250e148.css" type='text/css' rel="stylesheet">
+			
+		
+
+		<link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+
+		
+		<link rel="canonical" href="https://grafana.com/">
+		
+		<style>.lazyload,.lazyloading{opacity:0}.lazyloaded{opacity:1;transition:opacity .25s}</style>
+		<script>
+			window.bootData = {
+				pageType: "home",
+				pageKind: "home",
+			};
+
+			window.__config = {
+				marketoKey: "356-YFG-389",
+				gaKey: "UA-58328364-4",
+				apKey: "ce7ca2ade2be4a2ab852a49dbd0adffd18fb8ff6a10841e99c27628605cd81db",
+				fbKey: "2356769494554294",
+				liKey: "1048884",
+				hotjarEnable:  true ,
+				cbKey: "pk_d59280887896c2b65857edbe1274ca2e",
+				
+				driftKey: "",
+				
+				mutinyKey: "6634d246d5fef878",
+			};
+
+		</script>
+
+		
+		
+	</head>
+
+	<body class="section-home">
+
+		
+
+<div class="page-header ">
+	<div class="wrapper wrapper__header-nav">
+			
+				<div class="page-header__branding float-left">
+					<a href="https://grafana.com/">
+						<div class="page-header__site-logo">
+							<img src="https://grafana.com/static/assets/internal/grafana_logo-web-dark.svg" alt="Grafana Labs Logo" width="148" />
+						</div>
+					</a>
+				</div>
+			
+		</div>
+		<div class="page-header__menu float-right">
+			
+			<button class="site-nav__toggle" id="siteNavToggle">
+				<span class="t"></span>
+				<span class="m"></span>
+				<span class="b"></span>
+			</button>
+			
+			<div class="site-nav-canvas">
+				<div class="site-nav-dropdown__menu">
+					<div class="site-nav-dropdown__container">
+						<div class="site-nav_container">
+							<nav class="site-nav">
+								<ul class="ui-list">
+									<li class="site-nav__item site-nav__item--home">
+										<a class="site-nav__link" href="https://grafana.com/">Home</a>
+									</li>
+								</ul>
+							</nav>
+							
+								<div class="page-header__branding site-nav-dropdown-logo">
+									<a href="https://grafana.com/">
+										<div class="page-header__site-logo">
+											<img src="https://grafana.com/static/assets/internal/grafana_logo-web-dark.svg" alt="Grafana Labs Logo" width="148" />
+										</div>
+									</a>
+								</div>
+							
+							
+							<ul class="mega-wrapper">
+								
+								<li class="mega-item " itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement">
+									<a class="mega-item__main-link" href="https://grafana.com/grafana/">Grafana</a>
+									<div class="mega-item__dropdown">
+										<ul class="mega-item__sub-pages">
+											<li class="mega-item__list-item">
+												<a class="mega-item__sub-page-link" href="https://grafana.com/grafana/">Features</a>
+											</li>
+											
+											<li class="mega-item__list-item">
+												<a class="mega-item__sub-page-link" href="https://grafana.com/grafana/contribute/">Contribute	</a>
+											</li>
+											
+											<li class="mega-item__list-item">
+												<a class="mega-item__sub-page-link" href="https://grafana.com/grafana/dashboards/">Dashboards	</a>
+											</li>
+											
+											<li class="mega-item__list-item">
+												<a class="mega-item__sub-page-link" href="https://grafana.com/grafana/plugins/">Plugins	</a>
+											</li>
+											
+											<li class="mega-item__list-item">
+												<a class="mega-item__sub-page-link" href="https://grafana.com/grafana/download/">Download	</a>
+											</li>
+											
+										</ul>
+										<div class="mega-item__feature-highlight text-center">
+											<a class="mega-item__feature-highlight-link" href="https://grafana.com/grafana/">
+												<img class="mega-item__feature-highlight-img" src="https://grafana.com/static/img/grafana/showcase_visualize-250.jpg" width="250" />
+												<p class="mega-item__feature-highlight-text">Learn about Grafana the monitoring solution for every database</p>
+											</a>
+										</div>
+									</div>
+								</li>
+								
+								
+								<li class="mega-item " itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement">
+									<a class="mega-item__main-link" href="https://grafana.com/products/">Products</a>
+									<div class="mega-item__dropdown">
+										<div class="mega-item__feature-highlight text-center">
+											
+											<a class="mega-item__feature-highlight-link" href="https://grafana.com/products/cloud/">
+												<div>
+													<img class="mega-item__feature-highlight-img" src="https://grafana.com/static/assets/img/platform/grafana_cloud_hero.svg" alt="Grafana Cloud" width="275" />
+													<span>Grafana Cloud</span>
+												</div>
+											</a>
+											
+										</div>
+										<div class="mega-item__feature-highlight">
+											
+											<a class="mega-item__feature-highlight-link" href="https://grafana.com/products/enterprise/">
+												<img class="mega-item__feature-highlight-img" src="https://grafana.com/static/img/platform/grafana_enterprise_dark.svg" alt="Grafana Enterprise" width="175" />
+											</a>
+											
+										</div>
+
+										<ul class="mega-item__mobile-only">
+											
+											<li class="mega-item__list-item">
+												<a class="mega-item__sub-page-link" href="https://grafana.com/products/cloud/">Grafana Cloud	</a>
+											</li>
+											
+											<li class="mega-item__list-item">
+												<a class="mega-item__sub-page-link" href="https://grafana.com/products/enterprise/">Grafana Enterprise	</a>
+											</li>
+											
+										</ul>
+									</div>
+								</li>
+								
+								
+								<li class="mega-item " itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement">
+									<a class="mega-item__main-link" href="https://grafana.com/oss/">Open Source</a>
+									<div class="mega-item__dropdown">
+										<div class="mega-item__feature-highlight text-center">
+											<a class="mega-item__feature-highlight-link" href="https://grafana.com/oss/">
+												<img class="mega-item__feature-highlight-img" src="https://grafana.com/static/assets/img/jetpacktocat_menu.png" width="130" />
+												<p class="mega-item__feature-highlight-text">Open Source is at the heart of what we do at Grafana Labs.</p>
+											</a>
+										</div>
+										<ul class="mega-item__sub-pages">
+											
+											<li class="mega-item__list-item">
+												<a class="mega-item__sub-page-link" href="https://grafana.com/oss/grafana/">Grafana	</a>
+											</li>
+											
+											<li class="mega-item__list-item">
+												<a class="mega-item__sub-page-link" href="https://grafana.com/oss/cortex/">Cortex	</a>
+											</li>
+											
+											<li class="mega-item__list-item">
+												<a class="mega-item__sub-page-link" href="https://grafana.com/oss/graphite/">Graphite	</a>
+											</li>
+											
+											<li class="mega-item__list-item">
+												<a class="mega-item__sub-page-link" href="https://grafana.com/oss/loki/">Loki	</a>
+											</li>
+											
+											<li class="mega-item__list-item">
+												<a class="mega-item__sub-page-link" href="https://grafana.com/oss/metrictank/">Metrictank	</a>
+											</li>
+											
+											<li class="mega-item__list-item">
+												<a class="mega-item__sub-page-link" href="https://grafana.com/oss/prometheus/">Prometheus	</a>
+											</li>
+											
+											<li class="mega-item__list-item">
+												<a class="mega-item__sub-page-link" href="https://grafana.com/oss/tanka/">Tanka	</a>
+											</li>
+											
+										</ul>
+									</div>
+								</li>
+								
+								
+								
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+								<li class="mega-item " itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement">
+									
+									<a class="mega-item__main-link" href="https://grafana.com/blog/">Learn</a>
+									
+									<div class="mega-item__dropdown ">
+										<div class="mega-item__feature-highlight text-center">
+											
+											<a class="mega-item__feature-highlight-link" href="https://grafana.com/docs/">
+												<img class="mega-item__feature-highlight-img" src="https://grafana.com/static/img/icon_training.svg" width="130" />
+												<p class="mega-item__feature-highlight-text">Check out the docs for installation, getting started & feature guides.</p>
+											</a>
+											
+										</div>
+										<ul class="mega-item__sub-pages">
+											<li class="mega-item__list-item">
+												
+												<a class="mega-item__sub-page-link" href="https://grafana.com/blog/">Blog</a>
+												
+											</li>
+											<li class="mega-item__list-item">
+												
+												<a class="mega-item__sub-page-link" href="https://grafana.com/docs/">Documentation</a>
+												
+											</li>
+											<li class="mega-item__list-item">
+												<a class="mega-item__sub-page-link" href="https://community.grafana.com/">Community</a>
+											</li>
+											<li class="mega-item__list-item">
+												
+												<a class="mega-item__sub-page-link" href="https://grafana.com/case-study/">Case Studies</a>
+												
+											</li>
+											<li class="mega-item__list-item">
+												
+												<a class="mega-item__sub-page-link" href="https://grafana.com/about/events/grafanacon/2020/">GrafanaCon</a>
+												
+											</li>
+											<li class="mega-item__list-item">
+												
+												<a class="mega-item__sub-page-link" href="https://grafana.com/tutorials/">Tutorials</a>
+												
+											</li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+							<ul class="mega-wrapper mega-wrapper__left">
+								<li class="mega-item" itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement">
+									<a class="mega-item__main-link" href="https://grafana.com/get">Downloads</a>
+								</li>
+								<li class="mega-item" itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement">
+									<a class="mega-item__main-link mega-item__login" href="https://grafana.com/login?plcmt=nav-main"><noscript>Login</noscript></a>
+								</li>
+							</ul>
+							
+							
+						</div>
+						
+						<nav class="site-nav site-nav--no-border">
+							<ul class="ui-list nowrap">
+								<li class="site-nav__item site-nav__item--inline">
+									
+										<a class="btn btn--primary" style="white-space: nowrap" href="https://grafana.com/contact?plcmt=nav-main">Contact us</a>
+									
+								</li>
+							</ul>
+						</nav>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+		<div class="main">
+
+			
+    <div class="page__content--no-padding homepage">
+        <div class="home-grid">
+  <div class="home-grid__feature" >
+    <div class="home-grid__feature-item" style="background-image: url(/static/img/heros/hero-homepage_feature.svg);">
+      <div class="home-grid__feature-item-content">
+        <!-- <h1>The open observability platform</h1>
+        <p>Grafana is the open source analytics & monitoring solution for every database.</p>
+        <a class="btn btn--primary btn--hero arrow" href="https://grafana.com/get" rel="noopener noreferrer">Get Grafana</a> -->
+        <h1>Grafana 7.0 is here</h1>
+        <p>So many new things, so much to share.</p>
+        <div class="btn-row">
+          <a class="btn btn--primary btn--hero arrow" href="https://grafana.com/go/grafanaconline/grafana-7.0-release/?pg=hp&plcmt=hero-btn1">Watch the 7.0 keynote video</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="home-grid__subfeature">
+    <div class="home-grid__subfeature-top">
+      <div class="home-grid__subfeature-item" style="background-image: url(/static/img/heros/hero-home_cloud.png);">
+        <div class="home-grid__subfeature-item-content ml-1 p-1">
+          <h2 class="text-white">Grafana Cloud</h2>
+          <p class="text-white p-narrow">Get visibility into all data sources and metrics across teams without jumping through multiple tabs and tools.</p>
+          <a class="btn btn--white btn--hero arrow" href="https://grafana.com/products/cloud/?pg=hp&plcmt=hero-sub-1">Learn more</a>
+        </div>
+      </div>
+    </div>
+    <div class="home-grid__subfeature-bottom">
+      <div class="home-grid__subfeature-item" style="background-image: url(/static/img/heros/hero-home_support.jpg);">
+        <div class="home-grid__subfeature-item-content ml-1 p-1">
+          <h2 class="text-white">We’re here to help</h2>
+          <p class="text-white p-narrow">From premium plugins and Grafana Cloud to mission critical support.</p>
+          <a class="btn btn--white btn--hero arrow" href="https://grafana.com/contact?pg=hp&plcmt=hero-sub-2">Contact us</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="pt-3 bg-redesign" style="">
+	<div class="wrapper" >
+	<h2 class="homepage__logos-heading text-center maxw-650 mx-auto">Used by thousands of companies to monitor everything from infrastructure, applications, and power plants to beehives.</h2>
+<div class="homepage__logos-grid" style="">
+	<figure
+	class="figure-wrapper  "
+	style="max-width: 100%;"
+	itemprop="associatedMedia"
+	itemscope=""
+	itemtype="http://schema.org/ImageObject">
+	<img
+			class="lazyload"src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+			data-src="https://grafana.com/static/assets/img/logos/paypal_bw-2.svg"alt=""
+			width=""
+			height=""
+		/>
+		<noscript>
+			<img
+				src="https://grafana.com/static/assets/img/logos/paypal_bw-2.svg"
+				alt=""
+				width=""
+				height=""
+			/>
+		</noscript>
+</figure>
+<figure
+	class="figure-wrapper  "
+	style="max-width: 100%;"
+	itemprop="associatedMedia"
+	itemscope=""
+	itemtype="http://schema.org/ImageObject">
+	<img
+			class="lazyload"src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+			data-src="https://grafana.com/static/assets/img/logos/ebay_bw.svg"alt=""
+			width=""
+			height=""
+		/>
+		<noscript>
+			<img
+				src="https://grafana.com/static/assets/img/logos/ebay_bw.svg"
+				alt=""
+				width=""
+				height=""
+			/>
+		</noscript>
+</figure>
+<figure
+	class="figure-wrapper  "
+	style="max-width: 100%;"
+	itemprop="associatedMedia"
+	itemscope=""
+	itemtype="http://schema.org/ImageObject">
+	<img
+			class="lazyload"src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+			data-src="https://grafana.com/static/assets/img/logos/staples_bw.svg"alt=""
+			width=""
+			height=""
+		/>
+		<noscript>
+			<img
+				src="https://grafana.com/static/assets/img/logos/staples_bw.svg"
+				alt=""
+				width=""
+				height=""
+			/>
+		</noscript>
+</figure>
+<figure
+	class="figure-wrapper  "
+	style="max-width: 100%;"
+	itemprop="associatedMedia"
+	itemscope=""
+	itemtype="http://schema.org/ImageObject">
+	<img
+			class="lazyload"src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+			data-src="https://grafana.com/static/assets/img/logos/intel_bw.svg"alt=""
+			width=""
+			height=""
+		/>
+		<noscript>
+			<img
+				src="https://grafana.com/static/assets/img/logos/intel_bw.svg"
+				alt=""
+				width=""
+				height=""
+			/>
+		</noscript>
+</figure>
+<figure
+	class="figure-wrapper homepage__hide-logo-on-mobile "
+	style="max-width: 100%;"
+	itemprop="associatedMedia"
+	itemscope=""
+	itemtype="http://schema.org/ImageObject">
+	<img
+			class="lazyload"src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+			data-src="https://grafana.com/static/assets/img/logos/ted_bw.svg"alt=""
+			width=""
+			height=""
+		/>
+		<noscript>
+			<img
+				src="https://grafana.com/static/assets/img/logos/ted_bw.svg"
+				alt=""
+				width=""
+				height=""
+			/>
+		</noscript>
+</figure>
+<figure
+	class="figure-wrapper homepage__hide-logo-on-mobile "
+	style="max-width: 100%;"
+	itemprop="associatedMedia"
+	itemscope=""
+	itemtype="http://schema.org/ImageObject">
+	<img
+			class="lazyload"src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+			data-src="https://grafana.com/static/assets/img/logos/fermilab_bw.svg"alt=""
+			width=""
+			height=""
+		/>
+		<noscript>
+			<img
+				src="https://grafana.com/static/assets/img/logos/fermilab_bw.svg"
+				alt=""
+				width=""
+				height=""
+			/>
+		</noscript>
+</figure>
+<figure
+	class="figure-wrapper  "
+	style="max-width: 100%;"
+	itemprop="associatedMedia"
+	itemscope=""
+	itemtype="http://schema.org/ImageObject">
+	<img
+			class="lazyload"src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+			data-src="https://grafana.com/static/assets/img/logos/vimeo_bw.svg"alt=""
+			width=""
+			height=""
+		/>
+		<noscript>
+			<img
+				src="https://grafana.com/static/assets/img/logos/vimeo_bw.svg"
+				alt=""
+				width=""
+				height=""
+			/>
+		</noscript>
+</figure>
+<figure
+	class="figure-wrapper  "
+	style="max-width: 100%;"
+	itemprop="associatedMedia"
+	itemscope=""
+	itemtype="http://schema.org/ImageObject">
+	<img
+			class="lazyload"src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+			data-src="https://grafana.com/static/assets/img/logos/rackspace_bw.svg"alt=""
+			width=""
+			height=""
+		/>
+		<noscript>
+			<img
+				src="https://grafana.com/static/assets/img/logos/rackspace_bw.svg"
+				alt=""
+				width=""
+				height=""
+			/>
+		</noscript>
+</figure>
+<figure
+	class="figure-wrapper  "
+	style="max-width: 100%;"
+	itemprop="associatedMedia"
+	itemscope=""
+	itemtype="http://schema.org/ImageObject">
+	<img
+			class="lazyload"src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+			data-src="https://grafana.com/static/assets/img/logos/opentable_bw.svg"alt=""
+			width=""
+			height=""
+		/>
+		<noscript>
+			<img
+				src="https://grafana.com/static/assets/img/logos/opentable_bw.svg"
+				alt=""
+				width=""
+				height=""
+			/>
+		</noscript>
+</figure>
+<figure
+	class="figure-wrapper homepage__hide-logo-on-mobile "
+	style="max-width: 100%;"
+	itemprop="associatedMedia"
+	itemscope=""
+	itemtype="http://schema.org/ImageObject">
+	<img
+			class="lazyload"src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+			data-src="https://grafana.com/static/assets/img/logos/booking_bw.svg"alt=""
+			width=""
+			height=""
+		/>
+		<noscript>
+			<img
+				src="https://grafana.com/static/assets/img/logos/booking_bw.svg"
+				alt=""
+				width=""
+				height=""
+			/>
+		</noscript>
+</figure>
+</div>
+</div>
+
+</div>
+
+
+
+
+
+
+<div class="homepage__product">
+
+<div class="wrapper" >
+	<div class="maxw-900 d-block m-auto" style="">
+	<div class="homepage__screenshot" style="">
+	<div class="feature-image feature-image--img-mode">
+    <div class="feature-image__img">
+        <img src="https://grafana.com/static/img/grafana/showcase_visualize.jpg" srcset="https://grafana.com/static/img/grafana/showcase_visualize.jpg 1920w, https://grafana.com/static/img/grafana/showcase_visualize-954.jpg 954w, https://grafana.com/static/img/grafana/showcase_visualize-400.jpg 400w" sizes="(min-width: 976px) 954px, 100vw" alt="Visualize metrics via dashboards filled with panels" class="feature-image-fade-in">
+    </div>
+    <video loop="" muted="" width="100%" class="feature-image-fade-out">
+        <source src="https://grafana.com/video/visualize.mp4" type="video/mp4">
+    </video>
+</div>
+</div>
+</div>
+<div class="btn-row d-sm-flex justify-content-center"><p><a  class="btn btn--outline-hero btn--hero" href="https://grafana.com/grafana" rel="noopener noreferrer">What is Grafana?</a></p>
+<p><a  class="btn btn--primary btn--hero" href="https://grafana.com/get" rel="noopener noreferrer">Download</a></p>
+<p><a  class="btn btn--primary btn--hero homepage__grafana-live-demo-btn" href="https://play.grafana.org" rel="noopener noreferrer">Live Demo</a></p>
+</div>
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+<div class="wrapper my-2" >
+	<div class="row row--24 row--no-side-gutters" ><div class="col col--md-12"><div class="card-container home-card">
+<h3 class="company-pillar__heading">Grafana Cloud</h3>
+<h4 class="company-pillar__subheading">The best place to run Grafana, Graphite, Prometheus, and Loki</h4><a href="https://grafana.com/products/cloud/?pg=hp&amp;plcmt=prod-banner" data-ga-category="Home Page" data-ga-label="Grafana Cloud"><figure
+	class="figure-wrapper  "
+	style="max-width: 100%;"
+	itemprop="associatedMedia"
+	itemscope=""
+	itemtype="http://schema.org/ImageObject">
+	<img
+			class="lazyload"src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+			data-src="https://grafana.com/static/img/platform/grafana_cloud_hero.svg"alt=""
+			width=""
+			height=""
+		/>
+		<noscript>
+			<img
+				src="https://grafana.com/static/img/platform/grafana_cloud_hero.svg"
+				alt=""
+				width=""
+				height=""
+			/>
+		</noscript>
+</figure>
+</a><div class="btn-row">
+	<a class="btn btn--outline btn--hero" href="https://grafana.com/products/cloud/?pg=hp&amp;plcmt=prod-banner" data-ga-category="Home Page" data-ga-label="Grafana Cloud box">Learn more</a>
+</div></div>
+</div>
+<div class="col col--md-12"><div class="card-container home-card">
+<h3 class="company-pillar__heading">Grafana Enterprise</h3>
+<h4 class="company-pillar__subheading">Get the most out of Grafana</h4><a href="https://grafana.com/products/enterprise/" data-ga-category="Home Page" data-ga-label="Grafana Enterprise"><figure
+	class="figure-wrapper mb-3 "
+	style="max-width: 100%;"
+	itemprop="associatedMedia"
+	itemscope=""
+	itemtype="http://schema.org/ImageObject">
+	<img
+			class="lazyload"src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+			data-src="https://grafana.com/static/img/platform/grafana_enterprise_dark.svg"alt=""
+			width=""
+			height=""
+		/>
+		<noscript>
+			<img
+				src="https://grafana.com/static/img/platform/grafana_enterprise_dark.svg"
+				alt=""
+				width=""
+				height=""
+			/>
+		</noscript>
+</figure>
+</a><div class="btn-row">
+	<a class="btn btn--outline btn--hero" href="https://grafana.com/products/enterprise/" data-ga-category="Home Page" data-ga-label="Grafana Enterprise box">Let&#39;s talk Enterprise</a>
+</div></div>
+</div>
+</div>
+
+</div>
+
+
+
+
+
+
+
+<div class="bg-light-blue">
+
+<div class="wrapper py-4" >
+	<div class="row justify-content-around align-items-center">
+			<div class="col--md-6">
+				<div class="text-white">
+					<a class="text-white" href="https://grafana.com/about/events/"><small>Upcoming events</small></a>
+						<h2><a class="homepage__white-text" href="https://grafana.com/go/introduction-to-distributed-tracing/?pg=hp&plcmt=upcoming-events">Introduction to distributed tracing</a></h2>
+						<p class="text-navy">
+						<strong>
+							<small>
+								August 6, 2020 <span> | </span> Online
+							</small>
+						</strong>
+					</p>
+							<p>Come and learn about the basics of distributed tracing! In this webinar we will take a simple...</p>
+						<div class="mb-2"><a href="https://grafana.com/go/introduction-to-distributed-tracing/?pg=hp&plcmt=upcoming-events" class="btn btn--white arrow" rel="nofollow">Learn more</a></div></div>
+			</div>
+			<div class="col--md-4 overflow-hidden"><div class="homepage__event-image circle-image">
+					<img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="https://grafana.com/static/img/logos/grafana_logo_swirl.svg"
+					width="250"
+					alt="Introduction to Distributed Tracing" />
+				</div></div>
+		</div>
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+<div class="bg-redesign">
+
+<div class="wrapper py-4" >
+	<div class="row justify-content-around align-items-center">
+	<div class="col--md-6">
+		<div>
+			<span class="text-primary"><a href="https://grafana.com/blog/"><small>Latest on the blog</small></a></span>
+			<h2><a href="https://grafana.com/blog/2020/08/04/is-your-grafana-dashboard-ready-to-spot-chaos/">Is your Grafana dashboard ready to spot chaos?</a></h2>
+			<p class="text-navy"><strong><small>August 4, 2020 | by <a href="https://grafana.com/author/samcoren">Sam Coren</a></small></strong></p>
+			<p>Join Grafana Labs and Gremlin on August 12 for a beginner-friendly webinar on how Chaos Engineering can help improve your incident response approach through better monitoring and testing.</p>
+			<div class="mb-2"><a href="https://grafana.com/blog/2020/08/04/is-your-grafana-dashboard-ready-to-spot-chaos/" class="btn btn--outline arrow" rel="nofollow">Read more</a></div>
+		</div>
+	</div>
+	<div class="col--md-4 overflow-hidden">
+		<div class="homepage__blog-image circle-image">
+			<img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="https://grafana.com/static/img/about/sam-coren-photo.jpg"
+			width="250"
+			alt="Sam Coren" />
+		</div>
+	</div>
+</div>
+
+</div>
+
+</div>
+
+
+    </div>
+
+
+			
+			
+				
+<div class="page-footer">
+	<div class="wrapper">
+		<div class="row justify-content-between">
+			<div class="col--sm-12 col--md-2">
+				<div class="page-footer__nav">
+					<div class="meta">
+						<div>
+							<img src="https://grafana.com/static/assets/internal/grafana_logo-web.svg" alt="Grafana Labs Logo" width="225">
+						</div>
+						<div class="page-footer__nav-copyright">
+							Copyright 2020 &copy; Grafana Labs
+						</div>
+						<div class="page-footer__nav-terms">
+							
+							<a href="https://grafana.com/sitemap/?plcmt=footer">Sitemap</a>
+							
+						</div>
+						<div class="page-footer__nav-terms">
+							
+							<a href="https://grafana.com/terms/?plcmt=footer">Terms of Service</a>
+							
+						</div>
+						<div class="page-footer__nav-terms">
+							
+							<a href="https://grafana.com/trademark-policy/?plcmt=footer">Trademark Policy</a>
+							
+						</div>
+						<div class="page-footer__nav-social">
+							<a href="https://www.facebook.com/grafana/" target="_blank" rel="noopener"><i class="fa fa-facebook"></i></a>
+							<a href="https://twitter.com/grafana" target="_blank" rel="noopener"><i class="fa fa-twitter"></i></a>
+							<a href="https://www.linkedin.com/company/grafana-labs/" target="_blank" rel="noopener"><i class="fa fa-linkedin"></i></a>
+							<a href="https://github.com/grafana/" target="_blank" rel="noopener"><i class="fa fa-github"></i></a>
+							<a href="https://www.youtube.com/channel/UCYCwgQAMm9sTJv0rgwQLCxw" target="_blank" rel="noopener"><i class="fa fa-youtube"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col--sm-12 col--md-9">
+				<div class="row page-footer__row">
+					<div class="col--xs-12 col--md-3">
+						<nav class="site-nav">
+							<ul class="ui-list">
+								<li class="site-nav__item site-nav__item--heading">
+									<h4>Grafana</h4>
+								</li>
+								<li class="site-nav__item site-nav__item--text">
+									
+									<a class="site-nav__link site-nav__link--discrete" href="https://grafana.com/grafana/?plcmt=footer" >Features</a>
+									
+								</li>
+								<li class="site-nav__item site-nav__item--text">
+									
+									<a class="site-nav__link site-nav__link--discrete" href="https://grafana.com/grafana/contribute/?plcmt=footer">Contribute</a>
+									
+								</li>
+								<li class="site-nav__item site-nav__item--text">
+									
+									<a class="site-nav__link site-nav__link--discrete" href="https://grafana.com/grafana/dashboards/?plcmt=footer">Dashboards</a>
+									
+								</li>
+								<li class="site-nav__item site-nav__item--text">
+									
+									<a class="site-nav__link site-nav__link--discrete" href="https://grafana.com/grafana/plugins/?plcmt=footer">Plugins</a>
+									
+								</li>
+							</ul>
+						</nav>
+					</div>
+					<div class="col--xs-12 col--md-3">
+						<nav class="site-nav">
+							<ul class="ui-list">
+								<li class="site-nav__item site-nav__item--heading">
+									<h4>Products</h4>
+								</li>
+								
+								<li class="site-nav__item site-nav__item--text">
+									<a class="site-nav__link site-nav__link--discrete" href="https://grafana.com/products/cloud/?plcmt=footer">Grafana Cloud</a>
+								</li>
+								
+								<li class="site-nav__item site-nav__item--text">
+									<a class="site-nav__link site-nav__link--discrete" href="https://grafana.com/products/enterprise/?plcmt=footer">Grafana Enterprise</a>
+								</li>
+								
+							</ul>
+							<ul class="ui-list">
+								<li class="site-nav__item site-nav__item--heading">
+									<h4>Open Source</h4>
+								</li>
+								
+								<li class="site-nav__item site-nav__item--text">
+									<a class="site-nav__link site-nav__link--discrete" href="https://grafana.com/oss/grafana/?plcmt=footer">Grafana</a>
+								</li>
+								
+								<li class="site-nav__item site-nav__item--text">
+									<a class="site-nav__link site-nav__link--discrete" href="https://grafana.com/oss/cortex/?plcmt=footer">Cortex</a>
+								</li>
+								
+								<li class="site-nav__item site-nav__item--text">
+									<a class="site-nav__link site-nav__link--discrete" href="https://grafana.com/oss/graphite/?plcmt=footer">Graphite</a>
+								</li>
+								
+								<li class="site-nav__item site-nav__item--text">
+									<a class="site-nav__link site-nav__link--discrete" href="https://grafana.com/oss/loki/?plcmt=footer">Loki</a>
+								</li>
+								
+								<li class="site-nav__item site-nav__item--text">
+									<a class="site-nav__link site-nav__link--discrete" href="https://grafana.com/oss/metrictank/?plcmt=footer">Metrictank</a>
+								</li>
+								
+								<li class="site-nav__item site-nav__item--text">
+									<a class="site-nav__link site-nav__link--discrete" href="https://grafana.com/oss/prometheus/?plcmt=footer">Prometheus</a>
+								</li>
+								
+								<li class="site-nav__item site-nav__item--text">
+									<a class="site-nav__link site-nav__link--discrete" href="https://grafana.com/oss/tanka/?plcmt=footer">Tanka</a>
+								</li>
+								
+								<li class="site-nav__item site-nav__item--text">
+									<a class="site-nav__link site-nav__link--discrete" href="https://github.com/grafana/" target="_blank" rel="noopener"><i class="fa fa-github"></i> GitHub</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+					<div class="col--xs-12 col--md-3">
+						<nav class="site-nav">
+							<ul class="ui-list">
+								<li class="site-nav__item site-nav__item--heading">
+									<h4>Learn</h4>
+								</li>
+								<li class="site-nav__item site-nav__item--text">
+									
+									<a class="site-nav__link site-nav__link--discrete" href="https://grafana.com/blog/?plcmt=footer">Blog</a>
+									
+								</li>
+								<li class="site-nav__item site-nav__item--text">
+									
+									<a class="site-nav__link site-nav__link--discrete" href="https://grafana.com/docs/?plcmt=footer">Documentation</a>
+									
+								</li>
+								<li class="site-nav__item site-nav__item--text">
+									
+									<a class="site-nav__link site-nav__link--discrete" href="https://grafana.com/get/?plcmt=footer">Downloads</a>
+									
+								</li>
+								<li class="site-nav__item site-nav__item--text">
+									<a class="site-nav__link site-nav__link--discrete" href="https://community.grafana.com/?plcmt=footer">Community</a>
+								</li>
+								<li class="site-nav__item site-nav__item--text">
+									
+									<a class="site-nav__link site-nav__link--discrete" href="https://grafana.com/about/events/grafanacon/2020/?plcmt=footer">GrafanaCon</a>
+									
+								</li>
+								<li class="site-nav__item site-nav__item--text">
+									
+									<a class="site-nav__link site-nav__link--discrete" href="https://grafana.com/case-study/?plcmt=footer">Case Studies</a>
+									
+								</li>
+								<li class="site-nav__item site-nav__item--text">
+									
+									<a class="site-nav__link site-nav__link--discrete" href="https://grafana.com/training/?plcmt=footer">Training</a>
+									
+								</li>
+								<li class="site-nav__item site-nav__item--text">
+									<a class="site-nav__link site-nav__link--discrete" href="https://status.grafana.com/?plcmt=footer" target="_blank" rel="noopener">Grafana Cloud Status</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+					<div class="col--xs-12 col--md-3">
+						<nav class="site-nav">
+							<ul class="ui-list">
+								<li class="site-nav__item site-nav__item--heading">
+									<h4>Company</h4>
+								</li>
+								<li class="site-nav__item site-nav__item--text">
+									
+									<a class="site-nav__link site-nav__link--discrete" href="https://grafana.com/about/mission/?plcmt=footer">Our Mission</a>
+									
+								</li>
+								<li class="site-nav__item site-nav__item--text">
+									
+									<a class="site-nav__link site-nav__link--discrete" href="https://grafana.com/about/team/?plcmt=footer" >The Team</a>
+									
+								</li>
+								<li class="site-nav__item site-nav__item--text">
+									
+									<a class="site-nav__link site-nav__link--discrete" href="https://grafana.com/about/press/?plcmt=footer">Press</a>
+									
+								</li>
+								<li class="site-nav__item site-nav__item--text">
+									
+									<a class="site-nav__link site-nav__link--discrete" href="https://grafana.com/about/careers/?plcmt=footer">We&#39;re Hiring!</a>
+									
+								</li>
+								<li class="site-nav__item site-nav__item--text">
+									
+									<a class="site-nav__link site-nav__link--discrete" href="https://grafana.com/about/events/?plcmt=footer">Events</a>
+									
+								</li>
+								<li class="site-nav__item site-nav__item--text">
+									
+									<a class="site-nav__link site-nav__link--discrete" href="https://grafana.com/contact/?plcmt=footer">Contact</a>
+									
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+			
+
+			<div class="sticky-footer sticky-footer--dark consent-footer js-consent-footer">
+    <div class="sticky-footer__container">
+        <div class="sticky-footer__copy sticky-footer__copy--dark sticky-footer__items">
+            Grafana Labs uses cookies for the normal operation of this website. <a href="https://grafana.com/terms#cookie-policy"><strong>Learn more.</strong></a>
+        </div>
+        <div class="sticky-footer__cta">
+            <div class="sticky-footer__footer-signup">
+                <button class="btn btn--primary js-consent-footer-accept">Got it!</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+			
+			
+			
+
+		</div>
+
+		
+<div class="Modal js-modal">
+    <div class="content">
+
+    </div>
+</div>
+
+		
+		
+		<style>.lazyload,.lazyloading{opacity:0}.lazyloaded{opacity:1;transition:opacity .25s}</style>
+		
+		
+			<script src="https://grafana.com/static/vendor.98433bbc333c3b282675.js"></script>
+		
+		
+		
+			<script src="https://grafana.com/static/app.e738a9fae2bd6ff92a7e.js"></script>
+		
+		
+		
+			<script src="https://grafana.com/static/shared.eeea4cbdaee207701df8.js"></script>
+		
+	</body>
+</html>

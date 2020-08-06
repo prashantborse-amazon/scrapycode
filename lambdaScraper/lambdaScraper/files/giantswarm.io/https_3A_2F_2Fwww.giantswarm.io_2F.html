@@ -1,0 +1,2510 @@
+<!doctype html><!-- start coded_template: id:12789882714 path:generated_layouts/12789882713.html --><!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en" > <![endif]--><!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en" >        <![endif]--><!--[if IE 8]>    <html class="no-js lt-ie9" lang="en" >               <![endif]--><!--[if gt IE 8]><!--><html class="no-js" lang="en"><!--<![endif]--><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="author" content="Giant Swarm GmbH">
+    <meta name="description" content="Implement and manage your Kubernetes infrastructure with Giant Swarm. We will guide you along the Kubernetes learning curve. Get your containers in production.">
+    <meta name="generator" content="HubSpot">
+    <title>Managed Kubernetes as a Service » Giant Swarm</title>
+    <link rel="shortcut icon" href="https://www.giantswarm.io/hubfs/bant-4.png">
+    
+
+    <script src="/hs/hsstatic/jquery-libs/static-1.1/jquery/jquery-1.7.1.js"></script>
+<script>hsjQuery = window['jQuery'];</script>
+    <meta property="og:description" content="Implement and manage your Kubernetes infrastructure with Giant Swarm. We will guide you along the Kubernetes learning curve. Get your containers in production.">
+    <meta property="og:title" content="Managed Kubernetes as a Service » Giant Swarm">
+    <meta name="twitter:description" content="Implement and manage your Kubernetes infrastructure with Giant Swarm. We will guide you along the Kubernetes learning curve. Get your containers in production.">
+    <meta name="twitter:title" content="Managed Kubernetes as a Service » Giant Swarm">
+
+    
+
+    
+    <style>
+a.cta_button{-moz-box-sizing:content-box !important;-webkit-box-sizing:content-box !important;box-sizing:content-box !important;vertical-align:middle}.hs-breadcrumb-menu{list-style-type:none;margin:0px 0px 0px 0px;padding:0px 0px 0px 0px}.hs-breadcrumb-menu-item{float:left;padding:10px 0px 10px 10px}.hs-breadcrumb-menu-divider:before{content:'›';padding-left:10px}.hs-featured-image-link{border:0}.hs-featured-image{float:right;margin:0 0 20px 20px;max-width:50%}@media (max-width: 568px){.hs-featured-image{float:none;margin:0;width:100%;max-width:100%}}.hs-screen-reader-text{clip:rect(1px, 1px, 1px, 1px);height:1px;overflow:hidden;position:absolute !important;width:1px}
+</style>
+
+<link rel="stylesheet" href="https://www.giantswarm.io/hs-fs/hub/430224/hub_generated/template_assets/12789940861/1595315713824/Custom/page/mjfw/mjfw_styles.min.css">
+<link rel="stylesheet" href="https://www.giantswarm.io/hs-fs/hub/430224/hub_generated/module_assets/12789882562/1591256303150/module_12789882562_MJFW_Site_Header.min.css">
+<link rel="stylesheet" href="https://www.giantswarm.io/hs-fs/hub/430224/hub_generated/module_assets/27895818495/1591108926903/module_27895818495_GS-m17-Home-hero-3-CTA.min.css">
+<link rel="stylesheet" href="https://www.giantswarm.io/hs-fs/hub/430224/hub_generated/module_assets/21565714533/1588843608549/module_21565714533_GS-m2-hover-box.min.css">
+<link rel="stylesheet" href="https://www.giantswarm.io/hs-fs/hub/430224/hub_generated/module_assets/28171860617/1594379577004/module_28171860617_GS-m19-Home-what-is-gs.min.css">
+    
+
+    
+<!--  Added by GoogleAnalytics integration -->
+<script>
+var _hsq = window._hsq = window._hsq || [];
+_hsq.push(['addPrivacyConsentListener', function(consent) { if (consent.allowed) {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create','UA-52901087-2','auto');
+  ga('send','pageview');
+}}]);
+</script>
+
+<!-- /Added by GoogleAnalytics integration -->
+
+    <link rel="canonical" href="https://www.giantswarm.io">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PKJ8T4W');</script>
+<!-- End Google Tag Manager -->
+<!-- Script for code highlighter -->
+<link rel="stylesheet" type="text/css" href="https://s.giantswarm.io/highlightjs/9.16.2/1/solarized-dark.min.css">
+<meta property="og:image" content="https://www.giantswarm.io/hubfs/images/giantswarm-featured-image-generic-v1.jpg#keepProtocol">
+
+<meta name="twitter:image" content="https://www.giantswarm.io/hubfs/images/giantswarm-featured-image-generic-v1.jpg#keepProtocol">
+
+
+<meta property="og:url" content="https://www.giantswarm.io">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="//cdn2.hubspot.net/hub/-1/hub_generated/template_assets/1495141902003/hubspot_default/shared/responsive/layout.min.css">
+
+
+
+
+
+    
+    
+
+</head>
+<body class="interior interior--one-col 
+  
+ 
+  
+   hs-content-id-14471746055 hs-site-page page hs-content-path- hs-content-name-home  " style="">
+    <div class="header-container-wrapper">
+    <div class="header-container container-fluid">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-1 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget " style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_1541795161812913" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+
+
+
+<!-- BEGIN SITE_HEADER -->
+<div class="site-header site-header__on_dark site-header--mega-menu" role="banner">
+  <div class="site-header__inner">
+    <div class="site-header__left">
+      <div class="site-header__logo">
+        <a href="//www.giantswarm.io" id="hs-link-module_1541795161812913_logo" style="border-width:0px;border:0px;"><img src="https://www.giantswarm.io/hs-fs/hubfs/Email/Email%20Assets/giant-swarm-logo.png?width=241&amp;name=giant-swarm-logo.png" class="hs-image-widget " style="width:241px;border-width:0px;border:0px;" width="241" alt="Giant Swarm logo" title="Giant Swarm logo" srcset="https://www.giantswarm.io/hs-fs/hubfs/Email/Email%20Assets/giant-swarm-logo.png?width=121&amp;name=giant-swarm-logo.png 121w, https://www.giantswarm.io/hs-fs/hubfs/Email/Email%20Assets/giant-swarm-logo.png?width=241&amp;name=giant-swarm-logo.png 241w, https://www.giantswarm.io/hs-fs/hubfs/Email/Email%20Assets/giant-swarm-logo.png?width=362&amp;name=giant-swarm-logo.png 362w, https://www.giantswarm.io/hs-fs/hubfs/Email/Email%20Assets/giant-swarm-logo.png?width=482&amp;name=giant-swarm-logo.png 482w, https://www.giantswarm.io/hs-fs/hubfs/Email/Email%20Assets/giant-swarm-logo.png?width=603&amp;name=giant-swarm-logo.png 603w, https://www.giantswarm.io/hs-fs/hubfs/Email/Email%20Assets/giant-swarm-logo.png?width=723&amp;name=giant-swarm-logo.png 723w" sizes="(max-width: 241px) 100vw, 241px"></a>
+      </div>
+    </div>
+
+    <div class="site-header__right">
+      <div class="site-header__main-menu site-header__main-menu--mega">
+				<div class="hs-menu-wrapper active-branch flyouts hs-menu-flow-horizontal" role="navigation" aria-label="Navigation Menu">
+				  <ul>
+						
+							
+	
+
+  
+    
+  
+
+	
+
+	<li class="hs-menu-item hs-menu-depth-1 hs-item-has-children" role="menu">
+		<a href="https://www.giantswarm.io/why-giant-swarm" aria-haspopup="true" role="menuitem" aria-expanded="false">
+			
+			
+			<span>
+				Why Giant Swarm
+			</span>
+			
+			
+			  <span class="caret"></span>
+			
+		</a>
+
+		
+			
+				<div class="hs-menu-children-wrapper-container">
+					<div class="hs-menu-children-wrapper-container-inner">
+			
+
+			<ul class="hs-menu-children-wrapper">
+				
+					
+
+					
+						
+	
+
+  
+
+	
+		
+	
+
+	<li class="hs-menu-item hs-menu-depth-2 hs-item-has-children" role="menu">
+		<a href="javascript:;" aria-haspopup="false" role="menuitem">
+			
+			
+			<span>
+				Why
+			</span>
+			
+			
+			  <span class="caret"></span>
+			
+		</a>
+
+		
+			
+
+			<ul class="hs-menu-children-wrapper">
+				
+					
+
+					
+						
+	
+
+  
+
+	
+
+	<li class="hs-menu-item hs-menu-depth-3" role="menu">
+		<a href="https://www.giantswarm.io/why-giant-swarm" aria-haspopup="false" role="menuitem">
+			
+			
+			<span>
+				Giant Swarm
+			</span>
+			
+			
+		</a>
+
+		
+	</li>
+
+  
+
+					
+				
+			</ul>
+
+			
+		
+	</li>
+
+  
+    
+      
+				
+  <li class="hs-menu-item hs-menu-item--large-menu-items hs-menu-item--card-menu-item hs-menu-depth-2 hs-item-has-children hs-menu-item--double-cards" role="menu">
+		<span class="card-menu-label">Featured  Resources</span>
+		
+  	<a class="card-menu-item card-menu-item--default" href="https://www.giantswarm.io/on-demand-webinar-the-cost-of-kubernetes" aria-haspopup="false" role="menuitem" target="_blank">
+			<span class="card-menu-item__image">
+				<img src="https://www.giantswarm.io/hubfs/MegaNav%20resource%20images/meganav-the-cost-of-kubernetes-v1.jpg" alt="Test">
+			</span>
+			<span class="card-menu-item__content">
+				<p><strong>The Cost of Kubernetes<br></strong></p>
+<p>Learn about the $34m opportunity companies reap from cloud-native and which costs you have to consider to build and operate a Kubernetes platform.</p>
+				
+				<span class="card-menu-item__cta cta-btn cta-btn--large cta-btn--primary-stroke-unfill cta-btn--filled">
+					<i class="fas fa-chevron-right"></i>
+					Watch now
+				</span>
+			</span>
+		</a>
+		
+		
+	</li>
+
+      
+    
+      
+				
+  <li class="hs-menu-item hs-menu-item--large-menu-items hs-menu-item--card-menu-item hs-menu-depth-2 hs-item-has-children hs-menu-item--double-cards" role="menu">
+		<span class="card-menu-label">&nbsp;</span>
+		
+  	<a class="card-menu-item card-menu-item--default" href="https://www.giantswarm.io/blog/giantswarm-vs-openshift" aria-haspopup="false" role="menuitem" target="_blank">
+			<span class="card-menu-item__image">
+				<img src="https://www.giantswarm.io/hubfs/MegaNav%20resource%20images/meganav-gs-vs-openshift-v2.jpg" alt="Test">
+			</span>
+			<span class="card-menu-item__content">
+				<p><strong>Giant Swarm vs OpenShift</strong></p>
+<p>Learn why leading companies have migrated from OpenShift to Giant Swarm and experience faster time-to-market, higher productivity of their devops teams, better security and cost savings.</p>
+				
+				<span class="card-menu-item__cta cta-btn cta-btn--large cta-btn--primary-stroke-unfill cta-btn--filled">
+					<i class="fas fa-chevron-right"></i>
+					Read comparison
+				</span>
+			</span>
+		</a>
+		
+		
+	</li>
+
+      
+    
+  
+
+					
+				
+			</ul>
+
+			
+					</div>
+				</div>
+			
+		
+	</li>
+
+  
+
+						
+							
+	
+
+  
+    
+  
+
+	
+
+	<li class="hs-menu-item hs-menu-depth-1 hs-item-has-children" role="menu">
+		<a href="https://www.giantswarm.io/product" aria-haspopup="true" role="menuitem" aria-expanded="false">
+			
+			
+			<span>
+				Product
+			</span>
+			
+			
+			  <span class="caret"></span>
+			
+		</a>
+
+		
+			
+				<div class="hs-menu-children-wrapper-container">
+					<div class="hs-menu-children-wrapper-container-inner">
+			
+
+			<ul class="hs-menu-children-wrapper">
+				
+					
+
+					
+						
+	
+
+  
+
+	
+		
+	
+
+	<li class="hs-menu-item hs-menu-depth-2 hs-item-has-children hs-menu-item--large-menu-items" role="menu">
+		<a href="javascript:;" aria-haspopup="false" role="menuitem">
+			
+			
+			<span>
+				Product
+			</span>
+			
+			
+			  <span class="caret"></span>
+			
+		</a>
+
+		
+			
+
+			<ul class="hs-menu-children-wrapper">
+				
+					
+						
+					
+
+					
+						
+  
+  
+  
+  <li class="hs-menu-item hs-menu-item--large hs-menu-depth-3" role="menu">
+  	<a class="large-menu-item" href="https://www.giantswarm.io/product" aria-haspopup="false" role="menuitem">
+			<span class="large-menu-item__image">
+				<img src="https://www.giantswarm.io/hubfs/icons/icon-nav-overview-v2.png" alt="Overview icon" style="max-width: 50px;">
+			</span>
+			<span class="large-menu-item__content">
+				<span class="p large-menu-item__label"><strong>Overview</strong></span>
+				<span class="p large-menu-item__description">Get introduced to our managed platform</span>
+			</span>
+		</a>
+	</li>
+
+					
+				
+					
+						
+					
+
+					
+						
+  
+  
+  
+  <li class="hs-menu-item hs-menu-item--large hs-menu-depth-3" role="menu">
+  	<a class="large-menu-item" href="https://www.giantswarm.io/control-plane" aria-haspopup="false" role="menuitem">
+			<span class="large-menu-item__image">
+				<img src="https://www.giantswarm.io/hubfs/icons/icon-nav-platform-v2.png" alt="Kubernetes Platform icon" style="max-width: 50px;">
+			</span>
+			<span class="large-menu-item__content">
+				<span class="p large-menu-item__label"><strong>Kubernetes Platform</strong></span>
+				<span class="p large-menu-item__description">Run containers at scale around the world</span>
+			</span>
+		</a>
+	</li>
+
+					
+				
+					
+						
+					
+
+					
+						
+  
+  
+  
+  <li class="hs-menu-item hs-menu-item--large hs-menu-depth-3" role="menu">
+  	<a class="large-menu-item" href="https://www.giantswarm.io/app-platform" aria-haspopup="false" role="menuitem">
+			<span class="large-menu-item__image">
+				<img src="https://www.giantswarm.io/hubfs/icons/icon-nav-app-catalog-v2.png" alt="App Platform icon" style="max-width: 50px;">
+			</span>
+			<span class="large-menu-item__content">
+				<span class="p large-menu-item__label"><strong>App Platform</strong></span>
+				<span class="p large-menu-item__description">Rely on the right tools for the job</span>
+			</span>
+		</a>
+	</li>
+
+					
+				
+					
+						
+					
+
+					
+						
+  
+  
+  
+  <li class="hs-menu-item hs-menu-item--large hs-menu-depth-3" role="menu">
+  	<a class="large-menu-item" href="https://www.giantswarm.io/kaas" aria-haspopup="false" role="menuitem">
+			<span class="large-menu-item__image">
+				<img src="https://www.giantswarm.io/hubfs/icons/icon-nav-day2-v2.png" alt="Day 2 Operations icon" style="max-width: 50px;">
+			</span>
+			<span class="large-menu-item__content">
+				<span class="p large-menu-item__label"><strong>Day 2 Operations</strong></span>
+				<span class="p large-menu-item__description">Have a coffee while we fix it</span>
+			</span>
+		</a>
+	</li>
+
+					
+				
+			</ul>
+
+			
+		
+	</li>
+
+  
+
+					
+				
+					
+
+					
+						
+	
+
+  
+
+	
+		
+	
+
+	<li class="hs-menu-item hs-menu-depth-2 hs-item-has-children" role="menu">
+		<a href="javascript:;" aria-haspopup="false" role="menuitem">
+			
+			
+			<span>
+				Environments
+			</span>
+			
+			
+			  <span class="caret"></span>
+			
+		</a>
+
+		
+			
+
+			<ul class="hs-menu-children-wrapper">
+				
+					
+
+					
+						
+	
+
+  
+
+	
+
+	<li class="hs-menu-item hs-menu-depth-3" role="menu">
+		<a href="https://www.giantswarm.io/on-premises" aria-haspopup="false" role="menuitem">
+			
+			
+			<span>
+				On-Premises
+			</span>
+			
+			
+		</a>
+
+		
+	</li>
+
+  
+
+					
+				
+					
+
+					
+						
+	
+
+  
+
+	
+
+	<li class="hs-menu-item hs-menu-depth-3" role="menu">
+		<a href="https://www.giantswarm.io/aws" aria-haspopup="false" role="menuitem">
+			
+			
+			<span>
+				AWS
+			</span>
+			
+			
+		</a>
+
+		
+	</li>
+
+  
+
+					
+				
+					
+
+					
+						
+	
+
+  
+
+	
+
+	<li class="hs-menu-item hs-menu-depth-3" role="menu">
+		<a href="https://www.giantswarm.io/azure" aria-haspopup="false" role="menuitem">
+			
+			
+			<span>
+				Azure
+			</span>
+			
+			
+		</a>
+
+		
+	</li>
+
+  
+
+					
+				
+			</ul>
+
+			
+		
+	</li>
+
+  
+    
+      
+				
+  <li class="hs-menu-item hs-menu-item--large-menu-items hs-menu-item--card-menu-item hs-menu-depth-2 hs-item-has-children hs-menu-item--wide-menu-items" role="menu">
+		<span class="card-menu-label">Featured Resources</span>
+		
+  	<a class="card-menu-item card-menu-item--wide" href="https://youtu.be/xPYQVmFPVqc" aria-haspopup="false" role="menuitem" target="_blank">
+			<span class="card-menu-item__image">
+				<img src="https://www.giantswarm.io/hubfs/MegaNav%20resource%20images/meganav-gs-in-action-v3.jpg" alt="Test">
+			</span>
+			<span class="card-menu-item__content">
+				<p><strong>Giant Swarm in Action</strong></p>
+<p>Get a first impression of the world's most powerful Kubernetes platform managed inside your private and public cloud environments.<strong><br></strong></p>
+				
+				<span class="card-menu-item__cta cta-btn cta-btn--large cta-btn--primary-stroke-unfill cta-btn--filled">
+					<i class="fas fa-chevron-right"></i>
+					Watch demo
+				</span>
+			</span>
+		</a>
+		
+		
+		  <div class="menu-cta__container">
+				<a class="menu-cta__button cta-btn cta-btn--large cta-btn--primary-stroke-on-white cta-btn--unfilled" href="https://www.giantswarm.io/schedule-a-demo" target="_blank">
+				  Schedule Demo
+				</a>
+			</div>
+		
+	</li>
+
+      
+    
+  
+
+					
+				
+			</ul>
+
+			
+					</div>
+				</div>
+			
+		
+	</li>
+
+  
+
+						
+							
+	
+
+  
+    
+  
+
+	
+
+	<li class="hs-menu-item hs-menu-depth-1 hs-item-has-children" role="menu">
+		<a href="https://www.giantswarm.io/customers" aria-haspopup="true" role="menuitem" aria-expanded="false">
+			
+			
+			<span>
+				Customers
+			</span>
+			
+			
+			  <span class="caret"></span>
+			
+		</a>
+
+		
+			
+				<div class="hs-menu-children-wrapper-container">
+					<div class="hs-menu-children-wrapper-container-inner">
+			
+
+			<ul class="hs-menu-children-wrapper">
+				
+					
+
+					
+						
+	
+
+  
+
+	
+		
+	
+
+	<li class="hs-menu-item hs-menu-depth-2 hs-item-has-children" role="menu">
+		<a href="javascript:;" aria-haspopup="false" role="menuitem">
+			
+			
+			<span>
+				Overview
+			</span>
+			
+			
+			  <span class="caret"></span>
+			
+		</a>
+
+		
+			
+
+			<ul class="hs-menu-children-wrapper">
+				
+					
+
+					
+						
+	
+
+  
+
+	
+
+	<li class="hs-menu-item hs-menu-depth-3" role="menu">
+		<a href="https://www.giantswarm.io/customers" aria-haspopup="false" role="menuitem">
+			
+			
+			<span>
+				All Customer Stories
+			</span>
+			
+			
+		</a>
+
+		
+	</li>
+
+  
+
+					
+				
+			</ul>
+
+			
+		
+	</li>
+
+  
+
+					
+				
+					
+
+					
+						
+	
+
+  
+
+	
+		
+	
+
+	<li class="hs-menu-item hs-menu-depth-2 hs-item-has-children" role="menu">
+		<a href="javascript:;" aria-haspopup="false" role="menuitem">
+			
+			
+			<span>
+				Selected Stories
+			</span>
+			
+			
+			  <span class="caret"></span>
+			
+		</a>
+
+		
+			
+
+			<ul class="hs-menu-children-wrapper">
+				
+					
+
+					
+						
+	
+
+  
+
+	
+
+	<li class="hs-menu-item hs-menu-depth-3" role="menu">
+		<a href="https://www.giantswarm.io/customers/adidas" aria-haspopup="false" role="menuitem">
+			
+			
+			<span>
+				Adidas
+			</span>
+			
+			
+		</a>
+
+		
+	</li>
+
+  
+
+					
+				
+					
+
+					
+						
+	
+
+  
+
+	
+
+	<li class="hs-menu-item hs-menu-depth-3" role="menu">
+		<a href="https://www.giantswarm.io/customers/service-layers" aria-haspopup="false" role="menuitem">
+			
+			
+			<span>
+				Service Layers
+			</span>
+			
+			
+		</a>
+
+		
+	</li>
+
+  
+
+					
+				
+					
+
+					
+						
+	
+
+  
+
+	
+
+	<li class="hs-menu-item hs-menu-depth-3" role="menu">
+		<a href="https://www.giantswarm.io/customers/vaillant" aria-haspopup="false" role="menuitem">
+			
+			
+			<span>
+				Vaillant
+			</span>
+			
+			
+		</a>
+
+		
+	</li>
+
+  
+
+					
+				
+					
+
+					
+						
+	
+
+  
+
+	
+
+	<li class="hs-menu-item hs-menu-depth-3" role="menu">
+		<a href="https://www.giantswarm.io/customers/vodafone" aria-haspopup="false" role="menuitem">
+			
+			
+			<span>
+				Vodafone
+			</span>
+			
+			
+		</a>
+
+		
+	</li>
+
+  
+
+					
+				
+			</ul>
+
+			
+		
+	</li>
+
+  
+    
+      
+				
+  <li class="hs-menu-item hs-menu-item--large-menu-items hs-menu-item--card-menu-item hs-menu-depth-2 hs-item-has-children hs-menu-item--wide-menu-items" role="menu">
+		<span class="card-menu-label">Featured Story</span>
+		
+  	<a class="card-menu-item card-menu-item--wide" href="https://www.giantswarm.io/customers/vodafone" aria-haspopup="false" role="menuitem" target="_blank">
+			<span class="card-menu-item__image">
+				<img src="https://www.giantswarm.io/hubfs/MegaNav%20resource%20images/meganav-vodafone-v4.jpg" alt="Test">
+			</span>
+			<span class="card-menu-item__content">
+				<p><strong>Vodafone's smart journey to containers.</strong></p>
+<p>Learn how Vodafone created a blueprint for cloud-native projects and how Giant Swarm has become the foundation for their most critical digital initiatives</p>
+				
+				<span class="card-menu-item__cta cta-btn cta-btn--large cta-btn--primary-stroke-unfill cta-btn--filled">
+					<i class="fas fa-chevron-right"></i>
+					Read story
+				</span>
+			</span>
+		</a>
+		
+		
+		  <div class="menu-cta__container">
+				<a class="menu-cta__button cta-btn cta-btn--large cta-btn--primary-stroke-on-white cta-btn--unfilled" href="https://www.giantswarm.io/start-my-story" target="_blank">
+				  Start My Story
+				</a>
+			</div>
+		
+	</li>
+
+      
+    
+  
+
+					
+				
+			</ul>
+
+			
+					</div>
+				</div>
+			
+		
+	</li>
+
+  
+
+						
+							
+	
+
+  
+    
+  
+
+	
+
+	<li class="hs-menu-item hs-menu-depth-1 hs-item-has-children" role="menu">
+		<a href="javascript:;" aria-haspopup="true" role="menuitem" aria-expanded="false">
+			
+			
+			<span>
+				Resources
+			</span>
+			
+			
+			  <span class="caret"></span>
+			
+		</a>
+
+		
+			
+				<div class="hs-menu-children-wrapper-container">
+					<div class="hs-menu-children-wrapper-container-inner">
+			
+
+			<ul class="hs-menu-children-wrapper">
+				
+					
+
+					
+						
+	
+
+  
+
+	
+		
+	
+
+	<li class="hs-menu-item hs-menu-depth-2 hs-item-has-children" role="menu">
+		<a href="javascript:;" aria-haspopup="false" role="menuitem">
+			
+			
+			<span>
+				Overview
+			</span>
+			
+			
+			  <span class="caret"></span>
+			
+		</a>
+
+		
+			
+
+			<ul class="hs-menu-children-wrapper">
+				
+					
+
+					
+						
+	
+
+  
+
+	
+
+	<li class="hs-menu-item hs-menu-depth-3" role="menu">
+		<a href="https://www.giantswarm.io/blog" aria-haspopup="false" role="menuitem">
+			
+			
+			<span>
+				Blog
+			</span>
+			
+			
+		</a>
+
+		
+	</li>
+
+  
+
+					
+				
+					
+
+					
+						
+	
+
+  
+
+	
+
+	<li class="hs-menu-item hs-menu-depth-3" role="menu">
+		<a href="https://docs.giantswarm.io/" aria-haspopup="false" role="menuitem">
+			
+			
+			<span>
+				Documentation
+			</span>
+			
+			
+		</a>
+
+		
+	</li>
+
+  
+
+					
+				
+					
+
+					
+						
+	
+
+  
+
+	
+
+	<li class="hs-menu-item hs-menu-depth-3" role="menu">
+		<a href="https://www.giantswarm.io/customers" aria-haspopup="false" role="menuitem">
+			
+			
+			<span>
+				Case Studies
+			</span>
+			
+			
+		</a>
+
+		
+	</li>
+
+  
+
+					
+				
+			</ul>
+
+			
+		
+	</li>
+
+  
+    
+      
+				
+  <li class="hs-menu-item hs-menu-item--large-menu-items hs-menu-item--card-menu-item hs-menu-depth-2 hs-item-has-children hs-menu-item--double-cards" role="menu">
+		<span class="card-menu-label">Featured Resources</span>
+		
+  	<a class="card-menu-item card-menu-item--default" href="https://www.giantswarm.io/on-demand-webinar-the-cost-of-kubernetes" aria-haspopup="false" role="menuitem" target="_blank">
+			<span class="card-menu-item__image">
+				<img src="https://www.giantswarm.io/hubfs/MegaNav%20resource%20images/meganav-the-cost-of-kubernetes-v1.jpg" alt="Test">
+			</span>
+			<span class="card-menu-item__content">
+				<p><strong>The Cost of Kubernetes</strong></p>
+<p>Learn about the $34m opportunity companies reap from cloud-native and which costs you have to consider to build and operate a Kubernetes platform.</p>
+				
+				<span class="card-menu-item__cta cta-btn cta-btn--large cta-btn--primary-stroke-unfill cta-btn--filled">
+					<i class="fas fa-chevron-right"></i>
+					Watch now
+				</span>
+			</span>
+		</a>
+		
+		
+	</li>
+
+      
+    
+      
+				
+  <li class="hs-menu-item hs-menu-item--large-menu-items hs-menu-item--card-menu-item hs-menu-depth-2 hs-item-has-children hs-menu-item--double-cards" role="menu">
+		<span class="card-menu-label">&nbsp;</span>
+		
+  	<a class="card-menu-item card-menu-item--default" href="https://www.giantswarm.io/guide-cloud-native-stack" aria-haspopup="false" role="menuitem" target="_blank">
+			<span class="card-menu-item__image">
+				<img src="https://www.giantswarm.io/hubfs/MegaNav%20resource%20images/meganav-cloud-native-stack-v1.jpg" alt="Test">
+			</span>
+			<span class="card-menu-item__content">
+				<p><strong>How to build a cloud-native stack?</strong></p>
+<p>Learn everything you need to know about the choices and best-practices for all key components you need to consider to build your cloud-native platform.</p>
+				
+				<span class="card-menu-item__cta cta-btn cta-btn--large cta-btn--primary-stroke-unfill cta-btn--filled">
+					<i class="fas fa-chevron-right"></i>
+					Read guide
+				</span>
+			</span>
+		</a>
+		
+		
+	</li>
+
+      
+    
+  
+
+					
+				
+			</ul>
+
+			
+					</div>
+				</div>
+			
+		
+	</li>
+
+  
+
+						
+							
+	
+
+  
+    
+  
+
+	
+
+	<li class="hs-menu-item hs-menu-depth-1 hs-item-has-children" role="menu">
+		<a href="https://www.giantswarm.io/about" aria-haspopup="true" role="menuitem" aria-expanded="false">
+			
+			
+			<span>
+				Company
+			</span>
+			
+			
+			  <span class="caret"></span>
+			
+		</a>
+
+		
+			
+				<div class="hs-menu-children-wrapper-container">
+					<div class="hs-menu-children-wrapper-container-inner">
+			
+
+			<ul class="hs-menu-children-wrapper">
+				
+					
+
+					
+						
+	
+
+  
+
+	
+		
+	
+
+	<li class="hs-menu-item hs-menu-depth-2 hs-item-has-children" role="menu">
+		<a href="javascript:;" aria-haspopup="false" role="menuitem">
+			
+			
+			<span>
+				Company
+			</span>
+			
+			
+			  <span class="caret"></span>
+			
+		</a>
+
+		
+			
+
+			<ul class="hs-menu-children-wrapper">
+				
+					
+
+					
+						
+	
+
+  
+
+	
+
+	<li class="hs-menu-item hs-menu-depth-3" role="menu">
+		<a href="https://www.giantswarm.io/about" aria-haspopup="false" role="menuitem">
+			
+			
+			<span>
+				About Us
+			</span>
+			
+			
+		</a>
+
+		
+	</li>
+
+  
+
+					
+				
+					
+
+					
+						
+	
+
+  
+
+	
+
+	<li class="hs-menu-item hs-menu-depth-3" role="menu">
+		<a href="https://www.giantswarm.io/careers" aria-haspopup="false" role="menuitem">
+			
+			
+			<span>
+				Careers
+			</span>
+			
+			
+		</a>
+
+		
+	</li>
+
+  
+
+					
+				
+					
+
+					
+						
+	
+
+  
+
+	
+
+	<li class="hs-menu-item hs-menu-depth-3" role="menu">
+		<a href="https://www.giantswarm.io/events" aria-haspopup="false" role="menuitem">
+			
+			
+			<span>
+				Events
+			</span>
+			
+			
+		</a>
+
+		
+	</li>
+
+  
+
+					
+				
+					
+
+					
+						
+	
+
+  
+
+	
+
+	<li class="hs-menu-item hs-menu-depth-3" role="menu">
+		<a href="https://www.giantswarm.io/contact" aria-haspopup="false" role="menuitem">
+			
+			
+			<span>
+				Contact Us
+			</span>
+			
+			
+		</a>
+
+		
+	</li>
+
+  
+
+					
+				
+			</ul>
+
+			
+		
+	</li>
+
+  
+
+					
+				
+					
+
+					
+						
+	
+
+  
+
+	
+		
+	
+
+	<li class="hs-menu-item hs-menu-depth-2 hs-item-has-children" role="menu">
+		<a href="javascript:;" aria-haspopup="false" role="menuitem">
+			
+			
+			<span>
+				Connect
+			</span>
+			
+			
+			  <span class="caret"></span>
+			
+		</a>
+
+		
+			
+
+			<ul class="hs-menu-children-wrapper">
+				
+					
+
+					
+						
+	
+
+  
+
+	
+
+	<li class="hs-menu-item hs-menu-depth-3" role="menu">
+		<a href="http://www.twitter.com/giantswarm" aria-haspopup="false" role="menuitem">
+			
+				<svg width="23px" height="23px" viewbox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+					<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+							<g transform="translate(-568.000000, -161.000000)" fill="#1F3C4E" fill-rule="nonzero">
+									<path d="M585.056,170.056 C585.062,170.179 585.064,170.302 585.064,170.426 C585.064,174.203 582.189,178.558 576.932,178.558 C575.318,178.558 573.815,178.085 572.55,177.275 C572.774,177.301 573.001,177.315 573.232,177.315 C574.571,177.315 575.804,176.858 576.782,176.091 C575.531,176.068 574.476,175.241 574.112,174.106 C574.286,174.139 574.465,174.157 574.649,174.157 C574.91,174.157 575.162,174.122 575.403,174.057 C574.095,173.794 573.109,172.638 573.109,171.254 C573.109,171.242 573.109,171.23 573.11,171.217 C573.495,171.432 573.935,171.56 574.405,171.576 C573.637,171.062 573.133,170.188 573.133,169.196 C573.133,168.672 573.274,168.181 573.519,167.759 C574.93,169.488 577.036,170.626 579.411,170.744 C579.363,170.536 579.337,170.318 579.337,170.093 C579.337,168.516 580.617,167.236 582.196,167.236 C583.018,167.236 583.761,167.582 584.282,168.138 C584.933,168.01 585.545,167.772 586.097,167.444 C585.883,168.112 585.431,168.672 584.84,169.026 C585.419,168.956 585.97,168.802 586.482,168.576 C586.099,169.15 585.615,169.653 585.056,170.056 M579.343,161 C573.078,161 568,166.079 568,172.343 C568,178.607 573.078,183.685 579.343,183.685 C585.607,183.685 590.684,178.607 590.684,172.343 C590.684,166.079 585.606,161 579.343,161" id="Shape"></path>
+							</g>
+					</g>
+				</svg>
+			
+			
+			<span>
+				Twitter
+			</span>
+			
+			
+		</a>
+
+		
+	</li>
+
+  
+
+					
+				
+					
+
+					
+						
+	
+
+  
+
+	
+
+	<li class="hs-menu-item hs-menu-depth-3" role="menu">
+		<a href="http://www.facebook.com/giantswarm" aria-haspopup="false" role="menuitem">
+			
+				<svg width="23px" height="23px" viewbox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+						<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+								<g transform="translate(-568.000000, -195.000000)" fill="#1F3C4E" fill-rule="nonzero">
+										<g id="social-icon-facebook" transform="translate(568.000000, 195.000000)">
+												<path d="M11.342,22.684 C5.078,22.684 0,17.606 0,11.342 C0,5.079 5.078,0 11.342,0 C17.606,0 22.684,5.079 22.684,11.342 C22.684,17.606 17.606,22.684 11.342,22.684 L11.342,22.684 Z M9.741,17.512 L12.291,17.512 L12.291,11.341 L13.991,11.341 L14.217,9.215 L12.291,9.215 L12.293,8.151 C12.293,7.596 12.346,7.299 13.142,7.299 L14.204,7.299 L14.204,5.172 L12.504,5.172 C10.46,5.172 9.741,6.205 9.741,7.939 L9.741,9.215 L8.467,9.215 L8.467,11.342 L9.741,11.342 L9.741,17.512 Z" id="Shape"></path>
+										</g>
+								</g>
+						</g>
+				</svg>
+			
+			
+			<span>
+				Facebook
+			</span>
+			
+			
+		</a>
+
+		
+	</li>
+
+  
+
+					
+				
+					
+
+					
+						
+	
+
+  
+
+	
+
+	<li class="hs-menu-item hs-menu-depth-3" role="menu">
+		<a href="https://www.linkedin.com/company/giant-swarm" aria-haspopup="false" role="menuitem">
+			
+				<svg width="23px" height="23px" viewbox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+					<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+							<g transform="translate(-568.000000, -229.000000)" fill="#1F3C4E" fill-rule="nonzero">
+									<g id="social-icon-linkedin" transform="translate(568.000000, 229.000000)">
+											<path d="M5.886,16.686 L8.452,16.686 L8.452,8.963 L5.886,8.963 L5.886,16.686 Z M11.342,22.683 C5.078,22.683 0,17.605 0,11.341 C0,5.078 5.078,0 11.342,0 C17.606,0 22.684,5.078 22.684,11.341 C22.684,17.605 17.606,22.683 11.342,22.683 L11.342,22.683 Z M7.168,7.91 C8.063,7.91 8.621,7.316 8.621,6.575 C8.604,5.817 8.063,5.241 7.185,5.241 C6.308,5.241 5.733,5.817 5.733,6.575 C5.733,7.316 6.29,7.91 7.152,7.91 L7.168,7.91 Z M17.708,16.686 L17.708,12.258 C17.708,9.886 16.441,8.782 14.753,8.782 C13.391,8.782 12.78,9.532 12.439,10.057 L12.439,8.963 L9.872,8.963 C9.907,9.688 9.872,16.686 9.872,16.686 L12.439,16.686 L12.439,12.374 C12.439,12.143 12.456,11.913 12.524,11.748 C12.709,11.287 13.132,10.809 13.841,10.809 C14.77,10.809 15.141,11.517 15.141,12.554 L15.141,16.686 L17.708,16.686 Z" id="Shape"></path>
+									</g>
+							</g>
+					</g>
+				</svg>
+			
+			
+			<span>
+				Linkedin
+			</span>
+			
+			
+		</a>
+
+		
+	</li>
+
+  
+
+					
+				
+					
+
+					
+						
+	
+
+  
+
+	
+
+	<li class="hs-menu-item hs-menu-depth-3" role="menu">
+		<a href="https://github.com/giantswarm/" aria-haspopup="false" role="menuitem">
+			
+				<svg width="23px" height="23px" viewbox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+					<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+							<g transform="translate(-568.000000, -263.000000)" fill="#1F3C4E" fill-rule="nonzero">
+									<g id="social-icon-github" transform="translate(568.000000, 263.000000)">
+											<path d="M11.342,0 C5.078,0 0,5.207 0,11.629 C0,16.768 3.249,21.125 7.757,22.662 C8.323,22.769 8.53,22.409 8.53,22.104 C8.53,21.826 8.521,20.909 8.515,19.938 C5.361,20.641 4.695,18.567 4.695,18.567 C4.178,17.225 3.435,16.866 3.435,16.866 C2.404,16.146 3.513,16.159 3.513,16.159 C4.653,16.24 5.251,17.357 5.251,17.357 C6.264,19.135 7.907,18.621 8.552,18.323 C8.655,17.573 8.948,17.06 9.272,16.77 C6.754,16.477 4.106,15.479 4.106,11.022 C4.106,9.752 4.548,8.716 5.273,7.901 C5.156,7.606 4.767,6.423 5.385,4.823 C5.385,4.823 6.336,4.511 8.504,6.016 C9.407,5.756 10.378,5.628 11.342,5.624 C12.306,5.628 13.277,5.758 14.182,6.017 C16.346,4.511 17.298,4.824 17.298,4.824 C17.918,6.426 17.528,7.607 17.411,7.901 C18.139,8.716 18.577,9.752 18.577,11.022 C18.577,15.489 15.925,16.474 13.398,16.762 C13.807,17.122 14.168,17.829 14.168,18.913 C14.168,20.468 14.153,21.722 14.153,22.104 C14.153,22.414 14.359,22.776 14.934,22.662 C19.437,21.122 22.684,16.765 22.684,11.629 C22.684,5.207 17.606,0 11.342,0" id="Path"></path>
+									</g>
+							</g>
+					</g>
+				</svg>
+			
+			
+			<span>
+				Github
+			</span>
+			
+			
+		</a>
+
+		
+	</li>
+
+  
+
+					
+				
+			</ul>
+
+			
+		
+	</li>
+
+  
+    
+      
+				
+  <li class="hs-menu-item hs-menu-item--large-menu-items hs-menu-item--card-menu-item hs-menu-depth-2 hs-item-has-children hs-menu-item--double-cards" role="menu">
+		<span class="card-menu-label">Latest News</span>
+		
+  	<a class="card-menu-item card-menu-item--default" href="https://www.giantswarm.io/blog/taking-our-roadmap-public/" aria-haspopup="false" role="menuitem" target="_blank">
+			<span class="card-menu-item__image">
+				<img src="https://www.giantswarm.io/hubfs/MegaNav%20resource%20images/meganav-taking-our-roadmap-public-v1.jpg" alt="Test">
+			</span>
+			<span class="card-menu-item__content">
+				<p><strong>Taking our Roadmap Public</strong></p>
+<p>At Giant Swarm, everything we do is intertwined with our values. The decision to take our roadmap public is no exception. We began by challenging the status quo. Our roadmap has always resided in our private GitHub repository.</p>
+				
+				<span class="card-menu-item__cta cta-btn cta-btn--large cta-btn--primary-stroke-unfill cta-btn--filled">
+					<i class="fas fa-chevron-right"></i>
+					Read more
+				</span>
+			</span>
+		</a>
+		
+		
+	</li>
+
+      
+    
+      
+				
+  <li class="hs-menu-item hs-menu-item--large-menu-items hs-menu-item--card-menu-item hs-menu-depth-2 hs-item-has-children hs-menu-item--double-cards" role="menu">
+		<span class="card-menu-label">&nbsp;</span>
+		
+  	<a class="card-menu-item card-menu-item--default" href="https://youtu.be/jSAjQCEtkFk" aria-haspopup="false" role="menuitem" target="_blank">
+			<span class="card-menu-item__image">
+				<img src="https://www.giantswarm.io/hubfs/MegaNav%20resource%20images/meganav-marcel-muller-video-v1.jpg" alt="Test">
+			</span>
+			<span class="card-menu-item__content">
+				<p><strong>How Postmortems help hardening our k8s clusters</strong></p>
+<p>Learn from Platform Engineer Marcel Müller how Giant Swarm uses postmortems to find and fix the root cause of an issue in one of our Kubernetes clusters.</p>
+				
+				<span class="card-menu-item__cta cta-btn cta-btn--large cta-btn--primary-stroke-unfill cta-btn--filled">
+					<i class="fas fa-chevron-right"></i>
+					Watch video
+				</span>
+			</span>
+		</a>
+		
+		
+	</li>
+
+      
+    
+  
+
+					
+				
+			</ul>
+
+			
+					</div>
+				</div>
+			
+		
+	</li>
+
+  
+
+						
+					</ul>
+				</div>
+      </div>
+
+      <div class="site-header__secondary-menu">
+        <div class="action-button">
+          <a class="cta-btn cta-btn--small cta-btn--secondary cta-btn--filled" href="https://www.giantswarm.io/become-a-client">Become a Client</a>
+        </div>
+      </div>
+
+      <div class="menu-trigger__container">
+        <button class="menu-trigger__button" id="mobile-menu-toggle" aria-expanded="false" aria-controls="mobile-menu">
+          <div class="inner">
+            <span class="menu-trigger__icon"></span>
+            <span class="menu-trigger__label">Menu</span>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="site-header__secondary-button-link">
+  <div id="hs_menu_wrapper_module_1541795161812913_mjfw_header_secondary_menu" class="hs-menu-wrapper active-branch flyouts hs-menu-flow-horizontal" role="navigation" data-sitemap-name="MJFW Header Secondary Menu" data-menu-id="13143861887" aria-label="Navigation Menu">
+ <ul>
+  <li class="hs-menu-item hs-menu-depth-1"><a href="https://www.giantswarm.io/become-a-client" role="menuitem">Become a Client</a></li>
+ </ul>
+</div>
+</div>
+<!-- END SITE_HEADER --></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+    </div><!--end header -->
+</div><!--end header wrapper -->
+
+<div class="body-container-wrapper">
+    <div class="body-container container-fluid">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-1 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell " style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-2 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-widget_container flex-top-full" style="" data-widget-type="widget_container" data-x="0" data-w="12">
+<span id="hs_cos_wrapper_module_14508921441232089" class="hs_cos_wrapper hs_cos_wrapper_widget_container hs_cos_wrapper_type_widget_container" style="" data-hs-cos-general-type="widget_container" data-hs-cos-type="widget_container"><div id="hs_cos_wrapper_widget_1586871617426" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+<!-- Hero 2 col section : BEGIN -->
+
+<div class="gs-m17-hero-section-bg">
+  
+<div class="gs-m17-margins">
+<div class="gs-m17-main-wrapper">
+
+<!-- Left col -->
+  
+<div class="gs-m17-left-col-wrapper">
+<div style="display: flex;">
+<div style="display: flex; text-align: center; width: 110px; height: 27px; background-color: #143751; border-radius: 30px; padding: 5px; margin-right: 10px;"><img src="https://www.giantswarm.io/hubfs/icons/icon-hero-on-prem-2.svg" style="width: 15px; margin: 0px 10px;"><span style="font-size: 14px; color: #ffffff; font-weight: 500;">On-prem</span></div>
+<div style="display: flex; text-align: center; width: 100px; height: 27px; background-color: #143751; border-radius: 30px; padding: 5px; margin-right: 20px;"><img src="https://www.giantswarm.io/hubfs/icons/icon-hero-cloud.svg" style="width: 20px; margin: 0px 10px;"><span style="font-size: 14px; color: #ffffff; font-weight: 500;">Cloud</span></div>
+</div>
+<div style="height: 30px;">&nbsp;</div>
+<h1 style="color: #ffffff;">Beyond Managed Kubernetes</h1>
+<p><span class="large" style="color: #ffffff;">Smart teams deliver high-velocity innovation with cloud-native by relying on Giant Swarm.</span></p>
+<div style="height: 10px;">&nbsp;</div>
+<a href="https://www.giantswarm.io/become-a-client" rel="noopener" class="cta-btn cta-btn--primary cta-btn--filled cta-btn--large" target="_blank">Become a Client</a><a class="cta-btn cta-btn--large cta-btn--primary-stroke-on-white cta-btn--unfilled" style="margin-left: 20px;" href="https://www.giantswarm.io/why-giant-swarm" rel=" noopener"> <i class="fas fa-chevron-right"></i>&nbsp;Learn why</a>
+</div>
+  
+<!-- Right col -->
+ 
+<div class="gs-m17-right-col-wrapper">
+  
+<div class="gs-m17-vendor-logo"><img src="https://www.giantswarm.io/hubfs/Logo/Client%20Logos/kubernetes-white-circled.svg"><br>
+<p class="gs-m17-vendor-logo-text">KUBERNETES</p>
+</div>
+<div class="gs-m17-vendor-logo-spacer"></div>
+<div class="gs-m17-vendor-logo"><img src="https://www.giantswarm.io/hubfs/Logo/Client%20Logos/prometheus-white-circled.svg"><br>
+<p class="gs-m17-vendor-logo-text">PROMETHEUS</p>
+</div>
+<div class="gs-m17-vendor-logo-spacer"></div>
+<div class="gs-m17-vendor-logo"><img src="https://www.giantswarm.io/hubfs/Logo/Client%20Logos/elastic-stack-white-circled.svg"><br>
+<p class="gs-m17-vendor-logo-text">ELASTIC STACK</p>
+</div>
+<div class="gs-m17-vendor-logo-spacer gs-m17-vendor-logo-spacer-hide"></div>
+<div class="gs-m17-vendor-logo"><img src="https://www.giantswarm.io/hubfs/Logo/Client%20Logos/aqua-white-circled.svg"><br>
+<p class="gs-m17-vendor-logo-text">AQUA</p>
+</div>
+<div class="gs-m17-vendor-logo-spacer"></div>
+<div class="gs-m17-vendor-logo"><img src="https://www.giantswarm.io/hubfs/Logo/Client%20Logos/kong-white-circled.svg"><br>
+<p class="gs-m17-vendor-logo-text">KONG</p>
+</div>
+<div class="gs-m17-vendor-logo-spacer"></div>
+<div class="gs-m17-vendor-logo"><img src="https://www.giantswarm.io/hubfs/Logo/Client%20Logos/istio-white-circled.svg"><br>
+<p class="gs-m17-vendor-logo-text">ISTIO</p>
+</div>
+  
+</div>  
+
+  
+</div>
+</div>
+  
+</div>
+
+<!-- 3 CTAs section : BEGIN -->
+
+<div class="gs-m17-background-spacer" style="background: #1e445c; height: 170px; width: 100%; position: absolute;"></div>
+
+<div class="gs-m17-cards-background">
+<div class="gs-m17-margins">
+<div class="gs-m17-main-wrapper" style="margin-top: -40px;">
+  
+<div class="gs-m17-card-container">
+<div class="gs-m17-card-content-container">
+<div class="gs-m17-card-content">
+<div id="hs_cos_wrapper_widget_1586871617426_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_inline_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="inline_rich_text" data-hs-cos-field="home_cta_1"><h4>How to build a cloud-native stack?</h4>
+<p style="padding-bottom: 10px; padding-top: 10px;">Learn everything you need to know about the choices and best-practices for all key components of a cloud-native platform.</p>
+<p><a class="cta-btn cta-btn--large cta-btn--primary-stroke-unfill cta-btn--filled" href="/guide-cloud-native-stack" rel=" noopener"><i class="fas fa-chevron-right"></i> Read guide</a></p></div>
+</div>
+</div>
+</div>
+  
+<div class="gs-m17-spacer gs-m17-hide-mobile">&nbsp;</div>
+
+<div class="gs-m17-card-container">
+<div class="gs-m17-card-content-container">
+<div class="gs-m17-card-content">
+<div id="hs_cos_wrapper_widget_1586871617426_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_inline_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="inline_rich_text" data-hs-cos-field="home_cta_2"><h4>On Demand Webinar: Kubernetes for Software Architects</h4>
+<p style="padding-bottom: 10px; padding-top: 10px;">Setup for success. Learn how to avoid the pitfalls of Kubernetes that lead to low efficiency and reliability</p>
+<p><a class="cta-btn cta-btn--large cta-btn--primary-stroke-unfill cta-btn--filled" href="/on-demand-webinar-kubernetes-for-software-architects" rel=" noopener"><i class="fas fa-chevron-right"></i> Watch it here</a></p></div>
+</div>
+</div>
+</div>
+  
+<div class="gs-m17-spacer gs-m17-hide-tablet">&nbsp;</div>
+  
+<div class="gs-m17-card-container">
+<div class="gs-m17-card-content-container">
+<div class="gs-m17-card-content">
+<div id="hs_cos_wrapper_widget_1586871617426_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_inline_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="inline_rich_text" data-hs-cos-field="home_cta_3"><h4>Planning to get a project into production?</h4>
+<p style="padding-bottom: 10px; padding-top: 10px;">Then it's time to have a chat with us. We'll provide great advice. If you decide to partner with us, we'll ensure your success. Promised!</p>
+<p><a class="cta-btn cta-btn--large cta-btn--primary-stroke-unfill cta-btn--filled" href="https://www.giantswarm.io/become-a-client" rel=" noopener"><i class="fas fa-chevron-right"></i> Get in touch</a></p></div>
+</div>
+</div>
+</div>
+  
+</div>
+</div>
+</div></div>
+<div id="hs_cos_wrapper_widget_1569339816769" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="nested-layout nested-layout-module module  module--padding-medium module--no-padding-top  module--bg-white  module--on-light" id="">
+  
+
+  <div class="module__inner constrain">
+    
+      
+  
+  
+  
+  
+
+  <div class="module__section-header module__section-header--block-align-center">
+    <div class="module__section-header-inner module__section-header-inner--text-align-center constrain--12">
+      <div style="height: 40px;">&nbsp;</div>
+<h2 style="text-align: center;"><span>Instantly benefit from cloud-native technologies</span></h2>
+    </div>
+  </div>
+
+    
+
+    <div class="module__section-main module__section-main--block-align-center">
+      <div class="module__content constrain--12">
+        <div class="nested-layout__grid nested-layout__grid--three-col">
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    <div class="nested-layout__column nested-layout__column--normal  ">
+      <div class="nested-layout__column-inner">
+        <div class="column  ">
+          
+
+          
+
+          <div class="column__content column__content--left ">
+            
+              <div style="height: 45px; display: flex;"><img src="https://www.giantswarm.io/hubfs/icons/icon-small-velocity-v3.svg" height="40">
+<h4 style="padding: 10px 0px 0px 20px;">Velocity</h4>
+</div>
+<div style="height: 20px;">&nbsp;</div>
+<p>Faster time to market for innovation by building on our enterprise-grade Kubernetes operated 24/7.</p>
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  
+
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    <div class="nested-layout__column nested-layout__column--normal  ">
+      <div class="nested-layout__column-inner">
+        <div class="column  ">
+          
+
+          
+
+          <div class="column__content column__content--left ">
+            
+              <div style="height: 45px; display: flex;"><img src="https://www.giantswarm.io/hubfs/icons/icon-small-efficiency-v3.svg" height="35">
+<h4 style="padding: 10px 0px 0px 20px;">Efficiency</h4>
+</div>
+<div style="height: 20px;">&nbsp;</div>
+<p>Let you teams focus on innovation with the world's first managed cloud-native platform that removes the burden of managing a complex infrastructure.</p>
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  
+
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    <div class="nested-layout__column nested-layout__column--normal  ">
+      <div class="nested-layout__column-inner">
+        <div class="column  ">
+          
+
+          
+
+          <div class="column__content column__content--left ">
+            
+              <div style="height: 45px; display: flex;"><img src="https://www.giantswarm.io/hubfs/icons/icon-small-agility-v3.svg" height="37">
+<h4 style="padding: 10px 0px 0px 20px;">Agility</h4>
+</div>
+<div style="height: 20px;">&nbsp;</div>
+<p>Respond swiftly to your customers' demands and deliver better user experiences by deploying incremental improvements regularly.</p>
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  
+
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    <div class="nested-layout__column nested-layout__column--normal  ">
+      <div class="nested-layout__column-inner">
+        <div class="column  ">
+          
+
+          
+
+          <div class="column__content column__content--left ">
+            
+              <div style="height: 45px; display: flex;"><img src="https://www.giantswarm.io/hubfs/icons/icon-small-scalability-v3.svg" height="45">
+<h4 style="padding: 10px 0px 0px 20px;">Scalability</h4>
+</div>
+<div style="height: 20px;">&nbsp;</div>
+<p>Run and scale your containerized workloads easily across consistent Kubernetes clusters in your on-premises and cloud environments.</p>
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  
+
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    <div class="nested-layout__column nested-layout__column--normal  ">
+      <div class="nested-layout__column-inner">
+        <div class="column  ">
+          
+
+          
+
+          <div class="column__content column__content--left ">
+            
+              <div style="height: 45px; display: flex;"><img src="https://www.giantswarm.io/hubfs/icons/icon-small-resiliency-v3.svg" height="45">
+<h4 style="padding: 10px 0px 0px 20px;">Resiliency</h4>
+</div>
+<div style="height: 20px;">&nbsp;</div>
+<p>Enjoy higher uptime thanks to continuous upgrades and proactive troubleshooting. Guaranteed with a 99.95% SLA and the fastest time to resolution on the market.</p>
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  
+
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    <div class="nested-layout__column nested-layout__column--normal  ">
+      <div class="nested-layout__column-inner">
+        <div class="column  ">
+          
+
+          
+
+          <div class="column__content column__content--left ">
+            
+              <div style="height: 45px; display: flex;"><img src="https://www.giantswarm.io/hubfs/icons/icon-small-security-v3.svg" height="43">
+<h4 style="padding: 10px 0px 0px 20px;">Security</h4>
+</div>
+<div style="height: 20px;">&nbsp;</div>
+<p>Approved by Fortune 500 customers, rely on the industry's highest security setup, continuous upgrades, and prompt security patching that always keeps your cloud-native stack secure.</p>
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  
+
+          
+        </div>
+      </div>
+    </div>
+
+    
+  </div>
+</div>
+</div>
+<div id="hs_cos_wrapper_widget_1574433743930" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><div class="gs-m2-main-wrapper" style="margin: 0px 30px;">
+<div style="height: 80px;"></div>
+<h2 style="text-align: center; max-width: 900px; margin: 0 auto;">Leading companies run their most impactful applications with Giant Swarm to deliver extraordinary experiences</h2>
+<div style="height: 30px;"></div>
+<div style="text-align: center;">
+<a class="cta-btn cta-btn--large cta-btn--primary-stroke-unfill cta-btn--filled" style="margin-right: 30px; margin-bottom: 30px;" href="/customers/" rel=" noopener"><i class="fas fa-chevron-right"></i> See Success Stories</a>
+<a style="padding-bottom: 20px;" class="cta-btn cta-btn--large cta-btn--primary-stroke-unfill cta-btn--filled" href="/become-a-client" rel=" noopener"><i class="fas fa-chevron-right"></i> Become a Client</a>
+</div>
+<div style="height: 30px;"></div>
+  
+<div class="flex-wrapper">
+
+<a href="https://www.giantswarm.io/customers/adidas/" class="hvrbox hvrbox1" style="background: url('https://www.giantswarm.io/hubfs/Backgrounds/fachry-zella-devandra-zovRN8FQjA4-unsplash.jpg'); background-size: cover; flex: 2; -moz-flex: 2; -webkit-flex: 2; -ms-flex: 2; margin-right: 20px;">
+  <img src="https://www.giantswarm.io/hubfs/Logo/Client%20Logos/adidas-white.svg" alt="Adidas" class="hvrbox-layer_bottom">
+	<div class="hvrbox-layer_top hvrbox-layer_slideup">
+		<div class="hvrbox-text">
+      <img src="https://www.giantswarm.io/hubfs/Logo/Client%20Logos/adidas-white.svg" style="display: block; width: 150px; padding-bottom: 20px;">
+      In a year, adidas got 40% of its most impactful applications running on Kubernetes with Giant Swarm to support the exponential growth of its digital revenues to €4B in 2020.
+    </div>
+	</div>
+  </a>
+
+<a href="/customers/service-layers/" class="hvrbox hvrbox2" style="background: url('https://www.giantswarm.io/hubfs/Backgrounds/service-layers-bg.jpg'); background-size: cover; background-position: center center; flex: 1; -moz-flex: 1; -webkit-flex: 1; -ms-flex: 1;">
+	<img src="https://www.giantswarm.io/hubfs/Logo/Client%20Logos/service-layers-white.svg" alt="Service Layers" class="hvrbox-layer_bottom">
+	<div class="hvrbox-layer_top hvrbox-layer_slideup">
+		<div class="hvrbox-text">
+      <img src="https://www.giantswarm.io/hubfs/Logo/Client%20Logos/service-layers-white.svg" style="display: block; width: 150px; padding-bottom: 20px;">
+      Service Layers leverages Giant Swarm to provide its next-generation IAM service within the preferred cloud of its Fortune 500 customers.
+    </div>
+	</div>
+</a>
+  
+</div>
+</div>
+
+
+
+<div class="gs-m2-main-wrapper" style="margin: 0px 30px; margin-top: 20px; margin-bottom: 80px;">
+<div class="flex-wrapper" style="display: flex; max-width: 1140px; margin: 0 auto;">
+
+<a href="https://www.giantswarm.io/customers/vaillant" target="_blank" class="hvrbox hvrbox1" style="background: url('https://www.giantswarm.io/hubfs/Backgrounds/vaillant-bg.jpg'); background-size: cover; background-position: center center; flex: 1; -moz-flex: 1; -webkit-flex: 1; -ms-flex: 1; margin-right: 20px;">
+	<img src="https://www.giantswarm.io/hubfs/Logo/Client%20Logos/vaillant-white.svg" alt="Vaillant" class="hvrbox-layer_bottom">
+	<div class="hvrbox-layer_top hvrbox-layer_slideup">
+		<div class="hvrbox-text">
+      <img src="https://www.giantswarm.io/hubfs/Logo/Client%20Logos/vaillant-white.svg" style="display: block; width: 150px; padding-bottom: 20px;">
+      Giant Swarm empowers Vaillant Group to provide better maintenance and energy savings for their connected heating systems.
+    </div>
+	</div>
+</a>
+  
+<a href="/customers/vodafone/" class="hvrbox hvrbox2" style="background: url('https://www.giantswarm.io/hubfs/Backgrounds/vodafone-story-cover.jpg'); background-size: cover; background-position: center center; flex: 2; -moz-flex: 2; -webkit-flex: 2; -ms-flex: 2;">
+	<img src="https://www.giantswarm.io/hubfs/Logo/Client%20Logos/vodafone-white.svg" alt="Vodafone" class="hvrbox-layer_bottom">
+	<div class="hvrbox-layer_top hvrbox-layer_slideup">
+		<div class="hvrbox-text">
+      <img src="https://www.giantswarm.io/hubfs/Logo/Client%20Logos/vodafone-white.svg" style="display: block; width: 150px; padding-bottom: 20px;">
+      Vodafone uses Giant Swarm as the foundation for their most important digital initiatives after the successful migration of a huge legacy application to Kubernetes.
+    </div>
+	</div>
+</a>
+  
+</div>
+  
+<div class="gs-m2-hide-mobile" style="height: 20px;"></div>
+  
+<!-- <div style="text-align: center; background-color: #f1f4f6; max-width: 1140px; margin: 0 auto; padding: 50px 15px 20px 20px; border-radius: 3px;">
+<p style="max-width: 700px; margin: 0 auto;"><span class="large">Leading companies run their most impactful applications with Giant Swarm to deliver extraordinary experiences for their users.</span></p>
+<div style="height: 40px;"></div>
+<a class="cta-btn cta-btn--large cta-btn--primary-stroke-unfill cta-btn--filled" style="margin-right: 30px; margin-bottom: 30px;" href="/why-giant-swarm/" rel=" noopener"><i class="fas fa-chevron-right"></i> See Customer Results</a>
+<a style="padding-bottom: 20px;" class="cta-btn cta-btn--large cta-btn--primary-stroke-unfill cta-btn--filled" href="/talk-to-an-expert" rel=" noopener"><i class="fas fa-chevron-right"></i> Start My Story</a>
+</div> -->
+  
+  
+<div style="height: 40px;"></div>
+  
+</div>
+</div>
+<div id="hs_cos_wrapper_widget_1586871584747" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><div style="background-image: linear-gradient(to top, #e2f4fc , #ffffff); padding-bottom: 100px;">
+<div class="gs-m19-margins">
+  
+<!-- <div style="max-width: 900px; margin: 0 auto; padding-bottom: 20px;">
+<h2>The Managed Cloud-Native Platform to boost Digital Projects</h2>
+</div> -->
+  
+<div class="gs-m19-main-container"> 
+  
+<div class="gs-m19-title hide-tablet">
+<div class="gs-m19-title-column-left" style="width: 45%; text-align: left; padding-top: 80px;">
+<h2>The managed cloud-native platform to boost digital projects</h2><br>
+<p><span class="gs-m19-large">Unlike conventional <strong>Kubernetes-as-a-Service</strong> providers, Giant Swarm provides you with a product wrapped in a managed service. This complete solution allows you to run your containerized workloads securely and reliably, at scale across your <strong>on-premises</strong> and <strong>cloud</strong> environments.</span></p>
+</div>
+<div class="spacer" style="width: 10%;"></div>
+<div style="width: 45%; text-align: left;">
+<img src="https://www.giantswarm.io/hubfs/Illustrations/illustration-platform-v1.svg" style="max-height: 450px;">
+</div>
+</div>
+  
+<div class="gs-m19-title-tablet" style="display: none; padding-bottom: 40px;">
+<img src="https://www.giantswarm.io/hubfs/Illustrations/illustration-platform-v1.svg" style="max-width: 400px; margin: 20px;">
+<h2>The managed cloud-native platform to boost digital projects</h2>
+<p><span class="large">Unlike conventional Kubernetes-as-a-Service providers, Giant Swarm provides you with a product wrapped in a managed service. This complete solution allows you to run your containerized workloads securely and reliably, at scale across your on-premises and cloud environments.</span></p>
+</div>
+  
+  
+<div class="gs-m19-cards-main-wrapper" style="margin-top: 0px;">
+  
+<div class="gs-m19-card-container">
+<div class="gs-m19-card-content-container">
+<div style="text-align: left;">
+<div class="gs-m19-pre-headline"><img src="https://www.giantswarm.io/hubfs/icons/icon-small-technology-2-dark.svg"><p>TECHNOLOGY</p></div>
+<!-- <div style="background-color: #62c0ed; color: #ffffff; width: 120px; height: 26px; border-radius: 50px; font-weight: 500; text-align: center; font-size: 14px; padding-top: 5px; margin-top: 7px;">Technology</div> -->
+<h3 style="padding-bottom: 10px;">Kubernetes Platform</h3>
+<p>Create consistent vanilla Kubernetes clusters in minutes and run them in your <strong>on-premises</strong> and <strong>cloud</strong> environments via your private control plane.</p>
+<p><a class="cta-btn cta-btn--large cta-btn--primary-stroke-unfill cta-btn--filled" href="https://www.giantswarm.io/control-plane" rel=" noopener"><i class="fas fa-chevron-right"></i> Learn more</a></p>
+</div>
+</div>
+</div>
+<div class="gs-m19-spacer hide-mobile">&nbsp;</div>
+  
+<div class="gs-m19-card-container">
+<div class="gs-m19-card-content-container">
+<div style="text-align: left;">
+<div class="gs-m19-pre-headline"><img src="https://www.giantswarm.io/hubfs/icons/icon-small-technology-2-dark.svg"><p>TECHNOLOGY</p></div>
+<!-- <div style="background-color: #62c0ed; color: #ffffff; width: 120px; height: 26px; border-radius: 50px; font-weight: 500; text-align: center; font-size: 14px; padding-top: 5px; margin-top: 7px;">Technology</div> -->
+<h3 style="padding-bottom: 10px;">App Platform</h3>
+<p>Enjoy the freedom to choose your preferred tools for the job and build the <strong>cloud-native stack</strong> that is right for you.</p>
+<p><a class="cta-btn cta-btn--large cta-btn--primary-stroke-unfill cta-btn--filled" href="https://www.giantswarm.io/app-platform" rel=" noopener"><i class="fas fa-chevron-right"></i> Learn more</a></p>
+</div>
+</div>
+</div>
+  
+</div>  
+  
+  
+  
+<div class="gs-m19-cards-main-wrapper">
+  
+<div class="gs-m19-card-container">
+<div class="gs-m19-card-content-container">
+<div style="text-align: left;">
+<div class="gs-m19-pre-headline"><img src="https://www.giantswarm.io/hubfs/icons/icon-small-operations-dark.svg"><p>OPERATIONS</p></div>
+<!-- <div style="background-color: #196684; color: #ffffff; width: 120px; height: 26px; border-radius: 50px; font-weight: 500; text-align: center; font-size: 14px; padding-top: 5px; margin-top: 7px;">Operations</div> -->
+<h3 style="padding-bottom: 10px;">Day 2 Operations</h3>
+<p>Focus on innovation while we take care that your cloud-native stack is securely up and running at all times. Guaranteed with <strong>99.95% SLA</strong> and fastest time to resolution on the market.</p>
+<p><a class="cta-btn cta-btn--large cta-btn--primary-stroke-unfill cta-btn--filled" href="https://www.giantswarm.io/kaas" rel=" noopener"><i class="fas fa-chevron-right"></i> Learn more</a></p>
+</div>
+</div>
+</div>
+  
+<div class="gs-m19-spacer hide-mobile">&nbsp;</div>
+  
+<div class="gs-m19-card-container">
+<div class="gs-m19-card-content-container">
+<div style="text-align: left;">
+<div class="gs-m19-pre-headline"><img src="https://www.giantswarm.io/hubfs/icons/icon-small-operations-dark.svg"><p>OPERATIONS</p></div>
+<!-- <div style="background-color: #196684; color: #ffffff; width: 120px; height: 26px; border-radius: 50px; font-weight: 500; text-align: center; font-size: 14px; padding-top: 5px; margin-top: 7px;">Operations</div> -->
+<h3 style="padding-bottom: 10px;">Knowledge Building</h3>
+<p>Shorten your Kubernetes learning curve with easy access to experts via private chat and video calls.</p>
+</div>
+</div>
+</div>
+  
+</div>  
+ 
+<div style="padding-top: 40px; max-width: 600px; margin: 0 auto;">
+<a href="https://www.giantswarm.io/product" rel="noopener" class="cta-btn cta-btn--primary cta-btn--filled cta-btn--large" target="_blank">Explore Solution</a>
+<div style="height: 20px;"></div>
+</div>
+  
+  
+</div>
+  
+  
+</div>
+</div>  </div></span>
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-3 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell 
+  primary-content-container primary-content-container--padding-none
+" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-4 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell 
+  page page--sheet
+" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-5 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-widget_container flex-top-sheet" style="" data-widget-type="widget_container" data-x="0" data-w="12">
+<span id="hs_cos_wrapper_module_145089218939213436" class="hs_cos_wrapper hs_cos_wrapper_widget_container hs_cos_wrapper_type_widget_container" style="" data-hs-cos-general-type="widget_container" data-hs-cos-type="widget_container"></span>
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-6 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-rich_text primary-content" style="" data-widget-type="rich_text" data-x="0" data-w="12">
+<div class="cell-wrapper layout-widget-wrapper">
+<span id="hs_cos_wrapper_right_column" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"></span>
+</div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-7 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-widget_container flex-bottom-sheet" style="" data-widget-type="widget_container" data-x="0" data-w="12">
+<span id="hs_cos_wrapper_module_14508921490423660" class="hs_cos_wrapper hs_cos_wrapper_widget_container hs_cos_wrapper_type_widget_container" style="" data-hs-cos-general-type="widget_container" data-hs-cos-type="widget_container"></span>
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-8 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-widget_container flex-bottom-full" style="" data-widget-type="widget_container" data-x="0" data-w="12">
+<span id="hs_cos_wrapper_module_14508921462002860" class="hs_cos_wrapper hs_cos_wrapper_widget_container hs_cos_wrapper_type_widget_container" style="" data-hs-cos-general-type="widget_container" data-hs-cos-type="widget_container"></span>
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+    </div><!--end body -->
+</div><!--end body wrapper -->
+
+<div class="footer-container-wrapper">
+    <div class="footer-container container-fluid">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-1 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget " style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_1541795171385914" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+
+<!-- BEGIN SITE_FOOTER -->
+<div id="sitefooter">
+    <div class="site-footer" role="contentinfo">
+    <div class="site-footer__inner">
+        <div class="site-footer__main-menu">
+        <div id="hs_menu_wrapper_module_1541795171385914_mjfm_footer_main_menu" class="hs-menu-wrapper active-branch no-flyouts hs-menu-flow-vertical" role="navigation" data-sitemap-name="MJFM Footer Main Menu" data-menu-id="13147820304" aria-label="Navigation Menu">
+ <ul>
+  <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children" role="menu"><a href="javascript:;" aria-haspopup="true" aria-expanded="false" role="menuitem">Company</a>
+   <ul class="hs-menu-children-wrapper">
+    <li class="hs-menu-item hs-menu-depth-2" role="menuitem"><a href="https://www.giantswarm.io/about" role="menuitem">About Us</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="menuitem"><a href="https://giant-swarm-jobs.personio.de/" role="menuitem">Careers</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="menuitem"><a href="https://www.giantswarm.io/events" role="menuitem">Events</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="menuitem"><a href="https://www.giantswarm.io/contact" role="menuitem">Contact</a></li>
+   </ul></li>
+  <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children" role="menu"><a href="javascript:;" aria-haspopup="true" aria-expanded="false" role="menuitem">Platforms</a>
+   <ul class="hs-menu-children-wrapper">
+    <li class="hs-menu-item hs-menu-depth-2" role="menuitem"><a href="https://www.giantswarm.io/aws" role="menuitem">AWS</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="menuitem"><a href="https://www.giantswarm.io/azure" role="menuitem">Azure</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="menuitem"><a href="https://www.giantswarm.io/on-premises" role="menuitem">On-Prem</a></li>
+   </ul></li>
+  <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children" role="menu"><a href="javascript:;" aria-haspopup="true" aria-expanded="false" role="menuitem">Resources</a>
+   <ul class="hs-menu-children-wrapper">
+    <li class="hs-menu-item hs-menu-depth-2" role="menuitem"><a href="https://blog.giantswarm.io/" role="menuitem">Blog</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="menuitem"><a href="https://docs.giantswarm.io/" role="menuitem">Documentation</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="menuitem"><a href="https://www.giantswarm.io/privacy-policy" role="menuitem">Legal</a></li>
+   </ul></li>
+ </ul>
+</div>
+        </div>
+        <div class="site-footer__secondary-headline">
+        <img class="site-footer__secondary-headline-image" src="https://www.giantswarm.io/hubfs/giantswarm_logo_simplified_white.svg" alt="Giant Swarm logo">
+        <p>
+            Giant Swarm’s managed microservices infrastructure enables enterprises to run agile, resilient, distributed systems at scale, while removing the tasks related to managing the complex underlying infrastructure.
+        </p>
+        </div>
+    </div>
+    <div class="site-footer__social-links">
+        <div class="site-footer__social-links-list">
+        <div class="site-footer__social-links-holder twitter">
+            <a href="#" target="_blank" id="twitterLink"><img src="https://www.giantswarm.io/hubfs/icons/social-icon-twitter.svg"></a>
+        </div>
+        <div class="site-footer__social-links-holder linkedin">
+            <a id="linkedInLink" target="_blank"><img src="https://www.giantswarm.io/hubfs/icons/social-icon-linkedin.svg"></a>
+        </div>
+        <div class="site-footer__social-links-holder facebook">
+            <a href="#" target="_blank" id="facebookLink"><img src="https://www.giantswarm.io/hubfs/icons/social-icon-facebook.svg"></a>
+        </div>
+        <div class="site-footer__social-links-holder youtube">
+            <a href="#" target="_blank" id="youtubeLink"><img src="https://www.giantswarm.io/hubfs/icons/social-icon-youtube.svg"></a>
+        </div>
+        <div class="site-footer__social-links-holder github">
+            <a href="#" target="_blank" id="githubLink"><img src="https://www.giantswarm.io/hubfs/icons/social-icon-github.svg"></a>
+        </div>
+        <div class="site-footer__social-links-holder instagram" id="instagram">
+            <a href="#" target="_blank" id="instagramLink"><img src="https://www.giantswarm.io/hubfs/social-icon-instagram-blue%20(1).svg"></a>
+        </div>
+        </div>
+        <div class="site-footer__copyright">
+        <p class="site-footer__copyright-holder">©2020 Giant Swarm GmbH. All rights reserved. </p>
+        </div>
+    </div>
+    </div>
+
+    <div class="site-footer__second-menu">
+    <div id="hs_menu_wrapper_module_1541795171385914_mjfw_second_footer" class="hs-menu-wrapper active-branch no-flyouts hs-menu-flow-vertical" role="navigation" data-sitemap-name="MJFW Second Footer" data-menu-id="13190417917" aria-label="Navigation Menu">
+ <ul>
+  <li class="hs-menu-item hs-menu-depth-1"><a href="http://www.twitter.com/giantswarm" role="menuitem" target="_blank">Twitter Url</a></li>
+  <li class="hs-menu-item hs-menu-depth-1"><a href="https://www.linkedin.com/company/giant-swarm" role="menuitem" target="_blank">Linkedin Url</a></li>
+  <li class="hs-menu-item hs-menu-depth-1"><a href="http://www.facebook.com/giantswarm" role="menuitem" target="_blank">Facebook Url</a></li>
+  <li class="hs-menu-item hs-menu-depth-1"><a href="https://www.youtube.com/user/GiantSwarm" role="menuitem" target="_blank">Youtube Url</a></li>
+  <li class="hs-menu-item hs-menu-depth-1"><a href="https://github.com/giantswarm/" role="menuitem" target="_blank">Github Url</a></li>
+  <li class="hs-menu-item hs-menu-depth-1"><a href="https://www.instagram.com/giant.swarm/" role="menuitem" target="_blank">Instagram Url</a></li>
+ </ul>
+</div>
+    </div>
+
+    <div class="site-footer__third-menu">
+    <div id="hs_menu_wrapper_module_1541795171385914_mjfw_third_footer" class="hs-menu-wrapper active-branch no-flyouts hs-menu-flow-vertical" role="navigation" data-sitemap-name="MJFW Third Footer" data-menu-id="13150395251" aria-label="Navigation Menu">
+ <ul>
+  <li class="hs-menu-item hs-menu-depth-1"><a href="https://info-giantswarm-io.sandbox.hs-sites.com/privacy-policy" role="menuitem">Terms of Service | Privacy</a></li>
+ </ul>
+</div>
+    </div>
+</div>
+<!-- END SITE_FOOTER --></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+    </div><!--end footer -->
+</div><!--end footer wrapper -->
+
+    
+<script type="text/javascript" src="/hs/hsstatic/HubspotToolsMenu/static-1.72/js/index.js"></script>
+<script>
+(function () {
+    window.addEventListener('load', function () {
+        setTimeout(function () {
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', '/_hcms/perf', true /*async*/);
+            xhr.setRequestHeader("Content-type", "application/json");
+            xhr.onreadystatechange = function () {
+                // do nothing.
+            };
+            var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+            function populateNetworkInfo(name, connection, info) {
+                if (name in connection) {
+                    info[name] = connection[name];
+                }
+            }
+            var networkInfo = {};
+            if (connection) {
+                ['type', 'effectiveType', 'downlink', 'rtt'].forEach(function(name) {
+                    populateNetworkInfo(name, connection, networkInfo);
+                });
+            }
+            var perfData = {
+                url: location.href,
+                portal: 430224,
+                content: 14471746055,
+                group: -1,
+                connection: networkInfo,
+                timing: performance.timing
+            };
+            xhr.send(JSON.stringify(perfData));
+        }, 3000);  // Execute this 3 seconds after onload.
+    });
+})();
+</script>
+
+<script>
+if (typeof hsVars !== 'undefined') { hsVars['language'] = 'en'; }
+</script>
+
+<script src="/hs/hsstatic/cos-i18n/static-1.16/bundles/project.js"></script>
+<script src="/hs/hsstatic/keyboard-accessible-menu-flyouts/static-1.7/bundles/project.js"></script>
+<script src="https://www.giantswarm.io/hs-fs/hub/430224/hub_generated/template_assets/12789881179/1596569877104/Custom/page/mjfw/mjfw_main.js"></script>
+
+<!-- Start of HubSpot Analytics Code -->
+<script type="text/javascript">
+var _hsq = _hsq || [];
+_hsq.push(["setContentType", "standard-page"]);
+_hsq.push(["setCanonicalUrl", "https:\/\/www.giantswarm.io"]);
+_hsq.push(["setPageId", "14471746055"]);
+_hsq.push(["setContentMetadata", {
+    "contentPageId": 14471746055,
+    "legacyPageId": "14471746055",
+    "contentFolderId": null,
+    "contentGroupId": null,
+    "abTestId": null,
+    "languageVariantId": 14471746055,
+    "languageCode": null,
+    
+}]);
+</script>
+
+<script type="text/javascript" id="hs-script-loader" async defer src="/hs/scriptloader/430224.js"></script>
+<!-- End of HubSpot Analytics Code -->
+
+
+<script type="text/javascript">
+var hsVars = {
+    ticks: 1596694533752,
+    page_id: 14471746055,
+
+    content_group_id: 0,
+    portal_id: 430224,
+    app_hs_base_url: "https://app.hubspot.com",
+    cp_hs_base_url: "https://cp.hubspot.com",
+    language: "en",
+    analytics_page_type: "standard-page",
+    category_id: 1,
+    folder_id: 0,
+    is_hubspot_user: false
+}
+</script>
+
+
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PKJ8T4W" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!-- Script for code highlighter -->
+<script type="text/javascript" src="https://s.giantswarm.io/highlightjs/9.16.2/1/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+    
+    <!-- Generated by the HubSpot Template Builder - template version 1.03 -->
+
+
+<!-- end coded_template: id:12789882714 path:generated_layouts/12789882713.html -->
+</body></html>

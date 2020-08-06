@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tplus</title>
+    <link rel="stylesheet" href="/Public/TTplus/style/global.min.css">
+    <link rel="stylesheet" href="/Public/TTplus/style/main.css">
+</head>
+<body data-page="login">
+    <div id="login-bg" class="login-bg">
+        <div class="banner" id="banner">
+            <img src="/Public/TTplus/img/l1.jpg">
+            <img src="/Public/TTplus/img/l2.jpg">
+            <img src="/Public/TTplus/img/l3.jpg">
+            <img src="/Public/TTplus/img/l4.jpg">
+        </div>
+    </div>
+    <div id="login" class="login">
+        <div class="title"><i class="icon-font icon-logo"></i></div>
+        <form autocomplete="off">
+            <input type="text" id="email" name="email" placeholder="Email">
+            <div class="div-line"></div>
+            <input type="password" style="display:none;">
+            <input type="password" id="psd" name="psd" placeholder="Password">
+            <div class="div-line"></div>
+            <div class="from-group">
+                <span class="checkbox-parent"><input type="checkbox" class="checkbox" id="rmbuser"> <label>Remember</label></span>
+                <a class="font-strong right" id="j-forpsd">Forgot password</a>
+            </div>
+        </form>
+        <div class="div-btn"><a id="login-btn" class="btn btn-blue" >LOGIN</a></div>
+    </div>
+    <div class="lg-footer">
+        2016 © ABC360. ALL Rights Reserved
+    </div>
+    <!-- tip -->
+    
+    <div id="j-ln-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="dialog">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div id="j-modal-shown" class="j-modal-itmes">     
+                        <div id="j-ln-alert" class="j-modal-item">
+                            <p></p>
+                            <div class="d-div-btn"><a class="btn btn-blue" data-dismiss="modal">Ok</a></div>
+                        </div>
+                        <div id="j-ln-remtip" class="j-modal-item">
+                            <p>Please be aware of this, DON'T save your account/password on a public-use laptop/computer.</p>
+                            <div class="d-div-btn"><a class="btn btn-blue" id="j-tipbtn-y" data-dismiss="modal">Ok</a>&nbsp;&nbsp;<a class="btn btn-blue" id="j-tipbtn-n" data-dismiss="modal">Cancel</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+    </div>          
+<script>
+    var MODULE = '/Teacher';
+    var CONTROLLER = '/Teacher/Teacher';
+</script>
+<script src="/Public/TTplus/js/global.min.js"></script>
+<script src="/Public/TTplus/js/main.js"></script>
+</body>
+</html>

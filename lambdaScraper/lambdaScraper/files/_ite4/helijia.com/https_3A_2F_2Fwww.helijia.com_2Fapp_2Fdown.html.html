@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="format-detection" content="telephone=no">	
+<meta name="keywords" content="河狸家，河狸家官网，解放天下手艺人，河狸家App下载，河狸家安卓下载，河狸家ios下载">
+<meta name="description" content="河狸家，河狸家官网，解放天下手艺人，河狸家App下载，河狸家安卓下载，河狸家ios下载">
+<meta name="screen-orientation" content="portrait">
+<meta http-equiv="pragma" content="no-cache"> 
+<meta http-equiv="Cache-Control" content="no-store, must-revalidate"> 
+<meta http-equiv="expires" content="Wed, 26 Feb 1997 08:21:57 GMT"> 
+<meta http-equiv="expires" content="0">
+
+<title>河狸家App下载- 解放天下手艺人！</title>
+<link rel="stylesheet" type="text/css" href="css/down.css">
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript" src="../js/util.js"></script>
+<style type="text/css">
+	.houjia{position: absolute;bottom: 0;background-color: #333;width: 100%;height: 42px;text-align: center;font-size: 14px;color: #fff; opacity: 0.8;color:#fff;}
+	#white{
+		 position: absolute;
+	    bottom: 0;
+	    color: #fff;
+	    display:none;
+	}
+</style>
+</head>
+<body>
+<div class="main">
+	<div class="weixin" id="winxinShow">
+        <img src="">
+    </div>	
+	<img src="images/hlj1.jpg" width="100%" alt="河狸家，解放天下手艺人">
+	<img src="images/hlj2.jpg" width="100%" alt="河狸家，解放天下手艺人">
+	<img src="images/hlj3.jpg" width="100%" alt="" class="button-download" alt="下载河狸家App">
+	<img src="images/hlj4.jpg" width="100%" alt="">
+	<img src="images/hlj5.jpg" width="100%" alt="优质手艺人">
+	<img src="images/hlj6.jpg" width="100%" alt="优质手艺人">
+	<img src="images/hlj7.jpg" width="100%" alt="贴心承诺，安全保障">
+	<img src="images/hlj8.jpg" width="100%" alt="8天内免费上门修补">
+	<img src="images/hlj9.jpg" width="100%" alt="8天内免费上门修补">
+	<img src="images/hlj10.jpg" width="100%" alt="河狸家高颜值">
+	<p id="white">广州霸天网络科技有限公司 版权所有地址：广州市番禹区沙头街大平村村前大街46号之二十五</p>
+	<p id="white2"></p>
+</div>
+<script type = "text/javascript">
+var u         = navigator.userAgent,
+    app       = navigator.appVersion;
+var ua        = navigator.userAgent.toLowerCase();
+var isiOS     = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+var href      = document.location.href;
+var channel   = Util.unparam(decodeURIComponent(location.search.slice(1))).channel;
+var host      = location.host;
+var channel1  = null;
+window.button = $('.button-download');
+
+if(!channel){
+	if(host=='sem.helijia.com'){
+		channel = 'baiduBrand';
+	}else if(host=='www.xowhs.com' || host=='hlj.xowhs.com' || host=='hlj.ttwad.com' ){
+		channel = 'baiduSEM';
+	}
+}else if(host=='hlj.xowhs.com' && channel == 'baiduSEM' || host=='www.helijia.com' && channel == 'baiduSEM'){
+	channel1 = 'baiduSEM';
+}
+else if(host=='www.helijia.com' && channel == 'baiduSEM1'){
+	location.href="https://lnk0.com/xVlAl4";
+}
+if(host=='hlj.xowhs.com'){
+	$('#white').show();
+}
+var imgUrl=['images/android.png','images/ios.png']
+button.click(function(){
+	if(ua.match(/MicroMessenger/i) == "micromessenger"){
+		var img=$('#winxinShow img').eq(0);
+		var winxinshow=$('#winxinShow');
+		if(isiOS){
+			img.attr('src',imgUrl[1]);
+		}else{
+			img.attr('src',imgUrl[0]);
+		}
+		winxinshow.show();
+		return;
+	}else{
+		if(isiOS) {
+			if(host=='sem.helijia.com') {
+				location.href='https://lnk0.com/BJhgo4';
+			} else if(channel1) {
+				location.href='https://lnk0.com/xVlAl4';
+			} else {
+				window.parent.frames.location.href='https://itunes.apple.com/cn/app/id1341255223?mt=8';
+			}
+		} else {
+			if(!channel) {
+				location.href='https://hlj-app.b0.upaiyun.com/zmw/upload/android-package/hlj.apk';
+			} else {
+				location.href='https://hlj-app.b0.upaiyun.com/zmw/upload/android-package/hlj_'+channel+'.apk';
+			}
+		}
+	}
+});
+$('#winxinShow').click(function(){
+	$(this).hide();
+});
+</script>
+
+</body>
+</html>

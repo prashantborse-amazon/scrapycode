@@ -1,0 +1,608 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Gluster | Storage for your Cloud</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="apple-mobile-web-app-title" content="Ceph">
+		<meta name="application-name" content="Ceph">
+		<meta name="theme-color" content="#ffffff">
+		
+<!-- All in One SEO Pack 3.2.9 by Michael Torbert of Semper Fi Web Design[117,132] -->
+<script type="application/ld+json" class="aioseop-schema">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.gluster.org/#organization","url":"https://www.gluster.org/","name":"Gluster","sameAs":[]},{"@type":"WebSite","@id":"https://www.gluster.org/#website","url":"https://www.gluster.org/","name":"Gluster","publisher":{"@id":"https://www.gluster.org/#organization"}},{"@type":"WebPage","@id":"https://www.gluster.org/#webpage","url":"https://www.gluster.org/","inLanguage":"en-US","name":"Homepage","isPartOf":{"@id":"https://www.gluster.org/#website"},"datePublished":"2016-03-03T14:53:47-07:00","dateModified":"2017-12-12T15:32:15-07:00","about":{"@id":"https://www.gluster.org/#organization"}}]}</script>
+<link rel="canonical" href="https://www.gluster.org/" />
+<!-- All in One SEO Pack -->
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.gluster.org\/wp-includes\/js\/wp-emoji-release.min.js"}};
+			/*! This file is auto-generated */
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://www.gluster.org/wp-includes/css/dist/block-library/style.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='ceph/googlefont-css'  href='https://fonts.googleapis.com/css?family=Raleway%3A300%2C400%2C700&#038;ver=5.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='Stylesheet-css'  href='https://www.gluster.org/wp-content/themes/glusterTheme/Resources/Styles/style.min.css' type='text/css' media='all' />
+<script type='text/javascript' src='https://www.gluster.org/wp-content/themes/glusterTheme/foundation_framework/js/vendor/jquery.js'></script>
+<link rel='https://api.w.org/' href='https://www.gluster.org/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.gluster.org/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.gluster.org/wp-includes/wlwmanifest.xml" /> 
+<link rel='shortlink' href='https://www.gluster.org/' />
+<link rel="alternate" type="application/json+oembed" href="https://www.gluster.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.gluster.org%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.gluster.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.gluster.org%2F&#038;format=xml" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" /><link rel="icon" href="https://www.gluster.org/wp-content/uploads/2017/05/cropped-gluster-ico-1-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://www.gluster.org/wp-content/uploads/2017/05/cropped-gluster-ico-1-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://www.gluster.org/wp-content/uploads/2017/05/cropped-gluster-ico-1-180x180.png" />
+<meta name="msapplication-TileImage" content="https://www.gluster.org/wp-content/uploads/2017/05/cropped-gluster-ico-1-270x270.png" />
+		<style type="text/css" id="wp-custom-css">
+			.mailingListTable thead {
+    background: #fff;
+}
+
+table tr.even, table tr.alt, table tr:nth-of-type(even) {
+   background: #fff;
+}
+
+.pageHeader-mobileIcon .pageHeader-mobileIcon-lines:before, .pageHeader-mobileIcon .pageHeader-mobileIcon-lines:after {
+    background-color: #333;  
+}
+
+.pageHeader-mobileIcon .pageHeader-mobileIcon-lines {
+    background-color: #333;   
+}
+
+.textWithIconBlock .textWithIconBlock-title {
+    font-family: "museo",sans-serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: #fff;
+}
+
+.tags {
+    margin-top: 1.875rem;
+}
+
+.sideBar.sideBar--twitterFeeds .widget_display-latest-tweets li {
+    border-top: 0;
+    text-align: center;
+    color: #fff;
+    padding: 50px 0;
+      font-family: "montserrat",sans-serif;
+    font-size: 24px;
+}
+
+.breadCrumbs li {
+display:none;
+}
+
+.blogDetail .blogDetail-heading {
+    line-height: 2.6875rem;
+    font-size: 2.25rem;
+    color: #374249;
+ font-weight: 900;
+}
+
+.breadCrumbs {
+ margin-bottom: 3.875rem;
+}
+
+.blogPost .blogPost-item-image-writer {
+    font-weight: 600;
+}
+   
+
+.sideBar .widget_sub_categories>span, .sideBar .widget_recent_entries>span, .sideBar .widget_archive>span, .sideBar .widget_text .widget_text-container>span {
+    margin-bottom: .625rem;
+    display: block;
+    font-family: "museo",sans-serif;
+    font-weight: 700;
+      text-transform: none;
+ color: #000;
+    font-size: 1.125rem;
+}
+
+.sideBar .widget_text .widget_text-container.widget_text-container--darkGrey {
+    background-color: #fafafa;
+    border: 1px solid #e5e5e5;
+    border-radius: 6px;
+    padding: 20px;
+
+}
+
+.sideBar .widget_text .widget_text-container {
+      color: #4c4c4c;
+}
+
+h4 {
+    line-height: 1.1;
+	padding-bottom:20px;
+ font-weight: 700;
+ font-size: 1.2rem;
+}
+
+.mailingListTable thead th {
+    color: #333;
+text-transform: capitalize;
+    font-family: apex_sansbold, sans-serif;
+    font-size: 0.875rem;   
+}
+
+h2 {
+    font-size: 2.20rem;
+}
+
+.imageWithText .imageWithText-title {
+    font-size: 2.20rem;
+}
+
+.glusterFeed-list .glusterFeed-list-item-date {
+     font-family: "montserrat",sans-serif;
+    font-size: 1rem;
+    color: #000;
+    font-weight: 700;
+    margin-bottom: 10px;
+    display: block;
+    text-transform: uppercase;
+}
+
+.pageFooter-menu a {
+    font-family: "montserrat",sans-serif;
+    font-weight: normal;
+    color: #333;
+}
+
+li {
+    padding-bottom: 10px!important;
+}
+
+
+
+a {
+    color: #8bb71d;
+    line-height: inherit;
+    text-decoration: none;
+    font-weight: sebold;
+}
+
+.mailingListTable {
+    width: 100%;
+    border: 0;
+	margin-top:20px;
+}
+li {
+    padding-bottom: 20px;
+}
+
+.coloredContainer.coloredContainer--grey {
+    background-color: #fafafa;
+}
+
+.coloredContainer.coloredContainer--grey {
+    background-color: #fafafa;
+}
+
+.sideBar.sideBar--twitterFeeds .widget_display-latest-tweets li a {
+    display: inline;
+    color: #8bb71d;
+}		</style>
+			</head>
+	<body class="home page-template page-template-homepage page-template-homepage-php page page-id-7 gluster-theme">
+		<div class="pageHeader">
+			<div class="pageHeader-top">
+				<div class="row">
+					<div class="small-12 xlarge-4 columns">
+						<div class="pageHeader-menu">
+							<a href="https://www.gluster.org/" class="pageHeader-logo"></a>
+							<a href="#" class="pageHeader-searchIcon show-for-medium-down"></a>
+							<a class="pageHeader-mobileIcon" href="#">
+								<span class="pageHeader-mobileIcon-lines">Menu</span>
+							</a>
+						</div>
+					</div>
+					<div class="small-12 large-8 columns hide-for-large-down">
+						<div class="pageHeader-topMenu">
+							<ul id="menu-top-menu" class="pageHeader-topMenu-menu"><li id="menu-item-8762" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8762"><a href="https://www.gluster.org/events/">Events</a></li>
+<li id="menu-item-8786" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8786"><a href="http://planet.gluster.org">Planet Gluster</a></li>
+<li id="menu-item-95" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-95"><a target="_blank" rel="noopener noreferrer" href="http://docs.gluster.org">Documentation</a>
+<ul class="sub-menu">
+	<li id="menu-item-8743" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8743"><a href="http://docs.gluster.org/en/latest/Quick-Start-Guide/Quickstart/">Quick Start Guide</a></li>
+	<li id="menu-item-8755" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8755"><a href="http://docs.gluster.org/en/latest/Install-Guide/Overview/">More detailed Installation Guide</a></li>
+	<li id="menu-item-8756" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8756"><a href="http://docs.gluster.org/en/latest/Administrator%20Guide/">Administrators Guide</a></li>
+	<li id="menu-item-8757" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8757"><a href="http://docs.gluster.org/en/latest/Developer-guide/Developers-Index/">GlusterFS Developer Guide</a></li>
+	<li id="menu-item-8758" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8758"><a href="http://docs.gluster.org/en/latest/Upgrade-Guide/README/">Upgrade Guide</a></li>
+	<li id="menu-item-8759" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8759"><a href="http://docs.gluster.org/en/latest/">More documentation&#8230;</a></li>
+</ul>
+</li>
+<li id="menu-item-8855" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-8855"><a href="https://www.gluster.org/community/">Community</a>
+<ul class="sub-menu">
+	<li id="menu-item-8777" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8777"><a href="https://www.gluster.org/community/">How to get involved?</a></li>
+	<li id="menu-item-25628" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25628"><a href="https://www.gluster.org/community/consultants/">Consultants</a></li>
+	<li id="menu-item-8749" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8749"><a href="https://github.com/gluster">Development repositories for Gluster</a></li>
+	<li id="menu-item-8790" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8790"><a href="https://www.gluster.org/release-schedule/">Release Schedule</a></li>
+	<li id="menu-item-8813" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8813"><a href="https://www.gluster.org/roadmap/">Roadmap</a></li>
+</ul>
+</li>
+<li id="menu-item-8856" class="is-active menu-item menu-item-type-post_type menu-item-object-page menu-item-8856"><a href="https://www.gluster.org/install/">Install</a></li>
+</ul>							<form role="search" method="get" id="searchform" class="searchForm" action="https://www.gluster.org">
+	<div class="searchForm-container">
+		<label class="screen-reader-text" for="s"></label>
+		<input type="text" class="searchForm-input" placeholder="Search for.." value="" name="s" id="s" />
+		<button type="submit" class="searchForm-button">Search</button>
+	</div>
+</form>							<a href="#" title="Click for the searchform" class="searchFormIcon"></a>
+						</div>
+					</div>
+				</div>
+				<div class="pageHeader-mobileMenu">
+					<form role="search" method="get" id="searchform" class="searchForm" action="https://www.gluster.org">
+	<div class="searchForm-container">
+		<label class="screen-reader-text" for="s"></label>
+		<input type="text" class="searchForm-input" placeholder="Search for.." value="" name="s" id="s" />
+		<button type="submit" class="searchForm-button">Search</button>
+	</div>
+</form>					<ul id="menu-top-menu-1" class="mobile-topMenu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8762"><a href="https://www.gluster.org/events/">Events</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8786"><a href="http://planet.gluster.org">Planet Gluster</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-95"><a target="_blank" rel="noopener noreferrer" href="http://docs.gluster.org">Documentation</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8743"><a href="http://docs.gluster.org/en/latest/Quick-Start-Guide/Quickstart/">Quick Start Guide</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8755"><a href="http://docs.gluster.org/en/latest/Install-Guide/Overview/">More detailed Installation Guide</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8756"><a href="http://docs.gluster.org/en/latest/Administrator%20Guide/">Administrators Guide</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8757"><a href="http://docs.gluster.org/en/latest/Developer-guide/Developers-Index/">GlusterFS Developer Guide</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8758"><a href="http://docs.gluster.org/en/latest/Upgrade-Guide/README/">Upgrade Guide</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8759"><a href="http://docs.gluster.org/en/latest/">More documentation&#8230;</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-8855"><a href="https://www.gluster.org/community/">Community</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8777"><a href="https://www.gluster.org/community/">How to get involved?</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25628"><a href="https://www.gluster.org/community/consultants/">Consultants</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8749"><a href="https://github.com/gluster">Development repositories for Gluster</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8790"><a href="https://www.gluster.org/release-schedule/">Release Schedule</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8813"><a href="https://www.gluster.org/roadmap/">Roadmap</a></li>
+</ul>
+</li>
+<li class="is-active menu-item menu-item-type-post_type menu-item-object-page menu-item-8856"><a href="https://www.gluster.org/install/">Install</a></li>
+</ul>				</div>
+			</div>
+			<div class="pageHeader-navigation">
+				<div class="row">
+					<div class="small-11 columns only-show-on-fixed">
+						<a href="https://www.gluster.org/" class="pageHeader-logo pageHeader-logo--white"></a>
+					</div>
+					<div class="small-1 columns only-show-on-fixed">
+						<a href="#" title="Click for the searchform" class="searchFormIcon searchFormIcon--white"></a>
+					</div>
+				</div>
+			</div>
+
+			<div class="pageHeaderOverlay">
+			</div>
+
+			
+		</div>
+								<div class="defaultSlider">
+				<div class="defaultSlider-slider">
+																	<div class="defaultSlider-slider-slide">
+							<div class="defaultSlider-slider-box">
+								<div class="defaultSlider-slider-box-content row">
+									<div class="defaultSlider-slider-content defaultSlider-slider-content--left">
+																					<div class="defaultSlider-slider-heading"><br>Storage for your cloud</div>
+																															<div class="sce-bodyText"><p>Gluster is a free and open source software scalable network filesystem.</p>
+</div>
+																															<a href="https://www.gluster.org/install/" class="button">Install Gluster</a>
+																													</div>
+									<div class="defaultSlider-slider-content defaultSlider-slider-content--right">
+																					<div class="defaultSlider-image">
+												<img src="https://www.gluster.org/wp-content/uploads/2016/03/gluster-ant.png">
+											</div>
+																			</div>
+								</div>
+							</div>
+						</div>
+																	<div class="defaultSlider-slider-slide">
+							<div class="defaultSlider-slider-box">
+								<div class="defaultSlider-slider-box-content row">
+									<div class="defaultSlider-slider-content defaultSlider-slider-content--left">
+																					<div class="defaultSlider-slider-heading"><br>Scalable data filesystem</div>
+																															<div class="sce-bodyText"><p>Gluster is a free and open source software scalable network filesystem.</p>
+</div>
+																															<a href="https://www.gluster.org/install/" class="button">Install Gluster</a>
+																													</div>
+									<div class="defaultSlider-slider-content defaultSlider-slider-content--right">
+																					<div class="defaultSlider-image">
+												<img src="https://www.gluster.org/wp-content/uploads/2016/03/gluster-cloud.png">
+											</div>
+																			</div>
+								</div>
+							</div>
+						</div>
+									</div>
+			</div>
+										<div class="coloredContainer coloredContainer--flex coloredContainer--greenGradient">
+				<div class="row">
+					<div class="small-12 columns">
+						<div class="textWithIconBlockInto">
+							<h2 class="textWithIconBlock-introTitle">
+															</h2>
+							<p class="textWithIconBlock-introText">
+															</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					
+						
+						<div class="small-12 large-4 columns text-center">
+							<a href="https://www.gluster.org/community/" class="textWithIconBlock">
+								<div class="textWithIconBlock-icon">
+									<img src="https://www.gluster.org/wp-content/uploads/2016/03/heart.png" class="textWithIconBlock-icon-img"/>
+									<img src="https://www.gluster.org/wp-content/uploads/2016/03/heart-ro.png" class="textWithIconBlock-icon-img-hover"/>
+								</div>
+								<h3 class="textWithIconBlock-title">
+									Get to know the community								</h3>
+								<div class="textWithIconBlock-tekst">
+									<p>Gluster is powered by an open source community of users and developers.</p>
+								</div>
+								<span class="button button-blueBorder">
+									Read more								</span>
+							</a>
+						</div>
+					
+						
+						<div class="small-12 large-4 columns text-center">
+							<a href="https://www.gluster.org/events/" class="textWithIconBlock">
+								<div class="textWithIconBlock-icon">
+									<img src="https://www.gluster.org/wp-content/uploads/2016/03/people.png" class="textWithIconBlock-icon-img"/>
+									<img src="https://www.gluster.org/wp-content/uploads/2016/03/people-ro.png" class="textWithIconBlock-icon-img-hover"/>
+								</div>
+								<h3 class="textWithIconBlock-title">
+									Participate								</h3>
+								<div class="textWithIconBlock-tekst">
+									<p>Participate with the community!</p>
+								</div>
+								<span class="button button-blueBorder">
+									Read more								</span>
+							</a>
+						</div>
+					
+						
+						<div class="small-12 large-4 columns text-center">
+							<a href="https://www.gluster.org/community/" class="textWithIconBlock">
+								<div class="textWithIconBlock-icon">
+									<img src="https://www.gluster.org/wp-content/uploads/2016/03/chat.png" class="textWithIconBlock-icon-img"/>
+									<img src="https://www.gluster.org/wp-content/uploads/2016/03/chat-ro.png" class="textWithIconBlock-icon-img-hover"/>
+								</div>
+								<h3 class="textWithIconBlock-title">
+									Suggest a feature								</h3>
+								<div class="textWithIconBlock-tekst">
+									<p>Want to suggest a feature?</p>
+								</div>
+								<span class="button button-blueBorder">
+									Read more								</span>
+							</a>
+						</div>
+									</div>
+			</div>
+							<div class="coloredContainer coloredContainer--darkgrey">
+			<div class="row">
+				<div class="small-12 columns">
+					<div class="sideBar sideBar--twitterFeeds">
+	</div>				</div>
+			</div>
+		</div>
+
+				<div class="glusterFeed">
+		
+		
+		<div class="coloredContainer">
+			<div class="row">
+				<div class="small-12 columns">
+
+					<div class="glusterFeed-title">
+						<h4 class="mg-heading">BLOG</h4>
+					</div>
+
+					<ul class="blogPost small-block-grid-1 large-block-grid-3">
+						
+						
+							<!-- the loop -->
+																						<li class="blogPost-item">
+									<div class="blogPost-item-contentWrap">
+										<span class="blogPost-item-date">27 Apr 2020</span>
+										<h5 class="mg-heading mg-heading--blog">
+																						<a href="https://www.gluster.org/update-from-the-team/" title="Update from the team">
+																									Update from the team																							</a>
+										</h5>
+										<div class="blogPost-item-content">
+											<p>It has been a while since we provided an update to the Gluster community. Across the world various nations, states and localities have put together sets of guidelines around shelter-in-place and quarantine. We request our community members to stay safe, to care for their loved ones, to continue to be...</p>										</div>
+
+										<a href="https://www.gluster.org/update-from-the-team/" title="Update from the team" class="button">
+											Read more
+										</a>
+									</div>
+								</li>
+																															<li class="blogPost-item">
+									<div class="blogPost-item-contentWrap">
+										<span class="blogPost-item-date">03 Feb 2020</span>
+										<h5 class="mg-heading mg-heading--blog">
+																						<a href="https://www.gluster.org/building-a-longer-term-focus-for-gluster/" title="Building a longer term focus for Gluster">
+																									Building a longer term focus for Gl...																							</a>
+										</h5>
+										<div class="blogPost-item-content">
+											<p>The initial rounds of conversation around the planning of content for release 8 has helped the project identify one key thing &#8211; the need to stagger out features and enhancements over multiple releases. Thus, while release 8 is unlikely to be feature heavy as previous releases, it will be the...</p>										</div>
+
+										<a href="https://www.gluster.org/building-a-longer-term-focus-for-gluster/" title="Building a longer term focus for Gluster" class="button">
+											Read more
+										</a>
+									</div>
+								</li>
+																															<li class="blogPost-item">
+									<div class="blogPost-item-contentWrap">
+										<span class="blogPost-item-date">28 Nov 2019</span>
+										<h5 class="mg-heading mg-heading--blog">
+																						<a href="https://www.gluster.org/blog-planning-ahead-for-gluster-releases/" title="Planning ahead for Gluster releases">
+																									Planning ahead for Gluster releases																							</a>
+										</h5>
+										<div class="blogPost-item-content">
+											<p>In order to plan the content for upcoming releases, it is good to take a moment of pause, step back and attempt to look at the consumption of GlusterFS within large enterprises. With the enterprise architecture taking large strides towards cloud and more specifically, the hybrid cloud, continued efforts towards...</p>										</div>
+
+										<a href="https://www.gluster.org/blog-planning-ahead-for-gluster-releases/" title="Planning ahead for Gluster releases" class="button">
+											Read more
+										</a>
+									</div>
+								</li>
+															<!-- end of the loop -->
+
+							
+							<div class="feed-button">
+								<a href="https://www.gluster.org/category/blog/" class="button button-blueBorder">
+									View all								</a>
+							</div>
+
+											</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+																<div class="coloredContainer coloredContainer--backgroundImg imageWithText coloredContainer--darkgrey">
+			<div class="row">
+				<div class="small-12 columns">
+					<h2 class="imageWithText-mainTitle">
+						About Gluster					</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="small-12 large-6 columns">
+					<img src="https://www.gluster.org/wp-content/uploads/2016/07/comp.png" class="imageWithText-img"/>
+				</div>
+				<div class="small-12 large-6 columns">
+					<h4 class="imageWithText-title">
+						Gluster is a free and open source scalable network filesystem					</h4>
+					<div class="imageWithText-text">
+						<p>Gluster is a scalable network filesystem. Using common off-the-shelf hardware, you can create large, distributed storage solutions for media streaming, data analysis, and other data- and bandwidth-intensive tasks. Gluster is free.</p>
+					</div>
+					<div class="imageWithText-buttons">
+													<a class="button imageWithText-buttonGreen" href="https://www.gluster.org/community">
+								Join Gluster							</a>
+																			<a class="button imageWithText-textLink" href="http://docs.gluster.org/">
+								Browse guides							</a>
+											</div>
+				</div>
+			</div>
+		</div>
+		<div class="pageFooter">
+			<div class="socialMediaBar">
+			<div class="row">
+				<div class="small-12 columns">
+																																																																																																				<ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-5">
+													<li>
+								<a href="http://twitter.com/gluster" title="twitter" class="socialMediaBar-icon socialMediaBar-icon--twitter">
+								</a>
+							</li>
+													<li>
+								<a href="https://www.facebook.com/GlusterInc" title="facebook" class="socialMediaBar-icon socialMediaBar-icon--facebook">
+								</a>
+							</li>
+													<li>
+								<a href="" title="none" class="socialMediaBar-icon socialMediaBar-icon--none">
+								</a>
+							</li>
+													<li>
+								<a href="https://plus.google.com/communities/110022816028412595292" title="googleplus" class="socialMediaBar-icon socialMediaBar-icon--googleplus">
+								</a>
+							</li>
+													<li>
+								<a href="https://www.youtube.com/user/GlusterCommunity" title="youtube" class="socialMediaBar-icon socialMediaBar-icon--youtube">
+								</a>
+							</li>
+											</ul>
+				</div>
+			</div>
+		</div>
+		<div class="pageFooter-topBar">
+		<div class="backToTop button">
+			Back to top
+		</div>
+		<div class="row">
+			<div class="small-12 large-4 xlarge-6 columns">
+				<div class="pageFooter-logo">
+
+				</div>
+			</div>
+			<div class="small-12 large-8 xlarge-6 columns">
+									<ul class="pageFooter-menu small-block-grid-1 medium-block-grid-3">
+																				<li>
+								<p><strong>MENU</strong></p>
+<ul>
+<li><a href="https://www.gluster.org/install/">Install</a></li>
+<li><a href="https://www.gluster.org/category/planet/">News</a></li>
+<li><a href="http://docs.gluster.org/en/latest/">Documentation</a></li>
+<li><a href="/support/">Support</a></li>
+</ul>
+							</li>
+																				<li>
+								<p><strong>COMMUNITY</strong></p>
+<ul>
+<li><a href="/community/">Get to know the community</a></li>
+</ul>
+							</li>
+																				<li>
+								<p><strong>DOCUMENTATION</strong></p>
+<ul>
+<li><a href="http://docs.gluster.org/en/latest/Quick-Start-Guide/Quickstart/">Quick Start Guide</a></li>
+<li><a href="http://docs.gluster.org/en/latest/Install-Guide/Overview/">More detailed Installation Guide</a></li>
+<li><a href="http://docs.gluster.org/en/latest/Administrator%20Guide/">Administrators Guide</a></li>
+<li><a href="http://docs.gluster.org/en/latest/Developer-guide/Developers-Index/">GlusterFS Development Guide</a></li>
+<li><a href="http://docs.gluster.org/en/latest/Upgrade-Guide/README/">Upgrade Guide</a></li>
+</ul>
+							</li>
+											</ul>
+							</div>
+		</div>
+	</div>
+	<div class="pageFooter-bottomBar">
+		<div class="row">
+			<div class="small-12 large-4 columns">
+				<span class="pageFooter-bottomBar-copyright">Copyright © 2019, Red Hat, Inc. All rights reserved.</span>
+			</div>
+			<div class="small-12 large-8 columns">
+				<ul id="menu-footer-menu" class="pageFooter-bottomBar-menu"><li id="menu-item-7727" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7727"><a href="https://www.gluster.org/legal-page/terms-of-service/">Terms Of Service</a></li>
+<li id="menu-item-7728" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-7728"><a href="https://www.gluster.org/legal-page/privacy-statement/">Privacy Statement</a></li>
+<li id="menu-item-7729" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7729"><a href="https://www.gluster.org/legal-page/trademarks/">Trademarks</a></li>
+<li id="menu-item-25669" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25669"><a href="https://www.gluster.org/legal-page/code-of-conduct/">Code of Conduct</a></li>
+</ul>			</div>
+		</div>
+	</div>
+</div>
+
+<script type='text/javascript' src='https://www.gluster.org/wp-includes/js/wp-embed.min.js'></script>
+<script type='text/javascript' src='https://www.gluster.org/wp-content/themes/glusterTheme/foundation_framework/js/vendor/modernizr.js'></script>
+<script type='text/javascript' src='https://www.gluster.org/wp-content/themes/glusterTheme/foundation_framework/js/foundation/foundation.js'></script>
+<script type='text/javascript' src='https://www.gluster.org/wp-content/themes/glusterTheme/Resources/Javascripts/foundation.init.js'></script>
+<script type='text/javascript' src='https://www.gluster.org/wp-content/themes/glusterTheme/Resources/Javascripts/vendor/slick/slick.min.js'></script>
+<script type='text/javascript' src='https://www.gluster.org/wp-content/themes/glusterTheme/Resources/Javascripts/defaultSlider.js'></script>
+<script type='text/javascript' src='https://www.gluster.org/wp-content/themes/glusterTheme/Resources/Javascripts/pageHeader-mobileMenu.js'></script>
+<script type='text/javascript' src='https://www.gluster.org/wp-content/themes/glusterTheme/Resources/Javascripts/pageHeader-topMenu.js'></script>
+<script type='text/javascript' src='https://www.gluster.org/wp-content/themes/glusterTheme/Resources/Javascripts/pageHeader-desktopMenu.js'></script>
+<script type='text/javascript' src='https://www.gluster.org/wp-content/themes/glusterTheme/Resources/Javascripts/stickyMenu.js'></script>
+<script type='text/javascript' src='https://www.gluster.org/wp-content/themes/glusterTheme/Resources/Javascripts/twitterFeeds.js'></script>
+<script type='text/javascript' src='https://www.gluster.org/wp-content/themes/glusterTheme/Resources/Javascripts/jobPage.js'></script>
+<script type='text/javascript' src='https://www.gluster.org/wp-content/themes/glusterTheme/Resources/Javascripts/inputHandler.js'></script>
+<script type='text/javascript' src='https://www.gluster.org/wp-content/themes/glusterTheme/Resources/Javascripts/searchForm.js'></script>
+<script type='text/javascript' src='https://www.gluster.org/wp-content/themes/glusterTheme/Resources/Javascripts/backToTop.js'></script>
+</body>
+</html>

@@ -1,0 +1,2163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>GOQii</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="" name="keywords"/>
+  <meta content="" name="description"/>
+
+    <link rel="icon" href="https://websitecdn.goqii.com/images/newimages/favicon.png"/>
+    <link rel="apple-touch-icon" sizes="144x144" href="https://websitecdn.goqii.com/images/newimages/apple-touch-icon-ipad-retina.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="https://websitecdn.goqii.com/images/newimages/apple-touch-icon-iphone-retina.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="https://websitecdn.goqii.com/images/newimages/apple-touch-icon-ipad.png"/>
+    <link rel="apple-touch-icon" sizes="57x57" href="https://websitecdn.goqii.com/images/newimages/apple-touch-icon-iphone.png"/>
+
+
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Open+Sans:300,300i,400,400i,700,700i" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet"/> 
+
+  <!-- Bootstrap CSS File -->
+  <link href="https://store.goqii.com/media/goqiistore/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Libraries CSS Files -->
+  <link href="https://store.goqii.com/media/goqiistore/lib/animate/animate.min.css" rel="stylesheet"/>
+  <link href="https://store.goqii.com/media/goqiistore/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
+  <link href="https://store.goqii.com/media/goqiistore/lib/ionicons/css/ionicons.min.css" rel="stylesheet"/>
+  <link href="https://store.goqii.com/media/goqiistore/lib/magnific-popup/magnific-popup.css" rel="stylesheet"/>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"  crossorigin="anonymous"/>
+	
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://store.goqii.com/media/goqiistore/lib/swiper/css/swiper.min.css"/>
+
+  <!-- Main Stylesheet File -->
+  <link href="store/css/style.css" rel="stylesheet"/>
+  <link href="https://store.goqii.com/media/goqiistore/css/style.css" rel="stylesheet"/>
+  <link href="https://store.goqii.com/media/goqiistore/css/responsive.css" rel="stylesheet"/>
+  <link href="https://store.goqii.com/media/goqiistore/css/style_colorselect.css" rel="stylesheet"/>
+  <link href="https://store.goqii.com/media/goqiistore/color/style_colorselect.css" rel="stylesheet"/>
+  <link href="https://store.goqii.com/media/goqiistore/css/custom.css" rel="stylesheet" />
+  <script src="//goqii.com/js/alertify.js"></script>
+  <link rel="stylesheet" href="//goqii.com/css/alertify.css" type="text/css"/>
+<!-- Demo styles -->
+  <style>
+        
+        .swiper-container {
+              width: 100%;
+          
+              margin-left: auto;
+              margin-right: auto;
+            }
+            .swiper-slide {
+              background-size: cover;
+              background-position: center;
+            }
+            .gallery-top {
+              height: 445px;
+              width: 445px;
+            }
+            .gallery-thumbs {
+              height: 20%;
+              box-sizing: border-box;
+              padding: 10px 0;
+            }
+            .gallery-thumbs .swiper-slide {
+              height: 100%;
+              opacity: 1;
+          
+            }
+            .gallery-thumbs .swiper-slide-active {
+              opacity: 1;
+            }
+        #productsinner .content ul li {
+            padding-bottom: 2px;
+            font-size: 14px;
+            font-weight: 300;
+        }
+          .gallery-thumbs .swiper-slide img {
+              height: auto;
+              opacity: 1;
+            border: 1px solid #dadada;
+            background: #fff;
+            transition: 0.4s;
+            box-shadow: 0px 0px 10px rgba(73, 78, 92, 0.1);
+            padding: 2px;
+            cursor: pointer;
+            }
+            
+            .gallery-thumbs .swiper-slide-active img {
+              opacity: 1;
+            box-shadow: 0px 0px 10px rgba(73, 78, 92, 0.5);
+            background: #fff;
+            transition: 0.4s;
+            border: 1px solid #3ab14a;
+            padding: 2px;
+          }
+        .white-popup {
+          position: relative;
+          background: #FFF;
+          padding: 40px;
+          width: auto;
+          max-width: 900px;
+          margin: 20px auto;
+          transition: 1s all;
+        }
+
+        .mfp-bg {}
+
+        .mfp-fade.mfp-bg {
+          opacity: 0;
+          -webkit-transition: all 0.15s ease-out;
+          -moz-transition: all 0.15s ease-out;
+          transition: all 0.15s ease-out;
+        }
+
+
+        /* overlay animate in */
+
+        .mfp-fade.mfp-bg.mfp-ready {
+          opacity: 0.8;
+        }
+
+
+        /* overlay animate out */
+
+        .mfp-fade.mfp-bg.mfp-removing {
+          opacity: 0;
+        }
+
+        .mfp-fade.mfp-wrap .mfp-content {
+          opacity: 0;
+          transition: all 0.4s ease-out;
+        }
+
+        .mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+          opacity: 1;
+        }
+
+        .mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+          opacity: 0;
+        }
+        #aboutinner .content h5 {
+            color: #333;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 21px;
+            font-family: Poppins,sans-serif;
+            padding-top: 20px;
+         }
+        .store-head {
+          font-weight: 500;
+          font-size: 20px!important;
+          font-family: Poppins,sans-serif;
+          color: #323232;
+          line-height: 25px!important;
+          text-align: left;
+          margin: 0 0 10px 0;
+        }
+        .pricetext1 {
+          font-size: 15px!important;
+          line-height: 10px!important;
+          font-weight: 500;
+          color: #000;
+        }
+        .bolder {
+          color:#777;
+          font-weight:600!important;
+          font-size: 18px;
+          line-height: 26px;
+          font-family: Poppins,sans-serif;
+        }
+        #aboutinner {
+            padding: 30px 0 0px 0!important;
+            overflow: hidden;
+            background-size: 100%;
+            background: none!important;
+        }
+        .pricetext {
+          font-size: 25px!important;
+          line-height: 30px!important;
+        }
+        .shipped-time {
+          text-transform: capitalize;
+          line-height: 30px!important;
+          font-size: 14px!important;
+        }
+        .shipped-time1 {
+          text-transform: capitalize;
+          line-height: 15px!important;
+          font-size: 14px!important;
+          padding: 0px 1px 8px!important;
+        }
+        .time-duration {
+          font-size: 12px;
+          text-transform: capitalize;
+          font-weight: 600;
+        }
+        .checked {
+          color: orange;
+        }
+        .unchecked {
+          color: #abacad;
+        }
+        .userimg {
+          width: 100%;
+          border-radius: 50px;
+          float: right;
+          height: 70%;
+        }
+        .username {
+            font-size: 14px;
+            padding: 15px 0px;
+        }
+        .review-status {
+            font-size: 12px;
+            padding: 4px 0px;
+            font-weight: 600;
+            margin-left: -10px;
+        }
+        .review-location {
+            font-size: 13px;
+            line-height: 0px;
+            /* margin-top: -5px; */
+        }
+        .verified {
+            font-size: 12px;
+            font-weight: 600;
+            margin-top: -12px;
+        }
+        .review-desc {
+            font-size: 12px;
+            line-height: 18px;
+            margin: -15px 0px 0px 0px !important;
+            font-weight: 500;
+        }
+        .line-height  {
+          line-height: 0px;
+        }
+        .starsection {
+          display: contents;
+          text-decoration: none!important;
+          text-transform:capitalize!important;
+        }
+        .count-rating {
+          padding: 9px 1px;
+        }
+        .rate {
+              float: left;
+              height: 46px;
+              padding: 0 10px;
+          }
+          label:hover:before {
+              border: 0px solid #4778d9!important;
+          }
+          .rate:not(:checked) > input {
+              position:absolute;
+              top:-9999px;
+          }
+          .rate:not(:checked) > label {
+              float:right;
+              width:1em;
+              overflow:hidden;
+              white-space:nowrap;
+              cursor:pointer;
+              font-size:30px;
+              color:#ccc;
+          }
+          .rate:not(:checked) > label:before {
+              content: '★ ';
+          }
+          .rate > input:checked ~ label {
+              color: orange;    
+          }
+          .rate:not(:checked) > label:hover,
+          .rate:not(:checked) > label:hover ~ label {
+              color: orange;  
+          }
+          .rate > input:checked + label:hover,
+          .rate > input:checked + label:hover ~ label,
+          .rate > input:checked ~ label:hover,
+          .rate > input:checked ~ label:hover ~ label,
+          .rate > label:hover ~ input:checked ~ label {
+              color: orange;
+          }
+
+        .tecnicalinfo {
+          background-color:#f1edee;
+        }
+        .table-bordered td {
+            border: 1px solid #dee2e6;
+            padding: 5px 10px!important;
+            font-size: 14px!important;
+        }
+        .content-head {
+            font-size: 16px;
+            font-weight: 500;
+            padding: 20px 0px 0px;
+            margin: 0 0 15px 0;
+            color: #000;
+        }
+        .manufacturer h5 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
+            margin: 0 0 30px 0;
+            padding: 0px!important;
+            font-size: 14px!important;
+            line-height: 20px;
+         }
+         .font-h5 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
+            margin: 0 0 5px 0!important;
+            padding: 0px!important;
+            font-size: 14px!important;
+            line-height: 20px;
+         }
+        /* Tooltip */
+        .tooltip {
+          position: relative;
+          display: contents;
+          border-bottom: 1px dotted black;
+        }
+
+        .tooltip .tooltiptext {
+          visibility: hidden;
+          width: 240px;
+          top: 55%;
+          left: -15%;
+          margin-left: -60px;
+          background-color: #fff;
+          color: #000;
+          text-align: center;
+          border-radius: 6px;
+          padding: 10px 10px;
+
+          /* Position the tooltip */
+          position: absolute;
+          z-index: 1;
+        }
+        
+        .tooltip:hover .tooltiptext {
+          visibility: visible;
+        }
+        .hidedivrow {
+          display:none;
+        }
+
+        /* Three column layout */
+          .side {
+            float: left;
+            width: 15%;
+            margin-top:10px;
+            padding-left: 10px;
+            font-size: 12px;
+            font-weight: 400;
+          }
+
+          .middle {
+            margin-top:10px;
+            float: left;
+            width: 70%;
+          }
+
+          /* Place text to the right */
+          .right {
+            text-align: right;
+          }
+
+          /* Clear floats after the columns */
+          .row:after {
+            content: "";
+            display: table;
+            clear: both;
+          }
+
+          /* The bar container */
+          .bar-container {
+            width: 90%;
+            background-color: #f1f1f1;
+            text-align: center;
+            color: white;
+            border: 1px solid #0000002b;
+            border-radius: 2px;
+          }
+          
+          .customer-ratings {
+              font-size: 13px;
+              padding: 5px 15px 6px;
+              margin-bottom: 3px!important;
+          }
+          .fa-caret-down {
+            margin-left: -240%;
+          }
+          .w3-display-topright {
+              position: absolute;
+              right: 0;
+              top: 0;
+              z-index: 1;
+          }
+          .form-head {
+            font-size: 12px;
+            position: absolute;
+            bottom: -18px;
+          }
+          .headerinner-fixed a:hover {
+              color: #000!important;
+              padding-top: 15px!important;
+          }
+          .navlinks {
+            display: block;
+          }
+          #myLinks { 
+            display:none;
+          }
+          .cardbtn {
+            width: 100%;
+          }
+          .shoppingcart {
+            font-size: 20px!important;
+            float: left;
+          }
+          .cartlink {
+            position: relative;
+            top: -12px;
+          }
+          .cart-text {
+              position: absolute;
+              left: 12px;
+              bottom: 5px;
+              font-weight: 600;
+              color: #e42518
+          }
+          /* Individual bars */
+          .bar-5 {width: 60%; height: 18px; background-color: orange;}
+          .bar-4 {width: 30%; height: 18px; background-color: orange;}
+          .bar-3 {width: 10%; height: 18px; background-color: orange;}
+          .bar-2 {width: 4%; height: 18px; background-color: orange;}
+          .bar-1 {width: 15%; height: 18px; background-color: orange;}
+
+            .cust-reviewimg {
+                width: 100%;
+            }
+          /* Responsive layout - make the columns stack on top of each other instead of next to each other */
+          @media (max-width: 400px) {
+            /* .side, .middle {
+              width: 100%;
+            } */
+            .right {
+              display: none;
+            }
+          }
+        @media (min-width: 1200px ) and (max-width: 2560px) {
+          .manufacture-container {
+              max-width: 1000px!important;
+          }
+          .icon {
+            display:none;
+          }
+          .mobilecart-view {
+            display:none;
+          }
+          .mobnavlinks {
+            display: none;
+          }
+        }
+        @media (min-width: 993px) {
+          .w3-modal-content {
+              width: 700px;
+              border-radius: 10px;
+          }
+          .w3-container, .w3-panel {
+              padding: 2.01em 25px;
+          }
+          .icon {
+            display:none;
+          }
+          .mobnavlinks {
+            display: none;
+          }
+        }
+        
+
+        @media (max-width: 768px) {
+          .fa-caret-down {
+              margin-left:  -140%;
+          }
+          .w3-main, #main {
+               transition: margin-left .4s;
+               margin-top: -10px;
+            }
+          .content {
+            margin-top: 0%;
+          }
+          #productsinner {
+               padding: 100px 0 0px 0!important;
+            }
+          .manufacture-container {
+              max-width: 1000px!important;
+          }
+          .userimg {
+              width: 50px!important;
+              border-radius: 30px!important;
+              height: 50px;
+              float: left!important;
+          }
+          .cust-reviewimg {
+              width: 100%;
+              margin-bottom: 10%;
+          }
+          .btn {
+              margin-top: 5%;
+          }
+          div#id01 {
+            top: 5%;
+            bottom: 7%;
+            height: auto!important;
+          }
+          .navlinks {
+            display:none;
+          }
+          .mobnavlinks {
+            display:grid;
+          }
+          .icon {
+              position: fixed;
+              right: 5%;
+              top: 6px;
+          }
+          #myLinks {
+              position: relative;
+              padding-top: 12%;
+              font-size: 16px!important;
+          }
+          .cartlink {
+                position: relative;
+                top: 0px;
+            }
+            .mobilecart-view {
+               float: right;
+               left: -10%;
+               top: -5px;
+            }
+            .pc-tab section div {
+               margin-left: 10px;
+            }
+            .footerlinks {
+                text-align: center;
+            }
+            /* .bold600 {
+                font-weight: 600;
+                float: left;
+            } */
+            .mobnavlinks {
+                display: grid;
+            }
+            .socials {
+                text-align: center!important;
+                margin-bottom: 10px;
+            }
+            .copyright {
+                display: flex!important;
+                justify-content: center!important;
+            }
+            .footerbold600 {
+                font-weight: 600;
+                display: flex;
+                justify-content: center;
+                margin: -18px;
+            }
+            
+        }
+  </style>
+<script>
+function checkfun(){
+var url_string = window.location.href;
+var url = new URL(url_string);
+var utmsource = url.searchParams.get("utm_source");
+console.log(utmsource);
+document.getElementById("sourceId").value = utmsource;
+//$("#sourceId").val(utm_source);
+var utmmedium =  url.searchParams.get("utm_medium");
+document.getElementById('mediumId').value = utmmedium;
+var utmcampaign = url.searchParams.get("utm_campaign");
+document.getElementById('campaignId').value = utmcampaign;
+//document.getElementById("fmsvital").submit();
+}
+function checkbuttonfun(){
+var url_string = window.location.href;
+var url = new URL(url_string);
+var utmsource = url.searchParams.get("utm_source");
+console.log(utmsource);
+document.getElementById("sourceId").value = utmsource;
+//$("#sourceId").val(utm_source);
+var utmmedium =  url.searchParams.get("utm_medium");
+document.getElementById('mediumId').value = utmmedium;
+var utmcampaign = url.searchParams.get("utm_campaign");
+document.getElementById('campaignId').value = utmcampaign;
+document.getElementById("fmsvital").submit();
+}
+
+
+
+</script>
+
+<!-- Event snippet for Purchase of Vital 3.0 on store.goqii.com conversion page In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. --> <script> function gtag_report_conversion(url) { var callback = function () { if (typeof(url) != 'undefined') { window.location = url; } }; gtag('event', 'conversion', { 'send_to': 'AW-923463085/hnD_CJjpgNUBEK3bq7gD', 'transaction_id': '', 'event_callback': callback }); return false; } </script>
+ <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-48437558-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+</head>
+   <body>
+   <header id="headerinner" class="headerinner-fixed">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <!--<h1><a href="#intro" class="scrollto">GOQii</a></h1>-->
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <a href="https://store.goqii.com">
+            <img src="https://websitecdn.goqii.com/images/newimages/goqii-logo_store.png" alt="" title=""/>
+        </a>
+      </div>
+      <span class=" navlinks text-center p-t-10"><a href="#" class="open-popup-link mr-1 ">Fitness Trackers </a><span class="ml-1 mr-2"> | </span>
+          <a href="#" class="open-popup-link mr-1">Smart Scale </a><span class="ml-1 mr-2"> | </span>
+          <a href="#" class="open-popup-link mr-1">Health Plans </a><span class="ml-1 mr-2"> | </span>
+          <a href="#" class="open-popup-link">Support</a>
+          <a href="https://store.goqii.com/checkout/cart" class="open-popup-link cartlink pull-right">
+              <img src="https://appcdn.goqii.com/storeimg/24767_1595428870.png" class="carticon"/>
+              <span class="cart-text itemsuccessaddedincart" id="itemsuccessadded">0</span>
+          </a>
+      </span> 
+      <a href="https://store.goqii.com/checkout/cart" class="open-popup-link cartlink mobilecart-view">
+         <img src="https://appcdn.goqii.com/storeimg/24767_1595428870.png" class="carticon"/>
+         <span class="cart-text itemsuccessaddedincart">0</i>
+      </a>  
+      <div id="myLinks">
+        <span class=" mobnavlinks text-center p-t-10"><a href="#" class="open-popup-link mr-1 ">Fitness Trackers </a><span class=" mobileslash ml-1 mr-2"> | </span>
+            <a href="#" class="open-popup-link mr-1">Smart Scale </a><span class=" mobileslash ml-1 mr-2"> | </span>
+            <a href="#" class="open-popup-link mr-1">Health Plans </a><span class=" mobileslash ml-1 mr-2"> | </span>
+            <a href="#" class="open-popup-link">Support</a>  
+            <!-- <a href="#" class="open-popup-link cartlink">
+              <img src="https://appcdn.goqii.com/storeimg/24767_1595428870.png" class="carticon"/>
+              <span class="cart-text">0</i>
+            </a>           -->
+        </span> 
+      </div>
+     
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+  </header>
+<main id="main">
+
+    <!--==========================
+     Products Section
+    ============================-->
+    <section id="productsinner" class="section-bg">
+      <div class="container">
+        <div class="section-header">
+			
+		  <!-- <div class="breadcrumb"><a class="" href="//store.goqii.com/goqii-life-tracker.html">Home</a> <span style="color: #c6c6c6; padding: 0 5px;">/</span>GOQii Vital 3.0 - Body Temperature Monitor</div> -->
+		  <!-- <div class="col-lg-12 content p-l-0 p-r-0 p-t-10  p-b-30">
+          <img src="https://goqiimum.s3.ap-south-1.amazonaws.com/webp/V3Banner-min.jpg" onmouseover="checkfun();"  type="image/webp" style="width: 100%; max-width: 100%;" alt="" title=""/> 
+      </div> -->
+		 <div class="clearfix"></div>	
+			<div class="row">
+				
+			  <div class="col-md-6 col-lg-5 content text-center">
+				
+				  <!-- Swiper -->
+					  <div class="swiper-container gallery-top box">
+						<div class="swiper-wrapper">
+						  <div class="swiper-slide">
+							  <img src="https://appcdn.goqii.com/storeimg/newvital3image.jpg" style="width: auto; max-width: 100%;" alt="" title=""/> 
+						  </div>
+							
+						  <div class="swiper-slide">
+							  <img src="https://goqiimum.s3.ap-south-1.amazonaws.com/webp/B087CHCR1N.PT02-min.jpg" style="width: auto; max-width: 100%;" alt="" title=""/> 
+						  </div>
+						  <div class="swiper-slide">
+							  <img src="https://appcdn.goqii.com/storeimg/29430_1595483053.jpg" style="width: auto; max-width: 100%;" alt="" title=""/> 
+						  </div>
+						  <div class="swiper-slide">
+							  <img src="https://goqiimum.s3.ap-south-1.amazonaws.com/webp/B087CHCR1N.PT04-min.jpg" style="width: auto; max-width: 100%;" alt="" title=""/> 
+						  </div>
+						  <div class="swiper-slide">
+							  <img src=" https://appcdn.goqii.com/storeimg/31832_1594978009.jpg" style="width: auto; max-width: 100%;" alt="" title=""/> 
+						  </div> 
+              <div class="swiper-slide">
+							  <img src="https://appcdn.goqii.com/storeimg/15897_1595496951.jpg" style="width: auto; max-width: 100%;" alt="" title=""/> 
+						  </div>
+						  
+						</div>
+						
+						
+					  </div>
+					  <div class="swiper-container gallery-thumbs">
+						<div class="swiper-wrapper">
+						  <div class="swiper-slide">
+							  <img src="https://appcdn.goqii.com/storeimg/newvital3image.jpg" style="width: auto; max-width: 100%;" alt="" title=""/> 
+						  </div>
+						 
+						  <div class="swiper-slide">
+							  <img src="https://goqiimum.s3.ap-south-1.amazonaws.com/webp/B087CHCR1N.PT02-min.jpg" style="width: auto; max-width: 100%;" alt="" title=""/> 
+						  </div>
+						  <div class="swiper-slide">
+							  <img src="https://appcdn.goqii.com/storeimg/29430_1595483053.jpg" style="width: auto; max-width: 100%;" alt="" title=""/> 
+						  </div>
+
+						  <div class="swiper-slide">
+							  <img src="https://goqiimum.s3.ap-south-1.amazonaws.com/webp/B087CHCR1N.PT04-min.jpg" style="width: auto; max-width: 100%;" alt="" title=""/> 
+						  </div>
+						 				  
+              <div class="swiper-slide">
+							  <img src=" https://appcdn.goqii.com/storeimg/31832_1594978009.jpg" style="width: auto; max-width: 100%;" alt="" title=""/> 
+						  </div>
+              <div class="swiper-slide">
+							  <img src="https://appcdn.goqii.com/storeimg/15897_1595496951.jpg" style="width: auto; max-width: 100%;" alt="" title=""/> 
+						  </div>
+						  
+						<!-- Add Arrows --> 
+						<!-- 
+						<div class="swiper-button-next swiper-button-white"></div>
+						<div class="swiper-button-prev swiper-button-white"></div>
+						-->
+					</div>	
+					  </div>  
+				    
+			  </div>
+				
+			  <div class="col-md-6 col-lg-7 content" onmouseover="checkfun()">
+			<form name="fmsvital" id="fmsvital"  action="//store.goqii.com/addtocart.php" method="POST" enctype="multipart/form-data">
+      <!-- <h1 style="margin: 0 0 -10px 0;">GOQ<span class="text-lowercase">ii</span> <span style="font-style: italic; color: #ea232a;" class="bold600">VITAL 3.0 - BODY TEMPERATURE ACTIVITY TRACKER</span></h1>-->
+ <input type="hidden"  name="productid" value="14" id ="productid" />
+        <input type="hidden" name="sourceId" id="sourceId" value=""/>
+        <input type="hidden" name="mediumId" id="mediumId" value=""/>
+        <input type="hidden" name="campaignId" id="campaignId" value=""/>
+	<input type="hidden" name="bandColor" id="bandColor" value="0"/>
+
+      <h1 class="store-head">GOQ<span class="text-lowercase">ii</span> <span style="font-style: italic;" class="bold600">VITAL 3.0 - BODY TEMPERATURE MONITOR With 3 MONTHS PERSONAL CARE PLAN</span></h1>
+      <span class="pricetext1">+ Free GOQii Athleisure Duffel Bag & GOQii Pro AER95 Mask Worth Rs. 2899 </span>
+      <!-- <br/> + Free Bag Worth Rs. 2500 <br/> <span class="p-l-15">Total Value : Rs. 2899 Worth Free</span> -->
+      <!-- <p style="
+        font-size: 15px;
+        font-weight: 500;
+        margin-bottom: 8px;
+        padding-top: 5px;
+        line-height: 21px;
+      ">
+          GOQii Vital 3.0 + Temperature Features
+      </p> -->
+
+          <div class="col-12 p-l-10">
+            <div class="row">
+             <div class="tooltip">             
+                <div class="col-5 col-md-3 p-t-10">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star unchecked"></span>
+                </div>
+                <div class="col-2 col-md-1 p-t-10">
+                  <i class="fa fa-caret-down" style="font-size:20px; padding: 1px 0px;"></i>
+                  <div class="tooltiptext">
+                     <div class="row">
+                        <div class="col-7 text-left">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                        </div>
+                        <div class="col-5 text-left">
+                            <h4 class="rating-count text-primary"><strong>35 ratings</strong></h4>
+                        </div>
+                        <div class="col-7 text-left">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star unchecked"></span>                           
+                        </div>
+                        <div class="col-5 text-left">
+                            <h4 class="rating-count text-primary"><strong>3 ratings</strong></h4>
+                        </div>
+                        <div class="col-7 text-left">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span> 
+                            <span class="fa fa-star unchecked"></span>
+                            <span class="fa fa-star unchecked"></span>                           
+                        </div>
+                        <div class="col-5 text-left">
+                            <h4 class="rating-count text-primary"><strong>2 ratings</strong></h4>
+                        </div>
+                        <div class="col-7 text-left">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span> 
+                            <span class="fa fa-star unchecked"></span>
+                            <span class="fa fa-star unchecked"></span>
+                            <span class="fa fa-star unchecked"></span>                          
+                        </div>
+                        <div class="col-5 text-left">
+                            <h4 class="rating-count text-primary"><strong>1 ratings</strong></h4>
+                        </div>
+                        <div class="col-7 text-left">
+                            <span class="fa fa-star checked"></span>  
+                            <span class="fa fa-star unchecked"></span>
+                            <span class="fa fa-star unchecked"></span>                          
+                            <span class="fa fa-star unchecked"></span>
+                            <span class="fa fa-star unchecked"></span>
+                        </div>
+                        <div class="col-5 text-left">
+                            <h4 class="rating-count text-primary"><strong>1 ratings</strong></h4>
+                        </div>
+                     </div>
+                  </div>
+                </div>               
+              </div>  
+              <a href="#review" class="starsection"><span class="count-rating text-primary"><u>42 ratings</u></span></a>             
+            </div>
+          </div>
+          <div class="col-12 col-md-12 mt-1 mb-1" style="border-bottom: 1px solid #e0dbdbb8;"></div>
+          <div class="row">
+          <div class="col-md-8">
+          <div class="form-group">
+          <a href="javascript:void(0);"  style="outline: none; text-decoration: none;">
+          <div class="md-radio md-radio-inline text-center">
+
+          <!-- <input id="1b" type="radio" name="productid" value="14" checked="checked"/>
+          <label for="1b"></label>
+          <h2>3 months</h2>-->
+          <h4 class="shipped-time text-left" style="color: #3c3a3a;font-weight: 600;">M.R.P. : <i class="fas fa-rupee-sign" style="font-size: 12px!important"></i> <span style="text-decoration: line-through;">3,999.00</span></h4>
+          <h3 class="pricetext text-dark text-left"> Price : <i class="fas fa-rupee-sign" style="font-size: 22px!important"></i>3,799.00</h3>
+          <h4 style="margin-left:-40%;line-height: 6px;"><span style="color: #ea232a" onmouseover="checkfun();">*</span>Incl. of GST</h4>
+          <h4 class="shipped-time text-left p-t-10" style="color: #3c3a3a;font-weight: 600;">You Save:<i class="fas fa-rupee-sign" style="font-size: 12px!important"></i>200(5%)</h4>
+          <!-- <div class="row">
+              <div class="col-md-12 pt-md-0">
+                    <a class="btn btn-back" href="javascript:history.back();">Add to Cart</a>
+                    <button type="submit" title="PROCEED" class="btn btn-proceed" onclick="ga('send', 'event', 'Store GOQii Vital 3.0', 'PROCEED', 'Click on Proceed to checkout cart');"><span onmouseover="checkfun();"><span>Buy Now</span></span></button>
+              </div> 
+          </div> -->
+          <h4 class="shipped-time text-left p-t-10">Ships within 24 hrs.</h4>
+          <h4 class="shipped-time1 text-left text-success p-t-10">Free delivery</h4>
+          <h5 class="time-duration text-danger text-left">*The delivery period varies as per the COVID conditions in the delivery area.</h5> 
+          </div></a>
+          </div>
+          <div class="col-12 col-md-12 mt-1 mb-1" style="border-bottom: 1px solid #e0dbdbb8;"></div>
+          <p style="
+            font-size: 15px;
+            font-weight: 500;
+            margin-bottom: 8px;
+            padding-top: 5px;
+            line-height: 21px;
+          ">
+            Features
+          </p>
+          <div class="col-12 p-l-20">
+            <ul style="list-style:disc">
+              <li>Track all-day activities like steps, distance, calories burned, Active time.  </li>
+              <li>Auto Sleep Tracking</li>
+              <li>Measure Body Temperature </li>
+              <li>Measure Blood Pressure</li>
+              <li>24x7 Heart Rate Monitoring </li>
+              <li>Multiple Exercise Mode</li>
+              <li>Phone Notifications such as messages, calls, Whatsapp, Facebook, etc.</li>
+              <li>Other Features -Alarms, Inactivity Alerts, Weather Info</li>
+              <li>Water Proof</li>
+              <li>Upto 7 days Battery life</li>
+              <li>Build-in USB charger ( No Separate Charger  Required)</li> 
+          </ul>
+        </div>
+<!-- <h2 style="text-transform: capitalize; color: #333333; font-weight: 400; margin-bottom: 10px;">The world's first smart wrist watch & activity tracker with sensors to detect body temperature.</h2>-->
+
+ 
+ <span class="" style="font-size:14px;">For Indian residents with a local shipping address</span>
+ <!-- <p>
+GOQii Health Plans<span class="pull-right"><a href="#test-popup" class="open-popup-link">Policy</a></span>
+ </p> -->
+                                  <div id="test-popup" class="white-popup mfp-hide">
+                                      <p style="font-size: 20px;"><b>End of Subscription</b></p>
+                                      <ul>
+                                          <li>At the end of your subscribed plan you need to renew your coaching services.</li>
+                                          <li>However, if you choose not to renew your subscriptions you don&rsquo;t have return your GOQii band. You can continue to use your GOQii band and GOQii application with no additional charges. Only the coaching services will discontinue.</li>
+                                      </ul>
+                                      <p style="font-size: 20px;"><b>Renewals</b>:</p>
+                                      <ul>
+                                          <li>Visit www.goqii.com/renewals or contact your coach or write to renewals@goqii.com for any offers.</li>
+                                      </ul>
+                                      <p style="font-size: 20px;"><strong> Warranty:</strong></p>
+                                      <ul>
+                                          <li>GOQii Tracker (Device) is completely covered for all manufacturing defects for the duration of your subscription plan.</li>
+                                          <li>To avail the warranty, you would have to raise a support ticket via the GOQii APP.</li>
+                                          <li>You will have to courier the GOQii Device without the strap to the GOQii office.</li>
+                                          <li>On receipt of the same, GOQii will send you a new Device.</li>
+                                          <li>Kindly Note:</li>
+                                          <li>Warranty would not be applicable in case you lose your Tracker or damage it.</li>
+                                          <li>Warranty would not be applicable on the GOQii strap.</li>
+                                      </ul>
+                                      <p style="font-size: 20px;"><b> Cancellation and Return Policy:</b></p>
+                                      <ul>
+                                          <li>You can return your GOQii to the Company within a week; (07) days of delivery by placing a "Cancel Order" request by phone call with the Company&rsquo;s Customer Care Centre on 18003130390 or via email to support@goqii.com. Returns will only be accepted for unused product(s) and you will be required to dispatch the product using a reputed courier in your respective area within one (1) day from receipt of CANCEL ORDER request. Products must be returned in brand new and unopened condition with all the original packing, tags, inbox literature, scratch card, freebies and accessories.</li>
+                                          <li>It is advised that the return packets should be strongly and adequately packed so that there is no damage to the products during transit. The returned products are subject to verification and checks by GOQii in order to determine the legitimacy of the complaint / return.</li>
+                                          <li>All eligible refunds against Cancellation or Returns of Orders will be subject to deduction of 2.5% Transaction Fee of the Product Price paid, to cover Banking, Transaction charges and Surcharges. Additionally, GOQii will deduct Rs. 100/- to cover Shipping and Handling Charges and the balance would be refunded to you. By requesting a refund the company is given to understand that you agree to the charges and terms set forth herewith.</li>
+                                          <li>All refunds will be completed within 7-21 working days via a reversal or payment to your account or via cheque, depending on the current circumstances as determined by GOQii.</li>
+                                          <li>The cost for returning the package must be borne by you.</li>
+                                      </ul>
+                                  </div>
+
+ 
+<!--<div class="col-md-4">
+<div class="form-group boxselect">
+<div class="md-radio md-radio-inline text-center">
+ <input id="3b" type="radio" name="productid" value="53" checked="checked"/>
+ <label for="3b"></label>
+ <h2>12 months</h2>
+ <h3><i class="fas fa-rupee-sign"></i> 5,999</h3>
+ <h4><span style="color: #ea232a">*</span>Incl. of GST</h4>
+
+</div>
+</div>
+</div>
+ 
+<div class="col-md-4">
+<div class="form-group boxselect">
+<div class="md-radio md-radio-inline text-center">
+ <input id="2b" type="radio" name="productid" value="52"/>
+ <label for="2b"></label>
+ <h2>6 months</h2>
+ <h3><i class="fas fa-rupee-sign"></i> 4,999</h3>
+ <h4><span style="color: #ea232a">*</span>Incl. of GST</h4>
+
+</div>
+</div>
+</div>-->
+                   
+ </div>
+       <div class="col-md-4">
+            <div class="card mt-3" style="background-color: #eee;">
+              <div class="card-body">
+              <div id="quantityLayoutLow_feature_div" class="feature" data-feature-name="quantityLayoutLow" data-cel-widget="quantityLayoutLow_feature_div">
+                <div class="a-row a-spacing-mini">
+                <div class="a-column a-span12 a-text-left a-spacing-small">
+                <div id="selectQuantity" class="a-section a-spacing-none a-padding-none">
+                <span class="a-declarative" data-action="quantity-dropdown" data-quantity-dropdown="{}">
+                <div class="a-row a-spacing-base">
+
+
+                <div class="a-column a-span12 a-text-left">
+                    <span class="a-dropdown-container"><label for="quantity" class="a-native-dropdown">Quantity:</label><select name="quantity" autocomplete="off" id="cartquantity" tabindex="0" class="a-native-dropdown ml-2">
+                    <option value="1" selected="">1
+                    </option>
+                    <option value="2">2
+                    </option>
+                    <option value="3">3
+                    </option>
+                    <option value="4">4
+                    </option>
+                    <option value="5">5
+                    </option>
+                    <option value="6">6
+                    </option>
+                    <option value="7">7
+                    </option>
+                    <option value="8">8
+                    </option>
+                    <option value="9">9
+                    </option>
+                    <option value="10">10
+                    </option>
+                    <option value="11">11
+                    </option>
+                    <option value="12">12
+                    </option>
+                    <option value="13">13
+                    </option>
+                    <option value="14">14
+                    </option>
+                    <option value="15">15
+                    </option>
+                    </select>
+                    </div>
+                    </div>
+
+                    </span>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 pt-md-0 text-center">
+                          <a class="btn btn-warning btn-sm text-dark cardbtn mt-2" href="javascript:void(0);" style="text-decoration:none;" id="addtocart"><i class="fa fa-shopping-cart shoppingcart" aria-hidden="true"></i>Add to Cart</a>
+                          <a href="javascript:void(0);"><button type="button"  id="checkoutbutton" title="PROCEED" class="btn btn-success btn-sm text-white cardbtn mt-2" onclick="ga('send', 'event', 'Store GOQii Vital 3.0', 'PROCEED', 'Click on Proceed to checkout cart');"><span onmouseover="checkfun();"><span><i class="fa fa-arrow-circle-right shoppingcart" aria-hidden="true"></i>Buy Now</span></span></button></a>
+                    </div> 
+                </div>
+
+                </div>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+ <div class="row">
+ <!-- <div class="col-md-12 pt-5 pt-md-0 pt-lg-2">
+ <span class="">Color Select</span>
+     <div class="product-configuration">
+
+        
+        <div class="product-color">
+        <div class="color-choose">
+        <div> 
+        <input data-image="black" type="radio" id="black" name="bandColor" value="0" checked="checked"/>
+        <label for="black"><span></span></label> 
+        <input type="hidden"  name="productid" value="14" id ="productid" /> 
+        <input type="hidden" name="sourceId" id="sourceId" value=""/>
+        <input type="hidden" name="mediumId" id="mediumId" value=""/>
+        <input type="hidden" name="campaignId" id="campaignId" value=""/>
+
+        </div>
+
+         <div>
+        <input data-image="red" type="radio" id="red" name="bandColor" value="1" />
+        <label for="red"><span></span></label>
+        </div>
+        </div>
+
+        </div>
+
+ 
+</div> -->
+ 
+ </div>
+ 
+ 
+ 
+ </div>
+</form>	
+			
+			  </div>
+
+
+			</div>
+			
+        </div>
+
+
+        
+
+      </div>
+    </section><!-- #Products -->
+    <section class="technical-details mt-5">
+      <div class="container manufacture-container">
+            <div class="row">
+              <div class="col-12 col-md-12 content p-l-20 p-r-0 ">
+                <h3 class="bolder">Technical Details</h3>
+              </div>
+              <div class="col-12 col-md-12 content ">
+                  <div class="table-responsive">
+                  <table class="table table-bordered">
+                      <tbody>
+                        <tr>
+                          <td class="tecnicalinfo" width="50%" >Brand</td>
+                          <td width="50%">GOQii</td>                          
+                        </tr>
+                        <tr>
+                          <td class="tecnicalinfo" width="50%">Colour</td>
+                          <td>Black</td>                        
+                        </tr>
+                        <tr>
+                          <td class="tecnicalinfo" width="50%">Frame-Material</td>
+                          <td>Carbon-fiber</td>                         
+                        </tr>
+                        <tr>
+                          <td class="tecnicalinfo" width="50%">Sport</td>
+                          <td>Fitness</td>                         
+                        </tr>
+                        <tr>
+                          <td class="tecnicalinfo" width="50%">Style</td>
+                          <td>Temperature Tracker with 3 Months Personal Coaching</td>                         
+                        </tr>
+                        <tr>
+                          <td class="tecnicalinfo" width="50%">Manufacturer</td>
+                          <td>GOQii Technologies Pvt Ltd - MH</td>                         
+                        </tr>
+                        <tr>
+                          <td class="tecnicalinfo" width="50%">Manufacturer Contact</td>
+                          <td>GOQii Technologies Private Ltd., 101, Satyam Tower, Sanghi Industrial Estate, Govandi East, Mumbai-400088</td>                         
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+              </div>
+            </div>
+            <div class="row mt-4" style="border-bottom: 1px solid #f1f0f0;"></div>
+      </div>      
+    </section> 
+	 
+	 <section id="aboutinner" class="">
+      <div class="container manufacture-container">
+	  
+				  <div class="col-lg-12 content p-l-0 p-r-0 ">
+					<h3 class="bolder">Key Features</h3>
+				  </div>
+				 
+		 	         <div class="row manufacturer mt-4" style="text-align:center;">
+			 	<!--<div class="col-lg-12 content p-l-0 p-r-0 p-t-30">-->
+					
+					<!--<div class="row">-->
+					<div class="col-md-6 col-lg-4">
+					<img src="https://goqiimum.s3.ap-south-1.amazonaws.com/webp/temp.jpg" class="goqiiimg" style="max-width: 100%;" alt="" title=""/> 
+          <h4 class="content-head" style="text-align:left;">Body Temperature Tracking</h4>
+					<h5 style="text-align:left;">GOQii presents World's first wearable device with sensors that can measure Body Temperature. Body temperature is very important when checking for person's health and with continous tracking, you can be more self reliant and conscious about your health.</h5>	
+					</div>
+					
+					<div class="col-md-6 col-lg-4">
+					<img src="https://goqiimum.s3.ap-south-1.amazonaws.com/webp/Bloodpressure-V3.jpg" class="goqiiimg" style=" max-width: 100%;" alt="" title=""/> 
+				  <h4 class="content-head" style="text-align:left;">Blood Pressure Monitor</h4> 
+        	<h5 style="text-align:left;">The new blood pressure monitor on the tracker reads your systolic and diastolic blood pressure to track it. The inbuilt BP application integeration with the tracker helps to monitor BP as per the existing blood pressure of the GOQii user.</h5>
+					</div>
+						
+					<div class="col-md-6 col-lg-4">
+					<img src="https://goqiimum.s3.ap-south-1.amazonaws.com/webp/HR-Monitor-v3.jpg" class="goqiiimg" style=" max-width: 100%;" alt="" title=""/> 
+					<h4 class="content-head" style="text-align:left;">24*7 Continuous Heart Rate Tracking</h4>
+          <h5 style="text-align:left;">GOQii Vital 3's  cutting edge 24*7  heart rate monitor utilizing AI-driven algorithms, for high-precision readings. Infrared technology for continuous, non disruptive heart rate monitoring at night. </h5>
+					</div>
+						
+				<!--	</div>
+					
+		  		</div>
+				<div class="col-lg-12 content p-l-0 p-r-0 p-t-30">
+				        <div class="row">-->
+					<div class="col-md-6 col-lg-4">
+					<img src="https://goqiimum.s3.ap-south-1.amazonaws.com/webp/Exce-mode-v3.jpg" style=" max-width: 100%;" alt="" title=""/> 
+					<h4 class="content-head" style="text-align:left;">Exercise Tracker</h4>
+          <h5 style="text-align:left;">The 'Exercise Mode' on the new GOQii tracker enables you to track and monitor your steps, heart rate and time duration of your activities. Track exercise real time along with exercise duration, pace, heart rate.</h5>	
+					</div>
+					
+					<div class="col-md-6 col-lg-4">
+					<img src="https://goqiimum.s3.ap-south-1.amazonaws.com/webp/sleepmode-v3.jpg" style=" max-width: 100%;" alt="" title=""/> 
+					<h4 class="content-head" style="text-align:left;">Auto Sleep Tracking</h4>
+          <h5 style="text-align:left;">Real-time monitoring and analysis of sleeping heart rate and breathing, for sleep quality tracking at a glance. .</h5>
+					</div>
+						
+					<div class="col-md-6 col-lg-4">
+					<img src="https://goqiimum.s3.ap-south-1.amazonaws.com/webp/phonenotification-v3.jpg" style=" max-width: 100%;" alt="" title=""/> 
+					<h4 class="content-head" style="text-align:left;">Connected with phone notifications</h4>
+          <h5 style="text-align:left;">Now there’s no need to take your phone out of your pocket to know who is calling. Simply lift your wrist to check incoming calls and preview messages on your new GOQii Vital 3. </h5>
+					</div>
+						
+				<!--	</div>
+					
+		  		</div>
+			  
+			  <div class="col-lg-12 content p-l-0 p-r-0 p-t-30">
+					
+					<div class="row">-->
+          <div class="col-lg-12 content p-l-20 p-r-0 p-t-20 p-b-10">
+					<h3 class="bolder" style="text-align:left;">Train and Consult</h3>
+				  </div>
+					<div class="col-md-6 col-lg-4">
+					<img src="https://goqiimum.s3.ap-south-1.amazonaws.com/webp/coachesecg.jpg" style=" max-width: 100%;" alt="" title=""/> 
+					<h4 class="content-head" style="text-align:left;">Coaches</h4>
+          <h5 style="text-align:left;">GOQii gives you the option to choose your nutritionist, personal trainer and wellness expert to motivate you and support you in the right steps towards your well-being.</h5>	
+					</div>
+					
+					<div class="col-md-6 col-lg-4">
+					<img src="https://goqiimum.s3.ap-south-1.amazonaws.com/webp/doctorecg.jpg" style=" max-width: 100%;" alt="" title=""/> 
+					<h4 class="content-head" style="text-align:left;">Doctors</h4>
+          <h5 style="text-align:left;">This integrated service connects you with a board certified general practitioner who can provide preventive consultations over emails and calls. </h5>
+					</div>
+						
+					<div class="col-md-6 col-lg-4">
+					<img src="https://goqiimum.s3.ap-south-1.amazonaws.com/webp/playecg.jpg" style=" max-width: 100%;" alt="" title=""/> 
+					<h4 class="content-head" style="text-align:left;">GOQii Play</h4>
+          <h5 style="text-align:left;">This is an interactive live-video platform where you can get inputs from fitness experts as they talk about lifestyle tips and perform fitness workouts. </h5>
+					</div>
+						
+					<!--</div>
+					
+		  		</div>
+			  
+			    <div class="col-lg-12 content p-l-0 p-r-0 p-t-30">
+					
+					<div class="row">-->
+          <div class="col-lg-12 content p-l-20 p-r-0 p-t-20 p-b-10">
+					<h3 class="bolder" style="text-align:left;">GOQii Ecosystem</h3>
+				  </div>
+					<div class="col-md-6 col-lg-4">
+					<img src="https://goqiimum.s3.ap-south-1.amazonaws.com/webp/healthlockerecg.jpg" style="max-width: 100%;" alt="" title=""/> 
+					<h4 class="content-head" style="text-align:left;">Health Locker</h4>
+          <h5 style="text-align:left;">GOQii provides its users and their selected family members with unlimited cloud storage to Health Locker to record their medical tests and readings</h5>	
+					</div>
+					
+					<div class="col-md-6 col-lg-4">
+					<img src="https://goqiimum.s3.ap-south-1.amazonaws.com/webp/healthstoreecg.jpg" style=" max-width: 100%;" alt="" title=""/> 
+					<h4 class="content-head" style="text-align:left;">GOQii Ecosystem</h4>
+          <h5 style="text-align:left;">GOQii Health Store is a holistic services marketplace. offering a range of health related products and services. We have partnered with various companies that offer healthy, natural and organic products to make a positive lifestyle change.  </h5>
+					</div>
+						
+					<div class="col-md-6 col-lg-4">
+					<img src="https://goqiimum.s3.ap-south-1.amazonaws.com/webp/ecosystemecgweb2019.jpg" style=" max-width: 100%;" alt="" title=""/> 
+					<h4 class="content-head" style="text-align:left;">Health Store</h4>
+          <h5 style="text-align:left;">GOQii ecosystem combines a Fitness Tracker, an App, Care Team including a Personal Coach, Experts and a Doctor. Through Karma, GOQii enables you to walk, earn and donate karma points to social causes.</h5>
+					</div>
+						
+					<!--</div>-->
+					
+					<!--<div class="col-lg-12 content p-l-0 p-r-0 p-t-30">
+				  	<img src="https://websitecdn.goqii.com/images/goqiistore/image_features.jpg" style="width: 100%; max-width: 100%;" alt="" title=""/> 
+			  		</div>
+					
+		  		</div>-->
+			  
+		  
+
+		 </div>
+	 </section><!-- #Products -->
+    
+    <section class="review mb-5" id="review">
+       <div class="container-fluid">
+            <div class="row">
+             
+               <div class="col-12 col-md-4">
+                    <div class="col-12 col-md-12 content">
+                        <h3 class="bolder">Customer Reviews</h3>
+                    </div>
+                    <span class="heading" style="padding-left: 15px;">4.2 out of 5</span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <p class="customer-ratings">42 customer ratings</p>
+
+
+                    <div class="row p-l-20 p-r-10">
+                      <div class="side">
+                        <div>5 star</div>
+                      </div>
+                      <div class="middle">
+                        <div class="bar-container">
+                          <div class="bar-5"></div>
+                        </div>
+                      </div>
+                      <div class="side">
+                        <div>61%</div>
+                      </div>
+                      <div class="side">
+                        <div>4 star</div>
+                      </div>
+                      <div class="middle">
+                        <div class="bar-container">
+                          <div class="bar-4"></div>
+                        </div>
+                      </div>
+                      <div class="side">
+                        <div>16%</div>
+                      </div>
+                      <div class="side">
+                        <div>3 star</div>
+                      </div>
+                      <div class="middle">
+                        <div class="bar-container">
+                          <div class="bar-3"></div>
+                        </div>
+                      </div>
+                      <div class="side">
+                        <div>6%</div>
+                      </div>
+                      <div class="side">
+                        <div>2 star</div>
+                      </div>
+                      <div class="middle">
+                        <div class="bar-container">
+                          <div class="bar-2"></div>
+                        </div>
+                      </div>
+                      <div class="side">
+                        <div>4%</div>
+                      </div>
+                      <div class="side">
+                        <div>1 star</div>
+                      </div>
+                      <div class="middle">
+                        <div class="bar-container">
+                          <div class="bar-1"></div>
+                        </div>
+                      </div>
+                      <div class="side">
+                        <div>8%</div>
+                      </div>
+                    </div>
+                    <hr/>
+                    <div class="row">
+                        <div class="col-12 col-md-12 content p-l-25 p-r-0 ">
+                             <h3 class="bolder">Key Features</h3>
+                        </div>
+                        <div class="side p-l-25">
+                          <div>Thickness</div>
+                        </div>
+                        <div class="middle text-right">
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                        </div>
+                        <div class="side">
+                          <div>5.0</div>
+                        </div>
+                        <div class="side p-l-25">
+                          <div>Accuracy</div>
+                        </div>
+                        <div class="middle text-right">
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                        </div>
+                        <div class="side">
+                          <div>5.0</div>
+                        </div>
+                        <div class="side p-l-25">
+                          <div>Warmth</div>
+                        </div>
+                        <div class="middle text-right">
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                        </div>
+                        <div class="side">
+                          <div>5.0</div>
+                        </div>
+                        <div class="side p-l-25">
+                          <div style="width: 100px;padding-top: 4px;">Value for money</div>
+                        </div>
+                        <div class="middle text-right">
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                        </div>
+                        <div class="side">
+                          <div>5.0</div>
+                        </div>                      
+                    </div>
+                    <!--<hr/>
+                     <div class="row">
+                      <div class="col-12 col-md-12 content p-l-25 p-r-0 ">
+                            <h3 class="bolder">Review this product</h3>
+                            <p class="review-desc mt-5">Share your thoughts with other customers</p>
+                      </div>      
+                      <div class="col-11 col-md-11 text-center p-l-25 p-r-0 ">      
+                        <button type="button" onclick="document.getElementById('id01').style.display='block'" 
+                        class="w3-button w3-orange w3-round mt-3">
+                                Write a product review
+                              </button>
+                        </div>
+                        
+                        <div id="id01" class="w3-modal">
+                          <div class="w3-modal-content">
+                            <div class="w3-container">
+                              <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                              <form action="" class="mb-3">
+                                <div class="form-group">
+                                   <div class="row">
+                                      <div class="col-12 col-md-8">
+                                          <label for="email" class="p-t-10">Overall rating</label>
+                                      </div>
+                                      <div class="col-12 col-md-4">
+                                        <div class="rate">
+                                            <input type="radio" id="star5" name="rate" value="5" />
+                                            <label for="star5" title="text">5 stars</label>
+                                            <input type="radio" id="star4" name="rate" value="4" />
+                                            <label for="star4" title="text">4 stars</label>
+                                            <input type="radio" id="star3" name="rate" value="3" />
+                                            <label for="star3" title="text">3 stars</label>
+                                            <input type="radio" id="star2" name="rate" value="2" />
+                                            <label for="star2" title="text">2 stars</label>
+                                            <input type="radio" id="star1" name="rate" value="1" />
+                                            <label for="star1" title="text">1 star</label>
+                                          </div>
+                                      </div>
+                                   </div>
+                                   <div class="col-12 col-md-12 mt-4 mb-4" style="border-bottom: 1px solid #f1f0f0;"></div>
+                                </div>
+                               
+                                <div class="form-group">
+                                    <div class="row">
+                                      <div class="col-12 col-md-12">
+                                          <label for="email" class="p-t-10">Rate features</label>
+                                      </div>
+                                      <div class="col-10">
+                                          <h5 class="form-head">Accuracy</h5>
+                                      </div>
+                                      <div class="col-2">
+                                           <i class="fa fa-close" style="color:red"></i>
+                                      </div>
+                                      <div class="col-12 col-md-12">
+                                          <div class="rate">
+                                              <input type="radio" id="star5" name="rate" value="5" />
+                                              <label for="star5" title="text">5 stars</label>
+                                              <input type="radio" id="star4" name="rate" value="4" />
+                                              <label for="star4" title="text">4 stars</label>
+                                              <input type="radio" id="star3" name="rate" value="3" />
+                                              <label for="star3" title="text">3 stars</label>
+                                              <input type="radio" id="star2" name="rate" value="2" />
+                                              <label for="star2" title="text">2 stars</label>
+                                              <input type="radio" id="star1" name="rate" value="1" />
+                                              <label for="star1" title="text">1 star</label>
+                                            </div>
+                                      </div>
+                                   </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="row">                                     
+                                      <div class="col-10">
+                                          <h5 class="form-head">Thickness</h5>
+                                      </div>
+                                      <div class="col-2">
+                                         <i class="fa fa-close" style="color:red"></i>
+                                      </div>
+                                      <div class="col-12 col-md-12">
+                                          <div class="rate">
+                                              <input type="radio" id="star5" name="rate" value="5" />
+                                              <label for="star5" title="text">5 stars</label>
+                                              <input type="radio" id="star4" name="rate" value="4" />
+                                              <label for="star4" title="text">4 stars</label>
+                                              <input type="radio" id="star3" name="rate" value="3" />
+                                              <label for="star3" title="text">3 stars</label>
+                                              <input type="radio" id="star2" name="rate" value="2" />
+                                              <label for="star2" title="text">2 stars</label>
+                                              <input type="radio" id="star1" name="rate" value="1" />
+                                              <label for="star1" title="text">1 star</label>
+                                            </div>
+                                      </div>
+                                   </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="row">                                     
+                                      <div class="col-10">
+                                          <h5 class="form-head">Value for money</h5>
+                                      </div>
+                                      <div class="col-2">
+                                          <i class="fa fa-close" style="color:red"></i>
+                                      </div>
+                                      <div class="col-12 col-md-12">
+                                          <div class="rate">
+                                              <input type="radio" id="star5" name="rate" value="5" />
+                                              <label for="star5" title="text">5 stars</label>
+                                              <input type="radio" id="star4" name="rate" value="4" />
+                                              <label for="star4" title="text">4 stars</label>
+                                              <input type="radio" id="star3" name="rate" value="3" />
+                                              <label for="star3" title="text">3 stars</label>
+                                              <input type="radio" id="star2" name="rate" value="2" />
+                                              <label for="star2" title="text">2 stars</label>
+                                              <input type="radio" id="star1" name="rate" value="1" />
+                                              <label for="star1" title="text">1 star</label>
+                                            </div>
+                                      </div>
+                                   </div>
+                                   </hr>
+                                </div>
+                                <div class="form-group">
+                                  <label for="email">Add a photo or video</label>
+                                  <p style="font-size: 12px;font-weight: 300;margin-bottom: 15px;">Shoppers find images and videos more helpful than text alone.</p>
+                                  <div class="file-upload-wrapper">
+                                    <input type="file" id="input-file-now" class="file-upload" />
+                                  </div>
+                                </div>
+                                <div class="form-group">
+                                  <label for="email">Add a headline</label>
+                                  <input type="email" class="form-control" id="email" placeholder="What's most important to know ?" name="email">
+                                </div>
+                                <div class="form-group">
+                                  <label for="pwd">Write your review</label>
+                                  <textarea class="form-control" rows="5" id="comment" placeholder="What did you like or dislike ? What did you use for this product?" name="text"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-warning pull-right">Submit</button>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                    </div> -->
+                  </div>  
+               <div class="col-12 col-md-8">
+                    <div class="row">
+                      <div class="col-12 col-md-12 content p-l-20 p-r-0 ">
+                        <h3 class="bolder content">Customer Images</h3>
+                      </div>
+                    </div>
+                  <div class="row">
+                         <div class="col-6 col-md-3">
+                             <img src="https://www.amazon.in/images/I/61gqxGguqPL._CR204,0,1224,1224_UX175.jpg" class="cust-reviewimg"/>
+                         </div>
+                         <div class="col-6 col-md-3">
+                             <img src="https://www.amazon.in/images/I/713TV5ql9zL._CR204,0,1224,1224_UX175.jpg" class="cust-reviewimg"/>
+                         </div>
+                         <div class="col-6 col-md-3">
+                             <img src="https://www.amazon.in/images/I/71Sv6wPcjhL._CR350,0,900,900_UX175.jpg" class="cust-reviewimg"/>
+                         </div>
+                         <div class="col-6 col-md-3">
+                             <img src="https://www.amazon.in/images/I/71X12M3X76L._CR204,0,1224,1224_UX175.jpg" class="cust-reviewimg"/>
+                         </div>
+                         
+                      <div class="col-12 col-md-9 content p-t-10 p-r-0 ">
+                        <h3 class="bolder content p-l-10">Read reviews that mention</h3>
+                        <ul class="nav nav-pills">
+                          <li class="active m-l-10"><button type="button" class="btn"><a data-toggle="pill" href="#home" class="text-muted">Heart Rate</a></button></li>
+                          <li class="m-l-10"><button type="button" class="btn"><a data-toggle="pill" href="#" class="text-muted">Blood Pressure</a></button></li>
+                          <li class="m-l-10"><button type="button" class="btn"><a data-toggle="pill" href="#" class="text-muted">Blood Temperature</a></button></li>
+                          <li class="m-l-10"><button type="button" class="btn"><a data-toggle="pill" href="#" class="text-muted">Rate and Body</a></button></li>
+                          
+                          <li class="m-l-10 m-t-10"><button type="button" class="btn"><a data-toggle="pill" href="#" class="text-muted">Accurate</a></button></li>
+                          <li class="m-l-10 m-t-10"><button type="button" class="btn"><a data-toggle="pill" href="#" class="text-muted">Health</a></button></li>
+                          <li class="m-l-10 m-t-10"><button type="button" class="btn"><a data-toggle="pill" href="#" class="text-muted">App</a></button></li>
+                          <li class="m-l-10 m-t-10"><button type="button" class="btn"><a data-toggle="pill" href="#" class="text-muted">Steps</a></button></li>
+                          <li class="m-l-10 m-t-10"><button type="button" class="btn"><a data-toggle="pill" href="#" class="text-muted">Vital</a></button></li>
+                          <li class="m-l-10 m-t-10"><button type="button" class="btn"><a data-toggle="pill" href="#" class="text-muted">Tracker</a></button></li>
+                          
+                          <li class="m-l-10 m-t-10"><button type="button" class="btn"><a data-toggle="pill" href="#" class="text-muted">Device</a></button></li>
+                          <li class="m-l-10 m-t-10"><button type="button" class="btn"><a data-toggle="pill" href="#" class="text-muted">Points</a></button></li>
+                          <li class="m-l-10 m-t-10"><button type="button" class="btn"><a data-toggle="pill" href="#" class="text-muted">Touch</a></button></li>
+                          <li class="m-l-10 m-t-10"><button type="button" class="btn"><a data-toggle="pill" href="#" class="text-muted">Daily</a></button></li>
+                          <li class="m-l-10 m-t-10"><button type="button" class="btn"><a data-toggle="pill" href="#" class="text-muted">Fitness</a></button></li>
+                          <li class="m-l-10 m-t-10"><button type="button" class="btn"><a data-toggle="pill" href="#" class="text-muted">Sleep</a></button></li>
+                          <li class="m-l-10 m-t-10"><button type="button" class="btn"><a data-toggle="pill" href="#" class="text-muted">Accuracy</a></button></li>
+                        </ul>
+                      </div>
+                      <div class="col-12 col-md-12">
+                         <div class="col-12 col-md-12 mt-4 mb-2" style="border-bottom: 1px solid #f1f0f0;"></div> 
+                      </div>                   
+                      <div class="col-12 col-md-5 mt-3 p-l-25">
+                          <form>
+                            <div class="form-group">
+                              <label for="sel1"></label>
+                                <select class="form-control" id="sel1">
+                                  <option>Top Reviews</option>
+                                  <option>Most Recent</option>
+                                </select>
+                              </div>  
+                          </form>   
+                      </div>
+                  </div>
+
+
+              <div class="tab-content">
+                  <div class="row">
+                        <div class="col-3 col-md-1 m-l-10 mt-4">
+                            <img src=" https://appcdn.goqii.com/storeimg/28638_1594983284.png" class="userimg"/>
+                        </div>
+                        <div class="col-8 col-md-10 p-t-20">
+                            <h4 class="username">Rakesh </h4>
+                        </div>
+                        <div class="col-6 col-md-3 p-l-30">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                        </div>
+                        <div class="col-6 col-md-8">
+                            <h5 class="review-status">Very good</h5>
+                        </div>
+                        <div class="col-12 col-md-12 line-height p-l-30">
+                            <p class="review-location">28 June 2020</p>
+                            <p class="verified text-danger">Verified Purchase</p>   
+                            <p class="review-desc">A compact and light weight tracker with a plethora of features, blood pressure, 
+                            heart rate temperature, have bought it for my father to.monitor his health while he traveles and works out in these testing 
+                            </p>         
+
+                            <div class="col-12 col-md-12 mt-4 mb-4" style="border-bottom: 1px solid #f1f0f0;"></div> 
+                        </div>
+                  </div>
+                    
+                  <div class="row">
+                      <div class="col-3 col-md-1 m-l-10">
+                          <img src=" https://appcdn.goqii.com/storeimg/28638_1594983284.png" class="userimg"/>
+                      </div>
+                      <div class="col-8 col-md-10">
+                          <h4 class="username">Sanni </h4>
+                      </div>
+                      <div class="col-6 col-md-3 p-l-30">
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                      </div>
+                      <div class="col-6 col-md-8">
+                          <h5 class="review-status">Very good</h5>
+                      </div>
+                      <div class="col-12 col-md-12 line-height p-l-30">
+                          <p class="review-location">28 June 2020</p>
+                          <p class="verified text-danger">Verified Purchase</p>   
+                          <p class="review-desc">I am using Goqii product for 2 years and i like it very much, this band measures accurate temperature,BP, heart rate and gives a lot of product offers every day at a price which is equal to zero. 
+                          </p>   
+                          <div class="col-12 col-md-12 mt-4 mb-4" style="border-bottom: 1px solid #f1f0f0;"></div>         
+                      </div>
+                  </div>
+
+                  <div class="row">
+                      <div class="col-3 col-md-1 m-l-10">
+                          <img src=" https://appcdn.goqii.com/storeimg/28638_1594983284.png" class="userimg"/>
+                      </div>
+                      <div class="col-8 col-md-10">
+                          <h4 class="username">Vivek </h4>
+                      </div>
+                      <div class="col-6 col-md-3 p-l-30">
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                      </div>
+                      <div class="col-6 col-md-8">
+                          <h5 class="review-status">Excellent</h5>
+                      </div>
+                      <div class="col-12 col-md-12 line-height p-l-30">
+                          <p class="review-location">30 June 2020</p>
+                          <p class="verified text-danger">Verified Purchase</p>   
+                          <p class="review-desc">I get the perfect reading when I put this band under my armpit which is not really required in normal circumstances since you get a fair idea of the body temperature while wearing it on the wrist.
+
+                                I have been using the BP monitor band in the past which helped me monitor my blood pressure on a daily basis without the cumbersome blood pressure monitor which one ends up using once in three months.
+                                Very thoughtful during these testing times .
+                          </p>   
+                          <div class="col-12 col-md-12 mt-4 mb-4" style="border-bottom: 1px solid #f1f0f0;"></div>         
+                      </div>             
+                  </div>
+
+                  
+
+                  <div class="row showdivrow hidedivrow">
+                      <div class="col-2 col-md-1 m-l-10">
+                          <img src=" https://appcdn.goqii.com/storeimg/28638_1594983284.png" class="userimg"/>
+                      </div>
+                      <div class="col-8 col-md-10">
+                          <h4 class="username">Rohan </h4>
+                      </div>
+                      <div class="col-6 col-md-3 p-l-30">
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                      </div>
+                      <div class="col-6 col-md-8">
+                          <h5 class="review-status">Very good</h5>
+                      </div>
+                      <div class="col-12 col-md-12 line-height p-l-30">
+                          <p class="review-location">12 June 2020</p>
+                          <p class="verified text-danger">Verified Purchase</p>   
+                          <p class="review-desc">This is my second Goqii watch purchase. Good upgrade over the first edition. 
+                          Always love Goqii products for their quality, simplicity and reliability. Would've loved to have more customisation for the 
+                          </p>   
+                          <div class="col-12 col-md-12 mt-4 mb-4" style="border-bottom: 1px solid #f1f0f0;"></div>         
+                      </div>             
+                  </div>
+                                
+
+                  <div class="row showdivrow hidedivrow">
+                      <div class="col-3 col-md-1 m-l-10">
+                          <img src=" https://appcdn.goqii.com/storeimg/28638_1594983284.png" class="userimg"/>
+                      </div>
+                      <div class="col-8 col-md-10 m-l-10">
+                          <h4 class="username">Pankaj </h4>
+                      </div>
+                      <div class="col-6 col-md-3 p-l-30">
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star unchecked"></span>
+                      </div>
+                      <div class="col-6 col-md-8">
+                          <h5 class="review-status">Very good</h5>
+                      </div>
+                      <div class="col-12 col-md-12 line-height p-l-30">
+                          <p class="review-location">01 July 2020</p>
+                          <p class="verified text-danger">Verified Purchase</p>   
+                          <p class="review-desc">The Vital 3.0 is clearly the GOQii's best wearable device yet. With a sporty design and new sensors, the device can continuously track heart rate, body temperature, blood pressure,
+
+                            The remarkable improvements in my body and mind are testament to the value of this product. Most importantly, during this COVID-19 pandemic – I have been able to immediately identify signs of infection in my body and act before it is too late to ensure my family’s safety.
+
+                            The temperature sensor is quiet accurate and I compared it to my digital thermometer and pulse rate is also good
+
+                            The graphs in the app are helpful to track my daily trends
+
+                          </p>  
+                          <div class="col-12 col-md-12 mt-4 mb-4" style="border-bottom: 1px solid #f1f0f0;"></div>          
+                      </div>             
+                  </div>
+
+                  
+
+                  <div class="row showdivrow hidedivrow">
+                      <div class="col-3 col-md-1 m-l-10">
+                          <img src=" https://appcdn.goqii.com/storeimg/28638_1594983284.png" class="userimg"/>
+                      </div>
+                      <div class="col-8 col-md-10">
+                          <h4 class="username">Jayson </h4>
+                      </div>
+                      <div class="col-6 col-md-3 p-l-30">
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                      </div>
+                      <div class="col-6 col-md-8">
+                          <h5 class="review-status">Very good</h5>
+                      </div>
+                      <div class="col-12 col-md-12 line-height p-l-30">
+                          <p class="review-location">on 02 July 2020</p>
+                          <p class="verified text-danger">Verified Purchase</p>   
+                          <p class="review-desc">A good product to have if you are willing to take care of your health and fitness.
+                            I have used for a week now and as of now i found accuracy in BP, Heart rate and body temperature. So as the step count is accurate as compared with phone and other bands i used. Three month plan is good to initiate a fitness propmtness with the help of coach. They are active and guiding well. A good syn with the app as well. Many have raised issues with the sleep monitoring but i found it correct in my case.
+                            Its an indian product manufactured in china.
+                            Go for it!!
+                          </p>    
+                          <div class="col-12 col-md-12 mt-4 mb-4" style="border-bottom: 1px solid #f1f0f0;"></div>        
+                      </div>             
+                  </div>
+
+
+                  <div class="row">
+                      <div class="col-12 col-md-12 text-center mt-4">
+                          <a href="javascript:void(0);" class="buttondivrow"><u>See More Reviews</u></a>
+                      </div>
+                  </div> 
+               </div>
+              </div>
+            </div>
+        </div>             
+    </section>
+
+  </main>
+  
+  <!--==========================
+    Footer
+  ============================-->
+  <footer>
+        <div class="container">
+			<div class="row">
+        <div class="col-12 col-md-8 text-center text-lg-right">
+           <div class="footerlinks ">            
+                <ul class=" p-l-0">
+                     <li><a href="https://goqii.com/in-en/about">ABOUT</a></li>
+                    <li><a href="https://goqii.com/in-en/contactus">CONTACT</a></li>
+                    <li><a href="https://goqii.com/in-en/career">CAREERS</a></li>
+                    <li><a href="http://goqii.com/blog/" target="_blank">BLOG</a></li>
+                    <li><a href="https://goqii.com/in-en/gallery">Gallery</a></li>                    
+                    <li><a href="//goqiisupport.zendesk.com/hc/en-us">SUPPORT</a></li>
+                    <li><a href="https://goqii.com/in-en/press">PRESS</a></li>
+                    <li><a href="https://goqii.com/in-en/privacypolicy">Privacy Policy</a></li>
+                    <li><a href="https://goqii.com/in-en/terms">Terms of Use</a></li>
+                    <li><a href="https://goqii.com/startupguide" target="_blank">Startup Guide</a></li>
+                                         
+                </ul>
+                
+            </div>
+            <div class="footerlinks">            
+                <ul class=" p-l-0">
+                    <li><!--<span clas=""> Toll Free 1 800 313 0390</span> <span class="font11 text-grey">(Mon to Sat 10am to 6pm)</span>--></li>                    
+                    <li> &nbsp;</li>
+                    <li>&nbsp;</li>
+                    <li>&nbsp;</li>
+                    <li>&nbsp;</li>
+                    <li>&nbsp;</li>
+                    <li>&nbsp;</li>
+                    <li>&nbsp;</li>
+                    
+                    <li><span class="font18 bold600 footerbold600"> #BeTheForce</span></li>
+                                    
+                </ul>
+            </div>
+             
+            <div class="displaymob clearfix"></div>
+            
+           
+            </div>
+            <div class="col-12 col-md-4 text-center text-lg-right" style="padding-bottom:0px">
+                
+                
+            <div class="footersocial wow text-right animated" style="visibility: visible;">
+                <div class="socials text-center text-md-right">
+                    <a href="https://www.facebook.com/GOQiiLife" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://twitter.com/goqii" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com/goqiilife" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/user/GOQii" target="_blank"><i class="fab fa-youtube"></i></a>
+                 </div>
+             </div>
+                
+                <div class="copyright text-center text-md-right">
+                <p> GOQii All Rights Reserved</p> 
+            </div>
+            
+            
+            </div>
+            </div>
+            
+         </div>
+		
+     </footer>
+	 <!-- #footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+  <!-- JavaScript Libraries -->
+  <script src="https://store.goqii.com/media/goqiistore/lib/jquery/jquery.min.js"></script>
+  <!--<script src="https://store.goqii.com/media/goqiistore/lib/jquery/jquery-migrate.min.js"></script>
+  <script src="https://store.goqii.com/media/goqiistore/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="https://store.goqii.com/media/goqiistore/lib/easing/easing.min.js"></script>
+  <script src="https://store.goqii.com/media/goqiistore/lib/wow/wow.min.js"></script>-->
+  <script src="https://store.goqii.com/media/goqiistore/lib/superfish/hoverIntent.js"></script>
+  <script src="https://store.goqii.com/media/goqiistore/lib/superfish/superfish.min.js"></script>
+  <!--<script src="https://store.goqii.com/media/goqiistore/lib/magnific-popup/magnific-popup.min.js"></script>-->
+
+  <!-- Contact Form JavaScript File -->
+  <script src="https://store.goqii.com/media/goqiistore/contactform/contactform.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <!--<script src="https://store.goqii.com/media/goqiistore/js/main.js"></script>-->
+	
+  <!-- Swiper JS -->
+  <script src="https://store.goqii.com/media/goqiistore/js/swiper.min.js"></script>
+	
+  <!-- Product JS -->
+  <script src="https://store.goqii.com/media/goqiistore/js/index_productlist.js"></script>
+	
+	
+	
+
+  <!-- Initialize Swiper -->
+  <script>
+    var galleryTop = new Swiper('.gallery-top', {
+      spaceBetween: 4,
+      loop:true,
+      loopedSlides: 4, //looped slides should be the same
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+    var galleryThumbs = new Swiper('.gallery-thumbs', {
+      spaceBetween: 4,
+      slidesPerView: 4,
+      touchRatio: 0.2,
+      loop: true,
+      loopedSlides: 4, //looped slides should be the same
+      slideToClickedSlide: true,
+    });
+    galleryTop.controller.control = galleryThumbs;
+    galleryThumbs.controller.control = galleryTop;
+
+  </script>
+	
+	<script>
+            
+            $(document).on('click', '#addtocart', function () {
+                 addToCart();
+             });
+             
+             
+             $(document).on('click', '#checkoutbutton', function () {
+                 var item=$("#itemsuccessadded").text();
+                 item= parseInt(item);
+                 if(item===0){
+                     addToCartbk();
+                     }
+                 if(item>0){
+                   window.location="/shipping-address";
+                 }
+             });
+             
+             function addToCartbk(){
+                 var productId=$("#productid").val();
+                 var bandColor=$("#bandColor").val();
+                 var qty = $('#cartquantity').find("option:selected").val();
+                  $.ajax({
+                    type: "POST",
+                    url: "/addtocart.php",
+                    data: {
+                        productid: productId,
+                        bandColor: bandColor,
+                        qty: qty,
+
+                    },
+                    success: function (response) {
+                         var response = $.parseJSON(response);
+                         $(".itemsuccessaddedincart").text(response.itemNumber);
+                          $('select[id="cartquantity"] option[value="'+response.itemQuantity+'"]').attr("selected", "selected");
+                          window.location="/shipping-address";
+                    },
+                    error: function (e, msg) {
+                    }
+                });
+             }
+             function addToCart(){
+                 var productId=$("#productid").val();
+                 var bandColor=$("#bandColor").val();
+                 var qty = $('#cartquantity').find("option:selected").val();
+                 console.log(productId+"=="+bandColor+"=="+qty);
+                  $.ajax({
+                    type: "POST",
+                    url: "/addtocart.php",
+                    data: {
+                        productid: productId,
+                        bandColor: bandColor,
+                        qty: qty,
+
+                    },
+                    success: function (response) {
+                         var response = $.parseJSON(response);
+                         $(".itemsuccessaddedincart").text(response.itemNumber);
+                         $('select[id="cartquantity"] option[value="'+response.itemQuantity+'"]').attr("selected", "selected");
+                         alertify.success("Item added in cart successfully");
+                    },
+                    error: function (e, msg) {
+                    }
+                });
+             }
+             
+             function addToCartOnload(){
+                 var productId=$("#productid").val();
+                 var bandColor=$("#bandColor").val();
+                 var qty = $('#cartquantity').find("option:selected").val();
+                  $.ajax({
+                    type: "POST",
+                    url: "/addtocart.php",
+                    data: {
+                        productid: productId,
+                        bandColor: bandColor
+                    },
+                    success: function (response) {
+                         var response = $.parseJSON(response);
+                         $(".itemsuccessaddedincart").text(response.itemNumber);
+                         $('select[id="cartquantity"] option[value="'+response.itemQuantity+'"]').attr("selected", "selected");
+                    },
+                    error: function (e, msg) {
+                    }
+                });
+             }
+           
+             
+		 $(document).ready(function() {
+                     addToCartOnload();
+		  $('.color-choose input').on('click', function() {
+			  var headphonesColor = $(this).attr('data-image');
+
+			  $('.active').removeClass('active');
+			  $('.left-column img[data-image = ' + headphonesColor + ']').addClass('active');
+			  $(this).addClass('active');
+		  });
+		});
+
+            $(document).on('click', '.buttondivrow', function () {
+                $(".showdivrow").removeClass("hidedivrow");
+            })
+
+            function myFunction() {
+             var x = document.getElementById("myLinks");
+             if (x.style.display === "none") {
+               x.style.display = "block";
+             } else {
+               x.style.display = "none";
+             }
+            }
+	</script>
+
+<script>
+		 $(document).ready(function() {
+		  $('.color-choose input').on('click', function() {
+			  var headphonesColor = $(this).attr('data-image');
+
+			  $('.active').removeClass('active');
+			  $('.left-column img[data-image = ' + headphonesColor + ']').addClass('active');
+			  $(this).addClass('active');
+		  });
+		});
+		$('.open-popup-link').magnificPopup({
+			type: 'inline',
+			midClick: true,
+			mainClass: 'mfp-fade'
+		});
+
+
+
+	function chooseBandColor(color){ 
+        "use strict";
+		var divs = document.getElementsByClassName("bandColors");
+		for(var i=0; i < divs.length; i++){
+				divs[i].style.display = "none";
+		}
+		
+		switch(color){
+			case '0':
+				document.getElementById("black1").style.display = "block";
+				break;
+			case '1':
+				document.getElementById("red1").style.display = "block";
+				break;
+			case '2':
+				document.getElementById("green1").style.display = "block";
+				break;
+			case '3':
+				document.getElementById("pink1").style.display = "block";
+				break;
+			case '4':
+				document.getElementById("purple1").style.display = "block";
+				break;
+			case '5':
+				document.getElementById("skyblue1").style.display = "block";
+				break;
+		}
+		
+		// Slider1
+		var galleryTop1 = new Swiper('.gallery-top1', {
+		  spaceBetween: 4,
+		  loop:true,
+		  loopedSlides: 4, //looped slides should be the same
+		  navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		  },
+		});
+		var galleryThumbs1 = new Swiper('.gallery-thumbs1', {
+		  spaceBetween: 4,
+		  slidesPerView: 4,
+		  touchRatio: 0.2,
+		  loop: true,
+		  loopedSlides: 4, //looped slides should be the same
+		  slideToClickedSlide: true,
+		});
+		galleryTop1.controller.control = galleryThumbs1;
+		galleryThumbs1.controller.control = galleryTop1;
+		
+		
+		// Slider2
+		var galleryTop2 = new Swiper('.gallery-top2', {
+		  spaceBetween: 4,
+		  loop:true,
+		  loopedSlides: 4, //looped slides should be the same
+		  navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		  },
+		});
+		var galleryThumbs2 = new Swiper('.gallery-thumbs2', {
+		  spaceBetween: 4,
+		  slidesPerView: 4,
+		  touchRatio: 0.2,
+		  loop: true,
+		  loopedSlides: 4, //looped slides should be the same
+		  slideToClickedSlide: true,
+		});
+		galleryTop2.controller.control = galleryThumbs2;
+		galleryThumbs2.controller.control = galleryTop2;
+		
+		// Slider3
+		var galleryTop3 = new Swiper('.gallery-top3', {
+		  spaceBetween: 4,
+		  loop:true,
+		  loopedSlides: 4, //looped slides should be the same
+		  navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		  },
+		});
+		var galleryThumbs3 = new Swiper('.gallery-thumbs3', {
+		  spaceBetween: 4,
+		  slidesPerView: 4,
+		  touchRatio: 0.2,
+		  loop: true,
+		  loopedSlides: 4, //looped slides should be the same
+		  slideToClickedSlide: true,
+		});
+		galleryTop3.controller.control = galleryThumbs3;
+		galleryThumbs3.controller.control = galleryTop3;
+		
+		// Slider4
+		var galleryTop4 = new Swiper('.gallery-top4', {
+		  spaceBetween: 4,
+		  loop:true,
+		  loopedSlides: 4, //looped slides should be the same
+		  navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		  },
+		});
+		var galleryThumbs4 = new Swiper('.gallery-thumbs4', {
+		  spaceBetween: 4,
+		  slidesPerView: 4,
+		  touchRatio: 0.2,
+		  loop: true,
+		  loopedSlides: 4, //looped slides should be the same
+		  slideToClickedSlide: true,
+		});
+		galleryTop4.controller.control = galleryThumbs4;
+		galleryThumbs4.controller.control = galleryTop4;
+		
+		// Slider5
+		var galleryTop5 = new Swiper('.gallery-top5', {
+		  spaceBetween: 4,
+		  loop:true,
+		  loopedSlides: 4, //looped slides should be the same
+		  navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		  },
+		});
+		var galleryThumbs5 = new Swiper('.gallery-thumbs5', {
+		  spaceBetween: 4,
+		  slidesPerView: 4,
+		  touchRatio: 0.2,
+		  loop: true,
+		  loopedSlides: 5, //looped slides should be the same
+		  slideToClickedSlide: true,
+		});
+		galleryTop5.controller.control = galleryThumbs5;
+		galleryThumbs5.controller.control = galleryTop5;
+		
+		// Slider6
+		var galleryTop6 = new Swiper('.gallery-top6', {
+		  spaceBetween: 4,
+		  loop:true,
+		  loopedSlides: 4, //looped slides should be the same
+		  navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		  },
+		});
+		var galleryThumbs6 = new Swiper('.gallery-thumbs6', {
+		  spaceBetween: 4,
+		  slidesPerView: 4,
+		  touchRatio: 0.2,
+		  loop: true,
+		  loopedSlides: 4, //looped slides should be the same
+		  slideToClickedSlide: true,
+		});
+		galleryTop6.controller.control = galleryThumbs6;
+		galleryThumbs6.controller.control = galleryTop6;
+		
+		
+		
+	} 
+	</script>

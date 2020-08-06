@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <title>核桃编程</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+  <link rel="Shortcut Icon" href='//img.hetao101.com/icon/icologo32x32.ico'>
+  <script src="//js.fundebug.cn/fundebug.1.1.1.min.js" apikey="28bfebfb072e32bee9ea803fce13c2c3c27e2cfed50e35e51e52cadfb1cd93fd"></script>
+  <script src="//player.polyv.net/script/polyvplayer.min.js"></script>
+  <link rel="stylesheet" href="/official/main.229beff47f557bf431de.css">
+  <script>
+    /**
+    * 百度统计代码
+    */
+    var _hmt = _hmt || [];
+    (function () {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?75b89c55c1c9010694a2c9e09e0bb893";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+  <script>
+    var sUserAgent = navigator.userAgent.toLowerCase();
+    var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+    var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+    var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+    var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+    var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+    var bIsAndroid = sUserAgent.match(/android/i) == "android";
+    var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+    var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+    if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+      var originUrl = window.location.href;
+      if (originUrl.indexOf("landing") != -1) {
+        var search = window.location.search;
+        var url = search ? 'https://h5.hetao101.com/landingpage' + search : 'https://h5.hetao101.com/landingpage';
+        window.location.href = url;
+      }
+    } else {
+      // 神策统计代码
+      (function (para) {
+        var p = para.sdk_url, n = para.name, w = window, d = document, s = 'script', x = null, y = null;
+        w['sensorsDataAnalytic201505'] = n;
+        w[n] = w[n] || function (a) { return function () { (w[n]._q = w[n]._q || []).push([a, arguments]); } };
+        var ifs = ['track', 'quick', 'register', 'registerPage', 'registerOnce', 'trackSignup', 'trackAbtest', 'setProfile', 'setOnceProfile', 'appendProfile', 'incrementProfile', 'deleteProfile', 'unsetProfile', 'identify', 'login', 'logout', 'trackLink', 'clearAllRegister', 'getAppStatus'];
+        for (var i = 0; i < ifs.length; i++) {
+          w[n][ifs[i]] = w[n].call(null, ifs[i]);
+        }
+        if (!w[n]._t) {
+          x = d.createElement(s), y = d.getElementsByTagName(s)[2];
+          x.async = 1;
+          x.src = p;
+          x.setAttribute('charset', 'UTF-8');
+          y.parentNode.insertBefore(x, y);
+          w[n].para = para;
+        }
+      })({
+        sdk_url: 'https://img-hetao.oss-cn-beijing.aliyuncs.com/assets/new3_landingpage/sensorsdata.min.js',
+        heatmap_url: 'https://img-hetao.oss-cn-beijing.aliyuncs.com/assets/new3_landingpage/heatmap.min.js',
+        name: 'sa',
+        web_url: 'https://sensors.corp.hetao101.com/?project=production',
+        server_url: 'https://sensors.hetao101.com/sa?project=production',
+
+        heatmap: {
+          clickmap: 'default',
+          show_log: false,
+          scroll_notice_map: 'default'
+        }
+      });
+      sa.quick('autoTrack');
+    }
+  </script>
+</head>
+
+<body>
+  <div style="position: fixed;top: -900px;left: -1000px;">
+    <h1>专业针对7~13岁少儿设计的Scratch编程课</h1>
+    <p>内容概要：</p>
+    <p>1. 编程让孩子扮演上帝模式，编写属于自己的小工具和小游戏。</p>
+    <p>2. 让孩子直通信息学奥赛和生产力编程。</p>
+    <p>3. 让孩子避开枯燥的语法记忆和编译错误。</p>
+    <p>最近大火的少儿编程，到底要不要让孩子学？很多家长心中可能存在疑问。</p>
+    <p><strong>时间灵活，有料有趣，价格良心</strong>的核桃少儿编程课，已经来到了第四期，之前的三期，上千名家长的好评。</p>
+  </div>
+  <div id="app"></div>
+  <script type="text/javascript" src="/official/vendors.229beff47f557bf431de.js"></script>
+  <script type="text/javascript" src="/official/main.229beff47f557bf431de.js"></script>
+  <script>
+    // window.onload = function () {      
+    //   let chat = document.getElementById("ZCChatFrame");
+    //   chat.style.bottom = "180px";
+    // }
+  </script>
+</body>
+
+</html>
