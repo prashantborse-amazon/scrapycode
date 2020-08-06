@@ -1,0 +1,39 @@
+{  
+  "Json Bucket": "fdss3-1-spyderuat-us-east-1",
+  "Json File": "Spyder/spyder_news.json",
+  "Health Check File": "healthlog.txt",
+  "WFUSERID": 30000,
+	"WORKFLOWID":1,
+  "API end points":{			
+    "CREATE WORKFLOW": {
+      "API URL": "https://vpce-0537ee56e949aebdc-t0zmnz94.execute-api.us-east-1.vpce.amazonaws.com/test/workflow",
+      "KEY": "x-apigw-api-id",
+      "VALUE": "u785z47uc1",
+      "CONTENT-TYPE": "application/json"
+    },
+		"CREATE TASK": { 
+			"API URL": "https://vpce-0537ee56e949aebdc-t0zmnz94.execute-api.us-east-1.vpce.amazonaws.com/test/task",
+			"KEY": "x-apigw-api-id",
+			"VALUE": "1ut04n7ifh",
+			"CONTENT-TYPE" : "application/json" 
+		},
+		"GETNEXTBOT": { 
+			"API URL": "https://vpce-0537ee56e949aebdc-t0zmnz94.execute-api.us-east-1.vpce.amazonaws.com/test",
+			"KEY": "x-apigw-api-id",
+			"VALUE": "0jmong35r1",
+			"CONTENT-TYPE" : "application/json" 
+		},
+    "GETNEXT": {
+      "API URL": "https://vpce-0537ee56e949aebdc-t0zmnz94.execute-api.us-east-1.vpce.amazonaws.com/test",
+      "KEY": "x-apigw-api-id",
+      "VALUE": "jxx9zj2lp0",
+      "CONTENT-TYPE": "application/json"
+    },
+    "SmartSpyder": {
+      "API URL": "https://vpce-0537ee56e949aebdc-t0zmnz94.execute-api.us-east-1.vpce.amazonaws.com/test/smartspy",
+      "KEY": "x-apigw-api-id",
+      "VALUE": "7pdrqm",
+      "CONTENT-TYPE": "application/json"
+    }
+	}
+}
